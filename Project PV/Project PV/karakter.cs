@@ -9,7 +9,7 @@ namespace Project_PV
     class karakter
     {
         public int level { get; set; }
-        public List<skill> skills { get; set; }
+        public List<Skill> skills { get; set; }
         public stress stress_level { get; set; }
         public stress stress_level { get; set; }
         public int hero { get; set; }

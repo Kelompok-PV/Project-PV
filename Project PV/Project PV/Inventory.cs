@@ -6,8 +6,15 @@ using System.Threading.Tasks;
 
 namespace Project_PV
 {
-    class Inventory
+    public abstract class Inventory
     {
-        
+        public int x { get; set; }
+        public int y { get; set; }
+        public string name { get; set; }
+
+    }
+    class LargeFood : Inventory
+    {
+
     }
 }
