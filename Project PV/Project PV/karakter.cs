@@ -18,10 +18,10 @@ namespace Project_PV
         public buff hero_buff { get; set; }
         public equip[2] hero_equip { get; set; }
 
-        enum buff
+        public enum buff
         {
-            poison=1,
-            bleed=2
+            poison,
+            bleed
         }
     }
 }
