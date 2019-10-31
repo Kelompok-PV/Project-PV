@@ -1,0 +1,8 @@
+E:\GitHub\Project-PV\Project PV\Project PV\bin\Debug\Project PV.exe.config
+E:\GitHub\Project-PV\Project PV\Project PV\bin\Debug\Project PV.exe
+E:\GitHub\Project-PV\Project PV\Project PV\bin\Debug\Project PV.pdb
+E:\GitHub\Project-PV\Project PV\Project PV\obj\Debug\Project_PV.Properties.Resources.resources
+E:\GitHub\Project-PV\Project PV\Project PV\obj\Debug\Project PV.csproj.GenerateResource.cache
+E:\GitHub\Project-PV\Project PV\Project PV\obj\Debug\Project PV.csproj.CoreCompileInputs.cache
+E:\GitHub\Project-PV\Project PV\Project PV\obj\Debug\Project PV.exe
+E:\GitHub\Project-PV\Project PV\Project PV\obj\Debug\Project PV.pdb
