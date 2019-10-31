@@ -12,8 +12,16 @@ namespace Project_PV
         public List<skill> skills { get; set; }
         public stress stress_level { get; set; }
         public stress stress_level { get; set; }
-        public int c { get; set; }
-        public int char { get; set; }
-        public int karakter { get; set; }
+        public int hero { get; set; }
+        public int hero_move { get; set; }
+        public int hero_move_now { get; set; }
+        public buff hero_buff { get; set; }
+        public equip[2] hero_equip { get; set; }
+
+        enum buff
+        {
+            poison=1,
+            bleed=2
+        }
     }
 }
