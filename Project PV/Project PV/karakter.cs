@@ -9,9 +9,8 @@ namespace Project_PV
     class karakter
     {
         public int level { get; set; }
-        public List<Skill> skills { get; set; }
-        public stress stress_level { get; set; }
-        public stress stress_level { get; set; }
+        public List<skill> skills { get; set; }
+        public stress hero_stress { get; set; }
         public int hero { get; set; }
         public int hero_move { get; set; }
         public int hero_move_now { get; set; }
@@ -19,10 +18,11 @@ namespace Project_PV
         public equip[] hero_equip { get; set; }
         public string nama { get; set; }
         public string type { get; set; }
-        enum buff
-        {
-            poison,
-            bleed
-        }
+        
+    }
+    enum buff
+    {
+        poison,
+        bleed
     }
 }

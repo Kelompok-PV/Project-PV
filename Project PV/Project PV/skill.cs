@@ -13,9 +13,10 @@ namespace Project_PV
         public int[] posisi_skill{ get; set; }
         public status status_skill{ get; set; }
 
-        enum efek
-        {
-            bless
-        }
+        
+    }
+    enum efek
+    {
+        bless
     }
 }
