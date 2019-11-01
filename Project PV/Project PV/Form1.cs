@@ -16,5 +16,11 @@ namespace Project_PV
         {
             InitializeComponent();
         }
+        Inventory insi=new LargeFood();
+        private void Form1_Paint(object sender, PaintEventArgs e)
+        {
+            Graphics g = e.Graphics;
+            insi.getImage(g);
+        }
     }
 }

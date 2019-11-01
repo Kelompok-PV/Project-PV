@@ -6,17 +6,20 @@ using System.Threading.Tasks;
 
 namespace Project_PV
 {
-    class skill
+    public class Skill
     {
         public string nama { get; set; }
-        public efek skill_efek { get; set; }
+        public efek[] skill_efek { get; set; }
         public int[] posisi_skill{ get; set; }
         public status status_skill{ get; set; }
 
         
     }
-    enum efek
+    public enum efek
     {
-        bless
+        bless,
+        targeted,
+        poison,
+
     }
 }

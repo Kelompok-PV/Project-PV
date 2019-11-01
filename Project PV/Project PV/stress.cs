@@ -6,14 +6,15 @@ using System.Threading.Tasks;
 
 namespace Project_PV
 {
-    class stress
+    public class stress
     {
         public int stress_point { get; set; }
         public stress_stage stress_level { get; set; }
-        enum stress_stage
-        {
-            normal,
-            depresi
-        }
+        
+    }
+    public enum stress_stage
+    {
+        normal,
+        depresi
     }
 }
