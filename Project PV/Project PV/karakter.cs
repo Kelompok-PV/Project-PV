@@ -38,59 +38,59 @@ namespace Project_PV
             this.type = type;
         }
     }
-    class Abomination : karakter
+    class abuNala : karakter
     {
-        public Abomination(string nama, string type, int hp, string hero, string hero_move, int hero_move_now, equip[] hero_equip, List<string> dialog, int dodge, int speed)
-            : base(nama,type,hp,"","idle",1,new equip[2],new List<string>(),dodge,speed)
+        public abuNala(string nama, string type, int hp, string hero, string hero_move, int hero_move_now, equip[] hero_equip, List<string> dialog, int dodge, int speed) 
+            : base(nama, "Abu Nala", hp, "Abu Nala", "idle", 1, hero_equip, dialog, dodge, speed)
         {
         }
     }
-    class Abomination : karakter
+    class aladin : karakter
     {
-        public Abomination(string nama, string type, int hp, string hero, string hero_move, int hero_move_now, equip[] hero_equip, List<string> dialog, int dodge, int speed)
-            : base(nama, type, hp, "", "idle", 1, new equip[2], new List<string>(), dodge, speed)
+        public aladin(string nama, string type, int hp, string hero, string hero_move, int hero_move_now, equip[] hero_equip, List<string> dialog, int dodge, int speed) 
+            : base(nama, type, hp, hero, "idle", 1, hero_equip, dialog, dodge, speed)
         {
         }
     }
-    class Abomination : karakter
+    class archer : karakter
     {
-        public Abomination(string nama, string type, int hp, string hero, string hero_move, int hero_move_now, equip[] hero_equip, List<string> dialog, int dodge, int speed)
-            : base(nama, type, hp, "", "idle", 1, new equip[2], new List<string>(), dodge, speed)
+        public archer(string nama, string type, int hp, string hero, string hero_move, int hero_move_now, equip[] hero_equip, List<string> dialog, int dodge, int speed) 
+            : base(nama, type, hp, hero, "idle", 1, hero_equip, dialog, dodge, speed)
         {
         }
     }
-    class Abomination : karakter
+    class assasin : karakter
     {
-        public Abomination(string nama, string type, int hp, string hero, string hero_move, int hero_move_now, equip[] hero_equip, List<string> dialog, int dodge, int speed)
-            : base(nama, type, hp, "", "idle", 1, new equip[2], new List<string>(), dodge, speed)
+        public assasin(string nama, string type, int hp, string hero, string hero_move, int hero_move_now, equip[] hero_equip, List<string> dialog, int dodge, int speed) 
+            : base(nama, type, hp, hero, "idle", 1, hero_equip, dialog, dodge, speed)
         {
         }
     }
-    class Abomination : karakter
+    class druid : karakter
     {
-        public Abomination(string nama, string type, int hp, string hero, string hero_move, int hero_move_now, equip[] hero_equip, List<string> dialog, int dodge, int speed)
-            : base(nama, type, hp, "", "idle", 1, new equip[2], new List<string>(), dodge, speed)
+        public druid(string nama, string type, int hp, string hero, string hero_move, int hero_move_now, equip[] hero_equip, List<string> dialog, int dodge, int speed) 
+            : base(nama, type, hp, hero, "idle", 1, hero_equip, dialog, dodge, speed)
         {
         }
     }
-    class Abomination : karakter
+    class ghostPerson : karakter
     {
-        public Abomination(string nama, string type, int hp, string hero, string hero_move, int hero_move_now, equip[] hero_equip, List<string> dialog, int dodge, int speed)
-            : base(nama, type, hp, "", "idle", 1, new equip[2], new List<string>(), dodge, speed)
+        public ghostPerson(string nama, string type, int hp, string hero, string hero_move, int hero_move_now, equip[] hero_equip, List<string> dialog, int dodge, int speed) 
+            : base(nama, type, hp, hero, "idle", 1, hero_equip, dialog, dodge, speed)
         {
         }
     }
-    class Abomination : karakter
+    class giantLady : karakter
     {
-        public Abomination(string nama, string type, int hp, string hero, string hero_move, int hero_move_now, equip[] hero_equip, List<string> dialog, int dodge, int speed)
-            : base(nama, type, hp, "", "idle", 1, new equip[2], new List<string>(), dodge, speed)
+        public giantLady(string nama, string type, int hp, string hero, string hero_move, int hero_move_now, equip[] hero_equip, List<string> dialog, int dodge, int speed) 
+            : base(nama, type, hp, hero, "idle", 1, hero_equip, dialog, dodge, speed)
         {
         }
     }
-    class Abomination : karakter
+    class herbalist : karakter
     {
-        public Abomination(string nama, string type, int hp, string hero, string hero_move, int hero_move_now, equip[] hero_equip, List<string> dialog, int dodge, int speed)
-            : base(nama, type, hp, "", "idle", 1, new equip[2], new List<string>(), dodge, speed)
+        public herbalist(string nama, string type, int hp, string hero, string hero_move, int hero_move_now, equip[] hero_equip, List<string> dialog, int dodge, int speed) 
+            : base(nama, type, hp, hero, "idle", 1, hero_equip, dialog, dodge, speed)
         {
         }
     }
