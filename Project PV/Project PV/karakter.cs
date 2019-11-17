@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -37,63 +38,79 @@ namespace Project_PV
             this.speed = speed;
             this.type = type;
         }
+
+        public void getImage(Graphics g)
+        {
+            try
+            {
+                object O = Properties.Resources.ResourceManager.GetObject(hero + "_" + hero_move + "___" + hero_move_now + "_");
+                Image img = (Image)O;
+                g.DrawImage(img, 0, 0, 100, 150);
+            }catch(Exception)
+            {
+                hero_move_now = 1;
+                object O = Properties.Resources.ResourceManager.GetObject(hero + "_" + hero_move + "___" + hero_move_now + "_");
+                Image img = (Image)O;
+                g.DrawImage(img, 0, 0, 100, 150);
+            }
+        }
     }
-    class abuNala : karakter
+    class ninja : karakter
     {
-        public abuNala(string nama, string type, int hp, string hero, string hero_move, int hero_move_now, equip[] hero_equip, List<string> dialog, int dodge, int speed) 
-            : base(nama, "Abu Nala", hp, "Abu Nala", "idle", 1, hero_equip, dialog, dodge, speed)
+        public ninja(string nama, int hp, equip[] hero_equip, List<string> dialog, int dodge, int speed) 
+            : base(nama, "ninja", hp, "ninja", "idle", 1, hero_equip, dialog, dodge, speed)
         {
         }
     }
-    class aladin : karakter
-    {
-        public aladin(string nama, string type, int hp, string hero, string hero_move, int hero_move_now, equip[] hero_equip, List<string> dialog, int dodge, int speed) 
-            : base(nama, type, hp, hero, "idle", 1, hero_equip, dialog, dodge, speed)
-        {
-        }
-    }
-    class archer : karakter
-    {
-        public archer(string nama, string type, int hp, string hero, string hero_move, int hero_move_now, equip[] hero_equip, List<string> dialog, int dodge, int speed) 
-            : base(nama, type, hp, hero, "idle", 1, hero_equip, dialog, dodge, speed)
-        {
-        }
-    }
-    class assasin : karakter
-    {
-        public assasin(string nama, string type, int hp, string hero, string hero_move, int hero_move_now, equip[] hero_equip, List<string> dialog, int dodge, int speed) 
-            : base(nama, type, hp, hero, "idle", 1, hero_equip, dialog, dodge, speed)
-        {
-        }
-    }
-    class druid : karakter
-    {
-        public druid(string nama, string type, int hp, string hero, string hero_move, int hero_move_now, equip[] hero_equip, List<string> dialog, int dodge, int speed) 
-            : base(nama, type, hp, hero, "idle", 1, hero_equip, dialog, dodge, speed)
-        {
-        }
-    }
-    class ghostPerson : karakter
-    {
-        public ghostPerson(string nama, string type, int hp, string hero, string hero_move, int hero_move_now, equip[] hero_equip, List<string> dialog, int dodge, int speed) 
-            : base(nama, type, hp, hero, "idle", 1, hero_equip, dialog, dodge, speed)
-        {
-        }
-    }
-    class giantLady : karakter
-    {
-        public giantLady(string nama, string type, int hp, string hero, string hero_move, int hero_move_now, equip[] hero_equip, List<string> dialog, int dodge, int speed) 
-            : base(nama, type, hp, hero, "idle", 1, hero_equip, dialog, dodge, speed)
-        {
-        }
-    }
-    class herbalist : karakter
-    {
-        public herbalist(string nama, string type, int hp, string hero, string hero_move, int hero_move_now, equip[] hero_equip, List<string> dialog, int dodge, int speed) 
-            : base(nama, type, hp, hero, "idle", 1, hero_equip, dialog, dodge, speed)
-        {
-        }
-    }
+    //class aladin : karakter
+    //{
+    //    public aladin(string nama, string type, int hp, string hero, string hero_move, int hero_move_now, equip[] hero_equip, List<string> dialog, int dodge, int speed) 
+    //        : base(nama, type, hp, hero, "idle", 1, hero_equip, dialog, dodge, speed)
+    //    {
+    //    }
+    //}
+    //class archer : karakter
+    //{
+    //    public archer(string nama, string type, int hp, string hero, string hero_move, int hero_move_now, equip[] hero_equip, List<string> dialog, int dodge, int speed) 
+    //        : base(nama, type, hp, hero, "idle", 1, hero_equip, dialog, dodge, speed)
+    //    {
+    //    }
+    //}
+    //class assasin : karakter
+    //{
+    //    public assasin(string nama, string type, int hp, string hero, string hero_move, int hero_move_now, equip[] hero_equip, List<string> dialog, int dodge, int speed) 
+    //        : base(nama, type, hp, hero, "idle", 1, hero_equip, dialog, dodge, speed)
+    //    {
+    //    }
+    //}
+    //class druid : karakter
+    //{
+    //    public druid(string nama, string type, int hp, string hero, string hero_move, int hero_move_now, equip[] hero_equip, List<string> dialog, int dodge, int speed) 
+    //        : base(nama, type, hp, hero, "idle", 1, hero_equip, dialog, dodge, speed)
+    //    {
+    //    }
+    //}
+    //class ghostPerson : karakter
+    //{
+    //    public ghostPerson(string nama, string type, int hp, string hero, string hero_move, int hero_move_now, equip[] hero_equip, List<string> dialog, int dodge, int speed) 
+    //        : base(nama, type, hp, hero, "idle", 1, hero_equip, dialog, dodge, speed)
+    //    {
+    //    }
+    //}
+    //class giantLady : karakter
+    //{
+    //    public giantLady(string nama, string type, int hp, string hero, string hero_move, int hero_move_now, equip[] hero_equip, List<string> dialog, int dodge, int speed) 
+    //        : base(nama, type, hp, hero, "idle", 1, hero_equip, dialog, dodge, speed)
+    //    {
+    //    }
+    //}
+    //class herbalist : karakter
+    //{
+    //    public herbalist(string nama, string type, int hp, string hero, string hero_move, int hero_move_now, equip[] hero_equip, List<string> dialog, int dodge, int speed) 
+    //        : base(nama, type, hp, hero, "idle", 1, hero_equip, dialog, dodge, speed)
+    //    {
+    //    }
+    //}
     public enum buff
     {
         poison,

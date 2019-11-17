@@ -17,3 +17,13 @@ C:\Users\vinny\OneDrive\Documents\Project-PV\Project PV\Project PV\obj\Debug\Pro
 C:\Users\vinny\OneDrive\Documents\Project-PV\Project PV\Project PV\obj\Debug\Project PV.csproj.CoreCompileInputs.cache
 C:\Users\vinny\OneDrive\Documents\Project-PV\Project PV\Project PV\obj\Debug\Project PV.exe
 C:\Users\vinny\OneDrive\Documents\Project-PV\Project PV\Project PV\obj\Debug\Project PV.pdb
+C:\Users\Fabian-Lepi\Documents\GitHub\Project-PV\Project PV\Project PV\bin\Debug\Resources\The_Blood.png
+C:\Users\Fabian-Lepi\Documents\GitHub\Project-PV\Project PV\Project PV\bin\Debug\Project PV.exe.config
+C:\Users\Fabian-Lepi\Documents\GitHub\Project-PV\Project PV\Project PV\bin\Debug\Project PV.exe
+C:\Users\Fabian-Lepi\Documents\GitHub\Project-PV\Project PV\Project PV\bin\Debug\Project PV.pdb
+C:\Users\Fabian-Lepi\Documents\GitHub\Project-PV\Project PV\Project PV\obj\Debug\Project PV.csprojAssemblyReference.cache
+C:\Users\Fabian-Lepi\Documents\GitHub\Project-PV\Project PV\Project PV\obj\Debug\Project_PV.Form1.resources
+C:\Users\Fabian-Lepi\Documents\GitHub\Project-PV\Project PV\Project PV\obj\Debug\Project_PV.Properties.Resources.resources
+C:\Users\Fabian-Lepi\Documents\GitHub\Project-PV\Project PV\Project PV\obj\Debug\Project PV.csproj.GenerateResource.cache
+C:\Users\Fabian-Lepi\Documents\GitHub\Project-PV\Project PV\Project PV\obj\Debug\Project PV.exe
+C:\Users\Fabian-Lepi\Documents\GitHub\Project-PV\Project PV\Project PV\obj\Debug\Project PV.pdb

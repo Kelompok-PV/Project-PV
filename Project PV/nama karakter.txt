@@ -1,0 +1,13 @@
+Nama karakter darkest dungeon
+- crusader
+- highwayman
+- vestal
+- plague_doctor
+
+Nama musuh darkest dungeon
+brigand
+brigand_giant
+Bone_rabble
+Gargoyle
+
+C:\Users\Fabian-Lepi\Documents\GitHub\Project-PV\Project PV

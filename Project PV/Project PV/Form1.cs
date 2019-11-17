@@ -16,11 +16,22 @@ namespace Project_PV
         {
             InitializeComponent();
         }
-        Inventory insi=new LargeFood();
+        karakter player = new ninja("ninnin", 50, new equip[5], new List<string>(), 5, 5);
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
             Graphics g = e.Graphics;
-            insi.getImage(g);
+            player.getImage(g);
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            player.hero_move_now++;
+            Invalidate();
         }
     }
 }

@@ -93,5 +93,26 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ninja_idle_ %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ninja_idle_ %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ninja_idle_ %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ninja_idle_ %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ninja_idle_ %285%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ninja_idle_ %286%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ninja_idle_ %287%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
