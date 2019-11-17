@@ -1,4 +1,4 @@
-﻿using System;
+﻿ musing System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
@@ -43,16 +43,18 @@ namespace Project_PV
         {
             try
             {
-                object O = Properties.Resources.ResourceManager.GetObject(hero + "_" + hero_move + "___" + hero_move_now + "_");
-                Image img = (Image)O;
-                g.DrawImage(img, 0, 0, 100, 150);
+                gambar(g);
             }catch(Exception)
             {
                 hero_move_now = 1;
-                object O = Properties.Resources.ResourceManager.GetObject(hero + "_" + hero_move + "___" + hero_move_now + "_");
-                Image img = (Image)O;
-                g.DrawImage(img, 0, 0, 100, 150);
+                gambar(g);
             }
+        }
+        public void gambar(Graphics g)
+        {
+            object O = Properties.Resources.ResourceManager.GetObject(hero + "_" + hero_move + "___" + hero_move_now + "_");
+            Image img = (Image)O;
+            g.DrawImage(img, 0, 0, 100, 150);
         }
     }
     class ninja : karakter
