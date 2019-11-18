@@ -27,3 +27,13 @@ C:\Users\Fabian-Lepi\Documents\GitHub\Project-PV\Project PV\Project PV\obj\Debug
 C:\Users\Fabian-Lepi\Documents\GitHub\Project-PV\Project PV\Project PV\obj\Debug\Project PV.csproj.GenerateResource.cache
 C:\Users\Fabian-Lepi\Documents\GitHub\Project-PV\Project PV\Project PV\obj\Debug\Project PV.exe
 C:\Users\Fabian-Lepi\Documents\GitHub\Project-PV\Project PV\Project PV\obj\Debug\Project PV.pdb
+C:\Users\Fabian\Documents\GitHub\Project-PV-fix\Project PV\Project PV\obj\Debug\Project PV.csprojAssemblyReference.cache
+C:\Users\Fabian\Documents\GitHub\Project-PV-fix\Project PV\Project PV\obj\Debug\Project_PV.Form1.resources
+C:\Users\Fabian\Documents\GitHub\Project-PV-fix\Project PV\Project PV\obj\Debug\Project_PV.Properties.Resources.resources
+C:\Users\Fabian\Documents\GitHub\Project-PV-fix\Project PV\Project PV\obj\Debug\Project PV.csproj.GenerateResource.cache
+C:\Users\Fabian\Documents\GitHub\Project-PV-fix\Project PV\Project PV\obj\Debug\Project PV.exe
+C:\Users\Fabian\Documents\GitHub\Project-PV-fix\Project PV\Project PV\obj\Debug\Project PV.pdb
+C:\Users\Fabian\Documents\GitHub\Project-PV-fix\Project PV\Project PV\bin\Debug\Resources\The_Blood.png
+C:\Users\Fabian\Documents\GitHub\Project-PV-fix\Project PV\Project PV\bin\Debug\Project PV.exe.config
+C:\Users\Fabian\Documents\GitHub\Project-PV-fix\Project PV\Project PV\bin\Debug\Project PV.exe
+C:\Users\Fabian\Documents\GitHub\Project-PV-fix\Project PV\Project PV\bin\Debug\Project PV.pdb
