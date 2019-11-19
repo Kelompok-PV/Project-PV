@@ -12,6 +12,7 @@ namespace Project_PV
 {
     public partial class Form1 : Form
     {
+        GameStateManager manager;
         public Form1()
         {
             InitializeComponent();
@@ -20,18 +21,31 @@ namespace Project_PV
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
             Graphics g = e.Graphics;
-            player.getImage(g);
+            //player.getImage(g);
+            manager.draw(g);
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+            manager = new GameStateManager();
+
+            //object O1 = Properties.Resources.ResourceManager.GetObject("arrow");
+            //Image img1 = (Image)O1;
+
+            //this.Cursor = new Cursor("Resources\\arrow.png");
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            player.hero_move_now++;
+            //player.hero_move_now++;
             Invalidate();
+        }
+
+        private void Form1_MouseClick(object sender, MouseEventArgs e)
+        {
+            //MessageBox.Show("x: "+e.X+" - y: "+e.Y);
+            manager.mouse_click(sender, e);
+
         }
     }
 }
