@@ -33,5 +33,25 @@ namespace Project_PV
             player.hero_move_now++;
             Invalidate();
         }
+        bool jalan = false;
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == Keys.D&&!jalan)
+            {
+                jalan = true;
+                player.hero_move_now = 1;
+                player.hero_move = "run";
+            }
+        }
+
+        private void Form1_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (player.hero_move != "idle")
+            {
+                jalan = false;
+                player.hero_move_now = 1;
+                player.hero_move = "idle";
+            }
+        }
     }
 }
