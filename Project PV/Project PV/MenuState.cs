@@ -63,9 +63,6 @@ namespace Project_PV
                 frame = 0;
             }
             frame++;
-        public override void key_keydown(object sender, KeyEventArgs e)
-        {
-            throw new NotImplementedException();
         }
     }
 }
