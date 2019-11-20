@@ -123,7 +123,7 @@ namespace Prototype
                 index = 0;
             }
 
-            //g.DrawImage(Avatar[index], 0, posY, 300, 300);
+            g.DrawImage(Avatar[index], 0, posY, 300, 300);
 
             if(status == Status.idle || status == Status.jump)
             {

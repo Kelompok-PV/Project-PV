@@ -48,7 +48,6 @@
             this.Name = "Prototype";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Prototype";
-            this.Load += new System.EventHandler(this.Prototype_Load);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.Prototype_Paint);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Prototype_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Prototype_KeyUp);

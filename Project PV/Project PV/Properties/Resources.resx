@@ -178,125 +178,53 @@
   <data name="ninja_idle___9_" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ninja_idle_ (9).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="courtyard_background___1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\courtyard_background_ (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="torch__10_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Torch\torch (10).gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="courtyard_background___2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\courtyard_background_ (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="torch__11_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Torch\torch (11).gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="courtyard_background___3_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\courtyard_background_ (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="torch__12_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Torch\torch (12).gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="courtyard_door" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\courtyard_door.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="torch__13_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Torch\torch (13).gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="courtyard_last" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\courtyard_last.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="torch__14_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Torch\torch (14).gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="courtyard_random___10_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\courtyard_random_ (10).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="torch__15_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Torch\torch (15).gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="courtyard_random___11_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\courtyard_random_ (11).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="torch__16_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Torch\torch (16).gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="courtyard_random___12_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\courtyard_random_ (12).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="torch__1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Torch\torch (1).gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="courtyard_random___13_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\courtyard_random_ (13).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="torch__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Torch\torch (2).gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="courtyard_random___14_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\courtyard_random_ (14).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="torch__3_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Torch\torch (3).gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="courtyard_random___15_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\courtyard_random_ (15).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="torch__4_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Torch\torch (4).gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="courtyard_random___16_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\courtyard_random_ (16).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="torch__5_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Torch\torch (5).gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="courtyard_random___17_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\courtyard_random_ (17).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="torch__6_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Torch\torch (6).gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="courtyard_random___18_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\courtyard_random_ (18).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="torch__7_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Torch\torch (7).gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="courtyard_random___19_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\courtyard_random_ (19).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="torch__8_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Torch\torch (8).gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="courtyard_random___1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\courtyard_random_ (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="courtyard_random___20_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\courtyard_random_ (20).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="courtyard_random___21_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\courtyard_random_ (21).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="courtyard_random___22_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\courtyard_random_ (22).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="courtyard_random___23_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\courtyard_random_ (23).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="courtyard_random___24_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\courtyard_random_ (24).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="courtyard_random___2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\courtyard_random_ (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="courtyard_random___3_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\courtyard_random_ (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="courtyard_random___4_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\courtyard_random_ (4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="courtyard_random___5_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\courtyard_random_ (5).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="courtyard_random___6_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\courtyard_random_ (6).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="courtyard_random___7_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\courtyard_random_ (7).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="courtyard_random___8_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\courtyard_random_ (8).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="courtyard_random___9_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\courtyard_random_ (9).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ninja_run___10_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ninja_run_ (10).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ninja_run___11_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ninja_run_ (11).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ninja_run___1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ninja_run_ (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ninja_run___2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ninja_run_ (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ninja_run___3_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ninja_run_ (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ninja_run___4_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ninja_run_ (4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ninja_run___5_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ninja_run_ (5).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ninja_run___6_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ninja_run_ (6).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ninja_run___7_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ninja_run_ (7).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ninja_run___8_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ninja_run_ (8).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ninja_run___9_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ninja_run_ (9).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="torch__9_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Torch\torch (9).gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="lala" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\lala.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

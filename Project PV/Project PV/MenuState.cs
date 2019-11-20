@@ -13,12 +13,16 @@ namespace Project_PV
         public Rectangle startBtn { get; set; }
         public Rectangle font { get; set; }
         public GameStateManager gsm { get; set; }
-
+        public Timer vector;
+        public Graphics g2;
+        private int frame;
         public MenuState(GameStateManager gsm)
         {
             this.gsm = gsm;
-            startBtn = new Rectangle(271,373,200,50);
-            font = new Rectangle(241,36,300,100);
+            startBtn = new Rectangle(548, 524, 200,50);
+            font = new Rectangle(430,80,500,150);
+            
+            frame = 1;
         }
 
         public override void init()
@@ -28,16 +32,18 @@ namespace Project_PV
 
         public override void draw(Graphics g)
         {
+            this.g2 = g;
             object O = Properties.Resources.ResourceManager.GetObject("background");
             Image img = (Image)O;
-            g.DrawImage(img, 0, 0, 777, 492);
+            g2.DrawImage(img, 0, 0, 1300, 700);
             object O2 = Properties.Resources.ResourceManager.GetObject("button");
             img = (Image)O2;
-            g.DrawImage(img,startBtn);
-            O2 = Properties.Resources.ResourceManager.GetObject("font");
-            img = (Image)O2;
-            g.DrawImage(img, font);
-            //g.FillRectangle(new SolidBrush(Color.Red),font);
+            g2.DrawImage(img, startBtn);
+
+            O2 = Properties.Resources.ResourceManager.GetObject("torch__" + frame + "_");
+            Image img1 = (Image)O2;
+            g2.DrawImage(img1, 580, 80, 150, 150);
+
         }
 
         public override void mouse_click(object sender, MouseEventArgs e)
@@ -49,9 +55,14 @@ namespace Project_PV
                 gsm.loadState(gsm.stage);
             }
         }
-        public override void key_keydown(object sender, KeyEventArgs e)
+
+        public override void update()
         {
-            throw new NotImplementedException();
+            if (frame == 16)
+            {
+                frame = 0;
+            }
+            frame++;
         }
     }
 }

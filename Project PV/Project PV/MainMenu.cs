@@ -21,19 +21,11 @@ namespace Project_PV
         {
             object O1 = Properties.Resources.ResourceManager.GetObject("town_bg");
             Image img1 = (Image)O1;
-            g.DrawImage(img1, 0,0, 777, 492);
-
-            //O1 = Properties.Resources.ResourceManager.GetObject("town_ground");
-            //img1 = (Image)O1;
-            //g.DrawImage(img1, 0, 50, 777, 400);
-
-            //O1 = Properties.Resources.ResourceManager.GetObject("town_ground_sprite");
-            //img1 = (Image)O1;
-            //g.DrawImage(img1, 0, 50, 777, 400);
+            g.DrawImage(img1, 0,0, 1300, 700);
 
             object O = Properties.Resources.ResourceManager.GetObject("town_backdrop");
             Image img = (Image)O;
-            g.DrawImage(img, 0, 0, 777, 400);
+            g.DrawImage(img, 0, 0, 1300, 700);
 
             
         }
@@ -50,9 +42,9 @@ namespace Project_PV
             
         }
 
-        public override void key_keydown(object sender, KeyEventArgs e)
+        public override void update()
         {
-            throw new NotImplementedException();
+            
         }
     }
 }

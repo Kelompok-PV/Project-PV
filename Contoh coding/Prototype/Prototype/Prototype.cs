@@ -56,9 +56,5 @@ namespace Prototype
             gsm.KeyReleased(sender, e);
         }
 
-        private void Prototype_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }
