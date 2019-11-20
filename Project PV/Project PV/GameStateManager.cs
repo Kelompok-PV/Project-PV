@@ -17,7 +17,7 @@ namespace Project_PV
         public GameStateManager()
         {
             gameStates = new GameState[8];
-            this.stage = Stage.title;
+            this.stage = Stage.battleState;
             loadState(this.stage);
         }
 
@@ -33,7 +33,7 @@ namespace Project_PV
             }
             else if (stage == Stage.battleState)
             {
-                gameStates[(int)stage] = new MainMenu(this);
+                gameStates[(int)stage] = new BattleState(this);
             }
         }
 
@@ -51,6 +51,11 @@ namespace Project_PV
         {
             gameStates[(int)stage].update();
         }
+        public void key_keydown(object sender, KeyEventArgs e)
+        {
+            gameStates[(int)stage].key_keydown(sender, e);
+        }
+
     }
 
     public enum Stage

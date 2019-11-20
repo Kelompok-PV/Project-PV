@@ -115,3 +115,41 @@ E:\GitHub\Project-PV\Contoh coding\Prototype\Prototype\obj\Debug\Prototype.cspro
 E:\GitHub\Project-PV\Contoh coding\Prototype\Prototype\obj\Debug\Prototype.csproj.CoreCompileInputs.cache
 E:\GitHub\Project-PV\Contoh coding\Prototype\Prototype\obj\Debug\Prototype.exe
 E:\GitHub\Project-PV\Contoh coding\Prototype\Prototype\obj\Debug\Prototype.pdb
+C:\Users\Fabian\Documents\GitHub\Project-PV-fix\Contoh coding\Prototype\Prototype\bin\Debug\assets\char\Run (1).png
+C:\Users\Fabian\Documents\GitHub\Project-PV-fix\Contoh coding\Prototype\Prototype\bin\Debug\assets\char\Run (2).png
+C:\Users\Fabian\Documents\GitHub\Project-PV-fix\Contoh coding\Prototype\Prototype\bin\Debug\assets\char\Run (3).png
+C:\Users\Fabian\Documents\GitHub\Project-PV-fix\Contoh coding\Prototype\Prototype\bin\Debug\assets\char\Run (4).png
+C:\Users\Fabian\Documents\GitHub\Project-PV-fix\Contoh coding\Prototype\Prototype\bin\Debug\assets\char\Run (5).png
+C:\Users\Fabian\Documents\GitHub\Project-PV-fix\Contoh coding\Prototype\Prototype\bin\Debug\assets\char\Run (6).png
+C:\Users\Fabian\Documents\GitHub\Project-PV-fix\Contoh coding\Prototype\Prototype\bin\Debug\assets\char\Run (7).png
+C:\Users\Fabian\Documents\GitHub\Project-PV-fix\Contoh coding\Prototype\Prototype\bin\Debug\assets\char\Run (8).png
+C:\Users\Fabian\Documents\GitHub\Project-PV-fix\Contoh coding\Prototype\Prototype\bin\Debug\assets\Back2.gif
+C:\Users\Fabian\Documents\GitHub\Project-PV-fix\Contoh coding\Prototype\Prototype\bin\Debug\assets\Underworld 1.png
+C:\Users\Fabian\Documents\GitHub\Project-PV-fix\Contoh coding\Prototype\Prototype\bin\Debug\assets\char\Idle\Idle (1).png
+C:\Users\Fabian\Documents\GitHub\Project-PV-fix\Contoh coding\Prototype\Prototype\bin\Debug\assets\char\Idle\Idle (2).png
+C:\Users\Fabian\Documents\GitHub\Project-PV-fix\Contoh coding\Prototype\Prototype\bin\Debug\assets\char\Idle\Idle (3).png
+C:\Users\Fabian\Documents\GitHub\Project-PV-fix\Contoh coding\Prototype\Prototype\bin\Debug\assets\char\Idle\Idle (4).png
+C:\Users\Fabian\Documents\GitHub\Project-PV-fix\Contoh coding\Prototype\Prototype\bin\Debug\assets\char\Idle\Idle (5).png
+C:\Users\Fabian\Documents\GitHub\Project-PV-fix\Contoh coding\Prototype\Prototype\bin\Debug\assets\char\Idle\Idle (6).png
+C:\Users\Fabian\Documents\GitHub\Project-PV-fix\Contoh coding\Prototype\Prototype\bin\Debug\assets\char\Idle\Idle (7).png
+C:\Users\Fabian\Documents\GitHub\Project-PV-fix\Contoh coding\Prototype\Prototype\bin\Debug\assets\char\Idle\Idle (8).png
+C:\Users\Fabian\Documents\GitHub\Project-PV-fix\Contoh coding\Prototype\Prototype\bin\Debug\assets\char\Idle\Idle (9).png
+C:\Users\Fabian\Documents\GitHub\Project-PV-fix\Contoh coding\Prototype\Prototype\bin\Debug\assets\char\Jump\Jump (1).png
+C:\Users\Fabian\Documents\GitHub\Project-PV-fix\Contoh coding\Prototype\Prototype\bin\Debug\assets\char\Jump\Jump (2).png
+C:\Users\Fabian\Documents\GitHub\Project-PV-fix\Contoh coding\Prototype\Prototype\bin\Debug\assets\char\Jump\Jump (3).png
+C:\Users\Fabian\Documents\GitHub\Project-PV-fix\Contoh coding\Prototype\Prototype\bin\Debug\assets\char\Jump\Jump (4).png
+C:\Users\Fabian\Documents\GitHub\Project-PV-fix\Contoh coding\Prototype\Prototype\bin\Debug\assets\char\Jump\Jump (5).png
+C:\Users\Fabian\Documents\GitHub\Project-PV-fix\Contoh coding\Prototype\Prototype\bin\Debug\assets\char\Jump\Jump (6).png
+C:\Users\Fabian\Documents\GitHub\Project-PV-fix\Contoh coding\Prototype\Prototype\bin\Debug\assets\char\Jump\Jump (7).png
+C:\Users\Fabian\Documents\GitHub\Project-PV-fix\Contoh coding\Prototype\Prototype\bin\Debug\assets\char\Jump\Jump (8).png
+C:\Users\Fabian\Documents\GitHub\Project-PV-fix\Contoh coding\Prototype\Prototype\bin\Debug\assets\char\Jump\Jump (9).png
+C:\Users\Fabian\Documents\GitHub\Project-PV-fix\Contoh coding\Prototype\Prototype\bin\Debug\assets\char\Jump\Jump (10).png
+C:\Users\Fabian\Documents\GitHub\Project-PV-fix\Contoh coding\Prototype\Prototype\bin\Debug\Prototype.exe.config
+C:\Users\Fabian\Documents\GitHub\Project-PV-fix\Contoh coding\Prototype\Prototype\bin\Debug\Prototype.exe
+C:\Users\Fabian\Documents\GitHub\Project-PV-fix\Contoh coding\Prototype\Prototype\bin\Debug\Prototype.pdb
+C:\Users\Fabian\Documents\GitHub\Project-PV-fix\Contoh coding\Prototype\Prototype\obj\Debug\Prototype.csprojAssemblyReference.cache
+C:\Users\Fabian\Documents\GitHub\Project-PV-fix\Contoh coding\Prototype\Prototype\obj\Debug\Prototype.Properties.Resources.resources
+C:\Users\Fabian\Documents\GitHub\Project-PV-fix\Contoh coding\Prototype\Prototype\obj\Debug\Prototype.Prototype.resources
+C:\Users\Fabian\Documents\GitHub\Project-PV-fix\Contoh coding\Prototype\Prototype\obj\Debug\Prototype.csproj.GenerateResource.cache
+C:\Users\Fabian\Documents\GitHub\Project-PV-fix\Contoh coding\Prototype\Prototype\obj\Debug\Prototype.exe
+C:\Users\Fabian\Documents\GitHub\Project-PV-fix\Contoh coding\Prototype\Prototype\obj\Debug\Prototype.pdb

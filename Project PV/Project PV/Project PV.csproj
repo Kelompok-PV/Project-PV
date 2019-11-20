@@ -47,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BattleState.cs" />
     <Compile Include="equip.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -219,5 +220,124 @@
     <None Include="Resources\Torch\torch %2816%29.gif" />
   </ItemGroup>
   <ItemGroup />
+    <None Include="Resources\courtyard_background_ %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\courtyard_background_ %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\courtyard_background_ %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\courtyard_door.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\courtyard_last.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\courtyard_random_ %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\courtyard_random_ %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\courtyard_random_ %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\courtyard_random_ %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\courtyard_random_ %285%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\courtyard_random_ %286%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\courtyard_random_ %287%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\courtyard_random_ %288%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\courtyard_random_ %289%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\courtyard_random_ %2810%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\courtyard_random_ %2811%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\courtyard_random_ %2812%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\courtyard_random_ %2813%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\courtyard_random_ %2814%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\courtyard_random_ %2815%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\courtyard_random_ %2816%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\courtyard_random_ %2817%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\courtyard_random_ %2818%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\courtyard_random_ %2819%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\courtyard_random_ %2820%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\courtyard_random_ %2821%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\courtyard_random_ %2822%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\courtyard_random_ %2823%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\courtyard_random_ %2824%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ninja_run_ %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ninja_run_ %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ninja_run_ %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ninja_run_ %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ninja_run_ %285%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ninja_run_ %286%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ninja_run_ %287%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ninja_run_ %288%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ninja_run_ %289%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ninja_run_ %2810%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ninja_run_ %2811%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
