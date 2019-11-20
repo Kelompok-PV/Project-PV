@@ -48,5 +48,10 @@ namespace Project_PV
         {
             manager.key_keydown(sender, e);
         }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+
+        }
     }
 }
