@@ -291,5 +291,26 @@
   <ItemGroup>
     <None Include="Resources\ninja_run_ %2811%29.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lala.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lala2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\courtyard_backgroundcoba_ %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\courtyard_backgroundcoba_ %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\courtyard_backgroundcoba_ %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\courtyard_randomcoba_ %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\courtyard_randomcoba_ %284%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

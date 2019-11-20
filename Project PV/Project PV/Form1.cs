@@ -26,7 +26,7 @@ namespace Project_PV
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            manager = new GameStateManager();
+            manager = new GameStateManager(this);
         }
 
         private void timer1_Tick(object sender, EventArgs e)

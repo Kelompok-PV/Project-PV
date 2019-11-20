@@ -12,13 +12,15 @@ namespace Project_PV
     {
         public GameState[] gameStates { get; set; }
         public Stage stage { get; set; }
-        
 
-        public GameStateManager()
+        Form1 form;
+        public GameStateManager(Form1 forms)
         {
             gameStates = new GameState[8];
             this.stage = Stage.battleState;
+            form = forms;
             loadState(this.stage);
+            
         }
 
         public void loadState(Stage stage)
@@ -33,7 +35,7 @@ namespace Project_PV
             }
             else if (stage == Stage.battleState)
             {
-                gameStates[(int)stage] = new BattleState(this);
+                gameStates[(int)stage] = new BattleState(this,form);
             }
         }
 
