@@ -79,8 +79,18 @@ namespace Project_PV
         }
         public override void key_keydown(object sender, KeyEventArgs e)
         {
-            x--;
-            MessageBox.Show(x+"");
+            if (e.KeyData == Keys.D)
+            {
+                x -= 100;
+            }
+            if (e.KeyData == Keys.A)
+            {
+                x += 100;
+            }
+            if (e.KeyData == Keys.Space)
+            {
+                MessageBox.Show(x+"");
+            }
         }
     }
 }

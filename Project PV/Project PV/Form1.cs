@@ -38,15 +38,15 @@ namespace Project_PV
         {
             manager.mouse_click(sender, e);
         }
-        bool jalan = false;
-        private void Form1_KeyDown(object sender, KeyEventArgs e)
-        {
-            manager.key_keydown(sender,e);
-        }
-
+        
         private void Form1_KeyUp(object sender, KeyEventArgs e)
         {
             
+        }
+
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        {
+            manager.key_keydown(sender, e);
         }
     }
 }
