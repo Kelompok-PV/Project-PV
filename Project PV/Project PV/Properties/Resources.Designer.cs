@@ -19,7 +19,7 @@ namespace Project_PV.Properties {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -63,9 +63,15 @@ namespace Project_PV.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+<<<<<<< HEAD
         internal static System.Drawing.Bitmap archer_idle___1_ {
             get {
                 object obj = ResourceManager.GetObject("archer_idle___1_", resourceCulture);
+=======
+        internal static System.Drawing.Bitmap arrow {
+            get {
+                object obj = ResourceManager.GetObject("arrow", resourceCulture);
+>>>>>>> ee5dc73d2e6246243f1db6ca8f1e56fdd5534e05
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +79,15 @@ namespace Project_PV.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+<<<<<<< HEAD
         internal static System.Drawing.Bitmap archer_idle___2_ {
             get {
                 object obj = ResourceManager.GetObject("archer_idle___2_", resourceCulture);
+=======
+        internal static System.Drawing.Bitmap background {
+            get {
+                object obj = ResourceManager.GetObject("background", resourceCulture);
+>>>>>>> ee5dc73d2e6246243f1db6ca8f1e56fdd5534e05
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +95,15 @@ namespace Project_PV.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+<<<<<<< HEAD
         internal static System.Drawing.Bitmap archer_idle___3_ {
             get {
                 object obj = ResourceManager.GetObject("archer_idle___3_", resourceCulture);
+=======
+        internal static System.Drawing.Bitmap button {
+            get {
+                object obj = ResourceManager.GetObject("button", resourceCulture);
+>>>>>>> ee5dc73d2e6246243f1db6ca8f1e56fdd5534e05
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -93,9 +111,15 @@ namespace Project_PV.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+<<<<<<< HEAD
         internal static System.Drawing.Bitmap archer_idle___4_ {
             get {
                 object obj = ResourceManager.GetObject("archer_idle___4_", resourceCulture);
+=======
+        internal static System.Drawing.Bitmap district_midground {
+            get {
+                object obj = ResourceManager.GetObject("district_midground", resourceCulture);
+>>>>>>> ee5dc73d2e6246243f1db6ca8f1e56fdd5534e05
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -103,6 +127,7 @@ namespace Project_PV.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+<<<<<<< HEAD
         internal static System.Drawing.Bitmap archer_idle___5_ {
             get {
                 object obj = ResourceManager.GetObject("archer_idle___5_", resourceCulture);
@@ -236,6 +261,11 @@ namespace Project_PV.Properties {
         internal static System.Drawing.Bitmap archer_idle2___9_ {
             get {
                 object obj = ResourceManager.GetObject("archer_idle2___9_", resourceCulture);
+=======
+        internal static System.Drawing.Bitmap font {
+            get {
+                object obj = ResourceManager.GetObject("font", resourceCulture);
+>>>>>>> ee5dc73d2e6246243f1db6ca8f1e56fdd5534e05
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -333,6 +363,7 @@ namespace Project_PV.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+<<<<<<< HEAD
         internal static System.Drawing.Bitmap ninja_idle___8_ {
             get {
                 object obj = ResourceManager.GetObject("ninja_idle___8_", resourceCulture);
@@ -353,6 +384,11 @@ namespace Project_PV.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+=======
+        internal static System.Drawing.Bitmap town_backdrop {
+            get {
+                object obj = ResourceManager.GetObject("town_backdrop", resourceCulture);
+>>>>>>> ee5dc73d2e6246243f1db6ca8f1e56fdd5534e05
         internal static System.Drawing.Bitmap ninja_run___1_ {
             get {
                 object obj = ResourceManager.GetObject("ninja_run___1_", resourceCulture);
@@ -363,6 +399,9 @@ namespace Project_PV.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap town_bg {
+            get {
+                object obj = ResourceManager.GetObject("town_bg", resourceCulture);
         internal static System.Drawing.Bitmap ninja_run___10_ {
             get {
                 object obj = ResourceManager.GetObject("ninja_run___10_", resourceCulture);
@@ -373,6 +412,9 @@ namespace Project_PV.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap town_ground {
+            get {
+                object obj = ResourceManager.GetObject("town_ground", resourceCulture);
         internal static System.Drawing.Bitmap ninja_run___11_ {
             get {
                 object obj = ResourceManager.GetObject("ninja_run___11_", resourceCulture);
@@ -383,6 +425,9 @@ namespace Project_PV.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap town_ground_sprite {
+            get {
+                object obj = ResourceManager.GetObject("town_ground_sprite", resourceCulture);
         internal static System.Drawing.Bitmap ninja_run___2_ {
             get {
                 object obj = ResourceManager.GetObject("ninja_run___2_", resourceCulture);
