@@ -63,6 +63,186 @@ namespace Project_PV.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap archer_idle___1_ {
+            get {
+                object obj = ResourceManager.GetObject("archer_idle___1_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap archer_idle___2_ {
+            get {
+                object obj = ResourceManager.GetObject("archer_idle___2_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap archer_idle___3_ {
+            get {
+                object obj = ResourceManager.GetObject("archer_idle___3_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap archer_idle___4_ {
+            get {
+                object obj = ResourceManager.GetObject("archer_idle___4_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap archer_idle___5_ {
+            get {
+                object obj = ResourceManager.GetObject("archer_idle___5_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap archer_idle___6_ {
+            get {
+                object obj = ResourceManager.GetObject("archer_idle___6_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap archer_idle___7_ {
+            get {
+                object obj = ResourceManager.GetObject("archer_idle___7_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap archer_idle___8_ {
+            get {
+                object obj = ResourceManager.GetObject("archer_idle___8_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap archer_idle___9_ {
+            get {
+                object obj = ResourceManager.GetObject("archer_idle___9_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap archer_idle2___1_ {
+            get {
+                object obj = ResourceManager.GetObject("archer_idle2___1_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap archer_idle2___2_ {
+            get {
+                object obj = ResourceManager.GetObject("archer_idle2___2_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap archer_idle2___3_ {
+            get {
+                object obj = ResourceManager.GetObject("archer_idle2___3_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap archer_idle2___4_ {
+            get {
+                object obj = ResourceManager.GetObject("archer_idle2___4_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap archer_idle2___5_ {
+            get {
+                object obj = ResourceManager.GetObject("archer_idle2___5_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap archer_idle2___6_ {
+            get {
+                object obj = ResourceManager.GetObject("archer_idle2___6_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap archer_idle2___7_ {
+            get {
+                object obj = ResourceManager.GetObject("archer_idle2___7_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap archer_idle2___8_ {
+            get {
+                object obj = ResourceManager.GetObject("archer_idle2___8_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap archer_idle2___9_ {
+            get {
+                object obj = ResourceManager.GetObject("archer_idle2___9_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap gambar1 {
             get {
                 object obj = ResourceManager.GetObject("gambar1", resourceCulture);
@@ -76,6 +256,16 @@ namespace Project_PV.Properties {
         internal static System.Drawing.Bitmap ninja_idle___1_ {
             get {
                 object obj = ResourceManager.GetObject("ninja_idle___1_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ninja_idle___10_ {
+            get {
+                object obj = ResourceManager.GetObject("ninja_idle___10_", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -136,6 +326,26 @@ namespace Project_PV.Properties {
         internal static System.Drawing.Bitmap ninja_idle___7_ {
             get {
                 object obj = ResourceManager.GetObject("ninja_idle___7_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ninja_idle___8_ {
+            get {
+                object obj = ResourceManager.GetObject("ninja_idle___8_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ninja_idle___9_ {
+            get {
+                object obj = ResourceManager.GetObject("ninja_idle___9_", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
