@@ -21,23 +21,16 @@ namespace Project_PV
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
             Graphics g = e.Graphics;
-            //player.getImage(g);
             manager.draw(g);
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
             manager = new GameStateManager();
-
-            //object O1 = Properties.Resources.ResourceManager.GetObject("arrow");
-            //Image img1 = (Image)O1;
-
-            //this.Cursor = new Cursor("Resources\\arrow.png");
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            //player.hero_move_now++;
             Invalidate();
         }
 
@@ -48,22 +41,12 @@ namespace Project_PV
         bool jalan = false;
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyData == Keys.D&&!jalan)
-            {
-                jalan = true;
-                player.hero_move_now = 1;
-                player.hero_move = "run";
-            }
+            manager.key_keydown(sender,e);
         }
 
         private void Form1_KeyUp(object sender, KeyEventArgs e)
         {
-            if (player.hero_move != "idle")
-            {
-                jalan = false;
-                player.hero_move_now = 1;
-                player.hero_move = "idle";
-            }
+            
         }
     }
 }

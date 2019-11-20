@@ -49,5 +49,9 @@ namespace Project_PV
                 gsm.loadState(gsm.stage);
             }
         }
+        public override void key_keydown(object sender, KeyEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
