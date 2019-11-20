@@ -43,9 +43,8 @@ namespace Project_PV
 
         private void Form1_MouseClick(object sender, MouseEventArgs e)
         {
-            //MessageBox.Show("x: "+e.X+" - y: "+e.Y);
             manager.mouse_click(sender, e);
-
+        }
         bool jalan = false;
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {

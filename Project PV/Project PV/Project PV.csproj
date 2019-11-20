@@ -63,6 +63,11 @@
     <Compile Include="Player.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="status.cs" />
     <Compile Include="Skill.cs" />
     <Compile Include="stress.cs" />
@@ -71,14 +76,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -96,27 +96,6 @@
     <None Include="Resources\The_Blood.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\ninja_run_ %281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\ninja_run_ %282%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\ninja_run_ %283%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\ninja_run_ %284%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\ninja_run_ %285%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\ninja_run_ %286%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\ninja_run_ %287%29.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\background.jpg">
@@ -160,97 +139,6 @@
     <None Include="Resources\arrow.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="Resources\ninja_run_ %281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\ninja_run_ %289%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\ninja_run_ %2810%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\ninja_run_ %2811%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\archer_run_ %281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\archer_run_ %282%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\archer_run_ %283%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\archer_run_ %284%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\archer_run_ %285%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\archer_run_ %286%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\archer_run_ %287%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\archer_run_ %288%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\archer_run_ %289%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\archer_idle_ %281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\archer_idle_ %282%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\archer_idle_ %283%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\archer_idle_ %284%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\archer_idle_ %285%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\archer_idle_ %286%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\archer_idle_ %287%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\archer_idle_ %288%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\archer_idle_ %289%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\archer_idle2_ %281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\archer_idle2_ %282%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\archer_idle2_ %283%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\archer_idle2_ %284%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\archer_idle2_ %285%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\archer_idle2_ %286%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\archer_idle2_ %287%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\archer_idle2_ %288%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\archer_idle2_ %289%29.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ninja_idle_ %281%29.png" />

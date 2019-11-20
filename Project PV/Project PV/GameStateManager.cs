@@ -31,6 +31,10 @@ namespace Project_PV
             {
                 gameStates[(int)stage] = new MainMenu(this);
             }
+            else if (stage == Stage.battleState)
+            {
+                gameStates[(int)stage] = new MainMenu(this);
+            }
         }
 
         public void draw(Graphics g)
