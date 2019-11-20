@@ -15,7 +15,7 @@ namespace Project_PV
         public int x { get; set; }
         karakter player = new ninja("ninnin", 50, new equip[5], new List<string>(), 5, 5);
         public string url { get; set; }
-        public BattleState(GameStateManager gsm,Form1 form)
+        public BattleState(GameStateManager gsm)
         {
             Random r = new Random();
             this.gsm = gsm;
@@ -104,13 +104,18 @@ namespace Project_PV
             if (e.KeyData == Keys.D)
             {
                 x -= 10;
-                player.hero_move = "run";
+                //player.hero_move = "run";
             }
             if (e.KeyData == Keys.A&&x<0)
             {
                 x += 10;
-                player.hero_move = "run";
+                //player.hero_move = "run";
             }
+        }
+
+        public override void update()
+        {
+            
         }
     }
 }

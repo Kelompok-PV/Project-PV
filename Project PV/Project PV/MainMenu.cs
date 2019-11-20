@@ -46,5 +46,10 @@ namespace Project_PV
         {
             
         }
+
+        public override void key_keydown(object sender, KeyEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

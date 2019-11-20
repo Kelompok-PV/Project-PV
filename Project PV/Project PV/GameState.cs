@@ -14,6 +14,8 @@ namespace Project_PV
         public abstract void draw(Graphics g);
         public abstract void mouse_click(object sender, MouseEventArgs e);
         public abstract void update();
-        
+        public abstract void key_keydown(object sender, KeyEventArgs e);
+
+
     }
 }

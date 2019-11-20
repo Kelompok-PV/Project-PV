@@ -47,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BattleState.cs" />
     <Compile Include="equip.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -141,36 +142,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\ninja_idle_ %281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\ninja_idle_ %282%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\ninja_idle_ %283%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\ninja_idle_ %284%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\ninja_idle_ %285%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\ninja_idle_ %286%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\ninja_idle_ %287%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\ninja_idle_ %288%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\ninja_idle_ %289%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\ninja_idle_ %2810%29.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Torch\torch %281%29.gif" />
   </ItemGroup>
   <ItemGroup>
@@ -239,6 +210,35 @@
   <ItemGroup>
     <None Include="Resources\courtyard_randomcoba_ %284%29.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\ninja_idle_ %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ninja_idle_ %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ninja_idle_ %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ninja_idle_ %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ninja_idle_ %285%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ninja_idle_ %286%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ninja_idle_ %287%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ninja_idle_ %288%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ninja_idle_ %289%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ninja_idle_ %2810%29.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
