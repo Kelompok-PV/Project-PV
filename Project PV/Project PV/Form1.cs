@@ -21,28 +21,26 @@ namespace Project_PV
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
             Graphics g = e.Graphics;
-            //player.getImage(g);
+            
             manager.draw(g);
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
             manager = new GameStateManager();
-
-            //object O1 = Properties.Resources.ResourceManager.GetObject("arrow");
-            //Image img1 = (Image)O1;
-
-            //this.Cursor = new Cursor("Resources\\arrow.png");
+            timer1.Interval = 100;   
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
             //player.hero_move_now++;
+            manager.update();
             Invalidate();
         }
 
         private void Form1_MouseClick(object sender, MouseEventArgs e)
         {
+            MessageBox.Show("x: "+e.X+" y: "+e.Y);
             manager.mouse_click(sender, e);
         }
         bool jalan = false;

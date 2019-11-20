@@ -170,5 +170,54 @@
   <ItemGroup>
     <None Include="Resources\ninja_idle_ %2810%29.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Torch\torch %281%29.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Torch\torch %282%29.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Torch\torch %283%29.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Torch\torch %284%29.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Torch\torch %285%29.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Torch\torch %286%29.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Torch\torch %287%29.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Torch\torch %288%29.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Torch\torch %289%29.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Torch\torch %2810%29.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Torch\torch %2811%29.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Torch\torch %2812%29.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Torch\torch %2813%29.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Torch\torch %2814%29.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Torch\torch %2815%29.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Torch\torch %2816%29.gif" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

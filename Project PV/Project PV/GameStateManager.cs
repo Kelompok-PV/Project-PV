@@ -47,7 +47,10 @@ namespace Project_PV
             gameStates[(int)stage].mouse_click(sender,e);
         }
 
-        
+        public void update()
+        {
+            gameStates[(int)stage].update();
+        }
     }
 
     public enum Stage
