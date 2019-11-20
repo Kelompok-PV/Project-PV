@@ -13,6 +13,7 @@ namespace Project_PV
         public GameStateManager gsm { get; set; }
         public List<int> gambar { get; set; }
         public int x { get; set; }
+        karakter player = new ninja("ninnin", 50, new equip[5], new List<string>(), 5, 5);
         public BattleState(GameStateManager gsm)
         {
             Random r = new Random();
@@ -48,29 +49,32 @@ namespace Project_PV
         public override void draw(Graphics g)
         {
             
-            g.DrawImage(imgBg2, x, 20, 360, 400);
+            //g.DrawImage(imgBg2, x, 20, 360, 400);
             g.DrawImage(imgLast, x+220, 20, -220,400);
-            g.DrawImage(imgBg1, x, 0, 360, 100);
-            g.DrawImage(imgBg3, x, 320, 360, 100);
+            //g.DrawImage(imgBg1, x, 0, 360, 100);
+            //g.DrawImage(imgBg3, x, 320, 360, 100);
             
-            g.DrawImage(imgBg2, x+140, 20, 360, 400);
+            //g.DrawImage(imgBg2, x+140, 20, 360, 400);
             g.DrawImage(imgDoor, x+140, 20, 360, 400);
-            g.DrawImage(imgBg1, x + 140, 0, 360, 100);
-            g.DrawImage(imgBg3, x + 140, 320, 360, 100);
+            //g.DrawImage(imgBg1, x + 140, 0, 360, 100);
+            //g.DrawImage(imgBg3, x + 140, 320, 360, 100);
             for (int i = 0; i < gambar.Count; i++)
             {
                 object O = Properties.Resources.ResourceManager.GetObject("courtyard_random___"+gambar[i]+"_");
                 Image img = (Image)O;
-                g.DrawImage(imgBg2, x + 340 + i * 360, 20, 360, 400);
+                //g.DrawImage(imgBg2, x + 340 + i * 360, 20, 360, 400);
                 g.DrawImage(img, x + 340 + i * 360, 20, 360, 400);
-                g.DrawImage(imgBg1, x + 340 + i * 360, 0, 360, 100);
-                g.DrawImage(imgBg3, x + 340 + i * 360, 320, 360, 100);
+                //g.DrawImage(imgBg1, x + 340 + i * 360, 0, 360, 100);
+                //g.DrawImage(imgBg3, x + 340 + i * 360, 320, 360, 100);
             }
             
-            g.DrawImage(imgBg2, x + 340 + 5 * 360, 20, 360, 400);
+            //g.DrawImage(imgBg2, x + 340 + 5 * 360, 20, 360, 400);
             g.DrawImage(imgDoor, x + 340 + 5 * 360, 20, 360, 400);
-            g.DrawImage(imgBg1, x + 340 + 5 * 360, 0, 360, 100);
-            g.DrawImage(imgBg3, x + 340 + 5 * 360, 320, 360, 100);
+            //g.DrawImage(imgBg1, x + 340 + 5 * 360, 0, 360, 100);
+            //g.DrawImage(imgBg3, x + 340 + 5 * 360, 320, 360, 100);
+
+            player.getImage(g);
+            player.hero_move_now++;
         }
 
         public override void mouse_click(object sender, MouseEventArgs e)
@@ -79,17 +83,15 @@ namespace Project_PV
         }
         public override void key_keydown(object sender, KeyEventArgs e)
         {
-            if (e.KeyData == Keys.D)
+            if (e.KeyData == Keys.D&&x>-1200)
             {
-                x -= 100;
+                x -= 10;
+                player.hero_move = "run";
             }
-            if (e.KeyData == Keys.A)
+            if (e.KeyData == Keys.A&&x<0)
             {
-                x += 100;
-            }
-            if (e.KeyData == Keys.Space)
-            {
-                MessageBox.Show(x+"");
+                x += 10;
+                player.hero_move = "run";
             }
         }
     }

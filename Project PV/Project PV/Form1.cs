@@ -17,7 +17,7 @@ namespace Project_PV
         {
             InitializeComponent();
         }
-        karakter player = new ninja("ninnin", 50, new equip[5], new List<string>(), 5, 5);
+        
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
             Graphics g = e.Graphics;
