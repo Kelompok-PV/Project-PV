@@ -48,7 +48,9 @@ namespace Project_PV
 
         private void Form1_KeyUp(object sender, KeyEventArgs e)
         {
-
+            manager.Form1_KeyUp(sender, e);
         }
+
+        
     }
 }

@@ -19,7 +19,7 @@ namespace Project_PV.Properties {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -126,6 +126,26 @@ namespace Project_PV.Properties {
         internal static System.Drawing.Bitmap courtyard_backgroundcoba___3_ {
             get {
                 object obj = ResourceManager.GetObject("courtyard_backgroundcoba___3_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap courtyard_doorcoba {
+            get {
+                object obj = ResourceManager.GetObject("courtyard_doorcoba", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap courtyard_lastcoba {
+            get {
+                object obj = ResourceManager.GetObject("courtyard_lastcoba", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -306,6 +326,116 @@ namespace Project_PV.Properties {
         internal static System.Drawing.Bitmap ninja_idle___9_ {
             get {
                 object obj = ResourceManager.GetObject("ninja_idle___9_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ninja_run___1_ {
+            get {
+                object obj = ResourceManager.GetObject("ninja_run___1_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ninja_run___10_ {
+            get {
+                object obj = ResourceManager.GetObject("ninja_run___10_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ninja_run___11_ {
+            get {
+                object obj = ResourceManager.GetObject("ninja_run___11_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ninja_run___2_ {
+            get {
+                object obj = ResourceManager.GetObject("ninja_run___2_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ninja_run___3_ {
+            get {
+                object obj = ResourceManager.GetObject("ninja_run___3_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ninja_run___4_ {
+            get {
+                object obj = ResourceManager.GetObject("ninja_run___4_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ninja_run___5_ {
+            get {
+                object obj = ResourceManager.GetObject("ninja_run___5_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ninja_run___6_ {
+            get {
+                object obj = ResourceManager.GetObject("ninja_run___6_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ninja_run___7_ {
+            get {
+                object obj = ResourceManager.GetObject("ninja_run___7_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ninja_run___8_ {
+            get {
+                object obj = ResourceManager.GetObject("ninja_run___8_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ninja_run___9_ {
+            get {
+                object obj = ResourceManager.GetObject("ninja_run___9_", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

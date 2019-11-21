@@ -187,21 +187,6 @@
     <None Include="Resources\lala2.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\courtyard_backgroundcoba_ %281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\courtyard_backgroundcoba_ %282%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\courtyard_backgroundcoba_ %283%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\courtyard_randomcoba_ %281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\courtyard_randomcoba_ %284%29.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\ninja_idle_ %281%29.png" />
   </ItemGroup>
   <ItemGroup>
@@ -257,6 +242,60 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\abbey.character_background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\courtyard_backgroundcoba_ %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\courtyard_backgroundcoba_ %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\courtyard_backgroundcoba_ %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\courtyard_randomcoba_ %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\courtyard_randomcoba_ %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ninja_run_ %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ninja_run_ %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ninja_run_ %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ninja_run_ %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ninja_run_ %285%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ninja_run_ %286%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ninja_run_ %287%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ninja_run_ %288%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ninja_run_ %289%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ninja_run_ %2810%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ninja_run_ %2811%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\courtyard_doorcoba.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\courtyard_lastcoba.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
