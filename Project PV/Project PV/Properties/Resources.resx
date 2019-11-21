@@ -142,12 +142,6 @@
   <data name="town_bg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\town_bg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="town_ground" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\town_ground.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="town_ground_sprite" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\town_ground_sprite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="ninja_idle___10_" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ninja_idle_ (10).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -225,5 +219,29 @@
   </data>
   <data name="torch__9_" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Torch\torch (9).gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="town_bridge" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Town\town_bridge.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="darkest" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\darkest.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="town_cloud" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Town\town cloud.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="town_full1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Town\town full1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="town_ground" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Town\town_ground.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="town_ground_sprite" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Town\town_ground.sprite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="town_left_cliff" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Town\town_left_cliff.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="wagon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Town\wagon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

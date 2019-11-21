@@ -121,16 +121,6 @@
     <None Include="Resources\district_midground.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\town_ground_sprite.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\town_ground.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\town_bg.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -218,6 +208,29 @@
   <ItemGroup>
     <None Include="Resources\Torch\torch %2816%29.gif" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\darkest.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Town\town_bridge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Town\town_left_cliff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Town\town_ground.sprite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Town\town_ground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Town\wagon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Town\town full1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Town\town cloud.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
