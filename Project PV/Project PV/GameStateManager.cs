@@ -17,7 +17,7 @@ namespace Project_PV
         {
             gameStates = new GameState[8];
             this.stage = Stage.title;
-            //this.stage = Stage.battleState;
+			//this.stage = Stage.battleState;
             this.stage = Stage.battleState;
             loadState(this.stage);
             
