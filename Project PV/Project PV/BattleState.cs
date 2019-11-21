@@ -15,6 +15,7 @@ namespace Project_PV
         public int x { get; set; }
         karakter player = new ninja("ninnin", 50, new equip[5], new List<string>(), 5, 5);
         public string url { get; set; }
+        
         public BattleState(GameStateManager gsm)
         {
             Random r = new Random();
@@ -32,19 +33,6 @@ namespace Project_PV
             imgDoor = (Image)door;
             x = 0;
             img = (Image)O;
-
-            //for (int i = 0; i < gambar.Count; i++)
-            //{
-            //    PictureBox pb = new PictureBox();
-            //    pb.Width = 450;
-            //    pb.Height = 450;
-            //    pb.Location = new Point(0, 0);
-            //     Properties.Resources.ResourceManager.GetObject("courtyard_random___" + gambar[i] + "_");
-            //    Image img = (Image)O;
-            //    pb.Image = img;
-            //    form.Controls.Add(pb);
-            //}
-
         }
 
         public override void init()
@@ -54,8 +42,8 @@ namespace Project_PV
         object background1 = Properties.Resources.ResourceManager.GetObject("courtyard_backgroundcoba___1_");
         object background2 = Properties.Resources.ResourceManager.GetObject("courtyard_backgroundcoba___2_");
         object background3 = Properties.Resources.ResourceManager.GetObject("courtyard_backgroundcoba___3_");
-        object last = Properties.Resources.ResourceManager.GetObject("courtyard_last"); 
-        object door = Properties.Resources.ResourceManager.GetObject("courtyard_door"); 
+        object last = Properties.Resources.ResourceManager.GetObject("courtyard_lastcoba"); 
+        object door = Properties.Resources.ResourceManager.GetObject("courtyard_doorcoba"); 
         Image imgLast;
         Image imgDoor;
         Image imgBg1;
@@ -65,31 +53,40 @@ namespace Project_PV
         Image img ;
         public override void draw(Graphics g)
         {
-
-            //g.DrawImage(imgBg2, x, 20, 360, 400);
-            //g.DrawImage(imgLast, x+220, 20, -220,400);
-            //g.DrawImage(imgBg1, x, 0, 360, 100);
-            //g.DrawImage(imgBg3, x, 320, 360, 100);
-
-            //g.DrawImage(imgBg2, x + 140, 20, 360, 400);
-            //g.DrawImage(imgDoor, x+140, 20, 360, 400);
-            //g.DrawImage(imgBg1, x + 140, 0, 360, 100);
-            //g.DrawImage(imgBg3, x + 140, 320, 360, 100);
+            g.ScaleTransform(zoom, zoom);
+            g.TranslateTransform(-ox, -oy);
+            //last left
+            g.DrawImage(imgBg2, x, 20, 450, 450);
+            g.DrawImage(imgLast, x + 220, 20, -220, 450);
+            g.DrawImage(imgBg1, x, 0, 450, 100);
+            g.DrawImage(imgBg3, x, 380, 450, 100);
+            
+            //door right
+            g.DrawImage(imgBg2, x + 140, 20, 450, 450);
+            g.DrawImage(imgDoor, x + 140, 20, 450, 450);
+            g.DrawImage(imgBg1, x + 140, 0, 450, 100);
+            g.DrawImage(imgBg3, x + 140, 380, 450, 100);
+            g.FillRectangle(new SolidBrush(Color.Red), x + 250, 150, 200, 250);
             for (int i = 0; i < gambar.Count; i++)
             {
-                object O = Properties.Resources.ResourceManager.GetObject("courtyard_randomcoba___4_");
-                //object O = Properties.Resources.ResourceManager.GetObject("lala2");
-                Image img = (Image)O;
-                g.DrawImage(imgBg2, x + 340 + i * 360, 20, 450, 450);
-                g.DrawImage(img, x +340+ i * 360, 0, 450, 450);
-                g.DrawImage(imgBg1, x + 340 + i * 360, 0, 450, 100);
-                g.DrawImage(imgBg3, x + 340 + i * 360, 380, 450, 100);
+                object background_random = Properties.Resources.ResourceManager.GetObject("courtyard_randomcoba___4_");
+                Image img = (Image)background_random;
+                g.DrawImage(imgBg2, x + 585 + i * 360, 20, 450, 450);
+                g.DrawImage(img, x + 585 + i * 360, 0, 450, 450);
+                g.DrawImage(imgBg1, x + 585 + i * 360, 0, 450, 100);
+                g.DrawImage(imgBg3, x + 585 + i * 360, 380, 450, 100);
             }
-
-            //g.DrawImage(imgBg2, x + 340 + 5 * 360, 20, 360, 400);
-            //g.DrawImage(imgDoor, x + 340 + 5 * 360, 20, 360, 400);
-            //g.DrawImage(imgBg1, x + 340 + 5 * 360, 0, 360, 100);
-            //g.DrawImage(imgBg3, x + 340 + 5 * 360, 320, 360, 100);
+            //last right
+            g.DrawImage(imgBg2, x + 800 + 5 * 360, 20, 450, 450);
+            g.DrawImage(imgLast, x + 800 + 5 * 360, 20, 450, 450);
+            g.DrawImage(imgBg1, x + 800 + 5 * 360, 0, 450, 100);
+            g.DrawImage(imgBg3, x + 800 + 5 * 360, 380, 450, 100);
+            //door right
+            g.DrawImage(imgBg2, x + 585 + 5 * 360, 20, 450, 450);
+            g.DrawImage(imgDoor, x + 585 + 5 * 360, 20, 450, 450);
+            g.DrawImage(imgBg1, x + 585 + 5 * 360, 0, 450, 100);
+            g.DrawImage(imgBg3, x + 585 + 5 * 360, 380, 450, 100);
+            g.FillRectangle(new SolidBrush(Color.Red), x + 700 + 5 * 360, 150, 200, 250);
 
             player.getImage(g);
             player.hero_move_now++;
@@ -97,25 +94,53 @@ namespace Project_PV
 
         public override void mouse_click(object sender, MouseEventArgs e)
         {
-
+            zoomin = true;
         }
         public override void key_keydown(object sender, KeyEventArgs e)
         {
-            if (e.KeyData == Keys.D)
+            if (e.KeyData == Keys.D&&x>-1700)
             {
                 x -= 10;
-                //player.hero_move = "run";
+                player.hero_move = "run";
+            }else if(e.KeyData == Keys.D&&player.x<850)
+            {
+                player.x += 10;
+                player.hero_move = "run";
             }
-            if (e.KeyData == Keys.A&&x<0)
+            if (e.KeyData == Keys.A && player.x > 300)
+            {
+                player.x -= 10;
+                player.hero_move = "run";
+            }
+            else if (e.KeyData == Keys.A&&x<0)
             {
                 x += 10;
-                //player.hero_move = "run";
+                player.hero_move = "run";
+            }
+        }
+        float zoom = 1;
+        Point c = new Point(1000 / 2, 300 / 2);
+        float ox = 0;
+        float oy = 0;
+        bool zoomin = false;
+        public override void update()
+        {
+            if (zoom < 2 && zoomin == true)
+            {
+                
+                ox = c.X * (zoom - 1f);
+                oy = c.Y * (zoom - 1f);
+
+                // first move and then scale
+                
+                zoom = (float)(zoom + 0.1);
             }
         }
 
-        public override void update()
+        public override void key_KeyUp(object sender, KeyEventArgs e)
         {
-            
+            player.hero_move_now = 1;
+            player.hero_move = "idle";
         }
     }
 }

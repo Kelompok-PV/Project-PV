@@ -91,5 +91,10 @@ namespace Project_PV
         {
             throw new NotImplementedException();
         }
+
+        public override void key_KeyUp(object sender, KeyEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

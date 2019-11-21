@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Drawing.Text;
 
 namespace Project_PV
 {
@@ -21,6 +22,7 @@ namespace Project_PV
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
             Graphics g = e.Graphics;
+            Config.rect = this.ClientRectangle;
             manager.draw(g);
         }
 
@@ -48,7 +50,9 @@ namespace Project_PV
 
         private void Form1_KeyUp(object sender, KeyEventArgs e)
         {
-
+            manager.Form1_KeyUp(sender, e);
         }
+
+        
     }
 }

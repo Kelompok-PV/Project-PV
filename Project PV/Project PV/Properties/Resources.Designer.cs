@@ -133,6 +133,26 @@ namespace Project_PV.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap courtyard_doorcoba {
+            get {
+                object obj = ResourceManager.GetObject("courtyard_doorcoba", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap courtyard_lastcoba {
+            get {
+                object obj = ResourceManager.GetObject("courtyard_lastcoba", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap courtyard_randomcoba___1_ {
             get {
                 object obj = ResourceManager.GetObject("courtyard_randomcoba___1_", resourceCulture);
@@ -167,6 +187,16 @@ namespace Project_PV.Properties {
             get {
                 object obj = ResourceManager.GetObject("district_midground", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] DwarvenAxe_BB_W00_Regular {
+            get {
+                object obj = ResourceManager.GetObject("DwarvenAxe_BB_W00_Regular", resourceCulture);
+                return ((byte[])(obj));
             }
         }
         
@@ -316,6 +346,9 @@ namespace Project_PV.Properties {
         internal static System.Drawing.Bitmap sanitarium_character {
             get {
                 object obj = ResourceManager.GetObject("sanitarium_character", resourceCulture);
+        internal static System.Drawing.Bitmap ninja_run___1_ {
+            get {
+                object obj = ResourceManager.GetObject("ninja_run___1_", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -326,6 +359,9 @@ namespace Project_PV.Properties {
         internal static System.Drawing.Bitmap sanitarium_character_background {
             get {
                 object obj = ResourceManager.GetObject("sanitarium_character_background", resourceCulture);
+        internal static System.Drawing.Bitmap ninja_run___10_ {
+            get {
+                object obj = ResourceManager.GetObject("ninja_run___10_", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -336,6 +372,89 @@ namespace Project_PV.Properties {
         internal static System.Drawing.Bitmap sanitarium_icon {
             get {
                 object obj = ResourceManager.GetObject("sanitarium_icon", resourceCulture);
+        internal static System.Drawing.Bitmap ninja_run___11_ {
+            get {
+                object obj = ResourceManager.GetObject("ninja_run___11_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ninja_run___2_ {
+            get {
+                object obj = ResourceManager.GetObject("ninja_run___2_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ninja_run___3_ {
+            get {
+                object obj = ResourceManager.GetObject("ninja_run___3_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ninja_run___4_ {
+            get {
+                object obj = ResourceManager.GetObject("ninja_run___4_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ninja_run___5_ {
+            get {
+                object obj = ResourceManager.GetObject("ninja_run___5_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ninja_run___6_ {
+            get {
+                object obj = ResourceManager.GetObject("ninja_run___6_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ninja_run___7_ {
+            get {
+                object obj = ResourceManager.GetObject("ninja_run___7_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ninja_run___8_ {
+            get {
+                object obj = ResourceManager.GetObject("ninja_run___8_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ninja_run___9_ {
+            get {
+                object obj = ResourceManager.GetObject("ninja_run___9_", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -546,26 +665,6 @@ namespace Project_PV.Properties {
         internal static System.Drawing.Bitmap town_full1 {
             get {
                 object obj = ResourceManager.GetObject("town_full1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap town_ground {
-            get {
-                object obj = ResourceManager.GetObject("town_ground", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap town_ground_sprite {
-            get {
-                object obj = ResourceManager.GetObject("town_ground_sprite", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
