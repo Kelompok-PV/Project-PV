@@ -18,11 +18,9 @@ namespace Project_PV
             InitializeComponent();
             this.DoubleBuffered = true;
         }
-        karakter player = new ninja("ninnin", 50, new equip[5], new List<string>(), 5, 5);
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
             Graphics g = e.Graphics;
-            
             manager.draw(g);
         }
 
@@ -34,34 +32,23 @@ namespace Project_PV
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            //player.hero_move_now++;
             manager.update();
             Invalidate();
         }
 
         private void Form1_MouseClick(object sender, MouseEventArgs e)
         {
+            //MessageBox.Show("x: "+e.X+" y: "+e.Y);
             manager.mouse_click(sender, e);
         }
-        bool jalan = false;
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyData == Keys.D&&!jalan)
-            {
-                jalan = true;
-                player.hero_move_now = 1;
-                player.hero_move = "run";
-            }
+            manager.key_keydown(sender, e);
         }
 
         private void Form1_KeyUp(object sender, KeyEventArgs e)
         {
-            if (player.hero_move != "idle")
-            {
-                jalan = false;
-                player.hero_move_now = 1;
-                player.hero_move = "idle";
-            }
+
         }
     }
 }

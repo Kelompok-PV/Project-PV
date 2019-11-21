@@ -85,5 +85,10 @@ namespace Project_PV
         {
             xCloud-=1;
         }
+
+        public override void key_keydown(object sender, KeyEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
