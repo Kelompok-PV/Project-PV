@@ -310,5 +310,20 @@
   <ItemGroup>
     <None Include="Resources\courtyard_lastcoba.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\remove_quirk_negative.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\remove_quirk_positive.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blacksmith.character.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blacksmith.character_background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blacksmith.icon.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

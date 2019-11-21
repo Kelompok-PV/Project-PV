@@ -15,13 +15,14 @@ namespace Project_PV
 
         public GameStateManager()
         {
-            gameStates = new GameState[10];
-            this.stage = Stage.mainMenu;
+            gameStates = new GameState[11];
+            //this.stage = Stage.sanitarium;
+            this.stage = Stage.blacksmith;
             //this.stage = Stage.battleState;
-            gameStates = new GameState[8];
-            this.stage = Stage.title;
+            //gameStates = new GameState[8];
+            //this.stage = Stage.title;
             //this.stage = Stage.battleState;
-            this.stage = Stage.battleState;
+            //this.stage = Stage.battleState;
             loadState(this.stage);
             
         }
@@ -43,6 +44,10 @@ namespace Project_PV
             else if (stage == Stage.sanitarium)
             {
                 gameStates[(int)stage] = new Sanitarium(this);
+            }
+            else if (stage == Stage.blacksmith)
+            {
+                gameStates[(int)stage] = new Blacksmith(this);
             }
 
         }
@@ -81,6 +86,7 @@ namespace Project_PV
         battleState,
         gameOver,
         completeStage,
-        sanitarium
+        sanitarium,
+        blacksmith
     }
 }

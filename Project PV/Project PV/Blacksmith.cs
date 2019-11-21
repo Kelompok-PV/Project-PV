@@ -10,9 +10,50 @@ namespace Project_PV
 {
     class Blacksmith : GameState
     {
+        GameStateManager gsm { get; set; }
+        public Font title { get; set; }
+        public Font subtitle { get; set; }
+        public Font paragraph { get; set; }
+        public Rectangle font { get; set; }
+
+        List<string> text = new List<string>();
+        List<PointF> ptext = new List<PointF>();
+        public Blacksmith(GameStateManager gsm)
+        {
+            this.gsm = gsm;
+            font = new Rectangle(430, 80, 500, 150);
+            Config.font.AddFontFile("Resources\\DwarvenAxe BB W00 Regular.ttf");
+            title = new Font(Config.font.Families[0], 30, FontStyle.Regular);
+            subtitle = new Font(Config.font.Families[0], 20, FontStyle.Regular);
+
+            text.Add("Blacksmith"); text.Add("Drag a hero from the roster here.");
+            ptext.Add(new Point(120, 50)); ptext.Add(new Point(700, 55));
+        }
+
         public override void draw(Graphics g)
         {
-            
+            object O1 = Project_PV.Properties.Resources.blacksmith_character_background;
+            Image background = (Image)O1;
+            g.DrawImage(background, 0, 0, 1300, 700);
+
+            object O2 = Project_PV.Properties.Resources.blacksmith_icon;
+            Image icon = (Image)O2;
+            g.DrawImage(icon, 10, 20, 100, 100);
+
+            StringFormat format = StringFormat.GenericTypographic;
+            float dpi = g.DpiY;
+
+            Pen pen = new Pen(new SolidBrush(Color.Yellow));
+            g.DrawString(text[0], title, new SolidBrush(Color.Yellow), ptext[0]);
+            g.DrawString(text[1], subtitle, new SolidBrush(Color.Gray), ptext[1]);
+
+            object O3 = Project_PV.Properties.Resources.blacksmith_character;
+            Image character = (Image)O3;
+            g.DrawImage(character, 20, 100, 750, 620);
+
+            object O4 = Project_PV.Properties.Resources.remove_quirk_positive;
+            Image qpost = (Image)O4;
+            g.DrawImage(qpost, 25, 115, 70, 70);
         }
 
         public override void init()
@@ -25,6 +66,11 @@ namespace Project_PV
             throw new NotImplementedException();
         }
 
+        public override void key_KeyUp(object sender, KeyEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
         public override void mouse_click(object sender, MouseEventArgs e)
         {
             throw new NotImplementedException();
@@ -32,7 +78,7 @@ namespace Project_PV
 
         public override void update()
         {
-            throw new NotImplementedException();
+            
         }
     }
 }

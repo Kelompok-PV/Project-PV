@@ -93,6 +93,36 @@ namespace Project_PV.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap blacksmith_character {
+            get {
+                object obj = ResourceManager.GetObject("blacksmith_character", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap blacksmith_character_background {
+            get {
+                object obj = ResourceManager.GetObject("blacksmith_character_background", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap blacksmith_icon {
+            get {
+                object obj = ResourceManager.GetObject("blacksmith_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap button {
             get {
                 object obj = ResourceManager.GetObject("button", resourceCulture);
@@ -343,9 +373,6 @@ namespace Project_PV.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap sanitarium_character {
-            get {
-                object obj = ResourceManager.GetObject("sanitarium_character", resourceCulture);
         internal static System.Drawing.Bitmap ninja_run___1_ {
             get {
                 object obj = ResourceManager.GetObject("ninja_run___1_", resourceCulture);
@@ -356,9 +383,6 @@ namespace Project_PV.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap sanitarium_character_background {
-            get {
-                object obj = ResourceManager.GetObject("sanitarium_character_background", resourceCulture);
         internal static System.Drawing.Bitmap ninja_run___10_ {
             get {
                 object obj = ResourceManager.GetObject("ninja_run___10_", resourceCulture);
@@ -369,9 +393,6 @@ namespace Project_PV.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap sanitarium_icon {
-            get {
-                object obj = ResourceManager.GetObject("sanitarium_icon", resourceCulture);
         internal static System.Drawing.Bitmap ninja_run___11_ {
             get {
                 object obj = ResourceManager.GetObject("ninja_run___11_", resourceCulture);
@@ -455,6 +476,56 @@ namespace Project_PV.Properties {
         internal static System.Drawing.Bitmap ninja_run___9_ {
             get {
                 object obj = ResourceManager.GetObject("ninja_run___9_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap remove_quirk_negative {
+            get {
+                object obj = ResourceManager.GetObject("remove_quirk_negative", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap remove_quirk_positive {
+            get {
+                object obj = ResourceManager.GetObject("remove_quirk_positive", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sanitarium_character {
+            get {
+                object obj = ResourceManager.GetObject("sanitarium_character", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sanitarium_character_background {
+            get {
+                object obj = ResourceManager.GetObject("sanitarium_character_background", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sanitarium_icon {
+            get {
+                object obj = ResourceManager.GetObject("sanitarium_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -665,6 +736,26 @@ namespace Project_PV.Properties {
         internal static System.Drawing.Bitmap town_full1 {
             get {
                 object obj = ResourceManager.GetObject("town_full1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap town_ground {
+            get {
+                object obj = ResourceManager.GetObject("town_ground", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap town_ground_sprite {
+            get {
+                object obj = ResourceManager.GetObject("town_ground_sprite", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
