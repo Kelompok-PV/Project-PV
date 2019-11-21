@@ -15,6 +15,7 @@ namespace Project_PV
         public int x { get; set; }
         karakter player = new ninja("ninnin", 50, new equip[5], new List<string>(), 5, 5);
         public string url { get; set; }
+        
         public BattleState(GameStateManager gsm)
         {
             Random r = new Random();
@@ -52,16 +53,20 @@ namespace Project_PV
         Image img ;
         public override void draw(Graphics g)
         {
+            g.ScaleTransform(zoom, zoom);
+            g.TranslateTransform(-ox, -oy);
             //last left
             g.DrawImage(imgBg2, x, 20, 450, 450);
             g.DrawImage(imgLast, x + 220, 20, -220, 450);
             g.DrawImage(imgBg1, x, 0, 450, 100);
             g.DrawImage(imgBg3, x, 380, 450, 100);
+            
             //door right
             g.DrawImage(imgBg2, x + 140, 20, 450, 450);
             g.DrawImage(imgDoor, x + 140, 20, 450, 450);
             g.DrawImage(imgBg1, x + 140, 0, 450, 100);
             g.DrawImage(imgBg3, x + 140, 380, 450, 100);
+            g.FillRectangle(new SolidBrush(Color.Red), x + 250, 150, 200, 250);
             for (int i = 0; i < gambar.Count; i++)
             {
                 object background_random = Properties.Resources.ResourceManager.GetObject("courtyard_randomcoba___4_");
@@ -81,15 +86,15 @@ namespace Project_PV
             g.DrawImage(imgDoor, x + 585 + 5 * 360, 20, 450, 450);
             g.DrawImage(imgBg1, x + 585 + 5 * 360, 0, 450, 100);
             g.DrawImage(imgBg3, x + 585 + 5 * 360, 380, 450, 100);
+            g.FillRectangle(new SolidBrush(Color.Red), x + 700 + 5 * 360, 150, 200, 250);
 
-            
             player.getImage(g);
             player.hero_move_now++;
         }
 
         public override void mouse_click(object sender, MouseEventArgs e)
         {
-            MessageBox.Show(player.x+"");
+            zoomin = true;
         }
         public override void key_keydown(object sender, KeyEventArgs e)
         {
@@ -113,10 +118,23 @@ namespace Project_PV
                 player.hero_move = "run";
             }
         }
-
+        float zoom = 1;
+        Point c = new Point(1000 / 2, 300 / 2);
+        float ox = 0;
+        float oy = 0;
+        bool zoomin = false;
         public override void update()
         {
-            
+            if (zoom < 2 && zoomin == true)
+            {
+                
+                ox = c.X * (zoom - 1f);
+                oy = c.Y * (zoom - 1f);
+
+                // first move and then scale
+                
+                zoom = (float)(zoom + 0.1);
+            }
         }
 
         public override void key_KeyUp(object sender, KeyEventArgs e)
