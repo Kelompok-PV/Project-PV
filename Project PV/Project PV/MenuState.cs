@@ -13,7 +13,6 @@ namespace Project_PV
         public Rectangle startBtn { get; set; }
         public Rectangle font { get; set; }
         public GameStateManager gsm { get; set; }
-        public Timer vector;
         public Graphics g2;
         private int frame;
         public MenuState(GameStateManager gsm)
@@ -40,10 +39,15 @@ namespace Project_PV
             img = (Image)O2;
             g2.DrawImage(img, startBtn);
 
-            O2 = Properties.Resources.ResourceManager.GetObject("torch__" + frame + "_");
+            O2 = Properties.Resources.ResourceManager.GetObject("darkest");
             Image img1 = (Image)O2;
+            g2.DrawImage(img1, 446, 60, 150, 100);
+
+            O2 = Properties.Resources.ResourceManager.GetObject("torch__" + frame + "_");
+            img1 = (Image)O2;
             g2.DrawImage(img1, 580, 80, 150, 150);
 
+           
         }
 
         public override void mouse_click(object sender, MouseEventArgs e)

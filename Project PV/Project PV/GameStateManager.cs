@@ -17,6 +17,7 @@ namespace Project_PV
         public GameStateManager()
         {
             gameStates = new GameState[8];
+            this.stage = Stage.mainMenu;
             this.stage = Stage.battleState;
             loadState(this.stage);
             

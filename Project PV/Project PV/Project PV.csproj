@@ -47,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abbey.cs" />
     <Compile Include="BattleState.cs" />
     <Compile Include="equip.cs" />
     <Compile Include="Form1.cs">
@@ -120,16 +121,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\district_midground.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\town_ground_sprite.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\town_ground.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\town_bg.png">
@@ -239,6 +230,33 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ninja_idle_ %2810%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\darkest.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Town\town_bridge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Town\town_left_cliff.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Town\town_ground.sprite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Town\town_ground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Town\wagon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Town\town full1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Town\town cloud.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\abbey.character_background.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

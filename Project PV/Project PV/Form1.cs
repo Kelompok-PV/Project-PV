@@ -16,6 +16,7 @@ namespace Project_PV
         public Form1()
         {
             InitializeComponent();
+            this.DoubleBuffered = true;
         }
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
@@ -26,7 +27,7 @@ namespace Project_PV
         private void Form1_Load(object sender, EventArgs e)
         {
             manager = new GameStateManager();
-            timer1.Interval = 100;   
+            timer1.Interval = 10;   
         }
 
         private void timer1_Tick(object sender, EventArgs e)
