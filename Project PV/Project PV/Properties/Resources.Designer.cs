@@ -63,9 +63,39 @@ namespace Project_PV.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap abbey_character {
+            get {
+                object obj = ResourceManager.GetObject("abbey_character", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap abbey_character_background {
             get {
                 object obj = ResourceManager.GetObject("abbey_character_background", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap abbey_icon {
+            get {
+                object obj = ResourceManager.GetObject("abbey_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap abbey_locked_hero_slot_overlay {
+            get {
+                object obj = ResourceManager.GetObject("abbey_locked_hero_slot_overlay", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -216,6 +246,36 @@ namespace Project_PV.Properties {
         internal static System.Drawing.Bitmap gambar1 {
             get {
                 object obj = ResourceManager.GetObject("gambar1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap guild_character {
+            get {
+                object obj = ResourceManager.GetObject("guild_character", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap guild_character_background {
+            get {
+                object obj = ResourceManager.GetObject("guild_character_background", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap guild_icon {
+            get {
+                object obj = ResourceManager.GetObject("guild_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -453,6 +513,16 @@ namespace Project_PV.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap progression_close {
+            get {
+                object obj = ResourceManager.GetObject("progression_close", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap torch__1_ {
             get {
                 object obj = ResourceManager.GetObject("torch__1_", resourceCulture);
@@ -656,6 +726,26 @@ namespace Project_PV.Properties {
         internal static System.Drawing.Bitmap town_full1 {
             get {
                 object obj = ResourceManager.GetObject("town_full1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap town_ground {
+            get {
+                object obj = ResourceManager.GetObject("town_ground", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap town_ground_sprite {
+            get {
+                object obj = ResourceManager.GetObject("town_ground_sprite", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
