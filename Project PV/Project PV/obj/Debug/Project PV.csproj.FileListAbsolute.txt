@@ -77,3 +77,9 @@ C:\Users\Fendy\Documents\GitHub\Project-PV\Project PV\Project PV\obj\Debug\Proje
 C:\Users\Fendy\Documents\GitHub\Project-PV\Project PV\Project PV\obj\Debug\Project PV.csproj.GenerateResource.cache
 C:\Users\Fendy\Documents\GitHub\Project-PV\Project PV\Project PV\obj\Debug\Project PV.exe
 C:\Users\Fendy\Documents\GitHub\Project-PV\Project PV\Project PV\obj\Debug\Project PV.pdb
+C:\Users\Michael Shan Widodo\Documents\GitHub\Project-PV\Project PV\Project PV\bin\Debug\Resources\background.jpg
+C:\Users\Michael Shan Widodo\Documents\GitHub\Project-PV\Project PV\Project PV\bin\Debug\Resources\button.jpg
+C:\Users\Michael Shan Widodo\Documents\GitHub\Project-PV\Project PV\Project PV\bin\Debug\Resources\font.png
+C:\Users\Michael Shan Widodo\Documents\GitHub\Project-PV\Project PV\Project PV\bin\Debug\Resources\town_backdrop.png
+C:\Users\Michael Shan Widodo\Documents\GitHub\Project-PV\Project PV\Project PV\bin\Debug\Resources\town_bg.png
+C:\Users\Michael Shan Widodo\Documents\GitHub\Project-PV\Project PV\Project PV\bin\Debug\Resources\arrow.png

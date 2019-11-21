@@ -16,9 +16,9 @@ namespace Project_PV
         Form1 form;
         public GameStateManager()
         {
-            gameStates = new GameState[8];
+            gameStates = new GameState[10];
             this.stage = Stage.mainMenu;
-            this.stage = Stage.battleState;
+            //this.stage = Stage.battleState;
             loadState(this.stage);
             
         }
@@ -37,6 +37,11 @@ namespace Project_PV
             {
                 gameStates[(int)stage] = new BattleState(this);
             }
+            else if (stage == Stage.sanitarium)
+            {
+                gameStates[(int)stage] = new Sanitarium(this);
+            }
+
         }
 
         public void draw(Graphics g)
@@ -68,6 +73,7 @@ namespace Project_PV
         hardState,
         battleState,
         gameOver,
-        completeStage
+        completeStage,
+        sanitarium
     }
 }
