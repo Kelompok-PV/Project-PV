@@ -19,7 +19,7 @@ namespace Project_PV.Properties {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Resources {
@@ -63,6 +63,16 @@ namespace Project_PV.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap abbey_character_background {
+            get {
+                object obj = ResourceManager.GetObject("abbey_character_background", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap arrow {
             get {
                 object obj = ResourceManager.GetObject("arrow", resourceCulture);
@@ -93,9 +103,6 @@ namespace Project_PV.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap darkest {
-            get {
-                object obj = ResourceManager.GetObject("darkest", resourceCulture);
         internal static System.Drawing.Bitmap courtyard_backgroundcoba___1_ {
             get {
                 object obj = ResourceManager.GetObject("courtyard_backgroundcoba___1_", resourceCulture);
@@ -139,6 +146,16 @@ namespace Project_PV.Properties {
         internal static System.Drawing.Bitmap courtyard_randomcoba___4_ {
             get {
                 object obj = ResourceManager.GetObject("courtyard_randomcoba___4_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap darkest {
+            get {
+                object obj = ResourceManager.GetObject("darkest", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
