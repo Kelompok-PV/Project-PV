@@ -19,7 +19,7 @@ namespace Project_PV
         public int hero_move_now { get; set; }
         public buff hero_buff { get; set; }
         public equip[] hero_equip { get; set; }
-
+        public int x { get; set; }
         public string type { get; set; }
         public List<string> dialog { get; set; }
         public int dodge { get; set; }
@@ -37,6 +37,7 @@ namespace Project_PV
             this.dodge = dodge;
             this.speed = speed;
             this.type = type;
+            x = 300;
         }
 
         public void getImage(Graphics g)
@@ -54,7 +55,7 @@ namespace Project_PV
         {
             object O = Properties.Resources.ResourceManager.GetObject(hero + "_" + hero_move + "___" + hero_move_now + "_");
             Image img = (Image)O;
-            g.DrawImage(img, 0, 450, 100, 150);
+            g.DrawImage(img, x, 280, 100, 150);
         }
     }
     class ninja : karakter

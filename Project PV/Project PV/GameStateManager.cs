@@ -13,12 +13,12 @@ namespace Project_PV
         public GameState[] gameStates { get; set; }
         public Stage stage { get; set; }
 
-        Form1 form;
         public GameStateManager()
         {
             gameStates = new GameState[8];
             this.stage = Stage.title;
             //this.stage = Stage.battleState;
+            this.stage = Stage.battleState;
             loadState(this.stage);
             
         }
@@ -55,6 +55,10 @@ namespace Project_PV
         public void update()
         {
             gameStates[(int)stage].update();
+        }
+        public void Form1_KeyUp(object sender, KeyEventArgs e)
+        {
+            gameStates[(int)stage].key_KeyUp(sender, e);
         }
     }
 

@@ -100,6 +100,9 @@ namespace Project_PV
             path.AddString(s, font.FontFamily, (int)font.Style, emSize, rect, format);
 
             return path;
+        public override void key_KeyUp(object sender, KeyEventArgs e)
+        {
+            throw new NotImplementedException();
         }
     }
 }

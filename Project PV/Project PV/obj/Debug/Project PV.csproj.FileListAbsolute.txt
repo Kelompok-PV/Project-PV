@@ -67,9 +67,12 @@ C:\Users\Fabian\Documents\GitHub\Project-PV-fix\Project PV\Project PV\bin\Debug\
 C:\Users\Fabian\Documents\GitHub\Project-PV-fix\Project PV\Project PV\bin\Debug\Resources\button.jpg
 C:\Users\Fabian\Documents\GitHub\Project-PV-fix\Project PV\Project PV\bin\Debug\Resources\font.png
 C:\Users\Fabian\Documents\GitHub\Project-PV-fix\Project PV\Project PV\bin\Debug\Resources\town_backdrop.png
-C:\Users\Fabian\Documents\GitHub\Project-PV-fix\Project PV\Project PV\bin\Debug\Resources\town_ground_sprite.png
-C:\Users\Fabian\Documents\GitHub\Project-PV-fix\Project PV\Project PV\bin\Debug\Resources\town_ground.png
 C:\Users\Fabian\Documents\GitHub\Project-PV-fix\Project PV\Project PV\bin\Debug\Resources\town_bg.png
 C:\Users\Fabian\Documents\GitHub\Project-PV-fix\Project PV\Project PV\bin\Debug\Resources\arrow.png
 E:\GitHub\Project-PV\Project PV\Project PV\obj\Debug\Project PV.csprojAssemblyReference.cache
 E:\GitHub\Project-PV\Project PV\Project PV\bin\Debug\Resources\DwarvenAxe BB W00 Regular.ttf
+C:\Users\Fendy\Documents\GitHub\Project-PV\Project PV\Project PV\obj\Debug\Project PV.csprojAssemblyReference.cache
+C:\Users\Fendy\Documents\GitHub\Project-PV\Project PV\Project PV\obj\Debug\Project_PV.Form1.resources
+C:\Users\Fendy\Documents\GitHub\Project-PV\Project PV\Project PV\obj\Debug\Project PV.csproj.GenerateResource.cache
+C:\Users\Fendy\Documents\GitHub\Project-PV\Project PV\Project PV\obj\Debug\Project PV.exe
+C:\Users\Fendy\Documents\GitHub\Project-PV\Project PV\Project PV\obj\Debug\Project PV.pdb
