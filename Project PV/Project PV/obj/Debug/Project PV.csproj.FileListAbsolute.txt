@@ -37,6 +37,16 @@ C:\Users\Fabian\Documents\GitHub\Project-PV-fix\Project PV\Project PV\bin\Debug\
 C:\Users\Fabian\Documents\GitHub\Project-PV-fix\Project PV\Project PV\bin\Debug\Project PV.exe.config
 C:\Users\Fabian\Documents\GitHub\Project-PV-fix\Project PV\Project PV\bin\Debug\Project PV.exe
 C:\Users\Fabian\Documents\GitHub\Project-PV-fix\Project PV\Project PV\bin\Debug\Project PV.pdb
+E:\GitHub\Project-PV\Project PV\Project PV\bin\Debug\Resources\The_Blood.png
+E:\GitHub\Project-PV\Project PV\Project PV\obj\Debug\Project_PV.Form1.resources
+E:\GitHub\Project-PV\Project PV\Project PV\bin\Debug\Resources\background.jpg
+E:\GitHub\Project-PV\Project PV\Project PV\bin\Debug\Resources\button.jpg
+E:\GitHub\Project-PV\Project PV\Project PV\bin\Debug\Resources\font.png
+E:\GitHub\Project-PV\Project PV\Project PV\bin\Debug\Resources\town_backdrop.png
+E:\GitHub\Project-PV\Project PV\Project PV\bin\Debug\Resources\town_ground_sprite.png
+E:\GitHub\Project-PV\Project PV\Project PV\bin\Debug\Resources\town_ground.png
+E:\GitHub\Project-PV\Project PV\Project PV\bin\Debug\Resources\town_bg.png
+E:\GitHub\Project-PV\Project PV\Project PV\bin\Debug\Resources\arrow.png
 C:\Users\Michael Shan Widodo\Documents\GitHub\Project-PV\Project PV\Project PV\bin\Debug\Resources\The_Blood.png
 C:\Users\Michael Shan Widodo\Documents\GitHub\Project-PV\Project PV\Project PV\bin\Debug\Project PV.exe.config
 C:\Users\Michael Shan Widodo\Documents\GitHub\Project-PV\Project PV\Project PV\bin\Debug\Project PV.exe
@@ -47,3 +57,20 @@ C:\Users\Michael Shan Widodo\Documents\GitHub\Project-PV\Project PV\Project PV\o
 C:\Users\Michael Shan Widodo\Documents\GitHub\Project-PV\Project PV\Project PV\obj\Debug\Project PV.csproj.GenerateResource.cache
 C:\Users\Michael Shan Widodo\Documents\GitHub\Project-PV\Project PV\Project PV\obj\Debug\Project PV.exe
 C:\Users\Michael Shan Widodo\Documents\GitHub\Project-PV\Project PV\Project PV\obj\Debug\Project PV.pdb
+C:\Users\Fabian-Lepi\Documents\GitHub\Project-PV\Project PV\Project PV\bin\Debug\Resources\background.jpg
+C:\Users\Fabian-Lepi\Documents\GitHub\Project-PV\Project PV\Project PV\bin\Debug\Resources\button.jpg
+C:\Users\Fabian-Lepi\Documents\GitHub\Project-PV\Project PV\Project PV\bin\Debug\Resources\font.png
+C:\Users\Fabian-Lepi\Documents\GitHub\Project-PV\Project PV\Project PV\bin\Debug\Resources\town_backdrop.png
+C:\Users\Fabian-Lepi\Documents\GitHub\Project-PV\Project PV\Project PV\bin\Debug\Resources\town_ground_sprite.png
+C:\Users\Fabian-Lepi\Documents\GitHub\Project-PV\Project PV\Project PV\bin\Debug\Resources\town_ground.png
+C:\Users\Fabian-Lepi\Documents\GitHub\Project-PV\Project PV\Project PV\bin\Debug\Resources\town_bg.png
+C:\Users\Fabian-Lepi\Documents\GitHub\Project-PV\Project PV\Project PV\bin\Debug\Resources\arrow.png
+E:\GitHub\Project-PV\Project PV\Project PV\obj\Debug\Project PV.csprojAssemblyReference.cache
+C:\Users\Fabian\Documents\GitHub\Project-PV-fix\Project PV\Project PV\bin\Debug\Resources\background.jpg
+C:\Users\Fabian\Documents\GitHub\Project-PV-fix\Project PV\Project PV\bin\Debug\Resources\button.jpg
+C:\Users\Fabian\Documents\GitHub\Project-PV-fix\Project PV\Project PV\bin\Debug\Resources\font.png
+C:\Users\Fabian\Documents\GitHub\Project-PV-fix\Project PV\Project PV\bin\Debug\Resources\town_backdrop.png
+C:\Users\Fabian\Documents\GitHub\Project-PV-fix\Project PV\Project PV\bin\Debug\Resources\town_ground_sprite.png
+C:\Users\Fabian\Documents\GitHub\Project-PV-fix\Project PV\Project PV\bin\Debug\Resources\town_ground.png
+C:\Users\Fabian\Documents\GitHub\Project-PV-fix\Project PV\Project PV\bin\Debug\Resources\town_bg.png
+C:\Users\Fabian\Documents\GitHub\Project-PV-fix\Project PV\Project PV\bin\Debug\Resources\arrow.png

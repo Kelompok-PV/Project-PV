@@ -76,3 +76,42 @@ C:\Users\yongki40\Documents\Yongki\Kuliah\Latihan Semester 3\C#\Prototype\Protot
 C:\Users\yongki40\Documents\Yongki\Kuliah\Latihan Semester 3\C#\Prototype\Prototype\obj\Debug\Prototype.csproj.CoreCompileInputs.cache
 C:\Users\yongki40\Documents\Yongki\Kuliah\Latihan Semester 3\C#\Prototype\Prototype\obj\Debug\Prototype.exe
 C:\Users\yongki40\Documents\Yongki\Kuliah\Latihan Semester 3\C#\Prototype\Prototype\obj\Debug\Prototype.pdb
+E:\GitHub\Project-PV\Contoh coding\Prototype\Prototype\bin\Debug\assets\char\Run (1).png
+E:\GitHub\Project-PV\Contoh coding\Prototype\Prototype\bin\Debug\assets\char\Run (2).png
+E:\GitHub\Project-PV\Contoh coding\Prototype\Prototype\bin\Debug\assets\char\Run (3).png
+E:\GitHub\Project-PV\Contoh coding\Prototype\Prototype\bin\Debug\assets\char\Run (4).png
+E:\GitHub\Project-PV\Contoh coding\Prototype\Prototype\bin\Debug\assets\char\Run (5).png
+E:\GitHub\Project-PV\Contoh coding\Prototype\Prototype\bin\Debug\assets\char\Run (6).png
+E:\GitHub\Project-PV\Contoh coding\Prototype\Prototype\bin\Debug\assets\char\Run (7).png
+E:\GitHub\Project-PV\Contoh coding\Prototype\Prototype\bin\Debug\assets\char\Run (8).png
+E:\GitHub\Project-PV\Contoh coding\Prototype\Prototype\bin\Debug\assets\Back2.gif
+E:\GitHub\Project-PV\Contoh coding\Prototype\Prototype\bin\Debug\assets\Underworld 1.png
+E:\GitHub\Project-PV\Contoh coding\Prototype\Prototype\bin\Debug\assets\char\Idle\Idle (1).png
+E:\GitHub\Project-PV\Contoh coding\Prototype\Prototype\bin\Debug\assets\char\Idle\Idle (2).png
+E:\GitHub\Project-PV\Contoh coding\Prototype\Prototype\bin\Debug\assets\char\Idle\Idle (3).png
+E:\GitHub\Project-PV\Contoh coding\Prototype\Prototype\bin\Debug\assets\char\Idle\Idle (4).png
+E:\GitHub\Project-PV\Contoh coding\Prototype\Prototype\bin\Debug\assets\char\Idle\Idle (5).png
+E:\GitHub\Project-PV\Contoh coding\Prototype\Prototype\bin\Debug\assets\char\Idle\Idle (6).png
+E:\GitHub\Project-PV\Contoh coding\Prototype\Prototype\bin\Debug\assets\char\Idle\Idle (7).png
+E:\GitHub\Project-PV\Contoh coding\Prototype\Prototype\bin\Debug\assets\char\Idle\Idle (8).png
+E:\GitHub\Project-PV\Contoh coding\Prototype\Prototype\bin\Debug\assets\char\Idle\Idle (9).png
+E:\GitHub\Project-PV\Contoh coding\Prototype\Prototype\bin\Debug\assets\char\Jump\Jump (1).png
+E:\GitHub\Project-PV\Contoh coding\Prototype\Prototype\bin\Debug\assets\char\Jump\Jump (2).png
+E:\GitHub\Project-PV\Contoh coding\Prototype\Prototype\bin\Debug\assets\char\Jump\Jump (3).png
+E:\GitHub\Project-PV\Contoh coding\Prototype\Prototype\bin\Debug\assets\char\Jump\Jump (4).png
+E:\GitHub\Project-PV\Contoh coding\Prototype\Prototype\bin\Debug\assets\char\Jump\Jump (5).png
+E:\GitHub\Project-PV\Contoh coding\Prototype\Prototype\bin\Debug\assets\char\Jump\Jump (6).png
+E:\GitHub\Project-PV\Contoh coding\Prototype\Prototype\bin\Debug\assets\char\Jump\Jump (7).png
+E:\GitHub\Project-PV\Contoh coding\Prototype\Prototype\bin\Debug\assets\char\Jump\Jump (8).png
+E:\GitHub\Project-PV\Contoh coding\Prototype\Prototype\bin\Debug\assets\char\Jump\Jump (9).png
+E:\GitHub\Project-PV\Contoh coding\Prototype\Prototype\bin\Debug\assets\char\Jump\Jump (10).png
+E:\GitHub\Project-PV\Contoh coding\Prototype\Prototype\bin\Debug\Prototype.exe.config
+E:\GitHub\Project-PV\Contoh coding\Prototype\Prototype\bin\Debug\Prototype.exe
+E:\GitHub\Project-PV\Contoh coding\Prototype\Prototype\bin\Debug\Prototype.pdb
+E:\GitHub\Project-PV\Contoh coding\Prototype\Prototype\obj\Debug\Prototype.csprojAssemblyReference.cache
+E:\GitHub\Project-PV\Contoh coding\Prototype\Prototype\obj\Debug\Prototype.Properties.Resources.resources
+E:\GitHub\Project-PV\Contoh coding\Prototype\Prototype\obj\Debug\Prototype.Prototype.resources
+E:\GitHub\Project-PV\Contoh coding\Prototype\Prototype\obj\Debug\Prototype.csproj.GenerateResource.cache
+E:\GitHub\Project-PV\Contoh coding\Prototype\Prototype\obj\Debug\Prototype.csproj.CoreCompileInputs.cache
+E:\GitHub\Project-PV\Contoh coding\Prototype\Prototype\obj\Debug\Prototype.exe
+E:\GitHub\Project-PV\Contoh coding\Prototype\Prototype\obj\Debug\Prototype.pdb

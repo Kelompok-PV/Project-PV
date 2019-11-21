@@ -12,26 +12,42 @@ namespace Project_PV
 {
     public partial class Form1 : Form
     {
+        GameStateManager manager;
         public Form1()
         {
             InitializeComponent();
         }
-        karakter player = new ninja("ninnin", 50, new equip[5], new List<string>(), 5, 5);
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
             Graphics g = e.Graphics;
-            player.getImage(g);
+            manager.draw(g);
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+            manager = new GameStateManager();
+            timer1.Interval = 100;   
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            player.hero_move_now++;
+            manager.update();
             Invalidate();
+        }
+
+        private void Form1_MouseClick(object sender, MouseEventArgs e)
+        {
+            //MessageBox.Show("x: "+e.X+" y: "+e.Y);
+            manager.mouse_click(sender, e);
+        }
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        {
+            manager.key_keydown(sender, e);
+        }
+
+        private void Form1_KeyUp(object sender, KeyEventArgs e)
+        {
+
         }
     }
 }
