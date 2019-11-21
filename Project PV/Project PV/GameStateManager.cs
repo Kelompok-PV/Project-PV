@@ -15,10 +15,13 @@ namespace Project_PV
 
         public GameStateManager()
         {
-            gameStates = new GameState[8];
+            gameStates = new GameState[20];
             this.stage = Stage.title;
             //this.stage = Stage.battleState;
             //this.stage = Stage.battleState;
+			//this.stage = Stage.battleState;
+			// this.stage = Stage.battleState;
+			//this.stage = Stage.mainMenu;
             loadState(this.stage);
             
         }
@@ -37,6 +40,14 @@ namespace Project_PV
             {
                 gameStates[(int)stage] = new BattleState(this);
             }
+			else if(stage == Stage.abbey)
+			{
+				gameStates[(int)stage] = new Abbey(this);
+			}
+			else if(stage == Stage.guild)
+			{
+				gameStates[(int)stage] = new Guild(this);
+			}
         }
 
         public void draw(Graphics g)
@@ -83,6 +94,8 @@ namespace Project_PV
         hardState,
         battleState,
         gameOver,
-        completeStage
+        completeStage,
+		abbey,
+		guild
     }
 }

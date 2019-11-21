@@ -92,12 +92,12 @@ namespace Project_PV
             
         }
 
-        private GraphicsPath GetStringPath(string s, float dpi, RectangleF rect, Font font, StringFormat format)
-        {
-            GraphicsPath path = new GraphicsPath();
-            // Convert font size into appropriate coordinates
-            float emSize = dpi * font.SizeInPoints / 70;
-            path.AddString(s, font.FontFamily, (int)font.Style, emSize, rect, format);
+		private GraphicsPath GetStringPath(string s, float dpi, RectangleF rect, Font font, StringFormat format)
+		{
+			GraphicsPath path = new GraphicsPath();
+			// Convert font size into appropriate coordinates
+			float emSize = dpi * font.SizeInPoints / 70;
+			path.AddString(s, font.FontFamily, (int)font.Style, emSize, rect, format);
 
             return path;
         }
