@@ -23,6 +23,13 @@ namespace Project_PV
             //this.stage = Stage.title;
             //this.stage = Stage.battleState;
             //this.stage = Stage.battleState;
+            gameStates = new GameState[20];
+            this.stage = Stage.title;
+            //this.stage = Stage.battleState;
+            //this.stage = Stage.battleState;
+			//this.stage = Stage.battleState;
+			// this.stage = Stage.battleState;
+			//this.stage = Stage.mainMenu;
             loadState(this.stage);
             
         }
@@ -50,6 +57,14 @@ namespace Project_PV
                 gameStates[(int)stage] = new Blacksmith(this);
             }
 
+			else if(stage == Stage.abbey)
+			{
+				gameStates[(int)stage] = new Abbey(this);
+			}
+			else if(stage == Stage.guild)
+			{
+				gameStates[(int)stage] = new Guild(this);
+			}
         }
 
         public void draw(Graphics g)
@@ -61,6 +76,17 @@ namespace Project_PV
         {
             gameStates[(int)stage].mouse_click(sender,e);
         }
+
+        public void mouse_hover(object sender, MouseEventArgs e)
+        {
+            gameStates[(int)stage].mouse_hover(sender, e);
+        }
+
+        public void mouse_leave(object sender, MouseEventArgs e)
+        {
+            gameStates[(int)stage].mouse_leave(sender, e);
+        }
+
         public void key_keydown(object sender, KeyEventArgs e)
         {
             gameStates[(int)stage].key_keydown(sender, e);
@@ -87,6 +113,8 @@ namespace Project_PV
         gameOver,
         completeStage,
         sanitarium,
-        blacksmith
+        blacksmith,
+		abbey,
+		guild
     }
 }
