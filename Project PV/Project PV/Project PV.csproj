@@ -301,5 +301,8 @@
   <ItemGroup>
     <None Include="Resources\courtyard_lastcoba.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Town\blg_name_background.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

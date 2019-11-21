@@ -89,7 +89,7 @@ namespace Project_PV
 
         public override void key_keydown(object sender, KeyEventArgs e)
         {
-            throw new NotImplementedException();
+            
         }
 
         private GraphicsPath GetStringPath(string s, float dpi, RectangleF rect, Font font, StringFormat format)
@@ -100,9 +100,21 @@ namespace Project_PV
             path.AddString(s, font.FontFamily, (int)font.Style, emSize, rect, format);
 
             return path;
+        }
+
         public override void key_KeyUp(object sender, KeyEventArgs e)
         {
-            throw new NotImplementedException();
+            
+        }
+
+        public override void mouse_hover(object sender, MouseEventArgs e)
+        {
+            
+        }
+
+        public override void mouse_leave(object sender, MouseEventArgs e)
+        {
+            
         }
     }
 }
