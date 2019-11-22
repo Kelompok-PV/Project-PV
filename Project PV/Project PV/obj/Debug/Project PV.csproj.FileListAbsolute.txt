@@ -76,3 +76,4 @@ C:\Users\Fendy\Documents\GitHub\Project-PV\Project PV\Project PV\obj\Debug\Proje
 C:\Users\Fendy\Documents\GitHub\Project-PV\Project PV\Project PV\obj\Debug\Project PV.csproj.GenerateResource.cache
 C:\Users\Fendy\Documents\GitHub\Project-PV\Project PV\Project PV\obj\Debug\Project PV.exe
 C:\Users\Fendy\Documents\GitHub\Project-PV\Project PV\Project PV\obj\Debug\Project PV.pdb
+C:\Users\Fabian\Documents\GitHub\Project-PV-fix\Project PV\Project PV\bin\Debug\Resources\DwarvenAxe BB W00 Regular.ttf

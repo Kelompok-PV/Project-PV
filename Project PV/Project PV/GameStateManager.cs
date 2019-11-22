@@ -15,10 +15,9 @@ namespace Project_PV
 
         public GameStateManager()
         {
-            gameStates = new GameState[8];
-            this.stage = Stage.title;
-			//this.stage = Stage.battleState;
+            gameStates = new GameState[10];
             this.stage = Stage.battleState;
+			//this.stage = Stage.battleState;
             loadState(this.stage);
             
         }
@@ -36,6 +35,10 @@ namespace Project_PV
             else if (stage == Stage.battleState)
             {
                 gameStates[(int)stage] = new BattleState(this);
+            }
+            else if (stage == Stage.battleAreaState)
+            {
+                gameStates[(int)stage] = new BattleAreaState(this);
             }
         }
 
@@ -71,6 +74,7 @@ namespace Project_PV
         mediumState,
         hardState,
         battleState,
+        battleAreaState,
         gameOver,
         completeStage
     }
