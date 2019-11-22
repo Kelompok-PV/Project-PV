@@ -60,6 +60,7 @@
     </Compile>
     <Compile Include="GameState.cs" />
     <Compile Include="GameStateManager.cs" />
+    <Compile Include="Guild.cs" />
     <Compile Include="Inventory.cs" />
     <Compile Include="karakter.cs" />
     <Compile Include="MainMenu.cs" />
@@ -328,6 +329,32 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\courtyard_battleArea_.png" />
+    <None Include="Resources\Town\blg_name_background.png" />
+    <None Include="Resources\abbey.icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\abbey.character.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\abbey.locked_hero_slot_overlay.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\grunge-arrow-2-6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\progression_close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\guild.character_background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\guild.character.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\guild.town_button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\guild.icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

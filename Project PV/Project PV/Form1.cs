@@ -53,6 +53,9 @@ namespace Project_PV
             manager.Form1_KeyUp(sender, e);
         }
 
-        
+        private void Form1_MouseMove(object sender, MouseEventArgs e)
+        {
+            manager.mouse_hover(sender,e);
+        }
     }
 }
