@@ -213,6 +213,16 @@ namespace Project_PV.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap currency_gold_large_icon {
+            get {
+                object obj = ResourceManager.GetObject("currency_gold_large_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap darkest {
             get {
                 object obj = ResourceManager.GetObject("darkest", resourceCulture);
@@ -523,9 +533,29 @@ namespace Project_PV.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap progression_bar {
+            get {
+                object obj = ResourceManager.GetObject("progression_bar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap progression_close {
             get {
                 object obj = ResourceManager.GetObject("progression_close", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap progression_forward {
+            get {
+                object obj = ResourceManager.GetObject("progression_forward", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -12,16 +12,11 @@ namespace Project_PV
     {
         public GameState[] gameStates { get; set; }
         public Stage stage { get; set; }
-
+        public Player player { get; set; }
         public GameStateManager()
         {
             gameStates = new GameState[20];
             this.stage = Stage.title;
-            //this.stage = Stage.battleState;
-            //this.stage = Stage.battleState;
-			//this.stage = Stage.battleState;
-			// this.stage = Stage.battleState;
-			//this.stage = Stage.mainMenu;
             loadState(this.stage);
             
         }
@@ -30,6 +25,7 @@ namespace Project_PV
         {
             if(stage == Stage.title)
             {
+                player = new Player();
                 gameStates[(int)stage] = new MenuState(this);
             }
             else if (stage == Stage.mainMenu)
@@ -48,6 +44,11 @@ namespace Project_PV
 			{
 				gameStates[(int)stage] = new Guild(this);
 			}
+        }
+
+        public Player getPlayer()
+        {
+            return this.player;
         }
 
         public void draw(Graphics g)
@@ -88,7 +89,7 @@ namespace Project_PV
     {
         title,
         mainMenu,
-        loadState,
+        embark,
         easyState,
         mediumState,
         hardState,

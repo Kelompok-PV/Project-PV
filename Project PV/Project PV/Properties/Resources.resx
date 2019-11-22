@@ -312,6 +312,7 @@
   </data>
   <data name="blg_name_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Town\blg_name_background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="abbey_character" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\abbey.character.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -332,5 +333,14 @@
   </data>
   <data name="progression_close" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\progression_close.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="currency_gold_large_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\embark\currency.gold.large_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="progression_bar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\embark\progression_bar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="progression_forward" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\embark\progression_forward.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -330,5 +330,14 @@
   <ItemGroup>
     <None Include="Resources\guild.icon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\embark\progression_bar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\embark\progression_forward.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\embark\currency.gold.large_icon.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

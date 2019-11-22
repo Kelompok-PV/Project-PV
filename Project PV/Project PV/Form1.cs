@@ -29,7 +29,7 @@ namespace Project_PV
         private void Form1_Load(object sender, EventArgs e)
         {
             manager = new GameStateManager();
-            timer1.Interval = 10;   
+            
         }
 
         private void timer1_Tick(object sender, EventArgs e)

@@ -13,15 +13,18 @@ namespace Project_PV
     {
         public GameStateManager gsm { get; set; }
         private double xCloud;
-        private Rectangle sanitarium, guild, blackSmith, abbey;
+        Rectangle sanitarium, guild, blackSmith, abbey;
         private bool[] arrDraw;
         private List<coordinate> coordinates;
         private List<Rectangle> listBuilding;
-        private List<string> buildingTitle;
-        
+        private Player player;
+        private bool loading;
+        public Graphics g2 { get; set; }
         public MainMenu(GameStateManager gsm)
         {
             this.gsm = gsm;
+            loading = false;
+            player = gsm.getPlayer();
             xCloud = 1100;
             listBuilding = new List<Rectangle>();
             coordinates = new List<coordinate>();
@@ -50,15 +53,17 @@ namespace Project_PV
 
         }
 
+        int yload = 730;
         public override void draw(Graphics g)
         {
+            g2 = g;
             object O1 = Properties.Resources.ResourceManager.GetObject("town_full1");
             Image img1 = (Image)O1;
-            g.DrawImage(img1, 0, 0, 1300, 700);
+            g2.DrawImage(img1, 0, 0, 1300, 700);
 
             O1 = Properties.Resources.ResourceManager.GetObject("town_cloud");
             img1 = (Image)O1;
-            g.DrawImage(img1, (int)xCloud, 40, 433, 124);
+            g2.DrawImage(img1, (int)xCloud, 40, 433, 124);
 
             for (int i = 0; i < arrDraw.Length; i++)
             {
@@ -77,6 +82,28 @@ namespace Project_PV
                     g.DrawString(sub, subtitle, new SolidBrush(Color.White), point.X,point.Y+30);
                 }
             }
+
+            //panel embark
+            O1 = Properties.Resources.ResourceManager.GetObject("progression_bar");
+            img1 = (Image)O1;
+            g.DrawImage(img1, 0, 622, 1300, 90);
+
+            O1 = Properties.Resources.ResourceManager.GetObject("progression_forward");
+            img1 = (Image)O1;
+            g.DrawImage(img1, 580, 638, 200, 33);
+
+            Font font = new Font(Config.font.Families[0],28,FontStyle.Regular);
+            g.DrawString("Embark", font, new SolidBrush(Color.FromArgb(180, 33, 13)), 630, 635);
+            
+            O1 = Properties.Resources.ResourceManager.GetObject("currency_gold_large_icon");
+            img1 = (Image)O1;
+            g.DrawImage(img1, 109, 605, 66, 66);
+
+            g.DrawString(player.gold.ToString(), font, new SolidBrush(Color.FromArgb(202, 179, 112)), 179, 637);
+
+            //loading
+            g.FillRectangle(new SolidBrush(Color.Black), 0, yload, 1300, 730);
+            
         }
 
         public override void init()
@@ -88,6 +115,7 @@ namespace Project_PV
         {
             MessageBox.Show("x: " + e.X + " y: " + e.Y);
             Rectangle cursor = new Rectangle(e.X,e.Y,10,10);
+            Rectangle embark = new Rectangle(630, 635,200,33);
 
             for (int i = 0; i < listBuilding.Count; i++)
             {
@@ -96,33 +124,41 @@ namespace Project_PV
                     arrDraw[i] = true;
                 }
             }
-            else if (cursor.IntersectsWith(sanitarium))
+
+            if (cursor.IntersectsWith(sanitarium))
             {
                 MessageBox.Show("sanitarium");
             }
             else if (cursor.IntersectsWith(guild))
             {
-                MessageBox.Show("guild");
 				gsm.stage = Stage.guild;
 				gsm.loadState(gsm.stage);
 			}
             else if (cursor.IntersectsWith(abbey))
             {
-                MessageBox.Show("abbey");
 				gsm.stage = Stage.abbey;
 				gsm.loadState(gsm.stage);
 			}
+            else if (cursor.IntersectsWith(embark))
+            {
+                loading = true;
+            }
 
-            listRec.Clear();
-            listRec.Add(sanitarium);
-            listRec.Add(guild);
-            listRec.Add(abbey);
-            listRec.Add(blackSmith);
+            
         }
 
         public override void update()
         {
             xCloud-=1;
+            if (loading)
+            {
+                yload-=10;
+                if(yload <= 0)
+                {
+                    loading = false;
+                }
+            }
+            
         }
 
         public override void key_keydown(object sender, KeyEventArgs e)

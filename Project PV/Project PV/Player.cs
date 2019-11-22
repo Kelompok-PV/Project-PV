@@ -14,6 +14,14 @@ namespace Project_PV
         public karakter[] currentCharacters { get; set; }
         public Inventory[] inventoryAktif { get; set; }
 
+        public Player()
+        {
+            gold = 0;
+            name = "yomama";
+            myCharacter = new List<karakter>();
+            currentCharacters = new karakter[4];
+            inventoryAktif = new Inventory[16];
+        }
 
         //pas mulai game panggil ini
         private void fillInventory(List<Inventory> inputInventory)
