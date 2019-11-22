@@ -36,6 +36,10 @@ namespace Project_PV
             {
                 gameStates[(int)stage] = new BattleState(this);
             }
+            else if (stage == Stage.battleAreaState)
+            {
+                gameStates[(int)stage] = new BattleAreaState(this);
+            }
 			else if(stage == Stage.abbey)
 			{
 				gameStates[(int)stage] = new Abbey(this);
@@ -94,6 +98,7 @@ namespace Project_PV
         mediumState,
         hardState,
         battleState,
+        battleAreaState,
         gameOver,
         completeStage,
 		abbey,

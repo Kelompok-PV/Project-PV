@@ -48,6 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Abbey.cs" />
+    <Compile Include="BattleAreaState.cs" />
     <Compile Include="BattleState.cs" />
     <Compile Include="Config.cs" />
     <Compile Include="equip.cs" />
@@ -303,6 +304,31 @@
     <None Include="Resources\courtyard_lastcoba.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\courtyard_random_ %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\courtyard_random_ %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\courtyard_random_ %285%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\courtyard_random_ %286%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\courtyard_randomcoba_ %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\courtyard_randomcoba_ %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\courtyard_randomcoba_ %285%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\courtyard_randomcoba_ %286%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\courtyard_battleArea_.png" />
     <None Include="Resources\Town\blg_name_background.png" />
     <None Include="Resources\abbey.icon.png" />
   </ItemGroup>
