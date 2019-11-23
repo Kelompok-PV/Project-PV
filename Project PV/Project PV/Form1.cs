@@ -28,8 +28,8 @@ namespace Project_PV
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            Config.font.AddFontFile("Resources\\DwarvenAxe BB W00 Regular.ttf");
             manager = new GameStateManager();
-            
         }
 
         private void timer1_Tick(object sender, EventArgs e)

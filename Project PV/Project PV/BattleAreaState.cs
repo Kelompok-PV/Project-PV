@@ -64,5 +64,15 @@ namespace Project_PV
         {
             
         }
+
+        public override void mouse_hover(object sender, MouseEventArgs e)
+        {
+            
+        }
+
+        public override void mouse_leave(object sender, MouseEventArgs e)
+        {
+           
+        }
     }
 }

@@ -73,6 +73,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Quest.cs" />
     <Compile Include="status.cs" />
     <Compile Include="Skill.cs" />
     <Compile Include="stress.cs" />
@@ -364,6 +365,17 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\embark\currency.gold.large_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Quest\quest_select_back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Quest\hero_slot.background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Quest\dungeon_progressionbar.png" />
+    <Content Include="Resources\Quest\embark_party.background.png" />
+    <None Include="Resources\Town\town full_2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

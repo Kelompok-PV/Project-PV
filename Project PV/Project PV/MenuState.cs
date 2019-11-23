@@ -20,7 +20,6 @@ namespace Project_PV
         {
             this.gsm = gsm;
             startBtn = new Rectangle(548, 554, 200,50);
-            Config.font.AddFontFile("Resources\\DwarvenAxe BB W00 Regular.ttf");
             title = new Font(Config.font.Families[0],80,FontStyle.Regular);
             frame = 1;
         }

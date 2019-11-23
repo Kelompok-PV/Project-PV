@@ -19,7 +19,7 @@ namespace Project_PV
         private List<Rectangle> listBuilding;
         private Player player;
         private bool loading;
-        public Graphics g2 { get; set; }
+        Graphics g2;
         public MainMenu(GameStateManager gsm)
         {
             this.gsm = gsm;
@@ -53,17 +53,16 @@ namespace Project_PV
 
         }
 
-        int yload = 730;
+        int opacity = 0;
         public override void draw(Graphics g)
         {
-            g2 = g;
-            object O1 = Properties.Resources.ResourceManager.GetObject("town_full1");
+            object O1 = Properties.Resources.ResourceManager.GetObject("town_full_2");
             Image img1 = (Image)O1;
-            g2.DrawImage(img1, 0, 0, 1300, 700);
+            g.DrawImage(img1, 0, 0, 1300, 700);
 
             O1 = Properties.Resources.ResourceManager.GetObject("town_cloud");
             img1 = (Image)O1;
-            g2.DrawImage(img1, (int)xCloud, 40, 433, 124);
+            g.DrawImage(img1, (int)xCloud, 40, 433, 124);
 
             for (int i = 0; i < arrDraw.Length; i++)
             {
@@ -77,9 +76,9 @@ namespace Project_PV
 
                     O1 = Properties.Resources.ResourceManager.GetObject("blg_name_background");
                     img1 = (Image)O1;
-                    g.DrawImage(img1, point.X-20, point.Y-50, 154, 162);
+                    g.DrawImage(img1, point.X - 20, point.Y - 50, 154, 162);
                     g.DrawString(s, title, new SolidBrush(Color.FromArgb(250, 231, 162)), point);
-                    g.DrawString(sub, subtitle, new SolidBrush(Color.White), point.X,point.Y+30);
+                    g.DrawString(sub, subtitle, new SolidBrush(Color.White), point.X, point.Y + 30);
                 }
             }
 
@@ -92,9 +91,9 @@ namespace Project_PV
             img1 = (Image)O1;
             g.DrawImage(img1, 580, 638, 200, 33);
 
-            Font font = new Font(Config.font.Families[0],28,FontStyle.Regular);
+            Font font = new Font(Config.font.Families[0], 28, FontStyle.Regular);
             g.DrawString("Embark", font, new SolidBrush(Color.FromArgb(180, 33, 13)), 630, 635);
-            
+
             O1 = Properties.Resources.ResourceManager.GetObject("currency_gold_large_icon");
             img1 = (Image)O1;
             g.DrawImage(img1, 109, 605, 66, 66);
@@ -102,8 +101,8 @@ namespace Project_PV
             g.DrawString(player.gold.ToString(), font, new SolidBrush(Color.FromArgb(202, 179, 112)), 179, 637);
 
             //loading
-            g.FillRectangle(new SolidBrush(Color.Black), 0, yload, 1300, 730);
-            
+            g.FillRectangle(new SolidBrush(Color.FromArgb(opacity, Color.Black)), 0, 0, 1300, 730);
+
         }
 
         public override void init()
@@ -113,7 +112,7 @@ namespace Project_PV
 
         public override void mouse_click(object sender, MouseEventArgs e)
         {
-            MessageBox.Show("x: " + e.X + " y: " + e.Y);
+            //MessageBox.Show("x: " + e.X + " y: " + e.Y);
             Rectangle cursor = new Rectangle(e.X,e.Y,10,10);
             Rectangle embark = new Rectangle(630, 635,200,33);
 
@@ -131,17 +130,24 @@ namespace Project_PV
             }
             else if (cursor.IntersectsWith(guild))
             {
+                Stage temp = gsm.stage;
+                gsm.unloadState(temp);
+
 				gsm.stage = Stage.guild;
 				gsm.loadState(gsm.stage);
 			}
             else if (cursor.IntersectsWith(abbey))
             {
-				gsm.stage = Stage.abbey;
+                Stage temp = gsm.stage;
+                gsm.unloadState(temp);
+
+                gsm.stage = Stage.abbey;
 				gsm.loadState(gsm.stage);
 			}
             else if (cursor.IntersectsWith(embark))
             {
                 loading = true;
+                opacity = 128;
             }
 
             
@@ -152,10 +158,16 @@ namespace Project_PV
             xCloud-=1;
             if (loading)
             {
-                yload-=10;
-                if(yload <= 0)
+                opacity += 10;
+                if(opacity >=255)
                 {
                     loading = false;
+                    opacity = 255;
+                    Stage temp = gsm.stage;
+                    gsm.unloadState(temp);
+
+                    gsm.stage = Stage.quest;
+                    gsm.loadState(gsm.stage);
                 }
             }
             

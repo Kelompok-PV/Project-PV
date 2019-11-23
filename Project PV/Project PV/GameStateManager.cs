@@ -15,17 +15,16 @@ namespace Project_PV
         public Player player { get; set; }
         public GameStateManager()
         {
+            player = new Player();
             gameStates = new GameState[20];
-            this.stage = Stage.title;
+            this.stage = Stage.mainMenu;
             loadState(this.stage);
-            
         }
 
         public void loadState(Stage stage)
         {
             if(stage == Stage.title)
             {
-                player = new Player();
                 gameStates[(int)stage] = new MenuState(this);
             }
             else if (stage == Stage.mainMenu)
@@ -48,6 +47,15 @@ namespace Project_PV
 			{
 				gameStates[(int)stage] = new Guild(this);
 			}
+            else if(stage == Stage.quest)
+            {
+                gameStates[(int)stage] = new Quest(this);
+            }
+        }
+
+        public void unloadState(Stage stage)
+        {
+            gameStates[(int)stage] = null;
         }
 
         public Player getPlayer()
@@ -93,7 +101,7 @@ namespace Project_PV
     {
         title,
         mainMenu,
-        embark,
+        quest,
         easyState,
         mediumState,
         hardState,
