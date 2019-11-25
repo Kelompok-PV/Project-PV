@@ -95,30 +95,27 @@ namespace Project_PV
                 {
                     arrDraw[i] = true;
                 }
+                else if (cursor.IntersectsWith(sanitarium))
+                {
+                    gsm.stage = Stage.sanitarium;
+                    gsm.loadState(gsm.stage);
+                }
+                else if (cursor.IntersectsWith(guild))
+                {
+                    MessageBox.Show("guild");
+                    gsm.stage = Stage.guild;
+                    gsm.loadState(gsm.stage);
+                }
+                else if (cursor.IntersectsWith(abbey))
+                {
+                    MessageBox.Show("abbey");
+                    gsm.stage = Stage.abbey;
+                    gsm.loadState(gsm.stage);
+                }
             }
-            else if (cursor.IntersectsWith(sanitarium))
-            {
-                gsm.stage = Stage.sanitarium;
-                gsm.loadState(gsm.stage);
-            }
-            else if (cursor.IntersectsWith(guild))
-            {
-                MessageBox.Show("guild");
-				gsm.stage = Stage.guild;
-				gsm.loadState(gsm.stage);
-			}
-            else if (cursor.IntersectsWith(abbey))
-            {
-                MessageBox.Show("abbey");
-				gsm.stage = Stage.abbey;
-				gsm.loadState(gsm.stage);
-			}
+            
 
-            listRec.Clear();
-            listRec.Add(sanitarium);
-            listRec.Add(guild);
-            listRec.Add(abbey);
-            listRec.Add(blackSmith);
+            
         }
 
         public override void update()

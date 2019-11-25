@@ -146,6 +146,13 @@ namespace Project_PV.Properties {
         internal static System.Drawing.Bitmap blacksmith_icon {
             get {
                 object obj = ResourceManager.GetObject("blacksmith_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap blg_name_background {
             get {
                 object obj = ResourceManager.GetObject("blg_name_background", resourceCulture);
@@ -546,6 +553,16 @@ namespace Project_PV.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap progression_close {
+            get {
+                object obj = ResourceManager.GetObject("progression_close", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap remove_quirk_negative {
             get {
                 object obj = ResourceManager.GetObject("remove_quirk_negative", resourceCulture);
@@ -589,9 +606,6 @@ namespace Project_PV.Properties {
         internal static System.Drawing.Bitmap sanitarium_icon {
             get {
                 object obj = ResourceManager.GetObject("sanitarium_icon", resourceCulture);
-        internal static System.Drawing.Bitmap progression_close {
-            get {
-                object obj = ResourceManager.GetObject("progression_close", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

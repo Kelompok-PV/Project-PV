@@ -16,6 +16,7 @@ namespace Project_PV
         public GameStateManager()
         {
             gameStates = new GameState[11];
+            gameStates = new GameState[20];
             //this.stage = Stage.sanitarium;
             this.stage = Stage.blacksmith;
             //this.stage = Stage.battleState;
@@ -23,8 +24,7 @@ namespace Project_PV
             //this.stage = Stage.title;
             //this.stage = Stage.battleState;
             //this.stage = Stage.battleState;
-            gameStates = new GameState[20];
-            this.stage = Stage.title;
+            //this.stage = Stage.title;
             //this.stage = Stage.battleState;
             //this.stage = Stage.battleState;
 			//this.stage = Stage.battleState;

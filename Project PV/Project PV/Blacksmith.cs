@@ -54,6 +54,10 @@ namespace Project_PV
             object O4 = Project_PV.Properties.Resources.remove_quirk_positive;
             Image qpost = (Image)O4;
             g.DrawImage(qpost, 25, 115, 70, 70);
+
+            object O5 = Project_PV.Properties.Resources.progression_close;
+            Image close = (Image)O5;
+            g.DrawImage(close, 1230, 10, 50, 50);
         }
 
         public override void init()
@@ -73,12 +77,29 @@ namespace Project_PV
 
         public override void mouse_click(object sender, MouseEventArgs e)
         {
-            throw new NotImplementedException();
+            Rectangle cursor = new Rectangle(e.X, e.Y, 10, 10);
+            Rectangle back = new Rectangle(1230, 10, 50, 50);
+            if (cursor.IntersectsWith(back))
+            {
+                gsm.stage = Stage.mainMenu;
+                gsm.loadState(gsm.stage);
+            }
+            
         }
 
         public override void update()
         {
             
+        }
+
+        public override void mouse_hover(object sender, MouseEventArgs e)
+        {
+            
+        }
+
+        public override void mouse_leave(object sender, MouseEventArgs e)
+        {
+            throw new NotImplementedException();
         }
     }
 }

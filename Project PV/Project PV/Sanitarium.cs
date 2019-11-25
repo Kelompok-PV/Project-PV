@@ -72,9 +72,9 @@ namespace Project_PV
             Image qpost = (Image)O4;
             g.DrawImage(qpost, 25, 115, 70, 70);
 
-            //object O5 = Project_PV.Properties.Resources.remove_quirk_negative;
-            //Image qneg = (Image)O5;
-            //g.DrawImage(qneg, -30, 80, 800, 650);
+            object O5 = Project_PV.Properties.Resources.progression_close;
+            Image close = (Image)O5;
+            g.DrawImage(close, 1230, 10, 50, 50);
         }
 
         private GraphicsPath GetStringPath(string s, float dpi, RectangleF rect, Font font, StringFormat format)
@@ -99,7 +99,13 @@ namespace Project_PV
 
         public override void mouse_click(object sender, MouseEventArgs e)
         {
-            throw new NotImplementedException();
+            Rectangle cursor = new Rectangle(e.X, e.Y, 10, 10);
+            Rectangle back = new Rectangle(1230, 10, 50, 50);
+            if (cursor.IntersectsWith(back))
+            {
+                gsm.stage = Stage.mainMenu;
+                gsm.loadState(gsm.stage);
+            }
         }
 
         public override void update()
@@ -108,6 +114,16 @@ namespace Project_PV
         }
 
         public override void key_KeyUp(object sender, KeyEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override void mouse_hover(object sender, MouseEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override void mouse_leave(object sender, MouseEventArgs e)
         {
             throw new NotImplementedException();
         }
