@@ -81,17 +81,18 @@ namespace Project_PV
                 g.DrawImage(imgBg1, x + 585 + i * 449, 0, 450, 100);
                 g.DrawImage(imgBg3, x + 585 + i * 449, 380, 450, 100);
             }
+
             //last right
-            g.DrawImage(imgBg2, x + 800 + 5 * 450, 20, 450, 450);
-            g.DrawImage(imgLast, x + 800 + 5 * 450, 20, 450, 450);
-            g.DrawImage(imgBg1, x + 800 + 5 * 450, 0, 450, 100);
-            g.DrawImage(imgBg3, x + 800 + 5 * 450, 380, 450, 100);
+            g.DrawImage(imgBg2, x + 950 + 5 * 450, 20, 450, 450);
+            g.DrawImage(imgLast, x + 950 + 5 * 450, 20, 450, 450);
+            g.DrawImage(imgBg1, x + 950 + 5 * 450, 0, 450, 100);
+            g.DrawImage(imgBg3, x + 950 + 5 * 450, 380, 450, 100);
 
             //door right
-            g.DrawImage(imgBg2, x + 585 + 5 * 450, 20, 450, 450);
-            g.DrawImage(imgDoor, x + 585 + 5 * 450, 20, 450, 450);
-            g.DrawImage(imgBg1, x + 585 + 5 * 450, 0, 450, 100);
-            g.DrawImage(imgBg3, x + 585 + 5 * 450, 380, 450, 100);
+            g.DrawImage(imgBg2,  x + 580 + 5 * 450, 20, 450, 450);
+            g.DrawImage(imgDoor, x + 580 + 5 * 450, 20, 450, 450);
+            g.DrawImage(imgBg1,  x + 580 + 5 * 450, 0, 450, 100);
+            g.DrawImage(imgBg3,  x + 580 + 5 * 450, 380, 450, 100);
             g.FillRectangle(new SolidBrush(Color.Red), x + 700 + 5 * 450, 150, 200, 250);
 
             player.getImage(g);
@@ -123,7 +124,7 @@ namespace Project_PV
                 x -= 10;
                 player.hero_move = "run";
             }
-            else if(e.KeyData == Keys.D&&player.x<850)
+            else if(e.KeyData == Keys.D&&player.x<1050)
             {
                 player.x += 10;
                 player.hero_move = "run";
