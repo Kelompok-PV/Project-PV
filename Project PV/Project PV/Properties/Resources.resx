@@ -328,7 +328,7 @@
   <data name="remove_quirk_positive" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\remove_quirk_positive.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-    <data name="courtyard_randomcoba___2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="courtyard_randomcoba___2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\courtyard_randomcoba_ (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="courtyard_randomcoba___3_" type="System.Resources.ResXFileRef, System.Windows.Forms">
@@ -390,5 +390,20 @@
   </data>
   <data name="town_full_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\town\town full_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="panel_inventory" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\panel_inventory.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="panel_map" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\panel_map.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="panel_Player" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\panel_Player.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="panel_player2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\panel_player2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="panel_stat" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\panel_stat.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

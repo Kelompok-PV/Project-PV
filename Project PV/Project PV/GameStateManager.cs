@@ -16,14 +16,17 @@ namespace Project_PV
         public GameStateManager()
         {
             player = new Player();
-            
+
+
+            this.stage = Stage.battleState;
+            player.currentCharacters[0] = new ninja("ninnin", 50, new equip[5], new List<string>(), 5, 5);
+
+
             gameStates = new GameState[20];
             loadState(this.stage);
 
 
-            this.stage = Stage.title;
-
-            player.currentCharacters[0] = new ninja("ninnin", 50, new equip[5], new List<string>(), 5, 5);
+            
         }
 
         public void loadState(Stage stage)

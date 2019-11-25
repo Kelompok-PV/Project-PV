@@ -33,6 +33,7 @@ namespace Project_PV
             imgLast = (Image)last;
             imgDoor = (Image)door;
             x = 0;
+            imgpPlayer = (Image)Properties.Resources.ResourceManager.GetObject("panel_player2");
         }
 
         public override void init()
@@ -53,7 +54,7 @@ namespace Project_PV
         Image img;
 
 
-
+        Image imgpPlayer;
 
         public override void draw(Graphics g)
         {
@@ -61,44 +62,64 @@ namespace Project_PV
             g.TranslateTransform(-ox, -oy);
 
             //last left
-            g.DrawImage(imgBg2, x, 20, 450, 450);
-            g.DrawImage(imgLast, x + 220, 20, -220, 450);
-            g.DrawImage(imgBg1, x, 0, 450, 100);
-            g.DrawImage(imgBg3, x, 380, 450, 100);
+            if (x>-450)
+            {
+                g.DrawImage(imgBg2, x, 20, 450, 400);
+                g.DrawImage(imgLast, x + 220, 20, -220, 400);
+                g.DrawImage(imgBg1, x, 0, 450, 100);
+                g.DrawImage(imgBg3, x, 330, 450, 100);
+            }
+
 
             //door right
-            g.DrawImage(imgBg2, x + 140, 20, 450, 450);
-            g.DrawImage(imgDoor, x + 140, 20, 450, 450);
-            g.DrawImage(imgBg1, x + 140, 0, 450, 100);
-            g.DrawImage(imgBg3, x + 140, 380, 450, 100);
-            g.FillRectangle(new SolidBrush(Color.Red), x + 250, 150, 200, 250);
+            if (x > -600)
+            {
+                g.DrawImage(imgBg2, x + 140, 20, 450, 400);
+                g.DrawImage(imgDoor, x + 140, 20, 450, 400);
+                g.DrawImage(imgBg1, x + 140, 0, 450, 100);
+                g.DrawImage(imgBg3, x + 140, 330, 450, 100);
+                g.FillRectangle(new SolidBrush(Color.Red), x + 250, 150, 200, 250);
+            }
+            
             for (int i = 0; i < gambar.Count; i++)
             {
-                object background_random = Properties.Resources.ResourceManager.GetObject("courtyard_randomcoba___"+gambar[i]+"_");
-                Image img = (Image)background_random;
-                g.DrawImage(imgBg2, x + 585 + i * 449, 20, 450, 450);
-                g.DrawImage(img, x + 585 + i * 449, 0, 450, 450);
-                g.DrawImage(imgBg1, x + 585 + i * 449, 0, 450, 100);
-                g.DrawImage(imgBg3, x + 585 + i * 449, 380, 450, 100);
+                int tmpx = x + 585 + i * 449;
+                if (x>-1000-(i*449))
+                {
+                    object background_random = Properties.Resources.ResourceManager.GetObject("courtyard_randomcoba___" + gambar[i] + "_");
+                    Image img = (Image)background_random;
+                    g.DrawImage(imgBg2, x + 585 + i * 449, 20, 450, 400);
+                    g.DrawImage(img, x + 585 + i * 449, 0, 450, 400);
+                    g.DrawImage(imgBg1, x + 585 + i * 449, 0, 450, 100);
+                    g.DrawImage(imgBg3, x + 585 + i * 449, 330, 450, 100);
+                }
+                
             }
 
             //last right
-            g.DrawImage(imgBg2, x + 950 + 5 * 450, 20, 450, 450);
-            g.DrawImage(imgLast, x + 950 + 5 * 450, 20, 450, 450);
+            g.DrawImage(imgBg2, x + 950 + 5 * 450, 20, 450, 400);
+            g.DrawImage(imgLast, x + 950 + 5 * 450, 20, 450, 400);
             g.DrawImage(imgBg1, x + 950 + 5 * 450, 0, 450, 100);
-            g.DrawImage(imgBg3, x + 950 + 5 * 450, 380, 450, 100);
+            g.DrawImage(imgBg3, x + 950 + 5 * 450, 330, 450, 100);
 
             //door right
-            g.DrawImage(imgBg2,  x + 580 + 5 * 450, 20, 450, 450);
-            g.DrawImage(imgDoor, x + 580 + 5 * 450, 20, 450, 450);
+            g.DrawImage(imgBg2,  x + 580 + 5 * 450, 20, 450, 400);
+            g.DrawImage(imgDoor, x + 580 + 5 * 450, 20, 450, 400);
             g.DrawImage(imgBg1,  x + 580 + 5 * 450, 0, 450, 100);
-            g.DrawImage(imgBg3,  x + 580 + 5 * 450, 380, 450, 100);
+            g.DrawImage(imgBg3,  x + 580 + 5 * 450, 330, 450, 100);
             g.FillRectangle(new SolidBrush(Color.Red), x + 700 + 5 * 450, 150, 200, 250);
 
             player.getImage(g);
             player.hero_move_now++;
 
-            g.FillRectangle(new SolidBrush(Color.FromArgb(opacity, 0, 0, 0)), 0, 0, 1300, 700);
+            if (zoomin==true)
+            {
+                g.FillRectangle(new SolidBrush(Color.FromArgb(opacity, 0, 0, 0)), 0, 0, 1300, 700);
+            }
+
+            g.DrawImage(imgpPlayer,  70+23,420,527,100);
+            g.DrawImage((Image)Properties.Resources.ResourceManager.GetObject("panel_stat"),     70+50,520,500,170);
+            g.DrawImage((Image)Properties.Resources.ResourceManager.GetObject("panel_inventory"),70+550,420,550,270);
         }
         int opacity = 0;
         public override void mouse_click(object sender, MouseEventArgs e)
