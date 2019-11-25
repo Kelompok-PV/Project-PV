@@ -31,8 +31,9 @@ namespace Project_PV
 			// this.stage = Stage.battleState;
 			//this.stage = Stage.mainMenu;
             player = new Player();
+            player.currentCharacters[0] =new ninja("ninnin", 50, new equip[5], new List<string>(), 5, 5);
             gameStates = new GameState[20];
-            this.stage = Stage.mainMenu;
+            this.stage = Stage.battleState;
             loadState(this.stage);
         }
 
@@ -48,7 +49,9 @@ namespace Project_PV
             }
             else if (stage == Stage.battleState)
             {
-                gameStates[(int)stage] = new BattleState(this);
+                BattleState bs = new BattleState(this);
+                bs.player = player.currentCharacters[0];
+                gameStates[(int)stage] = bs;
             }
             else if (stage == Stage.sanitarium)
             {
@@ -124,7 +127,7 @@ namespace Project_PV
     public enum Stage
     {
         title,
-        mainMenu,
+        mainMenu, 
         quest,
         easyState,
         mediumState,

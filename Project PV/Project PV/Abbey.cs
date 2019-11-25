@@ -21,47 +21,59 @@ namespace Project_PV
 			this.gsm = gsm;
 			Config.font.AddFontFile("Resources\\DwarvenAxe BB W00 Regular.ttf");
 			title = new Font(Config.font.Families[0], 80, FontStyle.Regular);
-			
-		}
-		
 
-		public override void draw(Graphics g)
+            rect.Location = new PointF(140, 20);
+            arrow = (Image)O5;
+            chara = (Image)O3;
+            icon = (Image)O2;
+            background = (Image)O1;
+            for (int i = 0; i < 9; i++)
+            {
+                unlockset.Add(new unlockoverlay(cx, cy));
+                if (i % 3 == 0)
+                {
+                    cy += 200;
+                    cx = 830;
+                }
+                else
+                {
+                    cx += 130;
+                }
+            }
+            }
+        object O1 = Project_PV.Properties.Resources.abbey_character_background;
+        Image background ;
+        object O2 = Project_PV.Properties.Resources.abbey_icon;
+        Image icon;
+        object O3 = Project_PV.Properties.Resources.abbey_character;
+        Image chara;
+        object O5 = Project_PV.Properties.Resources.progression_close;
+        Image arrow;
+
+        string abbey = "Abbey";
+        RectangleF rect = Config.rect;
+
+        Pen pen = new Pen(new SolidBrush(Color.Red), 2);
+        StringFormat format = StringFormat.GenericTypographic;
+        public override void draw(Graphics g)
 		{
-			object O1 = Project_PV.Properties.Resources.abbey_character_background;
-			Image background = (Image)O1;
+			
 			g.DrawImage(background, 0, 0, 1300, 730);
-			object O2 = Project_PV.Properties.Resources.abbey_icon;
-			Image icon = (Image)O2;
+			
 			g.DrawImage(icon, 30, 20, 100, 100);
-			object O3 = Project_PV.Properties.Resources.abbey_character;
-			Image chara = (Image)O3;
+			
 			g.DrawImage(chara, 50, 200, 500, 400);
-			object O5 = Project_PV.Properties.Resources.progression_close;
-			Image arrow = (Image)O5;
+			
 			g.DrawImage(arrow, 50, 120,50, 50);
-			for (int i = 0; i < 9; i++)
-			{
-				unlockset.Add(new unlockoverlay(cx, cy));
-				if (i % 3 == 0)
-				{
-					cy += 200;
-					cx = 830;
-				}
-				else
-				{
-					cx += 130;
-				}
-				g.DrawImage(unlockset[i].Overlay,unlockset[i].X, unlockset[i].Y, 200, 200);
+            for (int i = 0; i < 9; i++)
+            {
+                g.DrawImage(unlockset[i].Overlay, unlockset[i].X, unlockset[i].Y, 200, 200);
+            }
 				
 				
-			}
-			string abbey = "Abbey";
-			RectangleF rect = Config.rect;
-			rect.Location = new PointF(140, 20);
-			StringFormat format = StringFormat.GenericTypographic;
+			
 			float dpi = g.DpiY;
 
-			Pen pen = new Pen(new SolidBrush(Color.Red), 2);
 			g.DrawString(abbey, title, new SolidBrush(Color.Black), new Point(142, 20));
 			g.DrawPath(pen, GetStringPath(abbey, dpi, rect, title, format));
 
