@@ -79,7 +79,17 @@ namespace Project_PV
 
 		}
 
-		public override void init()
+        private GraphicsPath GetStringPath(string s, float dpi, RectangleF rect, Font font, StringFormat format)
+        {
+            GraphicsPath path = new GraphicsPath();
+            // Convert font size into appropriate coordinates
+            float emSize = dpi * font.SizeInPoints / 70;
+            path.AddString(s, font.FontFamily, (int)font.Style, emSize, rect, format);
+
+            return path;
+        }
+
+        public override void init()
 		{
 			throw new NotImplementedException();
 		}
@@ -125,6 +135,23 @@ namespace Project_PV
         {
             
         }
+    }
+	
+	class unlockoverlay
+	{
+		int x;
+		int y;
+		Image overlay;
+		Rectangle shadow;
+		public unlockoverlay(int x, int y)
+		{
+			this.X = x;
+			this.Y = y;
+			object O4 = Project_PV.Properties.Resources.abbey_locked_hero_slot_overlay;
+			Image unlock = (Image)O4;
+			Overlay = unlock;
+			shadow = new Rectangle(x, y, 200, 200);
+		}
 
         private GraphicsPath GetStringPath(string s, float dpi, RectangleF rect, Font font, StringFormat format)
         {

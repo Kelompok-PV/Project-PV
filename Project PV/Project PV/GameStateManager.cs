@@ -15,6 +15,21 @@ namespace Project_PV
         public Player player { get; set; }
         public GameStateManager()
         {
+            gameStates = new GameState[11];
+            gameStates = new GameState[20];
+            //this.stage = Stage.sanitarium;
+            this.stage = Stage.blacksmith;
+            //this.stage = Stage.battleState;
+            //gameStates = new GameState[8];
+            //this.stage = Stage.title;
+            //this.stage = Stage.battleState;
+            //this.stage = Stage.battleState;
+            //this.stage = Stage.title;
+            //this.stage = Stage.battleState;
+            //this.stage = Stage.battleState;
+			//this.stage = Stage.battleState;
+			// this.stage = Stage.battleState;
+			//this.stage = Stage.mainMenu;
             player = new Player();
             player.currentCharacters[0] =new ninja("ninnin", 50, new equip[5], new List<string>(), 5, 5);
             gameStates = new GameState[20];
@@ -38,6 +53,15 @@ namespace Project_PV
                 bs.player = player.currentCharacters[0];
                 gameStates[(int)stage] = bs;
             }
+            else if (stage == Stage.sanitarium)
+            {
+                gameStates[(int)stage] = new Sanitarium(this);
+            }
+            else if (stage == Stage.blacksmith)
+            {
+                gameStates[(int)stage] = new Blacksmith(this);
+            }
+
             else if (stage == Stage.battleAreaState)
             {
                 gameStates[(int)stage] = new BattleAreaState(this);
@@ -112,6 +136,8 @@ namespace Project_PV
         battleAreaState,
         gameOver,
         completeStage,
+        sanitarium,
+        blacksmith,
 		abbey,
 		guild
     }
