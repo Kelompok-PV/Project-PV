@@ -3,7 +3,6 @@ E:\GitHub\Project-PV\Project PV\Project PV\bin\Debug\Project PV.exe
 E:\GitHub\Project-PV\Project PV\Project PV\bin\Debug\Project PV.pdb
 E:\GitHub\Project-PV\Project PV\Project PV\obj\Debug\Project_PV.Properties.Resources.resources
 E:\GitHub\Project-PV\Project PV\Project PV\obj\Debug\Project PV.csproj.GenerateResource.cache
-E:\GitHub\Project-PV\Project PV\Project PV\obj\Debug\Project PV.csproj.CoreCompileInputs.cache
 E:\GitHub\Project-PV\Project PV\Project PV\obj\Debug\Project PV.exe
 E:\GitHub\Project-PV\Project PV\Project PV\obj\Debug\Project PV.pdb
 C:\Users\vinny\OneDrive\Documents\Project-PV\Project PV\Project PV\bin\Debug\Resources\The_Blood.png
@@ -90,3 +89,8 @@ C:\Users\Fendy\Documents\GitHub\Project-PV\Project PV\Project PV\bin\Debug\Resou
 C:\Users\Fendy\Documents\GitHub\Project-PV\Project PV\Project PV\bin\Debug\Project PV.exe.config
 C:\Users\Fendy\Documents\GitHub\Project-PV\Project PV\Project PV\bin\Debug\Project PV.exe
 C:\Users\Fendy\Documents\GitHub\Project-PV\Project PV\Project PV\bin\Debug\Project PV.pdb
+E:\GitHub\Project-PV\Project PV\Project PV\bin\Debug\Interop.WMPLib.dll
+E:\GitHub\Project-PV\Project PV\Project PV\bin\Debug\AxInterop.WMPLib.dll
+E:\GitHub\Project-PV\Project PV\Project PV\obj\Debug\Interop.WMPLib.dll
+E:\GitHub\Project-PV\Project PV\Project PV\obj\Debug\AxInterop.WMPLib.dll
+E:\GitHub\Project-PV\Project PV\Project PV\obj\Debug\Project PV.csproj.ResolveComReference.cache

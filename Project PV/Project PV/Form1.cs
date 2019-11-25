@@ -14,6 +14,7 @@ namespace Project_PV
     public partial class Form1 : Form
     {
         GameStateManager manager;
+        int x, y;
         public Form1()
         {
             InitializeComponent();
@@ -28,12 +29,30 @@ namespace Project_PV
 
         private void Form1_Load(object sender, EventArgs e)
         {
+
+            try
+            {
+                axWindowsMediaPlayer1.URL = "E:\\GitHub\\Project-PV\\Project PV\\assets\\tst.mp3";
+                axWindowsMediaPlayer1.Hide();
+                axWindowsMediaPlayer1.Ctlcontrols.play();
+                axWindowsMediaPlayer1.settings.setMode("loop", true);
+            }
+            catch (Exception)
+            {
+
+                
+            }
+            
+
+
+
             Config.font.AddFontFile("Resources\\DwarvenAxe BB W00 Regular.ttf");
             manager = new GameStateManager();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
+            Cursor.Current = new Cursor(Project_PV.Properties.Resources.arrow.GetHicon());
             manager.update();
             Invalidate();
         }
@@ -53,8 +72,14 @@ namespace Project_PV
             manager.Form1_KeyUp(sender, e);
         }
 
+        private void Form1_MouseHover(object sender, EventArgs e)
+        {
+            Cursor.Current = new Cursor(Project_PV.Properties.Resources.arrow.GetHicon());
+        }
+
         private void Form1_MouseMove(object sender, MouseEventArgs e)
         {
+            Cursor.Current = new Cursor(Project_PV.Properties.Resources.arrow.GetHicon());
             manager.mouse_hover(sender,e);
         }
     }
