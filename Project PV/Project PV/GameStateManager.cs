@@ -17,7 +17,7 @@ namespace Project_PV
         {
             player = new Player();
             gameStates = new GameState[20];
-            this.stage = Stage.mainMenu;
+            this.stage = Stage.battleState;
             loadState(this.stage);
         }
 
@@ -100,7 +100,7 @@ namespace Project_PV
     public enum Stage
     {
         title,
-        mainMenu,
+        mainMenu, 
         quest,
         easyState,
         mediumState,

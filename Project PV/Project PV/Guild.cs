@@ -21,26 +21,36 @@ namespace Project_PV
 			Config.font.AddFontFile("Resources\\DwarvenAxe BB W00 Regular.ttf");
 			title = new Font(Config.font.Families[0], 80, FontStyle.Regular);
 
-		}
-		public override void draw(Graphics g)
+            rect.Location = new PointF(140, 20);
+
+            background = (Image)O1;
+            icon = (Image)O2;
+            chara = (Image)O3;
+            arrow = (Image)O5;
+        }
+        object O1 = Project_PV.Properties.Resources.guild_character_background;
+        Image background;
+        object O2 = Project_PV.Properties.Resources.guild_icon;
+        Image icon;
+        object O3 = Project_PV.Properties.Resources.guild_character;
+        Image chara;
+        object O5 = Project_PV.Properties.Resources.progression_close;
+        Image arrow;
+        string abbey = "Guild";
+        RectangleF rect = Config.rect;
+        StringFormat format = StringFormat.GenericTypographic;
+        public override void draw(Graphics g)
 		{
-			object O1 = Project_PV.Properties.Resources.guild_character_background;
-			Image background = (Image)O1;
+			
 			g.DrawImage(background, 0, 0, 1300, 730);
-			object O2 = Project_PV.Properties.Resources.guild_icon;
-			Image icon = (Image)O2;
+			
 			g.DrawImage(icon, 30, 20, 100, 100);
-			object O3 = Project_PV.Properties.Resources.guild_character;
-			Image chara = (Image)O3;
+			
 			g.DrawImage(chara, 50, 200, 500, 400);
-			object O5 = Project_PV.Properties.Resources.progression_close;
-			Image arrow = (Image)O5;
+			
 			g.DrawImage(arrow, 50, 120, 50, 50);
 
-			string abbey = "Guild";
-			RectangleF rect = Config.rect;
-			rect.Location = new PointF(140, 20);
-			StringFormat format = StringFormat.GenericTypographic;
+			
 			float dpi = g.DpiY;
 
 			Pen pen = new Pen(new SolidBrush(Color.Red), 2);
