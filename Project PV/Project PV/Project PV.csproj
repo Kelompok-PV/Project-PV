@@ -50,6 +50,7 @@
     <Compile Include="Abbey.cs" />
     <Compile Include="BattleAreaState.cs" />
     <Compile Include="BattleState.cs" />
+    <Compile Include="Blacksmith.cs" />
     <Compile Include="Config.cs" />
     <Compile Include="equip.cs" />
     <Compile Include="Form1.cs">
@@ -73,6 +74,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Sanitarium.cs" />
     <Compile Include="Quest.cs" />
     <Compile Include="status.cs" />
     <Compile Include="Skill.cs" />
@@ -251,6 +253,13 @@
     <None Include="Resources\abbey.character_background.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\sanitarium.character.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sanitarium.character_background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sanitarium.icon.png" />
     <None Include="Resources\courtyard_backgroundcoba_ %281%29.png" />
   </ItemGroup>
   <ItemGroup>
@@ -305,6 +314,19 @@
     <None Include="Resources\courtyard_lastcoba.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\remove_quirk_negative.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\remove_quirk_positive.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blacksmith.character.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blacksmith.character_background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blacksmith.icon.png" />
     <None Include="Resources\courtyard_random_ %282%29.png" />
   </ItemGroup>
   <ItemGroup>
@@ -373,6 +395,12 @@
     <None Include="Resources\Quest\hero_slot.background.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\side_decor.png" />
+    <None Include="Resources\panel_inventory.png" />
+    <None Include="Resources\panel_map.png" />
+    <None Include="Resources\panel_Player.png" />
+    <None Include="Resources\panel_stat.png" />
+    <None Include="Resources\panel_player2.png" />
     <Content Include="Resources\Quest\dungeon_progressionbar.png" />
     <Content Include="Resources\Quest\embark_party.background.png" />
     <None Include="Resources\tst.mp3" />

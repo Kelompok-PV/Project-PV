@@ -304,6 +304,30 @@
   <data name="ninja_run___9_" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ninja_run_ (9).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="sanitarium_character" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sanitarium.character.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sanitarium_character_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sanitarium.character_background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sanitarium_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sanitarium.icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="blacksmith_character" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\blacksmith.character.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="blacksmith_character_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\blacksmith.character_background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="blacksmith_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\blacksmith.icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="remove_quirk_negative" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\remove_quirk_negative.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="remove_quirk_positive" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\remove_quirk_positive.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="courtyard_randomcoba___2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\courtyard_randomcoba_ (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -369,5 +393,22 @@
   </data>
   <data name="tst" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tst.mp3;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="panel_inventory" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\panel_inventory.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="panel_map" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\panel_map.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="panel_Player" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\panel_Player.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="panel_player2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\panel_player2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="panel_stat" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\panel_stat.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="side_decor" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\side_decor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

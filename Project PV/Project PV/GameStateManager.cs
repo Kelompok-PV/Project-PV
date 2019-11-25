@@ -16,9 +16,17 @@ namespace Project_PV
         public GameStateManager()
         {
             player = new Player();
+
+
+            this.stage = Stage.battleState;
+            player.currentCharacters[0] = new ninja("ninnin", 50, new equip[5], new List<string>(), 5, 5);
+
+
             gameStates = new GameState[20];
-            this.stage = Stage.mainMenu;
             loadState(this.stage);
+
+
+            
         }
 
         public void loadState(Stage stage)
@@ -33,8 +41,19 @@ namespace Project_PV
             }
             else if (stage == Stage.battleState)
             {
-                gameStates[(int)stage] = new BattleState(this);
+                BattleState bs = new BattleState(this);
+                bs.player = player.currentCharacters[0];
+                gameStates[(int)stage] = bs;
             }
+            else if (stage == Stage.sanitarium)
+            {
+                gameStates[(int)stage] = new Sanitarium(this);
+            }
+            else if (stage == Stage.blacksmith)
+            {
+                gameStates[(int)stage] = new Blacksmith(this);
+            }
+
             else if (stage == Stage.battleAreaState)
             {
                 gameStates[(int)stage] = new BattleAreaState(this);
@@ -100,7 +119,7 @@ namespace Project_PV
     public enum Stage
     {
         title,
-        mainMenu,
+        mainMenu, 
         quest,
         easyState,
         mediumState,
@@ -109,6 +128,8 @@ namespace Project_PV
         battleAreaState,
         gameOver,
         completeStage,
+        sanitarium,
+        blacksmith,
 		abbey,
 		guild
     }

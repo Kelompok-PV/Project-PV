@@ -58,8 +58,6 @@ C:\Users\Fabian-Lepi\Documents\GitHub\Project-PV\Project PV\Project PV\bin\Debug
 C:\Users\Fabian-Lepi\Documents\GitHub\Project-PV\Project PV\Project PV\bin\Debug\Resources\button.jpg
 C:\Users\Fabian-Lepi\Documents\GitHub\Project-PV\Project PV\Project PV\bin\Debug\Resources\font.png
 C:\Users\Fabian-Lepi\Documents\GitHub\Project-PV\Project PV\Project PV\bin\Debug\Resources\town_backdrop.png
-C:\Users\Fabian-Lepi\Documents\GitHub\Project-PV\Project PV\Project PV\bin\Debug\Resources\town_ground_sprite.png
-C:\Users\Fabian-Lepi\Documents\GitHub\Project-PV\Project PV\Project PV\bin\Debug\Resources\town_ground.png
 C:\Users\Fabian-Lepi\Documents\GitHub\Project-PV\Project PV\Project PV\bin\Debug\Resources\town_bg.png
 C:\Users\Fabian-Lepi\Documents\GitHub\Project-PV\Project PV\Project PV\bin\Debug\Resources\arrow.png
 C:\Users\Fabian\Documents\GitHub\Project-PV-fix\Project PV\Project PV\bin\Debug\Resources\background.jpg
@@ -75,6 +73,13 @@ C:\Users\Fendy\Documents\GitHub\Project-PV\Project PV\Project PV\obj\Debug\Proje
 C:\Users\Fendy\Documents\GitHub\Project-PV\Project PV\Project PV\obj\Debug\Project PV.csproj.GenerateResource.cache
 C:\Users\Fendy\Documents\GitHub\Project-PV\Project PV\Project PV\obj\Debug\Project PV.exe
 C:\Users\Fendy\Documents\GitHub\Project-PV\Project PV\Project PV\obj\Debug\Project PV.pdb
+C:\Users\Michael Shan Widodo\Documents\GitHub\Project-PV\Project PV\Project PV\bin\Debug\Resources\background.jpg
+C:\Users\Michael Shan Widodo\Documents\GitHub\Project-PV\Project PV\Project PV\bin\Debug\Resources\button.jpg
+C:\Users\Michael Shan Widodo\Documents\GitHub\Project-PV\Project PV\Project PV\bin\Debug\Resources\font.png
+C:\Users\Michael Shan Widodo\Documents\GitHub\Project-PV\Project PV\Project PV\bin\Debug\Resources\town_backdrop.png
+C:\Users\Michael Shan Widodo\Documents\GitHub\Project-PV\Project PV\Project PV\bin\Debug\Resources\town_bg.png
+C:\Users\Michael Shan Widodo\Documents\GitHub\Project-PV\Project PV\Project PV\bin\Debug\Resources\arrow.png
+C:\Users\Michael Shan Widodo\Documents\GitHub\Project-PV\Project PV\Project PV\bin\Debug\Resources\DwarvenAxe BB W00 Regular.ttf
 C:\Users\Fabian\Documents\GitHub\Project-PV-fix\Project PV\Project PV\bin\Debug\Resources\DwarvenAxe BB W00 Regular.ttf
 C:\Users\Fendy\Documents\GitHub\Project-PV\Project PV\Project PV\obj\Debug\Project_PV.Properties.Resources.resources
 C:\Users\Fendy\Documents\GitHub\Project-PV\Project PV\Project PV\obj\Debug\Project PV.csproj.CoreCompileInputs.cache
@@ -94,3 +99,4 @@ E:\GitHub\Project-PV\Project PV\Project PV\bin\Debug\AxInterop.WMPLib.dll
 E:\GitHub\Project-PV\Project PV\Project PV\obj\Debug\Interop.WMPLib.dll
 E:\GitHub\Project-PV\Project PV\Project PV\obj\Debug\AxInterop.WMPLib.dll
 E:\GitHub\Project-PV\Project PV\Project PV\obj\Debug\Project PV.csproj.ResolveComReference.cache
+C:\Users\Fabian-Lepi\Documents\GitHub\Project-PV\Project PV\Project PV\bin\Debug\Resources\DwarvenAxe BB W00 Regular.ttf

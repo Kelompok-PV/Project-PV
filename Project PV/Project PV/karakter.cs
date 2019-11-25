@@ -55,7 +55,7 @@ namespace Project_PV
         {
             object O = Properties.Resources.ResourceManager.GetObject(hero + "_" + hero_move + "___" + hero_move_now + "_");
             Image img = (Image)O;
-            g.DrawImage(img, x, 280, 100, 150);
+            g.DrawImage(img, x, 250, 100, 150);
         }
     }
     class ninja : karakter

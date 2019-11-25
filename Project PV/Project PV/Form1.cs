@@ -60,6 +60,7 @@ namespace Project_PV
         private void Form1_MouseClick(object sender, MouseEventArgs e)
         {
             //MessageBox.Show("x: "+e.X+" y: "+e.Y);
+            Cursor.Current = new Cursor(Project_PV.Properties.Resources.arrow.GetHicon());
             manager.mouse_click(sender, e);
         }
         private void Form1_KeyDown(object sender, KeyEventArgs e)
@@ -81,6 +82,11 @@ namespace Project_PV
         {
             Cursor.Current = new Cursor(Project_PV.Properties.Resources.arrow.GetHicon());
             manager.mouse_hover(sender,e);
+        }
+
+        private void Form1_MouseDown(object sender, MouseEventArgs e)
+        {
+            Cursor.Current = new Cursor(Project_PV.Properties.Resources.arrow.GetHicon());
         }
     }
 }
