@@ -34,6 +34,7 @@ namespace Project_PV
             imgDoor = (Image)door;
             x = 0;
             imgpPlayer = (Image)Properties.Resources.ResourceManager.GetObject("panel_player2");
+            imgpInv = (Image)Properties.Resources.ResourceManager.GetObject("panel_inventory");
         }
 
         public override void init()
@@ -55,6 +56,7 @@ namespace Project_PV
 
 
         Image imgpPlayer;
+        Image imgpInv;
 
         public override void draw(Graphics g)
         {
@@ -78,7 +80,6 @@ namespace Project_PV
                 g.DrawImage(imgDoor, x + 140, 20, 450, 400);
                 g.DrawImage(imgBg1, x + 140, 0, 450, 100);
                 g.DrawImage(imgBg3, x + 140, 330, 450, 100);
-                g.FillRectangle(new SolidBrush(Color.Red), x + 250, 150, 200, 250);
             }
             
             for (int i = 0; i < gambar.Count; i++)
@@ -107,7 +108,6 @@ namespace Project_PV
             g.DrawImage(imgDoor, x + 580 + 5 * 450, 20, 450, 400);
             g.DrawImage(imgBg1,  x + 580 + 5 * 450, 0, 450, 100);
             g.DrawImage(imgBg3,  x + 580 + 5 * 450, 330, 450, 100);
-            g.FillRectangle(new SolidBrush(Color.Red), x + 700 + 5 * 450, 150, 200, 250);
 
             player.getImage(g);
             player.hero_move_now++;
@@ -117,25 +117,33 @@ namespace Project_PV
                 g.FillRectangle(new SolidBrush(Color.FromArgb(opacity, 0, 0, 0)), 0, 0, 1300, 700);
             }
 
-            g.DrawImage(imgpPlayer,  70+23,420,527,100);
+            g.DrawImage((Image)Properties.Resources.ResourceManager.GetObject("side_decor"), 0, 420, 120, 270);
+            g.DrawImage(imgpPlayer,  70+22,420,528,100);
             g.DrawImage((Image)Properties.Resources.ResourceManager.GetObject("panel_stat"),     70+50,520,500,170);
-            g.DrawImage((Image)Properties.Resources.ResourceManager.GetObject("panel_inventory"),70+550,420,550,270);
+            g.DrawImage(imgpInv,70+550,420,550,270);
+            g.DrawImage((Image)Properties.Resources.ResourceManager.GetObject("side_decor"), 1285, 420, -120, 270);
         }
         int opacity = 0;
         public override void mouse_click(object sender, MouseEventArgs e)
         {
-            Rectangle recDoorL = new Rectangle(x + 250, 150, 200, 250);
-            Rectangle recDoorR = new Rectangle(x + 700 + 5 * 450, 20, 450, 450);
             Rectangle mouse = new Rectangle(e.X, e.Y, 1, 1);
-            if (mouse.IntersectsWith(recDoorL) )
+            if (mouse.IntersectsWith(new Rectangle(x + 250, 150, 200, 250)) )
             {
                 c = new Point(500 / 2, 300 / 2);
                 zoomin = true;
             }
-            if (mouse.IntersectsWith(recDoorR))
+            if (mouse.IntersectsWith(new Rectangle(x + 700 + 5 * 450, 20, 450, 450)))
             {
                 c= new Point(1000 / 2, 300 / 2);
                 zoomin = true;
+            }
+            if (mouse.IntersectsWith(new Rectangle(1130, 550, 50, 50)))
+            {
+                imgpInv = (Image)Properties.Resources.ResourceManager.GetObject("panel_map");
+            }
+            if (mouse.IntersectsWith(new Rectangle(1130, 610, 50, 50)))
+            {
+                imgpInv = (Image)Properties.Resources.ResourceManager.GetObject("panel_inventory");
             }
         }
         public override void key_keydown(object sender, KeyEventArgs e)

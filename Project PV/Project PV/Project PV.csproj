@@ -395,6 +395,7 @@
     <None Include="Resources\Quest\hero_slot.background.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\side_decor.png" />
     <None Include="Resources\panel_inventory.png" />
     <None Include="Resources\panel_map.png" />
     <None Include="Resources\panel_Player.png" />
