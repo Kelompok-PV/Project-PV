@@ -29,7 +29,7 @@ namespace Project_PV
 		{
 			object O1 = Project_PV.Properties.Resources.abbey_character_background;
 			Image background = (Image)O1;
-			g.DrawImage(background, 0, 0, 1300, 700);
+			g.DrawImage(background, 0, 0, 1300, 730);
 			object O2 = Project_PV.Properties.Resources.abbey_icon;
 			Image icon = (Image)O2;
 			g.DrawImage(icon, 30, 20, 100, 100);
@@ -111,7 +111,7 @@ namespace Project_PV
 
         public override void key_KeyUp(object sender, KeyEventArgs e)
         {
-            throw new NotImplementedException();
+            
         }
 
         public override void mouse_hover(object sender, MouseEventArgs e)
@@ -121,7 +121,7 @@ namespace Project_PV
 
         public override void mouse_leave(object sender, MouseEventArgs e)
         {
-            throw new NotImplementedException();
+            
         }
     }
 	
@@ -141,9 +141,36 @@ namespace Project_PV
 			shadow = new Rectangle(x, y, 200, 200);
 		}
 
-		public int X { get => x; set => x = value; }
-		public int Y { get => y; set => y = value; }
-		public Image Overlay { get => overlay; set => overlay = value; }
-		public Rectangle Shadow { get => shadow; set => shadow = value; }
-	}
+        private GraphicsPath GetStringPath(string s, float dpi, RectangleF rect, Font font, StringFormat format)
+        {
+            GraphicsPath path = new GraphicsPath();
+            // Convert font size into appropriate coordinates
+            float emSize = dpi * font.SizeInPoints / 70;
+            path.AddString(s, font.FontFamily, (int)font.Style, emSize, rect, format);
+
+            return path;
+        }
+    }
+    class unlockoverlay
+    {
+        int x;
+        int y;
+        Image overlay;
+        Rectangle shadow;
+        public unlockoverlay(int x, int y)
+        {
+            this.X = x;
+            this.Y = y;
+            object O4 = Project_PV.Properties.Resources.abbey_locked_hero_slot_overlay;
+            Image unlock = (Image)O4;
+            Overlay = unlock;
+            shadow = new Rectangle(x, y, 200, 200);
+        }
+
+        public int X { get => x; set => x = value; }
+        public int Y { get => y; set => y = value; }
+        public Image Overlay { get => overlay; set => overlay = value; }
+        public Rectangle Shadow { get => shadow; set => shadow = value; }
+    }
 }
+

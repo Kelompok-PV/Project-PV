@@ -83,6 +83,7 @@ C:\Users\Michael Shan Widodo\Documents\GitHub\Project-PV\Project PV\Project PV\b
 C:\Users\Michael Shan Widodo\Documents\GitHub\Project-PV\Project PV\Project PV\bin\Debug\Resources\town_bg.png
 C:\Users\Michael Shan Widodo\Documents\GitHub\Project-PV\Project PV\Project PV\bin\Debug\Resources\arrow.png
 C:\Users\Michael Shan Widodo\Documents\GitHub\Project-PV\Project PV\Project PV\bin\Debug\Resources\DwarvenAxe BB W00 Regular.ttf
+C:\Users\Fabian\Documents\GitHub\Project-PV-fix\Project PV\Project PV\bin\Debug\Resources\DwarvenAxe BB W00 Regular.ttf
 C:\Users\Fendy\Documents\GitHub\Project-PV\Project PV\Project PV\obj\Debug\Project_PV.Properties.Resources.resources
 C:\Users\Fendy\Documents\GitHub\Project-PV\Project PV\Project PV\obj\Debug\Project PV.csproj.CoreCompileInputs.cache
 C:\Users\Fendy\Documents\GitHub\Project-PV\Project PV\Project PV\bin\Debug\Resources\DwarvenAxe BB W00 Regular.ttf

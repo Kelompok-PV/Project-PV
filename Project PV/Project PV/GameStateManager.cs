@@ -12,7 +12,7 @@ namespace Project_PV
     {
         public GameState[] gameStates { get; set; }
         public Stage stage { get; set; }
-
+        public Player player { get; set; }
         public GameStateManager()
         {
             gameStates = new GameState[11];
@@ -30,8 +30,10 @@ namespace Project_PV
 			//this.stage = Stage.battleState;
 			// this.stage = Stage.battleState;
 			//this.stage = Stage.mainMenu;
+            player = new Player();
+            gameStates = new GameState[20];
+            this.stage = Stage.mainMenu;
             loadState(this.stage);
-            
         }
 
         public void loadState(Stage stage)
@@ -57,6 +59,10 @@ namespace Project_PV
                 gameStates[(int)stage] = new Blacksmith(this);
             }
 
+            else if (stage == Stage.battleAreaState)
+            {
+                gameStates[(int)stage] = new BattleAreaState(this);
+            }
 			else if(stage == Stage.abbey)
 			{
 				gameStates[(int)stage] = new Abbey(this);
@@ -65,6 +71,20 @@ namespace Project_PV
 			{
 				gameStates[(int)stage] = new Guild(this);
 			}
+            else if(stage == Stage.quest)
+            {
+                gameStates[(int)stage] = new Quest(this);
+            }
+        }
+
+        public void unloadState(Stage stage)
+        {
+            gameStates[(int)stage] = null;
+        }
+
+        public Player getPlayer()
+        {
+            return this.player;
         }
 
         public void draw(Graphics g)
@@ -105,11 +125,12 @@ namespace Project_PV
     {
         title,
         mainMenu,
-        loadState,
+        quest,
         easyState,
         mediumState,
         hardState,
         battleState,
+        battleAreaState,
         gameOver,
         completeStage,
         sanitarium,

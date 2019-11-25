@@ -26,7 +26,7 @@ namespace Project_PV
 		{
 			object O1 = Project_PV.Properties.Resources.guild_character_background;
 			Image background = (Image)O1;
-			g.DrawImage(background, 0, 0, 1300, 700);
+			g.DrawImage(background, 0, 0, 1300, 730);
 			object O2 = Project_PV.Properties.Resources.guild_icon;
 			Image icon = (Image)O2;
 			g.DrawImage(icon, 30, 20, 100, 100);
@@ -37,7 +37,7 @@ namespace Project_PV
 			Image arrow = (Image)O5;
 			g.DrawImage(arrow, 50, 120, 50, 50);
 
-			string abbey = "GUild";
+			string abbey = "Guild";
 			RectangleF rect = Config.rect;
 			rect.Location = new PointF(140, 20);
 			StringFormat format = StringFormat.GenericTypographic;
@@ -53,15 +53,9 @@ namespace Project_PV
 			throw new NotImplementedException();
 		}
 
-		public override void key_keydown(object sender, KeyEventArgs e)
-		{
-			throw new NotImplementedException();
-		}
+		public override void key_keydown(object sender, KeyEventArgs e){}
 
-		public override void key_KeyUp(object sender, KeyEventArgs e)
-		{
-			throw new NotImplementedException();
-		}
+		public override void key_KeyUp(object sender, KeyEventArgs e){}
 
 		public override void mouse_click(object sender, MouseEventArgs e)
 		{
@@ -92,11 +86,13 @@ namespace Project_PV
         public override void mouse_hover(object sender, MouseEventArgs e)
         {
             throw new NotImplementedException();
+            
         }
 
         public override void mouse_leave(object sender, MouseEventArgs e)
         {
             throw new NotImplementedException();
+            
         }
     }
 }

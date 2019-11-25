@@ -12,7 +12,6 @@ namespace Project_PV
     class MenuState : GameState
     {
         public Rectangle startBtn { get; set; }
-        public Rectangle font { get; set; }
         public GameStateManager gsm { get; set; }
         public Graphics g2;
         private int frame;
@@ -20,9 +19,7 @@ namespace Project_PV
         public MenuState(GameStateManager gsm)
         {
             this.gsm = gsm;
-            startBtn = new Rectangle(548, 524, 200,50);
-            font = new Rectangle(430,80,500,150);
-            Config.font.AddFontFile("Resources\\DwarvenAxe BB W00 Regular.ttf");
+            startBtn = new Rectangle(548, 554, 200,50);
             title = new Font(Config.font.Families[0],80,FontStyle.Regular);
             frame = 1;
         }
@@ -101,7 +98,6 @@ namespace Project_PV
 
             return path;
         }
-
         public override void key_KeyUp(object sender, KeyEventArgs e)
         {
             

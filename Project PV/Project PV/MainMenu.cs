@@ -13,15 +13,18 @@ namespace Project_PV
     {
         public GameStateManager gsm { get; set; }
         private double xCloud;
-        private Rectangle sanitarium, guild, blackSmith, abbey;
+        Rectangle sanitarium, guild, blackSmith, abbey;
         private bool[] arrDraw;
         private List<coordinate> coordinates;
         private List<Rectangle> listBuilding;
-        private List<string> buildingTitle;
-        
+        private Player player;
+        private bool loading;
+        Graphics g2;
         public MainMenu(GameStateManager gsm)
         {
             this.gsm = gsm;
+            loading = false;
+            player = gsm.getPlayer();
             xCloud = 1100;
             listBuilding = new List<Rectangle>();
             coordinates = new List<coordinate>();
@@ -50,9 +53,10 @@ namespace Project_PV
 
         }
 
+        int opacity = 0;
         public override void draw(Graphics g)
         {
-            object O1 = Properties.Resources.ResourceManager.GetObject("town_full1");
+            object O1 = Properties.Resources.ResourceManager.GetObject("town_full_2");
             Image img1 = (Image)O1;
             g.DrawImage(img1, 0, 0, 1300, 700);
 
@@ -72,11 +76,33 @@ namespace Project_PV
 
                     O1 = Properties.Resources.ResourceManager.GetObject("blg_name_background");
                     img1 = (Image)O1;
-                    g.DrawImage(img1, point.X-20, point.Y-50, 154, 162);
+                    g.DrawImage(img1, point.X - 20, point.Y - 50, 154, 162);
                     g.DrawString(s, title, new SolidBrush(Color.FromArgb(250, 231, 162)), point);
-                    g.DrawString(sub, subtitle, new SolidBrush(Color.White), point.X,point.Y+30);
+                    g.DrawString(sub, subtitle, new SolidBrush(Color.White), point.X, point.Y + 30);
                 }
             }
+
+            //panel embark
+            O1 = Properties.Resources.ResourceManager.GetObject("progression_bar");
+            img1 = (Image)O1;
+            g.DrawImage(img1, 0, 622, 1300, 90);
+
+            O1 = Properties.Resources.ResourceManager.GetObject("progression_forward");
+            img1 = (Image)O1;
+            g.DrawImage(img1, 580, 638, 200, 33);
+
+            Font font = new Font(Config.font.Families[0], 28, FontStyle.Regular);
+            g.DrawString("Embark", font, new SolidBrush(Color.FromArgb(180, 33, 13)), 630, 635);
+
+            O1 = Properties.Resources.ResourceManager.GetObject("currency_gold_large_icon");
+            img1 = (Image)O1;
+            g.DrawImage(img1, 109, 605, 66, 66);
+
+            g.DrawString(player.gold.ToString(), font, new SolidBrush(Color.FromArgb(202, 179, 112)), 179, 637);
+
+            //loading
+            g.FillRectangle(new SolidBrush(Color.FromArgb(opacity, Color.Black)), 0, 0, 1300, 730);
+
         }
 
         public override void init()
@@ -86,8 +112,9 @@ namespace Project_PV
 
         public override void mouse_click(object sender, MouseEventArgs e)
         {
-            MessageBox.Show("x: " + e.X + " y: " + e.Y);
+            //MessageBox.Show("x: " + e.X + " y: " + e.Y);
             Rectangle cursor = new Rectangle(e.X,e.Y,10,10);
+            Rectangle embark = new Rectangle(630, 635,200,33);
 
             for (int i = 0; i < listBuilding.Count; i++)
             {
@@ -115,12 +142,53 @@ namespace Project_PV
             }
             
 
+            if (cursor.IntersectsWith(sanitarium))
+            {
+                MessageBox.Show("sanitarium");
+            }
+            else if (cursor.IntersectsWith(guild))
+            {
+                Stage temp = gsm.stage;
+                gsm.unloadState(temp);
+
+				gsm.stage = Stage.guild;
+				gsm.loadState(gsm.stage);
+			}
+            else if (cursor.IntersectsWith(abbey))
+            {
+                Stage temp = gsm.stage;
+                gsm.unloadState(temp);
+
+                gsm.stage = Stage.abbey;
+				gsm.loadState(gsm.stage);
+			}
+            else if (cursor.IntersectsWith(embark))
+            {
+                loading = true;
+                opacity = 128;
+            }
+
             
         }
 
         public override void update()
         {
             xCloud-=1;
+            if (loading)
+            {
+                opacity += 10;
+                if(opacity >=255)
+                {
+                    loading = false;
+                    opacity = 255;
+                    Stage temp = gsm.stage;
+                    gsm.unloadState(temp);
+
+                    gsm.stage = Stage.quest;
+                    gsm.loadState(gsm.stage);
+                }
+            }
+            
         }
 
         public override void key_keydown(object sender, KeyEventArgs e)
