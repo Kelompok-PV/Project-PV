@@ -15,26 +15,15 @@ namespace Project_PV
         public Player player { get; set; }
         public GameStateManager()
         {
-            gameStates = new GameState[11];
-            gameStates = new GameState[20];
-            //this.stage = Stage.sanitarium;
-            this.stage = Stage.blacksmith;
-            //this.stage = Stage.battleState;
-            //gameStates = new GameState[8];
-            //this.stage = Stage.title;
-            //this.stage = Stage.battleState;
-            //this.stage = Stage.battleState;
-            //this.stage = Stage.title;
-            //this.stage = Stage.battleState;
-            //this.stage = Stage.battleState;
-			//this.stage = Stage.battleState;
-			// this.stage = Stage.battleState;
-			//this.stage = Stage.mainMenu;
             player = new Player();
-            player.currentCharacters[0] =new ninja("ninnin", 50, new equip[5], new List<string>(), 5, 5);
+            
             gameStates = new GameState[20];
-            this.stage = Stage.battleState;
             loadState(this.stage);
+
+
+            this.stage = Stage.title;
+
+            player.currentCharacters[0] = new ninja("ninnin", 50, new equip[5], new List<string>(), 5, 5);
         }
 
         public void loadState(Stage stage)

@@ -643,12 +643,29 @@ namespace Project_PV.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap remove_quirk_negative {
-            get {
-                object obj = ResourceManager.GetObject("remove_quirk_negative", resourceCulture);
         internal static System.Drawing.Bitmap progression_forward {
             get {
                 object obj = ResourceManager.GetObject("progression_forward", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap quest_select_back {
+            get {
+                object obj = ResourceManager.GetObject("quest_select_back", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap remove_quirk_negative {
+            get {
+                object obj = ResourceManager.GetObject("remove_quirk_negative", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -689,9 +706,6 @@ namespace Project_PV.Properties {
         internal static System.Drawing.Bitmap sanitarium_icon {
             get {
                 object obj = ResourceManager.GetObject("sanitarium_icon", resourceCulture);
-        internal static System.Drawing.Bitmap quest_select_back {
-            get {
-                object obj = ResourceManager.GetObject("quest_select_back", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
