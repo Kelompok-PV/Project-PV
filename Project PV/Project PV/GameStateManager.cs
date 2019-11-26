@@ -16,17 +16,18 @@ namespace Project_PV
         public GameStateManager()
         {
             player = new Player();
+            
 
-
-            this.stage = Stage.battleState;
+            this.stage = Stage.mainMenu;
+            player.myCharacter.Add(new ninja("ninnin", 50, new equip[5], new List<string>(), 5, 5));
+            player.myCharacter.Add(new ninja("ninnin", 50, new equip[5], new List<string>(), 5, 5));
+            player.myCharacter.Add(new ninja("ninnin", 50, new equip[5], new List<string>(), 5, 5));
             player.currentCharacters[0] = new ninja("ninnin", 50, new equip[5], new List<string>(), 5, 5);
 
 
             gameStates = new GameState[20];
             loadState(this.stage);
 
-
-            
         }
 
         public void loadState(Stage stage)
@@ -114,6 +115,7 @@ namespace Project_PV
         {
             gameStates[(int)stage].key_KeyUp(sender, e);
         }
+        
     }
 
     public enum Stage

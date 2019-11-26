@@ -13,8 +13,12 @@ namespace Project_PV
         private Player player;
         private GameStateManager gsm;
         List<Selected_karacter> karacters;
+        object frameObj;
+        Bitmap frameBit;
+        List<int> yRoster;
         public Quest(GameStateManager gsm)
         {
+            yRoster = new List<int>();
             this.gsm = gsm;
             player = gsm.getPlayer();
             karacters = new List<Selected_karacter>();
@@ -25,9 +29,19 @@ namespace Project_PV
                 karacters.Add(new Selected_karacter(coorX, coorY, i+1));
                 coorX += 57;
             }
-            
-        }
 
+            frameObj = Properties.Resources.rosterelement_res1;
+            frameBit = (Bitmap)frameObj;
+            yRoster.Add(130);
+
+            for (int i = 0; i < player.myCharacter.Count; i++)
+            {
+                yRoster[i] += 85;
+                rosterField.Add(new Rectangle(xRoster + 10, yRoster[i], 260, 80));
+                yRoster.Add(yRoster[i]);
+            }
+        }
+        int xRoster = 1105;
         public override void draw(Graphics g)
         {
             //background
@@ -68,6 +82,15 @@ namespace Project_PV
             for (int i = 0; i < karacters.Count; i++)
             {
                 g.DrawImage(img1, karacters[i].x, karacters[i].y, 52, 52);
+
+                try
+                {
+                    g.DrawImage(karacters[i].GetKarakter().getIcon(), karacters[i].x, karacters[i].y, 52, 52);
+                }
+                catch (Exception)
+                {
+
+                }
             }
 
             //panel embark
@@ -87,9 +110,29 @@ namespace Project_PV
             g.DrawImage(img1, 109, 605, 66, 66);
 
             g.DrawString(player.gold.ToString(), font1, new SolidBrush(Color.FromArgb(202, 179, 112)), 179, 637);
-            
-        }
 
+            //roster
+            for (int i = 0; i < player.myCharacter.Count; i++)
+            {
+                g.FillRectangle(new SolidBrush(Color.Black), xRoster + 10, yRoster[i], 260, 80);
+                
+
+                g.DrawImage(frameBit, xRoster, yRoster[i], 309, 82);
+                g.DrawImage(player.myCharacter[i].getIcon(), 1117, yRoster[i] + 10, 50, 50);
+                
+                font = new Font(Config.font.Families[0], 16, FontStyle.Regular);
+                g.DrawString(player.myCharacter[i].nama, font, new SolidBrush(Color.FromArgb(250, 231, 162)), 1117 + 55, yRoster[i] + 5);
+
+            }
+
+            if (selected && index!=-1)
+            {
+                g.DrawImage(player.myCharacter[index].getIcon(), x,y, 50, 50);
+            }
+
+        }
+        List<Rectangle> rosterField = new List<Rectangle>();
+        int index = -1;
         public override void init()
         {
             
@@ -104,15 +147,51 @@ namespace Project_PV
         {
             
         }
-
+        int x, y;
         public override void mouse_click(object sender, MouseEventArgs e)
         {
-            MessageBox.Show(string.Format("{0},{1}",e.X,e.Y));
-        }
+            //MessageBox.Show(string.Format("{0},{1}",e.X,e.Y));
+            Rectangle cursor = new Rectangle(e.X, e.Y, 10, 10);
+            if (!selected)
+            {
+                for (int i = 0; i < rosterField.Count; i++)
+                {
+                    if (rosterField[i].IntersectsWith(cursor))
+                    {
+                        index = i;
+                        selected = true;
+                        break;
+                    }
+                }
+            }
 
+            if (selected)
+            {
+                for (int i = 0; i < karacters.Count; i++)
+                {
+                    if (cursor.IntersectsWith(karacters[i].getSelect()))
+                    {
+                        selected = false;
+                        karacters[i].setKaracter(player.myCharacter[index]);
+                        player.currentCharacters[i] = karacters[i].GetKarakter();
+                        index = -1;
+                        break;
+                    }
+                }
+
+                
+            }
+
+            
+
+
+        }
+        bool selected = false;  
         public override void mouse_hover(object sender, MouseEventArgs e)
         {
-            
+            x = e.X;
+            y = e.Y;
+            //Config.form1.Invalidate(new Rectangle(x,y,50,50));
         }
 
         public override void mouse_leave(object sender, MouseEventArgs e)
@@ -124,6 +203,7 @@ namespace Project_PV
         {
             
         }
+
     }
 
     class Selected_karacter

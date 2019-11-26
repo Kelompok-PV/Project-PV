@@ -13,13 +13,14 @@ namespace Project_PV
     {
         public GameStateManager gsm { get; set; }
         private double xCloud;
-        Rectangle sanitarium, guild, blackSmith, abbey;
+        Rectangle sanitarium, guild, blackSmith, abbey,shop;
         private bool[] arrDraw;
         private List<coordinate> coordinates;
         private List<Rectangle> listBuilding;
         private Player player;
         private bool loading;
-        Graphics g2;
+        private Graphics g2;
+        
         public MainMenu(GameStateManager gsm)
         {
             this.gsm = gsm;
@@ -28,9 +29,9 @@ namespace Project_PV
             xCloud = 1100;
             listBuilding = new List<Rectangle>();
             coordinates = new List<coordinate>();
-            arrDraw = new bool[4];
+            arrDraw = new bool[5];
 
-            for (int i = 0; i < 4; i++)
+            for (int i = 0; i < 5; i++)
             {
                 arrDraw[i] = false;
             }
@@ -41,7 +42,7 @@ namespace Project_PV
 
             guild = new Rectangle(819, 377, 94, 139);
             listBuilding.Add(guild);
-            coordinates.Add(new coordinate(878, 281, "guild", "treat quirks and disease"));
+            coordinates.Add(new coordinate(878-100, 281, "guild", "treat quirks and disease"));
 
             blackSmith = new Rectangle(931, 501, 136, 79);
             listBuilding.Add(blackSmith);
@@ -51,9 +52,30 @@ namespace Project_PV
             listBuilding.Add(abbey);
             coordinates.Add(new coordinate(741, 196, "abbey", "treat quirks and disease"));
 
+            shop = new Rectangle(167, 511, 272 - 167, 603 - 511);
+            listBuilding.Add(shop);
+            coordinates.Add(new coordinate(167+8, 511-50, "Shop Hero", "treat quirks and disease"));
+
+            //frame roster
+            frameObj = Properties.Resources.rosterelement_res1;
+            frameBit = (Bitmap)frameObj;
+            yRoster.Add(130);
+            g2 = Graphics.FromImage(frameBit);
+            for (int i = 0; i < player.myCharacter.Count; i++)
+            {
+                yRoster[i] += 85;
+                yRoster.Add(yRoster[i]);
+            }
+            
         }
 
+        Object frameObj;
+        Bitmap frameBit;
         int opacity = 0;
+        int xRoster = 1105;
+        
+        List<int> yRoster = new List<int>();
+        Rectangle cloud;
         public override void draw(Graphics g)
         {
             object O1 = Properties.Resources.ResourceManager.GetObject("town_full_2");
@@ -63,7 +85,7 @@ namespace Project_PV
             O1 = Properties.Resources.ResourceManager.GetObject("town_cloud");
             img1 = (Image)O1;
             g.DrawImage(img1, (int)xCloud, 40, 433, 124);
-
+            cloud = new Rectangle((int)xCloud,40,433,124);
             for (int i = 0; i < arrDraw.Length; i++)
             {
                 if (arrDraw[i])
@@ -78,7 +100,7 @@ namespace Project_PV
                     img1 = (Image)O1;
                     g.DrawImage(img1, point.X - 20, point.Y - 50, 154, 162);
                     g.DrawString(s, title, new SolidBrush(Color.FromArgb(250, 231, 162)), point);
-                    g.DrawString(sub, subtitle, new SolidBrush(Color.White), point.X, point.Y + 30);
+                    g.DrawString(sub, subtitle, new SolidBrush(Color.White), point.X, point.Y + 40);
                 }
             }
 
@@ -100,9 +122,20 @@ namespace Project_PV
 
             g.DrawString(player.gold.ToString(), font, new SolidBrush(Color.FromArgb(202, 179, 112)), 179, 637);
 
+            
+            //roster
+            for (int i = 0; i < player.myCharacter.Count; i++)
+            {
+                g.FillRectangle(new SolidBrush(Color.Black), xRoster+10, yRoster[i], 260, 80);
+                g.DrawImage(frameBit, xRoster, yRoster[i],309, 82);
+                g.DrawImage(player.myCharacter[i].getIcon(), 1117, yRoster[i]+10, 50, 50);
+                font = new Font(Config.font.Families[0], 16, FontStyle.Regular);
+                g.DrawString(player.myCharacter[i].nama, font, new SolidBrush(Color.FromArgb(250, 231, 162)), 1117+55, yRoster[i]+5);
+                
+            }
+
             //loading
             g.FillRectangle(new SolidBrush(Color.FromArgb(opacity, Color.Black)), 0, 0, 1300, 730);
-
         }
 
         public override void init()
@@ -112,35 +145,9 @@ namespace Project_PV
 
         public override void mouse_click(object sender, MouseEventArgs e)
         {
-            //MessageBox.Show("x: " + e.X + " y: " + e.Y);
+            MessageBox.Show("x: " + e.X + " y: " + e.Y);
             Rectangle cursor = new Rectangle(e.X,e.Y,10,10);
             Rectangle embark = new Rectangle(630, 635,200,33);
-
-            for (int i = 0; i < listBuilding.Count; i++)
-            {
-                if (cursor.IntersectsWith(listBuilding[i]))
-                {
-                    arrDraw[i] = true;
-                }
-                else if (cursor.IntersectsWith(sanitarium))
-                {
-                    gsm.stage = Stage.sanitarium;
-                    gsm.loadState(gsm.stage);
-                }
-                else if (cursor.IntersectsWith(guild))
-                {
-                    MessageBox.Show("guild");
-                    gsm.stage = Stage.guild;
-                    gsm.loadState(gsm.stage);
-                }
-                else if (cursor.IntersectsWith(abbey))
-                {
-                    MessageBox.Show("abbey");
-                    gsm.stage = Stage.abbey;
-                    gsm.loadState(gsm.stage);
-                }
-            }
-            
 
             if (cursor.IntersectsWith(sanitarium))
             {
@@ -164,11 +171,43 @@ namespace Project_PV
 			}
             else if (cursor.IntersectsWith(embark))
             {
+                choice = choice.provision;
+                loading = true;
+                opacity = 128;
+
+            }
+            else if (cursor.IntersectsWith(shop))
+            {
+                choice = choice.shop;
                 loading = true;
                 opacity = 128;
             }
 
             
+        }
+
+        private choice choice;
+        int delay = 0;
+        private void loadingScreen()
+        {
+            if (choice == choice.shop)
+            {
+                Stage temp = gsm.stage;
+                gsm.unloadState(temp);
+
+                gsm.stage = Stage.quest;
+                gsm.loadState(gsm.stage);
+            }
+            else if (choice == choice.provision)
+            {
+                Stage temp = gsm.stage;
+                gsm.unloadState(temp);
+
+                gsm.stage = Stage.quest;
+                gsm.loadState(gsm.stage);
+            }
+
+
         }
 
         public override void update()
@@ -177,18 +216,21 @@ namespace Project_PV
             if (loading)
             {
                 opacity += 10;
-                if(opacity >=255)
+                if (opacity >=255)
                 {
-                    loading = false;
+                    delay++;
                     opacity = 255;
-                    Stage temp = gsm.stage;
-                    gsm.unloadState(temp);
-
-                    gsm.stage = Stage.quest;
-                    gsm.loadState(gsm.stage);
+                    if (delay >= 10)
+                    {
+                        loading = false;
+                        loadingScreen();
+                    }
+                    
+                    
                 }
             }
-            
+
+            Config.form1.Invalidate();
         }
 
         public override void key_keydown(object sender, KeyEventArgs e)
@@ -200,7 +242,6 @@ namespace Project_PV
         {
             
         }
-
         public override void mouse_hover(object sender, MouseEventArgs e)
         {
             Rectangle cursor = new Rectangle(e.X,e.Y,10,10);
@@ -217,6 +258,7 @@ namespace Project_PV
                 }
             }
 
+            
         }
 
         public override void mouse_leave(object sender, MouseEventArgs e)
@@ -224,6 +266,7 @@ namespace Project_PV
 
         }
 
+        
     }
     class coordinate
     {
@@ -239,5 +282,11 @@ namespace Project_PV
             this.buildingTitle = buildingTitle;
             this.subtitle = subtitle;
         }
+    }
+
+    enum choice
+    {
+        provision,
+        shop
     }
 }
