@@ -25,9 +25,10 @@ namespace Project_PV
             player.currentCharacters[0] = new ninja("ninnin", 50, new equip[5], new List<string>(), 5, 5);
 
 
+            player.currentCharacters[0] = new ninja("ninnin", 50, new equip[5], 5, 5);
+            
             gameStates = new GameState[20];
             loadState(this.stage);
-
         }
 
         public void loadState(Stage stage)
@@ -42,12 +43,14 @@ namespace Project_PV
             }
             else if (stage == Stage.battleState)
             {
-                BattleState bs = new BattleState(this);
-                bs.player = player.currentCharacters[0];
-                gameStates[(int)stage] = bs;
+                //BattleState bs = new BattleState(this);
+                //bs.player = player.currentCharacters[0];
+                gameStates[(int)stage] = new BattleState(this) ;
             }
             else if (stage == Stage.sanitarium)
             {
+                Sanitarium bs = new Sanitarium(this);
+                bs.player = player.currentCharacters[0];
                 gameStates[(int)stage] = new Sanitarium(this);
             }
             else if (stage == Stage.blacksmith)

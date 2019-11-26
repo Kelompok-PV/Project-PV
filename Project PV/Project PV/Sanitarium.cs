@@ -11,6 +11,7 @@ namespace Project_PV
 {
     class Sanitarium : GameState
     {
+        public karakter player { get; set; }
         GameStateManager gsm { get; set; }
         public Font title { get; set; }
         public Font subtitle { get; set; }
@@ -58,14 +59,8 @@ namespace Project_PV
         StringFormat format = StringFormat.GenericTypographic;
         public override void draw(Graphics g)
         {
-            
-            
             g.DrawImage(background, 0, 0, 1300, 700);
-
-            
             g.DrawImage(icon, 10, 20, 100, 100);
-
-            
             float dpi = g.DpiY;
 
             Pen pen = new Pen(new SolidBrush(Color.Yellow));
@@ -82,14 +77,8 @@ namespace Project_PV
                     g.DrawString(text[i], paragraph, new SolidBrush(Color.Gray), ptext[i]);
                 }
             }
-
-            
             g.DrawImage(character, -40, 100, 750, 620);
-
-            
             g.DrawImage(qpost, 25, 115, 70, 70);
-
-            
             g.DrawImage(close, 1230, 10, 50, 50);
         }
 
@@ -110,7 +99,7 @@ namespace Project_PV
 
         public override void key_keydown(object sender, KeyEventArgs e)
         {
-            throw new NotImplementedException();
+
         }
 
         Rectangle back = new Rectangle(1230, 10, 50, 50);
@@ -119,6 +108,8 @@ namespace Project_PV
             Rectangle cursor = new Rectangle(e.X, e.Y, 10, 10);
             if (cursor.IntersectsWith(back))
             {
+                gsm.player.currentCharacters[0] = this.player;
+                gsm.unloadState(gsm.stage);
                 gsm.stage = Stage.mainMenu;
                 gsm.loadState(gsm.stage);
             }

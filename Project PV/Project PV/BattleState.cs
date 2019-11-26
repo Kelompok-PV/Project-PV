@@ -16,41 +16,37 @@ namespace Project_PV
 
         public karakter player { get; set; }
         public string url { get; set; }
+        public bool lala { get; set; }
 
         public BattleState(GameStateManager gsm)
         {
             //player = gsm.getPlayer();
+            player= new ninja("ninnin", 50, new equip[5], 5, 5);
+
             Random r = new Random();
             this.gsm = gsm;
+            lala = false;
             gambar = new List<int>();
             for (int i = 0; i < 5; i++)
             {
-                gambar.Add(r.Next(6) + 1);
+                gambar.Add(r.Next(5) + 1);
             }
-            imgBg1 = (Image)background1;
-            imgBg2 = (Image)background2;
-            imgBg3 = (Image)background3;
             imgLast = (Image)last;
             imgDoor = (Image)door;
             x = 0;
             imgpPlayer = (Image)Properties.Resources.ResourceManager.GetObject("panel_player2");
             imgpInv = (Image)Properties.Resources.ResourceManager.GetObject("panel_inventory");
+            //drawInventory();
         }
 
         public override void init()
         {
             throw new NotImplementedException();
         }
-        object background1 = Properties.Resources.ResourceManager.GetObject("courtyard_backgroundcoba___1_");
-        object background2 = Properties.Resources.ResourceManager.GetObject("courtyard_backgroundcoba___2_");
-        object background3 = Properties.Resources.ResourceManager.GetObject("courtyard_backgroundcoba___3_");
-        object last = Properties.Resources.ResourceManager.GetObject("courtyard_lastcoba");
-        object door = Properties.Resources.ResourceManager.GetObject("courtyard_doorcoba");
+        object last = Properties.Resources.ResourceManager.GetObject("courtyard_lastfix");
+        object door = Properties.Resources.ResourceManager.GetObject("courtyard_doorfix");
         Image imgLast;
         Image imgDoor;
-        Image imgBg1;
-        Image imgBg2;
-        Image imgBg3;
         object O = Properties.Resources.ResourceManager.GetObject("lala");
         Image img;
 
@@ -66,48 +62,36 @@ namespace Project_PV
             //last left
             if (x>-450)
             {
-                g.DrawImage(imgBg2, x, 20, 450, 400);
-                g.DrawImage(imgLast, x + 220, 20, -220, 400);
-                g.DrawImage(imgBg1, x, 0, 450, 100);
-                g.DrawImage(imgBg3, x, 330, 450, 100);
+                g.DrawImage(imgLast, x + 220, 0, -220, 430);
             }
 
 
             //door right
             if (x > -600)
             {
-                g.DrawImage(imgBg2, x + 140, 20, 450, 400);
-                g.DrawImage(imgDoor, x + 140, 20, 450, 400);
-                g.DrawImage(imgBg1, x + 140, 0, 450, 100);
-                g.DrawImage(imgBg3, x + 140, 330, 450, 100);
+                g.DrawImage(imgDoor, x + 140, 0, 450, 430);
             }
             
             for (int i = 0; i < gambar.Count; i++)
             {
                 int tmpx = x + 585 + i * 449;
-                if (x>-1000-(i*449))
+                if (x>=-1000-(i*449)&&tmpx<1300)
                 {
-                    object background_random = Properties.Resources.ResourceManager.GetObject("courtyard_randomcoba___" + gambar[i] + "_");
+                    object background_random = Properties.Resources.ResourceManager.GetObject("courtyard_randomfix___"+gambar[i]+"_");
                     Image img = (Image)background_random;
-                    g.DrawImage(imgBg2, x + 585 + i * 449, 20, 450, 400);
-                    g.DrawImage(img, x + 585 + i * 449, 0, 450, 400);
-                    g.DrawImage(imgBg1, x + 585 + i * 449, 0, 450, 100);
-                    g.DrawImage(imgBg3, x + 585 + i * 449, 330, 450, 100);
+                    g.DrawImage(img, x + 585 + i * 449, 0, 450, 430);
                 }
-                
+            }
+            if (x<-1800)
+            {
+                g.DrawImage(imgLast, x + 950 + 5 * 450, 0, 450, 430);
             }
 
-            //last right
-            g.DrawImage(imgBg2, x + 950 + 5 * 450, 20, 450, 400);
-            g.DrawImage(imgLast, x + 950 + 5 * 450, 20, 450, 400);
-            g.DrawImage(imgBg1, x + 950 + 5 * 450, 0, 450, 100);
-            g.DrawImage(imgBg3, x + 950 + 5 * 450, 330, 450, 100);
-
-            //door right
-            g.DrawImage(imgBg2,  x + 580 + 5 * 450, 20, 450, 400);
-            g.DrawImage(imgDoor, x + 580 + 5 * 450, 20, 450, 400);
-            g.DrawImage(imgBg1,  x + 580 + 5 * 450, 0, 450, 100);
-            g.DrawImage(imgBg3,  x + 580 + 5 * 450, 330, 450, 100);
+            if (x<-1500)
+            {
+                g.DrawImage(imgDoor, x + 580 + 5 * 450, 0, 450, 430);
+            }
+            
 
             player.getImage(g);
             player.hero_move_now++;
@@ -118,14 +102,23 @@ namespace Project_PV
             }
 
             g.DrawImage((Image)Properties.Resources.ResourceManager.GetObject("side_decor"), 0, 420, 120, 270);
-            g.DrawImage(imgpPlayer,  70+22,420,528,100);
-            g.DrawImage((Image)Properties.Resources.ResourceManager.GetObject("panel_stat"),     70+50,520,500,170);
-            g.DrawImage(imgpInv,70+550,420,550,270);
+            g.DrawImage(imgpPlayer, 70 + 22, 420, 528, 100);
+            g.DrawImage((Image)Properties.Resources.ResourceManager.GetObject("panel_stat"), 70 + 50, 520, 500, 170);
+            g.DrawImage(imgpInv, 70 + 550, 420, 550, 270);
             g.DrawImage((Image)Properties.Resources.ResourceManager.GetObject("side_decor"), 1285, 420, -120, 270);
+            if (ceeek == false)
+            {
+                //ceeek = true;
+                //drawInventory();
+            }
         }
+        bool ceeek = false;
+        
+
         int opacity = 0;
         public override void mouse_click(object sender, MouseEventArgs e)
         {
+            //MessageBox.Show(x+"");
             Rectangle mouse = new Rectangle(e.X, e.Y, 1, 1);
             if (mouse.IntersectsWith(new Rectangle(x + 250, 150, 200, 250)) )
             {
@@ -207,6 +200,13 @@ namespace Project_PV
             
         }
 
-        
+        private void drawInventory()
+        {
+            //Config.g.DrawImage((Image)Properties.Resources.ResourceManager.GetObject("side_decor"), 0, 420, 120, 270);
+            //Config.g.DrawImage(imgpPlayer, 70 + 22, 420, 528, 100);
+            //Config.g.DrawImage((Image)Properties.Resources.ResourceManager.GetObject("panel_stat"), 70 + 50, 520, 500, 170);
+            //Config.g.DrawImage(imgpInv, 70 + 550, 420, 550, 270);
+            //Config.g.DrawImage((Image)Properties.Resources.ResourceManager.GetObject("side_decor"), 1285, 420, -120, 270);
+        }
     }
 }

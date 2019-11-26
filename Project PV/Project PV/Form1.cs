@@ -20,16 +20,18 @@ namespace Project_PV
             this.DoubleBuffered = true;
             Config.form1 = this;
         }
+        Random rand = new Random();
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
             Graphics g = e.Graphics;
+            g2 = e.Graphics;
             Config.rect = this.ClientRectangle;
-            manager.draw(g);
+            manager.draw(g2);
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
             try
             {
                 axWindowsMediaPlayer1.URL = "E:\\GitHub\\Project-PV\\Project PV\\assets\\tst.mp3";
@@ -46,10 +48,11 @@ namespace Project_PV
             Config.font.AddFontFile("Resources\\DwarvenAxe BB W00 Regular.ttf");
             manager = new GameStateManager();
         }
-
+        Rectangle test = new Rectangle(500, 500, 500, 500);
         private void timer1_Tick(object sender, EventArgs e)
         {
             manager.update();
+            
             Invalidate();
         }
 
@@ -83,6 +86,15 @@ namespace Project_PV
         private void Form1_MouseDown(object sender, MouseEventArgs e)
         {
             Cursor.Current = new Cursor(Project_PV.Properties.Resources.arrow.GetHicon());
+        }
+        private void drawCircle(int x, int y)
+        {
+
+            Config.g.DrawImage((Image)Properties.Resources.ResourceManager.GetObject("side_decor"), 0, 420, 120, 270);
+            Config.g.DrawImage((Image)Properties.Resources.ResourceManager.GetObject("panel_player2"), 70 + 22, 420, 528, 100);
+            Config.g.DrawImage((Image)Properties.Resources.ResourceManager.GetObject("panel_stat"), 70 + 50, 520, 500, 170);
+            Config.g.DrawImage((Image)Properties.Resources.ResourceManager.GetObject("panel_inventory"), 70 + 550, 420, 550, 270);
+            Config.g.DrawImage((Image)Properties.Resources.ResourceManager.GetObject("side_decor"), 1285, 420, -120, 270);
         }
     }
 }

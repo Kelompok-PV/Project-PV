@@ -11,6 +11,7 @@ namespace Project_PV
 {
     class MenuState : GameState
     {
+        public Rectangle btnStart { get; set; }
         public GameStateManager gsm { get; set; }
         public Graphics g2;
         private int frame;
@@ -18,6 +19,7 @@ namespace Project_PV
         public MenuState(GameStateManager gsm)
         {
             this.gsm = gsm;
+            btnStart = new Rectangle(548, 554, 200, 50);
             title = new Font(Config.font.Families[0],80,FontStyle.Regular);
             frame = 1;
         }
@@ -35,7 +37,7 @@ namespace Project_PV
             g2.DrawImage(img, 0, 0, 1300, 700);
             object O2 = Properties.Resources.ResourceManager.GetObject("button");
             img = (Image)O2;
-            g2.DrawImage(img, new Rectangle(548, 554, 200, 50));
+            g2.DrawImage(img, btnStart);
 
             string darkest = "Darkest";
             RectangleF rect = Config.rect;
@@ -66,7 +68,7 @@ namespace Project_PV
         {
             //MessageBox.Show(string.Format("x: {0} - y:{1}",e.X,e.Y));
             Rectangle cursor = new Rectangle(e.X,e.Y,10,10);
-            if (cursor.IntersectsWith(new Rectangle(548, 554, 200, 50)))
+            if (cursor.IntersectsWith(btnStart))
             {
                 gsm.stage = Stage.mainMenu;
                 gsm.loadState(gsm.stage);
