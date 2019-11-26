@@ -85,7 +85,7 @@ namespace Project_PV
             for (int i = 0; i < gambar.Count; i++)
             {
                 int tmpx = x + 585 + i * 449;
-                if (x>-1000-(i*449))
+                if (x>=-1000-(i*449)&&tmpx<1300)
                 {
                     object background_random = Properties.Resources.ResourceManager.GetObject("courtyard_randomcoba___" + gambar[i] + "_");
                     Image img = (Image)background_random;
@@ -96,18 +96,24 @@ namespace Project_PV
                 }
                 
             }
+            if (x<-1800)
+            {
+                //last right
+                g.DrawImage(imgBg2, x + 950 + 5 * 450, 20, 450, 400);
+                g.DrawImage(imgLast, x + 950 + 5 * 450, 20, 450, 400);
+                g.DrawImage(imgBg1, x + 950 + 5 * 450, 0, 450, 100);
+                g.DrawImage(imgBg3, x + 950 + 5 * 450, 330, 450, 100);
+            }
 
-            //last right
-            g.DrawImage(imgBg2, x + 950 + 5 * 450, 20, 450, 400);
-            g.DrawImage(imgLast, x + 950 + 5 * 450, 20, 450, 400);
-            g.DrawImage(imgBg1, x + 950 + 5 * 450, 0, 450, 100);
-            g.DrawImage(imgBg3, x + 950 + 5 * 450, 330, 450, 100);
-
-            //door right
-            g.DrawImage(imgBg2,  x + 580 + 5 * 450, 20, 450, 400);
-            g.DrawImage(imgDoor, x + 580 + 5 * 450, 20, 450, 400);
-            g.DrawImage(imgBg1,  x + 580 + 5 * 450, 0, 450, 100);
-            g.DrawImage(imgBg3,  x + 580 + 5 * 450, 330, 450, 100);
+            if (x<-1500)
+            {
+                //door right
+                g.DrawImage(imgBg2, x + 580 + 5 * 450, 20, 450, 400);
+                g.DrawImage(imgDoor, x + 580 + 5 * 450, 20, 450, 400);
+                g.DrawImage(imgBg1, x + 580 + 5 * 450, 0, 450, 100);
+                g.DrawImage(imgBg3, x + 580 + 5 * 450, 330, 450, 100);
+            }
+            
 
             player.getImage(g);
             player.hero_move_now++;
@@ -126,6 +132,7 @@ namespace Project_PV
         int opacity = 0;
         public override void mouse_click(object sender, MouseEventArgs e)
         {
+            MessageBox.Show(x+"");
             Rectangle mouse = new Rectangle(e.X, e.Y, 1, 1);
             if (mouse.IntersectsWith(new Rectangle(x + 250, 150, 200, 250)) )
             {
