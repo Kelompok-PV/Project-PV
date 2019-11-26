@@ -199,18 +199,6 @@
   <data name="courtyard_randomcoba___6_" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\courtyard_randomcoba_ (6).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="courtyard_random___2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\courtyard_random_ (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="courtyard_random___3_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\courtyard_random_ (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="courtyard_random___5_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\courtyard_random_ (5).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="courtyard_random___6_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\courtyard_random_ (6).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="currency_gold_large_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\embark\currency.gold.large_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -381,8 +369,6 @@
   </data>
   <data name="rosterelement_res3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\roster\rosterelement_res3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  <data name="courtyard_doorcoba" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\courtyard_doorcoba.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="rosterelement_res4" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\roster\rosterelement_res4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -395,9 +381,6 @@
   </data>
   <data name="roster_bggrad" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\roster\roster_bggrad.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="ninja_run___10_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ninja_run_ (10).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="roster_bottomframe" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\roster\roster_bottomframe.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -464,8 +447,6 @@
   </data>
   <data name="torch__14_" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Torch\torch (14).gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  <data name="courtyard_battleArea_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\courtyard_battleArea_.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="torch__15_" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Torch\torch (15).gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -517,11 +498,6 @@
   </data>
   <data name="town_full1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Town\town full1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  <data name="tst" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tst.mp3;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="panel_inventory" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\panel_inventory.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="town_full_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Town\town full_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -537,9 +513,6 @@
   </data>
   <data name="wagon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Town\wagon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="lala2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\lala2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="courtyard_doorfix" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Map\courtyard_doorfix.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

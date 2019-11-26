@@ -24,9 +24,8 @@ namespace Project_PV
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
             Graphics g = e.Graphics;
-            g2 = e.Graphics;
             Config.rect = this.ClientRectangle;
-            manager.draw(g2);
+            manager.draw(g);
 
         }
 
