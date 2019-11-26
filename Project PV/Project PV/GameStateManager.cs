@@ -18,8 +18,7 @@ namespace Project_PV
             player = new Player();
             
 
-            this.stage = Stage.battleAreaState;
-            player.myCharacter.Add(new ninja("ninnin", 50, new equip[5], 5, 5));
+            this.stage = Stage.battleState;
             player.myCharacter.Add(new ninja("ninnin", 50, new equip[5], 5, 5));
             player.currentCharacters[0] = new ninja("ninnin", 50, new equip[5], 5, 5);
             
