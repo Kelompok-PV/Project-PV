@@ -70,6 +70,11 @@ namespace Project_PV
             : base(nama, "ninja", hp, "ninja", "idle", 1, hero_equip, dodge, speed)
         {
             this.level = 1;
+            skills = new List<Skill>();
+            skills.Add(new incision());
+            skills.Add(new noxius_blast());
+            skills.Add(new battlefield_medicine());
+            skills.Add(new bliding_gas());
         }
     }
     //class aladin : karakter
