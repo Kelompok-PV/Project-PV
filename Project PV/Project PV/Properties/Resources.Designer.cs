@@ -193,6 +193,36 @@ namespace Project_PV.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap courtyard_backgroundcoba___1_ {
+            get {
+                object obj = ResourceManager.GetObject("courtyard_backgroundcoba___1_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap courtyard_backgroundcoba___2_ {
+            get {
+                object obj = ResourceManager.GetObject("courtyard_backgroundcoba___2_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap courtyard_backgroundcoba___3_ {
+            get {
+                object obj = ResourceManager.GetObject("courtyard_backgroundcoba___3_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap courtyard_battleArea_ {
             get {
                 object obj = ResourceManager.GetObject("courtyard_battleArea_", resourceCulture);
@@ -233,39 +263,9 @@ namespace Project_PV.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap courtyard_random___2_ {
+        internal static System.Drawing.Bitmap courtyard_lastfix {
             get {
-                object obj = ResourceManager.GetObject("courtyard_random___2_", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap courtyard_random___3_ {
-            get {
-                object obj = ResourceManager.GetObject("courtyard_random___3_", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap courtyard_random___5_ {
-            get {
-                object obj = ResourceManager.GetObject("courtyard_random___5_", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap courtyard_random___6_ {
-            get {
-                object obj = ResourceManager.GetObject("courtyard_random___6_", resourceCulture);
+                object obj = ResourceManager.GetObject("courtyard_lastfix", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -274,9 +274,118 @@ namespace Project_PV.Properties {
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap courtyard_randomcoba___1_ {
-        internal static System.Drawing.Bitmap courtyard_lastfix {
             get {
-                object obj = ResourceManager.GetObject("courtyard_lastfix", resourceCulture);
+                object obj = ResourceManager.GetObject("courtyard_randomcoba___1_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap courtyard_randomcoba___1_1 {
+            get {
+                object obj = ResourceManager.GetObject("courtyard_randomcoba___1_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap courtyard_randomcoba___2_ {
+            get {
+                object obj = ResourceManager.GetObject("courtyard_randomcoba___2_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap courtyard_randomcoba___2_1 {
+            get {
+                object obj = ResourceManager.GetObject("courtyard_randomcoba___2_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap courtyard_randomcoba___3_ {
+            get {
+                object obj = ResourceManager.GetObject("courtyard_randomcoba___3_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap courtyard_randomcoba___3_1 {
+            get {
+                object obj = ResourceManager.GetObject("courtyard_randomcoba___3_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap courtyard_randomcoba___4_ {
+            get {
+                object obj = ResourceManager.GetObject("courtyard_randomcoba___4_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap courtyard_randomcoba___4_1 {
+            get {
+                object obj = ResourceManager.GetObject("courtyard_randomcoba___4_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap courtyard_randomcoba___5_ {
+            get {
+                object obj = ResourceManager.GetObject("courtyard_randomcoba___5_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap courtyard_randomcoba___5_1 {
+            get {
+                object obj = ResourceManager.GetObject("courtyard_randomcoba___5_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap courtyard_randomcoba___6_ {
+            get {
+                object obj = ResourceManager.GetObject("courtyard_randomcoba___6_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap courtyard_randomcoba___6_1 {
+            get {
+                object obj = ResourceManager.GetObject("courtyard_randomcoba___6_1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
