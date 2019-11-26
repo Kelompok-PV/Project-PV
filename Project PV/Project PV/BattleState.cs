@@ -44,7 +44,6 @@ namespace Project_PV
         Image imgLast;
         Image imgDoor;
         object O = Properties.Resources.ResourceManager.GetObject("lala");
-        Image img;
 
 
         Image imgpPlayer;

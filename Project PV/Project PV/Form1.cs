@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing.Text;
+using System.Diagnostics;
 
 namespace Project_PV
 {
@@ -19,11 +20,13 @@ namespace Project_PV
             InitializeComponent();
             this.DoubleBuffered = true;
             Config.form1 = this;
+            manager = new GameStateManager();
         }
         Random rand = new Random();
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
             Graphics g = e.Graphics;
+            g = e.Graphics;
             Config.rect = this.ClientRectangle;
             manager.draw(g);
 
@@ -47,12 +50,34 @@ namespace Project_PV
             Config.font.AddFontFile("Resources\\DwarvenAxe BB W00 Regular.ttf");
             manager = new GameStateManager();
         }
-        Rectangle test = new Rectangle(500, 500, 500, 500);
+        //private int FPS = 60;
+        private long targetTime = 1000 / 60;
         private void timer1_Tick(object sender, EventArgs e)
         {
+            long start;
+            long elapsed;
+            long wait;
+
+            start = nanoTime();
             manager.update();
-            
             Invalidate();
+            elapsed = nanoTime() - start;
+
+            //targettime = 1000/ FPS = 1000 / 60 = ... (miliseconds / frame)
+            //calculate wait for accuracy
+            wait = targetTime - elapsed / 1000000;
+            //anticipate lag
+            if (wait < 0) wait = 5;
+
+            try
+            {
+                timer1.Interval = (int)wait;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
 
         private void Form1_MouseClick(object sender, MouseEventArgs e)
@@ -86,9 +111,13 @@ namespace Project_PV
         {
             Cursor.Current = new Cursor(Project_PV.Properties.Resources.arrow.GetHicon());
         }
-        private void drawCircle(int x, int y)
+        
+        private long nanoTime()
         {
-
+            long nano = 10000L * Stopwatch.GetTimestamp();
+            nano /= TimeSpan.TicksPerMillisecond;
+            nano *= 100L;
+            return nano;
         }
     }
 }
