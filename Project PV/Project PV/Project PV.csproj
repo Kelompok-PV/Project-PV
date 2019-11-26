@@ -405,6 +405,10 @@
     <None Include="Resources\stage_coach\stage_coach.dd.character.png" />
     <None Include="Resources\stage_coach\stage_coach.character_background.png" />
     <None Include="Resources\stage_coach\stage_coach.character.png" />
+    <None Include="Resources\skill_ %284%29.png" />
+    <None Include="Resources\skill_ %283%29.png" />
+    <None Include="Resources\skill_ %282%29.png" />
+    <None Include="Resources\skill_ %281%29.png" />
     <None Include="Resources\roster\hero_slot.positive_frame.png" />
     <None Include="Resources\roster\town_event.icon_roster.png" />
     <None Include="Resources\roster\selected_charslide.png" />
@@ -448,6 +452,9 @@
     <None Include="Resources\Map\courtyard_randomfix_ %283%29.png" />
     <None Include="Resources\Map\courtyard_randomfix_ %284%29.png" />
     <None Include="Resources\Map\courtyard_randomfix_ %285%29.png" />
+    <None Include="Resources\ability_move.png" />
+    <None Include="Resources\ability_pass.png" />
+    <None Include="Resources\gold.png" />
     <Content Include="Resources\Quest\dungeon_progressionbar.png" />
     <Content Include="Resources\Quest\embark_party.background.png" />
     <None Include="Resources\tst.mp3" />

@@ -28,47 +28,48 @@ namespace Project_PV
     }
     public class noxius_blast : Skill
     {
-        public noxius_blast(string nama, efek[] skill_efek, int[] rank, int[] target, status status_skill,int efek_kena)
+        public noxius_blast()
            : base("noxius_blast",new efek[1],new int[4],new int[4],new status(),10)
         {
+
             rank[0]   = 1; rank[1]   = 1; rank[2]   = 1; rank[3] = 0;
             target[0] = 1; target[1] = 1; target[2] = 0; target[3] = 0;
             status_skill = new status(2,4,20,70,0,-1);
             skill_efek[0] = efek.blight;
-            
+            icon = Properties.Resources.skill___1_;
         }
     }
     public class incision : Skill
     {
-        public incision(string nama, efek[] skill_efek, int[] rank, int[] target, status status_skill, int efek_kena)
+        public incision()
            : base("Incision", new efek[1], new int[4], new int[4], new status(), 10)
         {
             rank[0] = 0; rank[1] = 1; rank[2] = 1; rank[3] = 1;
             target[0] = 1; target[1] = 1; target[2] = 0; target[3] = 0;
             status_skill = new status(0, 1, 20, 60, 0, -1);
-            skill_efek[0] = efek.blight;
+            skill_efek[0] = efek.blight; icon = Properties.Resources.skill___2_;
         }
     }
     public class battlefield_medicine : Skill
     {
-        public battlefield_medicine(string nama, efek[] skill_efek, int[] rank, int[] target, status status_skill, int efek_kena)
+        public battlefield_medicine()
            : base("battlefield medicine", new efek[1], new int[4], new int[4], new status(), 10)
         {
             rank[0] = 1; rank[1] = 1; rank[2] = 0; rank[3] = 0;
             target[0] = 1; target[1] = 1; target[2] = 1; target[3] = 1;
             status_skill = new status(1, 2, 20, 100, 0, -1);
-            skill_efek[0] = efek.blight;
+            skill_efek[0] = efek.blight; icon = Properties.Resources.skill___3_;
         }
     }
     public class bliding_gas: Skill
     {
-        public bliding_gas(string nama, efek[] skill_efek, int[] rank, int[] target, status status_skill, int efek_kena)
+        public bliding_gas()
            : base("Bliding Gas", new efek[1], new int[4], new int[4], new status(), 100)
         {
             rank[0] = 1; rank[1] = 1; rank[2] = 0; rank[3] = 0;
             target[0] = 0; target[1] = 0; target[2] = 1; target[3] = 1;
             status_skill = new status(3, 4, 20, 70, 0, 3);
-            skill_efek[0] = efek.stun;
+            skill_efek[0] = efek.stun; icon = Properties.Resources.skill___4_;
         }
     }
     public enum efek

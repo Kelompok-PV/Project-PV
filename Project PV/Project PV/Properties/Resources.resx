@@ -535,6 +535,18 @@
   <data name="courtyard_randomfix___5_" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Map\courtyard_randomfix_ (5).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="skill___1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\skill_ (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="skill___2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\skill_ (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="skill___3_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\skill_ (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="skill___4_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\skill_ (4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="courtyard_randomcoba___1_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\courtyard_randomcoba_ (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -579,5 +591,13 @@
   </data>
   <data name="stage_coach_upgraded_recruits_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\stage_coach\stage_coach.upgraded_recruits.icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ability_move" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ability_move.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ability_pass" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ability_pass.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="gold" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\gold.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

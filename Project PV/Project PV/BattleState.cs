@@ -14,7 +14,7 @@ namespace Project_PV
         public List<int> gambar { get; set; }
         public int x { get; set; }
         public karakter player { get; set; }
-
+        
         public BattleState(GameStateManager gsm)
         {
             //player = gsm.getPlayer();
@@ -99,13 +99,35 @@ namespace Project_PV
             g.DrawImage((Image)Properties.Resources.ResourceManager.GetObject("side_decor"), 0, 420, 120, 270);
             g.DrawImage(imgpPlayer, 70 + 22, 420, 528, 100);
             g.DrawImage((Image)Properties.Resources.ResourceManager.GetObject(player.hero + "_icon"), 135, 440, 68, 68);
+
+            for (int i = 0; i < 4; i++)
+            {
+                g.DrawImage(player.skills[i].icon, 308+55*i, 447, 52, 52);
+            }
+            g.DrawImage((Image)Properties.Resources.ResourceManager.GetObject("ability_move"), 308 + 55 * 4, 447, 52, 52);
+            g.DrawImage((Image)Properties.Resources.ResourceManager.GetObject("ability_pass"), 308 + 55 * 5, 447, 10, 52);
+            
+
             g.DrawImage((Image)Properties.Resources.ResourceManager.GetObject("panel_stat"), 70 + 50, 520, 500, 170);
             g.DrawImage(imgpInv, 70 + 550, 420, 550, 270);
+            //MessageBox.Show((Image)imgpInv+"");
+            Font font = new Font("Arial", 15.0f);
+            if (aktif=="inv")
+            {
+                for (int i = 0; i < 2; i++)
+                {
+                    for (int j = 0; j < 8; j++)
+                    {
+                        g.DrawImage((Image)Properties.Resources.ResourceManager.GetObject("gold"), (float)(640 + j * 61.5), 440 + i * 120, 50, 110);
+                        g.DrawString("11",font,new SolidBrush(Color.White), (float)(640 + j * 61.5), 445 + i * 120);
+                    }
+                }
+            }
             g.DrawImage((Image)Properties.Resources.ResourceManager.GetObject("side_decor"), 1285, 420, -120, 270);
             
         }
         bool ceeek = false;
-        
+        string aktif = "inv";
 
         int opacity = 0;
         public override void mouse_click(object sender, MouseEventArgs e)
@@ -125,10 +147,12 @@ namespace Project_PV
             if (mouse.IntersectsWith(new Rectangle(1130, 550, 50, 50)))
             {
                 imgpInv = (Image)Properties.Resources.ResourceManager.GetObject("panel_map");
+                aktif = "map";
             }
             if (mouse.IntersectsWith(new Rectangle(1130, 610, 50, 50)))
             {
                 imgpInv = (Image)Properties.Resources.ResourceManager.GetObject("panel_inventory");
+                aktif = "inv";
             }
         }
         public override void key_keydown(object sender, KeyEventArgs e)

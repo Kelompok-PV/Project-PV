@@ -103,6 +103,26 @@ namespace Project_PV.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ability_move {
+            get {
+                object obj = ResourceManager.GetObject("ability_move", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ability_pass {
+            get {
+                object obj = ResourceManager.GetObject("ability_pass", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap aladin_icon {
             get {
                 object obj = ResourceManager.GetObject("aladin_icon", resourceCulture);
@@ -526,6 +546,16 @@ namespace Project_PV.Properties {
         internal static System.Drawing.Bitmap giantLady_icon {
             get {
                 object obj = ResourceManager.GetObject("giantLady_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap gold {
+            get {
+                object obj = ResourceManager.GetObject("gold", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1216,6 +1246,9 @@ namespace Project_PV.Properties {
         internal static System.Drawing.Bitmap stage_coach_character {
             get {
                 object obj = ResourceManager.GetObject("stage_coach_character", resourceCulture);
+        internal static System.Drawing.Bitmap skill___1_ {
+            get {
+                object obj = ResourceManager.GetObject("skill___1_", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1226,6 +1259,9 @@ namespace Project_PV.Properties {
         internal static System.Drawing.Bitmap stage_coach_character_background {
             get {
                 object obj = ResourceManager.GetObject("stage_coach_character_background", resourceCulture);
+        internal static System.Drawing.Bitmap skill___2_ {
+            get {
+                object obj = ResourceManager.GetObject("skill___2_", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1236,6 +1272,9 @@ namespace Project_PV.Properties {
         internal static System.Drawing.Bitmap stage_coach_dd_character {
             get {
                 object obj = ResourceManager.GetObject("stage_coach_dd_character", resourceCulture);
+        internal static System.Drawing.Bitmap skill___3_ {
+            get {
+                object obj = ResourceManager.GetObject("skill___3_", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1296,6 +1335,9 @@ namespace Project_PV.Properties {
         internal static System.Drawing.Bitmap stage_coach_upgraded_recruits_icon {
             get {
                 object obj = ResourceManager.GetObject("stage_coach_upgraded_recruits_icon", resourceCulture);
+        internal static System.Drawing.Bitmap skill___4_ {
+            get {
+                object obj = ResourceManager.GetObject("skill___4_", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
