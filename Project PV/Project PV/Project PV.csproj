@@ -401,6 +401,13 @@
     <None Include="Resources\panel_Player.png" />
     <None Include="Resources\panel_stat.png" />
     <None Include="Resources\panel_player2.png" />
+    <None Include="Resources\Map\courtyard_doorfix.png" />
+    <None Include="Resources\Map\courtyard_lastfix.png" />
+    <None Include="Resources\Map\courtyard_randomfix_ %281%29.png" />
+    <None Include="Resources\Map\courtyard_randomfix_ %282%29.png" />
+    <None Include="Resources\Map\courtyard_randomfix_ %283%29.png" />
+    <None Include="Resources\Map\courtyard_randomfix_ %284%29.png" />
+    <None Include="Resources\Map\courtyard_randomfix_ %285%29.png" />
     <Content Include="Resources\Quest\dungeon_progressionbar.png" />
     <Content Include="Resources\Quest\embark_party.background.png" />
     <None Include="Resources\tst.mp3" />

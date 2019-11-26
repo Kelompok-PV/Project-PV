@@ -31,18 +31,6 @@ namespace Project_PV
             Config.rect = this.ClientRectangle;
             manager.draw(g2);
 
-            int temp = rand.Next(2);
-            if(temp == 0)
-            {
-                g.FillRectangle(new SolidBrush(Color.Red), test);
-                g.FillRectangle(new SolidBrush(Color.Blue), 300, 300, 400, 400);
-            }
-            else
-            {
-                g.FillRectangle(new SolidBrush(Color.Black), test);
-                g.FillRectangle(new SolidBrush(Color.Green), 300, 300, 400, 400);
-            }
-            
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -68,7 +56,7 @@ namespace Project_PV
             Cursor.Current = new Cursor(Project_PV.Properties.Resources.arrow.GetHicon());
             manager.update();
             
-            Invalidate(test);
+            Invalidate();
         }
 
         private void Form1_MouseClick(object sender, MouseEventArgs e)
