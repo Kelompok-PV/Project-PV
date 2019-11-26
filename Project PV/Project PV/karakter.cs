@@ -21,11 +21,10 @@ namespace Project_PV
         public equip[] hero_equip { get; set; }
         public int x { get; set; }
         public string type { get; set; }
-        public List<string> dialog { get; set; }
         public int dodge { get; set; }
         public int speed { get; set; }
 
-        protected karakter(string nama,string type ,int hp, string hero, string hero_move, int hero_move_now, equip[] hero_equip, List<string> dialog, int dodge, int speed)
+        protected karakter(string nama,string type ,int hp, string hero, string hero_move, int hero_move_now, equip[] hero_equip, int dodge, int speed)
         {
             this.nama = nama;
             this.hp = hp;
@@ -33,7 +32,6 @@ namespace Project_PV
             this.hero_move = hero_move;
             this.hero_move_now = hero_move_now;
             this.hero_equip = hero_equip;
-            this.dialog = dialog;
             this.dodge = dodge;
             this.speed = speed;
             this.type = type;
@@ -60,8 +58,8 @@ namespace Project_PV
     }
     class ninja : karakter
     {
-        public ninja(string nama, int hp, equip[] hero_equip, List<string> dialog, int dodge, int speed) 
-            : base(nama, "ninja", hp, "ninja", "idle", 1, hero_equip, dialog, dodge, speed)
+        public ninja(string nama, int hp, equip[] hero_equip,  int dodge, int speed) 
+            : base(nama, "ninja", hp, "ninja", "idle", 1, hero_equip, dodge, speed)
         {
         }
     }

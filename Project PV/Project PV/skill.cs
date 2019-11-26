@@ -10,16 +10,17 @@ namespace Project_PV
     {
         public string nama { get; set; }
         public efek[] skill_efek { get; set; }
-        public int[] posisi_skill{ get; set; }
+        public int[] rank{ get; set; }
+        public int[] target{ get; set; }
         public status status_skill{ get; set; }
 
         
     }
     public enum efek
     {
-        bless,
-        targeted,
-        poison,
-
+        blight ,
+        bleed ,
+        stun,
+        marked
     }
 }

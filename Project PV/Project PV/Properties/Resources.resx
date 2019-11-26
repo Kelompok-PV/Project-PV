@@ -393,6 +393,7 @@
   </data>
   <data name="tst" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tst.mp3;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="panel_inventory" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\panel_inventory.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -410,5 +411,8 @@
   </data>
   <data name="side_decor" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\side_decor.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="lala2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\lala2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
