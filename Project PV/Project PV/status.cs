@@ -14,8 +14,10 @@ namespace Project_PV
         public int acc { get; set; }
         public int def { get; set; }
         public int jumlah { get; set; }
-
-        public status(int dmg_min, int dmg_max, int crit, int acc, int def, int jumlah)
+        public status()
+        {
+        }
+            public status(int dmg_min, int dmg_max, int crit, int acc, int def, int jumlah)
         {
             this.dmg_min = dmg_min;
             this.dmg_max = dmg_max;

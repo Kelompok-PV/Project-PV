@@ -22,9 +22,6 @@ namespace Project_PV
             player.myCharacter.Add(new ninja("ninnin", 50, new equip[5], 5, 5));
             player.myCharacter.Add(new ninja("ninnin", 50, new equip[5], 5, 5));
             player.currentCharacters[0] = new ninja("ninnin", 50, new equip[5], 5, 5);
-
-
-            player.currentCharacters[0] = new ninja("ninnin", 50, new equip[5], 5, 5);
             
             gameStates = new GameState[20];
             loadState(this.stage);
