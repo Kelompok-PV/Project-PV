@@ -12,6 +12,6 @@ namespace Project_PV
     {
         public static PrivateFontCollection font = new PrivateFontCollection();
         public static RectangleF rect;
-        public static Graphics g;
+        public static Form1 form1;
     }
 }

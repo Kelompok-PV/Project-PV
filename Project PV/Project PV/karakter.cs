@@ -55,12 +55,21 @@ namespace Project_PV
             Image img = (Image)O;
             g.DrawImage(img, x, 250, 100, 150);
         }
+
+        
+        public Image getIcon()
+        {
+            object icon = Properties.Resources.ResourceManager.GetObject(string.Format("{0}_icon",hero));
+            Bitmap iconImg = (Bitmap)icon;
+            return iconImg;
+        }
     }
     class ninja : karakter
     {
         public ninja(string nama, int hp, equip[] hero_equip,  int dodge, int speed) 
             : base(nama, "ninja", hp, "ninja", "idle", 1, hero_equip, dodge, speed)
         {
+            this.level = 1;
         }
     }
     //class aladin : karakter

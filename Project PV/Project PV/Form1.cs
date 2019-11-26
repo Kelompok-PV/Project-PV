@@ -14,14 +14,11 @@ namespace Project_PV
     public partial class Form1 : Form
     {
         GameStateManager manager;
-        int x, y;
-        Graphics g2;
         public Form1()
         {
             InitializeComponent();
             this.DoubleBuffered = true;
-            Config.g = this.CreateGraphics();
-            
+            Config.form1 = this;
         }
         Random rand = new Random();
         private void Form1_Paint(object sender, PaintEventArgs e)
@@ -47,13 +44,13 @@ namespace Project_PV
 
                 
             }
+            
             Config.font.AddFontFile("Resources\\DwarvenAxe BB W00 Regular.ttf");
             manager = new GameStateManager();
         }
         Rectangle test = new Rectangle(500, 500, 500, 500);
         private void timer1_Tick(object sender, EventArgs e)
         {
-            Cursor.Current = new Cursor(Project_PV.Properties.Resources.arrow.GetHicon());
             manager.update();
             
             Invalidate();
@@ -62,7 +59,7 @@ namespace Project_PV
         private void Form1_MouseClick(object sender, MouseEventArgs e)
         {
             //MessageBox.Show("x: "+e.X+" y: "+e.Y);
-            Cursor.Current = new Cursor(Project_PV.Properties.Resources.arrow.GetHicon());
+            //Cursor.Current = new Cursor(Project_PV.Properties.Resources.arrow.GetHicon());
             manager.mouse_click(sender, e);
         }
         private void Form1_KeyDown(object sender, KeyEventArgs e)
@@ -77,12 +74,12 @@ namespace Project_PV
 
         private void Form1_MouseHover(object sender, EventArgs e)
         {
-            Cursor.Current = new Cursor(Project_PV.Properties.Resources.arrow.GetHicon());
+            //Cursor.Current = new Cursor(Project_PV.Properties.Resources.arrow.GetHicon());
         }
 
         private void Form1_MouseMove(object sender, MouseEventArgs e)
         {
-            Cursor.Current = new Cursor(Project_PV.Properties.Resources.arrow.GetHicon());
+            //Cursor.Current = new Cursor(Project_PV.Properties.Resources.arrow.GetHicon());
             manager.mouse_hover(sender,e);
         }
 
