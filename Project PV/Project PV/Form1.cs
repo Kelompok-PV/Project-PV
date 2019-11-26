@@ -93,11 +93,6 @@ namespace Project_PV
         private void drawCircle(int x, int y)
         {
 
-            Config.g.DrawImage((Image)Properties.Resources.ResourceManager.GetObject("side_decor"), 0, 420, 120, 270);
-            Config.g.DrawImage((Image)Properties.Resources.ResourceManager.GetObject("panel_player2"), 70 + 22, 420, 528, 100);
-            Config.g.DrawImage((Image)Properties.Resources.ResourceManager.GetObject("panel_stat"), 70 + 50, 520, 500, 170);
-            Config.g.DrawImage((Image)Properties.Resources.ResourceManager.GetObject("panel_inventory"), 70 + 550, 420, 550, 270);
-            Config.g.DrawImage((Image)Properties.Resources.ResourceManager.GetObject("side_decor"), 1285, 420, -120, 270);
         }
     }
 }

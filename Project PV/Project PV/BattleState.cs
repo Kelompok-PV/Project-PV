@@ -13,10 +13,7 @@ namespace Project_PV
         public GameStateManager gsm { get; set; }
         public List<int> gambar { get; set; }
         public int x { get; set; }
-
         public karakter player { get; set; }
-        public string url { get; set; }
-        public bool lala { get; set; }
 
         public BattleState(GameStateManager gsm)
         {
@@ -25,7 +22,6 @@ namespace Project_PV
 
             Random r = new Random();
             this.gsm = gsm;
-            lala = false;
             gambar = new List<int>();
             for (int i = 0; i < 5; i++)
             {
@@ -106,11 +102,7 @@ namespace Project_PV
             g.DrawImage((Image)Properties.Resources.ResourceManager.GetObject("panel_stat"), 70 + 50, 520, 500, 170);
             g.DrawImage(imgpInv, 70 + 550, 420, 550, 270);
             g.DrawImage((Image)Properties.Resources.ResourceManager.GetObject("side_decor"), 1285, 420, -120, 270);
-            if (ceeek == false)
-            {
-                //ceeek = true;
-                //drawInventory();
-            }
+            
         }
         bool ceeek = false;
         
@@ -120,14 +112,14 @@ namespace Project_PV
         {
             //MessageBox.Show(x+"");
             Rectangle mouse = new Rectangle(e.X, e.Y, 1, 1);
-            if (mouse.IntersectsWith(new Rectangle(x + 250, 150, 200, 250)) )
+            if (mouse.IntersectsWith(new Rectangle(x + 250, 150, 200, 250))&&player.x==300 )
             {
                 c = new Point(500 / 2, 300 / 2);
                 zoomin = true;
             }
-            if (mouse.IntersectsWith(new Rectangle(x + 700 + 5 * 450, 20, 450, 450)))
+            if (mouse.IntersectsWith(new Rectangle(x + 700 + 5 * 450, 20, 450, 450)) && player.x > 900)
             {
-                c= new Point(1000 / 2, 300 / 2);
+                c = new Point(1000 / 2, 300 / 2);
                 zoomin = true;
             }
             if (mouse.IntersectsWith(new Rectangle(1130, 550, 50, 50)))
