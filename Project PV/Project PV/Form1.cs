@@ -20,7 +20,6 @@ namespace Project_PV
             InitializeComponent();
             this.DoubleBuffered = true;
             Config.form1 = this;
-            manager = new GameStateManager();
         }
         Random rand = new Random();
         private void Form1_Paint(object sender, PaintEventArgs e)

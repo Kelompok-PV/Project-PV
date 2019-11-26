@@ -286,9 +286,6 @@ namespace Project_PV.Properties {
         internal static System.Drawing.Bitmap courtyard_randomcoba___1_1 {
             get {
                 object obj = ResourceManager.GetObject("courtyard_randomcoba___1_1", resourceCulture);
-        internal static System.Drawing.Bitmap courtyard_randomcoba___2_ {
-            get {
-                object obj = ResourceManager.GetObject("courtyard_randomcoba___2_", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -299,9 +296,6 @@ namespace Project_PV.Properties {
         internal static System.Drawing.Bitmap courtyard_randomcoba___2_ {
             get {
                 object obj = ResourceManager.GetObject("courtyard_randomcoba___2_", resourceCulture);
-        internal static System.Drawing.Bitmap courtyard_randomcoba___3_ {
-            get {
-                object obj = ResourceManager.GetObject("courtyard_randomcoba___3_", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -339,8 +333,6 @@ namespace Project_PV.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap courtyard_randomcoba___4_ {
-            get {
         internal static System.Drawing.Bitmap courtyard_randomcoba___4_ {
             get {
                 object obj = ResourceManager.GetObject("courtyard_randomcoba___4_", resourceCulture);
@@ -394,9 +386,6 @@ namespace Project_PV.Properties {
         internal static System.Drawing.Bitmap courtyard_randomcoba___6_1 {
             get {
                 object obj = ResourceManager.GetObject("courtyard_randomcoba___6_1", resourceCulture);
-        internal static System.Drawing.Bitmap courtyard_randomcoba___6_ {
-            get {
-                object obj = ResourceManager.GetObject("courtyard_randomcoba___6_", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1217,6 +1206,96 @@ namespace Project_PV.Properties {
         internal static System.Drawing.Bitmap side_decor {
             get {
                 object obj = ResourceManager.GetObject("side_decor", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap stage_coach_character {
+            get {
+                object obj = ResourceManager.GetObject("stage_coach_character", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap stage_coach_character_background {
+            get {
+                object obj = ResourceManager.GetObject("stage_coach_character_background", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap stage_coach_dd_character {
+            get {
+                object obj = ResourceManager.GetObject("stage_coach_dd_character", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap stage_coach_hero_background {
+            get {
+                object obj = ResourceManager.GetObject("stage_coach_hero_background", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap stage_coach_icon {
+            get {
+                object obj = ResourceManager.GetObject("stage_coach_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap stage_coach_numrecruits_icon {
+            get {
+                object obj = ResourceManager.GetObject("stage_coach_numrecruits_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap stage_coach_rostersize_icon {
+            get {
+                object obj = ResourceManager.GetObject("stage_coach_rostersize_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap stage_coach_town_button {
+            get {
+                object obj = ResourceManager.GetObject("stage_coach_town_button", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap stage_coach_upgraded_recruits_icon {
+            get {
+                object obj = ResourceManager.GetObject("stage_coach_upgraded_recruits_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

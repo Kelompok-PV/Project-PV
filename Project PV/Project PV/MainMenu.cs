@@ -60,7 +60,6 @@ namespace Project_PV
             frameObj = Properties.Resources.rosterelement_res1;
             frameBit = (Bitmap)frameObj;
             yRoster.Add(130);
-            g2 = Graphics.FromImage(frameBit);
             for (int i = 0; i < player.myCharacter.Count; i++)
             {
                 yRoster[i] += 85;
@@ -145,7 +144,6 @@ namespace Project_PV
 
         public override void mouse_click(object sender, MouseEventArgs e)
         {
-            MessageBox.Show("x: " + e.X + " y: " + e.Y);
             Rectangle cursor = new Rectangle(e.X,e.Y,10,10);
             Rectangle embark = new Rectangle(630, 635,200,33);
 
@@ -178,7 +176,7 @@ namespace Project_PV
             }
             else if (cursor.IntersectsWith(shop))
             {
-                choice = choice.shop;
+                choice = choice.stage_coach;
                 loading = true;
                 opacity = 128;
             }
@@ -190,12 +188,12 @@ namespace Project_PV
         int delay = 0;
         private void loadingScreen()
         {
-            if (choice == choice.shop)
+            if (choice == choice.stage_coach)
             {
                 Stage temp = gsm.stage;
                 gsm.unloadState(temp);
 
-                gsm.stage = Stage.quest;
+                gsm.stage = Stage.entryNewHero;
                 gsm.loadState(gsm.stage);
             }
             else if (choice == choice.provision)
@@ -287,6 +285,6 @@ namespace Project_PV
     enum choice
     {
         provision,
-        shop
+        stage_coach
     }
 }

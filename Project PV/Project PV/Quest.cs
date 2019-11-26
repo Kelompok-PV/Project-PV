@@ -212,13 +212,11 @@ namespace Project_PV
         public int y { get; set; }
         public int index { get; set; }
         public karakter name { get; set; }
-        public Rectangle hit { get; set; }
         public Selected_karacter(int x, int y, int index)
         {
             this.x = x;
             this.y = y;
             this.index = index;
-            hit = new Rectangle(x, y, 52, 52);
         }
 
         public void setKaracter(karakter karakter)
@@ -233,7 +231,7 @@ namespace Project_PV
 
         public Rectangle getSelect()
         {
-            return this.hit;
+            return new Rectangle(x, y, 52, 52);
         }
     }
 }

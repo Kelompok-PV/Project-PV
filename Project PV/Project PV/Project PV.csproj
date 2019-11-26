@@ -52,6 +52,7 @@
     <Compile Include="BattleState.cs" />
     <Compile Include="Blacksmith.cs" />
     <Compile Include="Config.cs" />
+    <Compile Include="EntryNewHero.cs" />
     <Compile Include="equip.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -395,6 +396,15 @@
     <None Include="Resources\Quest\hero_slot.background.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\stage_coach\stage_coach.upgraded_recruits.icon.png" />
+    <None Include="Resources\stage_coach\stage_coach.town_button.png" />
+    <None Include="Resources\stage_coach\stage_coach.rostersize.icon.png" />
+    <None Include="Resources\stage_coach\stage_coach.numrecruits.icon.png" />
+    <None Include="Resources\stage_coach\stage_coach.icon.png" />
+    <None Include="Resources\stage_coach\stage_coach.hero_background.png" />
+    <None Include="Resources\stage_coach\stage_coach.dd.character.png" />
+    <None Include="Resources\stage_coach\stage_coach.character_background.png" />
+    <None Include="Resources\stage_coach\stage_coach.character.png" />
     <None Include="Resources\roster\hero_slot.positive_frame.png" />
     <None Include="Resources\roster\town_event.icon_roster.png" />
     <None Include="Resources\roster\selected_charslide.png" />
