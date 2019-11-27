@@ -19,6 +19,9 @@ namespace Project_PV
         Bitmap frame;
         List<newHero> newHeroes;
         Random rand = new Random();
+
+        Rectangle frameBuy;
+        Rectangle playerPanel;
         public EntryNewHero(GameStateManager gsm)
         {
             this.gsm = gsm;
@@ -36,11 +39,13 @@ namespace Project_PV
             frame = Properties.Resources.rosterelement_res1;
             for (int i = 0; i < temp; i++)
             {
-                newHeroes.Add(new newHero(xRoster, yRoster));
+                int priceRand = rand.Next(1000, 3000);
+                newHeroes.Add(new newHero(xRoster, yRoster,priceRand));
                 yRoster += 75;
 
                 karakter karakter;
                 int type = rand.Next(4);
+                type = 0;
                 switch (type)
                 {
                     case 0:
@@ -58,9 +63,28 @@ namespace Project_PV
                 }
                 newHeroes[i].karakter = karakter;
             }
+
+            frameStats = Properties.Resources.characterpanel_frames;
+
+            frameBuy = new Rectangle(xBuy, 240, widthBuy, 388);
+            playerPanel = new Rectangle(0, 622, 1300, 90);
         }
         bool loading = false;
+        bool buy = false;
+        bool disposeBuy = false;
         int alpha = 0;
+        Font name = new Font(Config.font.Families[0], 16, FontStyle.Regular);
+        Font price = new Font(Config.font.Families[0], 24, FontStyle.Regular);
+
+        //untuk pop up
+        int xBuy = 650;
+        int widthBuy = 50;
+        Bitmap frameStats;
+        int index = -1;
+
+        object O1;
+        Image img1;
+        Rectangle buyBtn = new Rectangle(747, 598, 100, 50);
         public override void draw(Graphics g)
         {
             g.DrawImage(background, 0, 0, 1300, 730);
@@ -70,12 +94,30 @@ namespace Project_PV
             g.DrawImage(characterCoach, 30, 166,505,478);
             g.DrawImage(backBtn, 1232, 33, 30, 30);
 
+            //panel embark
+            O1 = Properties.Resources.ResourceManager.GetObject("progression_bar");
+            img1 = (Image)O1;
+            g.DrawImage(img1, 0, 622, 1300, 90);
+
+            O1 = Properties.Resources.ResourceManager.GetObject("progression_forward");
+            img1 = (Image)O1;
+            g.DrawImage(img1, 580, 638, 200, 33);
+
+            Font font = new Font(Config.font.Families[0], 28, FontStyle.Regular);
+
+            O1 = Properties.Resources.ResourceManager.GetObject("currency_gold_large_icon");
+            img1 = (Image)O1;
+            g.DrawImage(img1, 109, 605, 66, 66);
+
+            g.DrawString(player.gold.ToString(), font, new SolidBrush(Color.FromArgb(202, 179, 112)), 179, 637);
+
             for (int i = 0; i < newHeroes.Count; i++)
             {
                 g.DrawImage(frame, newHeroes[i].x, newHeroes[i].y, 500, 70);
-
-                
-                g.DrawImage(newHeroes[i].karakter.getIcon(), newHeroes[i].x+100, newHeroes[i].y, 50, 50);
+                g.DrawImage(newHeroes[i].karakter.getIcon(), newHeroes[i].x+100, newHeroes[i].y+10, 50, 50); //icon karakter
+                g.DrawString(newHeroes[i].karakter.nama, name, new SolidBrush(Color.FromArgb(250, 231, 162)), newHeroes[i].x + 170, newHeroes[i].y + 10);
+                g.DrawString(newHeroes[i].karakter.hero, name, new SolidBrush(Color.White), newHeroes[i].x + 170, newHeroes[i].y + 25);
+                g.DrawString("Price "+ newHeroes[i].price, price, new SolidBrush(Color.FromArgb(250, 231, 162)), newHeroes[i].x + 300, newHeroes[i].y + 25);
             }
 
             //loading
@@ -83,7 +125,37 @@ namespace Project_PV
             {
                 g.FillRectangle(new SolidBrush(Color.FromArgb(alpha,Color.Black)), 0, 0, 1300, 730);
             }
+
+            if (buy)
+            {
+                g.FillRectangle(new SolidBrush(Color.FromArgb(200, Color.Black)), 0, 0, 1300, 730);
+                g.FillRectangle(new SolidBrush(Color.Black), xBuy, 240, widthBuy, 388);
+                g.DrawRectangle(new Pen(Color.Gold), xBuy, 240, widthBuy, 388);
+                g.DrawImage(frameStats, xBuy, 240, widthBuy, 388);
+
+                
+                if (!transition)
+                {
+                    //base stats
+                    g.DrawString("Base Stats", name, new SolidBrush(Color.FromArgb(250, 231, 162)), 533, 415);
+                    g.FillRectangle(new SolidBrush(Color.FromArgb(200, Color.Red)), buyBtn);
+                    g.DrawString("Buy Hero", price, new SolidBrush(Color.FromArgb(250, 231, 162)), buyBtn.X+10,buyBtn.Y+5);
+                    //idle
+                    try
+                    {
+
+                        g.DrawImage(newHeroes[index].karakter.getIdle(), 335, 452, 100, 150);
+                        newHeroes[index].karakter.hero_move_now++;
+                    }
+                    catch (Exception)
+                    {
+                        newHeroes[index].karakter.hero_move_now = 1;
+                        g.DrawImage(newHeroes[index].karakter.getIdle(), 335, 452, 100, 150);
+                    }
+                }
+            }
         }
+
         private GameStateManager gsm;
         
         public override void init()
@@ -112,6 +184,31 @@ namespace Project_PV
                 alpha = 128;
 
             }
+            else if (cursor.IntersectsWith(buyBtn))
+            {
+                player.gold -= newHeroes[index].price;
+                disposeBuy = true;
+            }
+            else
+            {
+                for (int i = 0; i < newHeroes.Count; i++)
+                {
+                    if (cursor.IntersectsWith(newHeroes[i].getHit()))
+                    {
+                        if(player.gold >= newHeroes[i].price)
+                        {
+                            buy = true;
+                            transition = true;
+                            index = i;
+                            break;
+                        }
+                        else
+                        {
+                            
+                        }
+                    }
+                }
+            }
         }
 
         public override void mouse_hover(object sender, MouseEventArgs e)
@@ -124,6 +221,7 @@ namespace Project_PV
             
         }
         int delay = 0;
+        bool transition;
         public override void update()
         {
             
@@ -140,6 +238,45 @@ namespace Project_PV
                     }
                 }
             }
+            if (disposeBuy)
+            {
+                if (widthBuy <= 10)
+                {
+                    widthBuy = 10;
+                    buy = false;
+                    disposeBuy = false;
+                    Config.form1.Invalidate();
+                }
+                else
+                {
+                    widthBuy -= 50;
+                    xBuy += 25;
+                    transition = true;
+                    Rectangle temp = new Rectangle(frameBuy.X, frameBuy.Y, frameBuy.Width + 50, frameBuy.Height);
+                    Config.form1.Invalidate(temp);
+                    Config.form1.Invalidate(playerPanel);
+                }
+                
+            }
+            else if (buy)
+            {
+                if (widthBuy >= 697)
+                {
+                    widthBuy = 697;
+                    transition = false;
+                    Config.form1.Invalidate();
+                }
+                else
+                {
+                    widthBuy += 50;
+                    xBuy -= 25;
+                    Config.form1.Invalidate(frameBuy);
+                }
+                
+            }
+
+            frameBuy = new Rectangle(xBuy, 240, widthBuy, 388);
+            playerPanel = new Rectangle(0, 622, 1300, 90);
         }
 
         private void loadingScreen()
@@ -155,10 +292,12 @@ namespace Project_PV
         public int x { get; set; }
         public int y { get; set; }
         public karakter karakter { get; set; }
-        public newHero(int x, int y)
+        public int price { get; set; }
+        public newHero(int x, int y,int price)
         {
             this.x = x;
             this.y = y;
+            this.price = price;
         }
 
         public Rectangle getHit()
@@ -166,9 +305,5 @@ namespace Project_PV
             return new Rectangle(x, y, 500, 70);
         }
 
-        public karakter GetKarakter()
-        {
-            return karakter;
-        }
     }
 }

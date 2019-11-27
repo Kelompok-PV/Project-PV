@@ -396,6 +396,13 @@
     <None Include="Resources\Quest\hero_slot.background.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\stats\characterpanel_frames.png" />
+    <None Include="Resources\roster\roster_icon_frame_town_event.png" />
+    <None Include="Resources\stats\saveslot_overlay.png" />
+    <None Include="Resources\stats\quirkheader.png" />
+    <None Include="Resources\tst.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="Resources\stage_coach\stage_coach.upgraded_recruits.icon.png" />
     <None Include="Resources\stage_coach\stage_coach.town_button.png" />
     <None Include="Resources\stage_coach\stage_coach.rostersize.icon.png" />
@@ -457,7 +464,6 @@
     <None Include="Resources\gold.png" />
     <Content Include="Resources\Quest\dungeon_progressionbar.png" />
     <Content Include="Resources\Quest\embark_party.background.png" />
-    <None Include="Resources\tst.mp3" />
     <None Include="Resources\Town\town full_2.png" />
   </ItemGroup>
   <ItemGroup>

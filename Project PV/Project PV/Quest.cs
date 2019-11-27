@@ -181,17 +181,14 @@ namespace Project_PV
 
                 
             }
-
-            
-
-
         }
-        bool selected = false;  
+        bool selected = false;
+        Rectangle cursor;
         public override void mouse_hover(object sender, MouseEventArgs e)
         {
             x = e.X;
             y = e.Y;
-            //Config.form1.Invalidate(new Rectangle(x,y,50,50));
+            Config.form1.Invalidate();
         }
 
         public override void mouse_leave(object sender, MouseEventArgs e)

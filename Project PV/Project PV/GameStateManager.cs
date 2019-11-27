@@ -16,9 +16,9 @@ namespace Project_PV
         public GameStateManager()
         {
             player = new Player();
-            player.gold = 2000;
+            player.gold = 3000;
 
-            this.stage = Stage.entryNewHero;
+            this.stage = Stage.quest;
             player.myCharacter.Add(new ninja("ninnin", 50, new equip[5], 5, 5));
             player.myCharacter.Add(new ninja("ninnin", 50, new equip[5], 5, 5));
             player.currentCharacters[0] = new ninja("ninnin", 50, new equip[5], 5, 5);

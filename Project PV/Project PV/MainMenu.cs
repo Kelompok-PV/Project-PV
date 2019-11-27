@@ -19,7 +19,6 @@ namespace Project_PV
         private List<Rectangle> listBuilding;
         private Player player;
         private bool loading;
-        private Graphics g2;
         
         public MainMenu(GameStateManager gsm)
         {
@@ -54,7 +53,7 @@ namespace Project_PV
 
             shop = new Rectangle(167, 511, 272 - 167, 603 - 511);
             listBuilding.Add(shop);
-            coordinates.Add(new coordinate(167+8, 511-50, "Shop Hero", "treat quirks and disease"));
+            coordinates.Add(new coordinate(167+8, 511-50, "Shop Hero", "recruit new heroes"));
 
             //frame roster
             frameObj = Properties.Resources.rosterelement_res1;
