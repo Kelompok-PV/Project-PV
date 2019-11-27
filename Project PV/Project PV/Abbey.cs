@@ -111,15 +111,18 @@ namespace Project_PV
 
 			for (int i = 0; i < 9; i++)
 			{
-				if (cursor.IntersectsWith(unlockset[i].Shadow))
+                Rectangle shadow = new Rectangle(unlockset[i].X, unlockset[i].Y, 200, 200);
+				if (cursor.IntersectsWith(shadow))
 				{
-					MessageBox.Show("hero masih kekunci");
+					MessageBox.Show("hero masih kekunci ");
 				}
 			}
 		}
 
 		public override void update()
-		{}
+		{
+        
+        }
 
         public override void key_KeyUp(object sender, KeyEventArgs e)
         {
@@ -135,6 +138,7 @@ namespace Project_PV
         {
             
         }
+
     }
 	
 	class unlockoverlay
@@ -142,16 +146,19 @@ namespace Project_PV
 		int x;
 		int y;
 		Image overlay;
-		Rectangle shadow;
+       
 		public unlockoverlay(int x, int y)
 		{
-			this.X = x;
-			this.Y = y;
+			this.x = x;
+			this.y = y;
 			object O4 = Project_PV.Properties.Resources.abbey_locked_hero_slot_overlay;
 			Image unlock = (Image)O4;
-			Overlay = unlock;
-			shadow = new Rectangle(x, y, 200, 200);
+			overlay = unlock;
 		}
+
+        public int X { get => x; set => x = value; }
+        public int Y { get => y; set => y = value; }
+        public Image Overlay { get => overlay; set => overlay = value; }
 
         private GraphicsPath GetStringPath(string s, float dpi, RectangleF rect, Font font, StringFormat format)
         {
@@ -163,26 +170,6 @@ namespace Project_PV
             return path;
         }
     }
-    class unlockoverlay
-    {
-        int x;
-        int y;
-        Image overlay;
-        Rectangle shadow;
-        public unlockoverlay(int x, int y)
-        {
-            this.X = x;
-            this.Y = y;
-            object O4 = Project_PV.Properties.Resources.abbey_locked_hero_slot_overlay;
-            Image unlock = (Image)O4;
-            Overlay = unlock;
-            shadow = new Rectangle(x, y, 200, 200);
-        }
-
-        public int X { get => x; set => x = value; }
-        public int Y { get => y; set => y = value; }
-        public Image Overlay { get => overlay; set => overlay = value; }
-        public Rectangle Shadow { get => shadow; set => shadow = value; }
-    }
+    
 }
 

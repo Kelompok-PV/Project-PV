@@ -11,6 +11,7 @@ namespace Project_PV
 {
     class Sanitarium : GameState
     {
+        public karakter player { get; set; }
         GameStateManager gsm { get; set; }
         public Font title { get; set; }
         public Font subtitle { get; set; }
@@ -33,20 +34,33 @@ namespace Project_PV
             text.Add("Treat Quirks and other \n problematic behaviors."); text.Add("Treat Diseases, humorous, \n and other physical maladies");
             ptext.Add(new Point(120, 50)); ptext.Add(new PointF(670, 60)); ptext.Add(new PointF(680, 265));
             ptext.Add(new Point(650, 90)); ptext.Add(new PointF(650, 300));
-        }
 
+            background = (Image)O1;
+            icon = (Image)O2;
+            character = (Image)O3;
+            qpost = (Image)O4;
+            close = (Image)O5;
+        }
+        object O1 = Project_PV.Properties.Resources.sanitarium_character_background;
+        Image background ;
+
+        object O2 = Project_PV.Properties.Resources.sanitarium_icon;
+        Image icon;
+
+        object O3 = Project_PV.Properties.Resources.sanitarium_character;
+        Image character;
+
+        object O4 = Project_PV.Properties.Resources.remove_quirk_positive;
+        Image qpost;
+
+        object O5 = Project_PV.Properties.Resources.progression_close;
+        Image close;
+
+        StringFormat format = StringFormat.GenericTypographic;
         public override void draw(Graphics g)
         {
-            
-            object O1 = Project_PV.Properties.Resources.sanitarium_character_background;
-            Image background = (Image)O1;
             g.DrawImage(background, 0, 0, 1300, 700);
-
-            object O2 = Project_PV.Properties.Resources.sanitarium_icon;
-            Image icon = (Image)O2;
             g.DrawImage(icon, 10, 20, 100, 100);
-
-            StringFormat format = StringFormat.GenericTypographic;
             float dpi = g.DpiY;
 
             Pen pen = new Pen(new SolidBrush(Color.Yellow));
@@ -63,17 +77,8 @@ namespace Project_PV
                     g.DrawString(text[i], paragraph, new SolidBrush(Color.Gray), ptext[i]);
                 }
             }
-
-            object O3 = Project_PV.Properties.Resources.sanitarium_character;
-            Image character = (Image)O3;
             g.DrawImage(character, -40, 100, 750, 620);
-
-            object O4 = Project_PV.Properties.Resources.remove_quirk_positive;
-            Image qpost = (Image)O4;
             g.DrawImage(qpost, 25, 115, 70, 70);
-
-            object O5 = Project_PV.Properties.Resources.progression_close;
-            Image close = (Image)O5;
             g.DrawImage(close, 1230, 10, 50, 50);
         }
 
@@ -94,15 +99,17 @@ namespace Project_PV
 
         public override void key_keydown(object sender, KeyEventArgs e)
         {
-            throw new NotImplementedException();
+
         }
 
+        Rectangle back = new Rectangle(1230, 10, 50, 50);
         public override void mouse_click(object sender, MouseEventArgs e)
         {
             Rectangle cursor = new Rectangle(e.X, e.Y, 10, 10);
-            Rectangle back = new Rectangle(1230, 10, 50, 50);
             if (cursor.IntersectsWith(back))
             {
+                gsm.player.currentCharacters[0] = this.player;
+                gsm.unloadState(gsm.stage);
                 gsm.stage = Stage.mainMenu;
                 gsm.loadState(gsm.stage);
             }
@@ -115,17 +122,19 @@ namespace Project_PV
 
         public override void key_KeyUp(object sender, KeyEventArgs e)
         {
-            throw new NotImplementedException();
+            
         }
 
         public override void mouse_hover(object sender, MouseEventArgs e)
         {
-            throw new NotImplementedException();
+            
         }
 
         public override void mouse_leave(object sender, MouseEventArgs e)
         {
-            throw new NotImplementedException();
+            
         }
+
+        
     }
 }

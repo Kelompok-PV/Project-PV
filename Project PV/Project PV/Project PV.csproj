@@ -52,6 +52,7 @@
     <Compile Include="BattleState.cs" />
     <Compile Include="Blacksmith.cs" />
     <Compile Include="Config.cs" />
+    <Compile Include="EntryNewHero.cs" />
     <Compile Include="equip.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -395,9 +396,88 @@
     <None Include="Resources\Quest\hero_slot.background.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\stage_coach\stage_coach.upgraded_recruits.icon.png" />
+    <None Include="Resources\stage_coach\stage_coach.town_button.png" />
+    <None Include="Resources\stage_coach\stage_coach.rostersize.icon.png" />
+    <None Include="Resources\stage_coach\stage_coach.numrecruits.icon.png" />
+    <None Include="Resources\stage_coach\stage_coach.icon.png" />
+    <None Include="Resources\stage_coach\stage_coach.hero_background.png" />
+    <None Include="Resources\stage_coach\stage_coach.dd.character.png" />
+    <None Include="Resources\stage_coach\stage_coach.character_background.png" />
+    <None Include="Resources\stage_coach\stage_coach.character.png" />
+    <None Include="Resources\skill_ %284%29.png" />
+    <None Include="Resources\skill_ %283%29.png" />
+    <None Include="Resources\skill_ %282%29.png" />
+    <None Include="Resources\skill_ %281%29.png" />
+    <None Include="Resources\roster\hero_slot.positive_frame.png" />
+    <None Include="Resources\roster\town_event.icon_roster.png" />
+    <None Include="Resources\roster\selected_charslide.png" />
+    <None Include="Resources\roster\rosterelement_res6.png" />
+    <None Include="Resources\roster\rosterelement_res5.png" />
+    <None Include="Resources\roster\rosterelement_res4.png" />
+    <None Include="Resources\roster\rosterelement_res3.png" />
+    <None Include="Resources\roster\rosterelement_res2.png" />
+    <None Include="Resources\roster\rosterelement_res1.png" />
+    <None Include="Resources\roster\rosterelement.background.png" />
+    <None Include="Resources\roster\roster_uparrow.png" />
+    <None Include="Resources\roster\roster_topframe.png" />
+    <None Include="Resources\roster\roster_sort_stress.png" />
+    <None Include="Resources\roster\roster_sort_level.png" />
+    <None Include="Resources\roster\roster_sort_current_overlay.png" />
+    <None Include="Resources\roster\roster_sort_class.png" />
+    <None Include="Resources\roster\roster_sort_building.png" />
+    <None Include="Resources\roster\roster_live.png" />
+    <None Include="Resources\roster\roster_downarrow.png" />
+    <None Include="Resources\roster\roster_bottomframe.png" />
+    <None Include="Resources\roster\roster_bggrad.png" />
+    <None Include="Resources\roster\party.icon_roster.png" />
+    <None Include="Resources\roster\missing.icon_roster.png" />
+    <None Include="Resources\side_decor.png" />
+    <None Include="Resources\panel_inventory.png" />
+    <None Include="Resources\panel_map.png" />
+    <None Include="Resources\panel_Player.png" />
+    <None Include="Resources\panel_stat.png" />
+    <None Include="Resources\panel_player2.png" />
+    <None Include="Resources\icon_character\aladin_icon.png" />
+    <None Include="Resources\icon_character\archer_icon.png" />
+    <None Include="Resources\icon_character\druid_icon.png" />
+    <None Include="Resources\icon_character\giantLady_icon.png" />
+    <None Include="Resources\icon_character\hercules_icon.png" />
+    <None Include="Resources\icon_character\ninja_icon.png" />
+    <None Include="Resources\icon_character\tonyStark_icon.png" />
+    <None Include="Resources\Map\courtyard_doorfix.png" />
+    <None Include="Resources\Map\courtyard_lastfix.png" />
+    <None Include="Resources\Map\courtyard_randomfix_ %281%29.png" />
+    <None Include="Resources\Map\courtyard_randomfix_ %282%29.png" />
+    <None Include="Resources\Map\courtyard_randomfix_ %283%29.png" />
+    <None Include="Resources\Map\courtyard_randomfix_ %284%29.png" />
+    <None Include="Resources\Map\courtyard_randomfix_ %285%29.png" />
+    <None Include="Resources\ability_move.png" />
+    <None Include="Resources\ability_pass.png" />
+    <None Include="Resources\gold.png" />
     <Content Include="Resources\Quest\dungeon_progressionbar.png" />
     <Content Include="Resources\Quest\embark_party.background.png" />
+    <None Include="Resources\tst.mp3" />
     <None Include="Resources\Town\town full_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxWMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="WMPLib">
+      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

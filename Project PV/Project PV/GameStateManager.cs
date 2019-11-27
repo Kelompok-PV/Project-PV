@@ -15,25 +15,15 @@ namespace Project_PV
         public Player player { get; set; }
         public GameStateManager()
         {
-            gameStates = new GameState[11];
-            gameStates = new GameState[20];
-            //this.stage = Stage.sanitarium;
-            this.stage = Stage.blacksmith;
-            //this.stage = Stage.battleState;
-            //gameStates = new GameState[8];
-            //this.stage = Stage.title;
-            //this.stage = Stage.battleState;
-            //this.stage = Stage.battleState;
-            //this.stage = Stage.title;
-            //this.stage = Stage.battleState;
-            //this.stage = Stage.battleState;
-			//this.stage = Stage.battleState;
-			// this.stage = Stage.battleState;
-			//this.stage = Stage.mainMenu;
             player = new Player();
-            player.currentCharacters[0] =new ninja("ninnin", 50, new equip[5], new List<string>(), 5, 5);
+            player.gold = 2000;
+
+            this.stage = Stage.entryNewHero;
+            player.myCharacter.Add(new ninja("ninnin", 50, new equip[5], 5, 5));
+            player.myCharacter.Add(new ninja("ninnin", 50, new equip[5], 5, 5));
+            player.currentCharacters[0] = new ninja("ninnin", 50, new equip[5], 5, 5);
+            
             gameStates = new GameState[20];
-            this.stage = Stage.battleState;
             loadState(this.stage);
         }
 
@@ -49,12 +39,14 @@ namespace Project_PV
             }
             else if (stage == Stage.battleState)
             {
-                BattleState bs = new BattleState(this);
-                bs.player = player.currentCharacters[0];
-                gameStates[(int)stage] = bs;
+                //BattleState bs = new BattleState(this);
+                //bs.player = player.currentCharacters[0];
+                gameStates[(int)stage] = new BattleState(this) ;
             }
             else if (stage == Stage.sanitarium)
             {
+                Sanitarium bs = new Sanitarium(this);
+                bs.player = player.currentCharacters[0];
                 gameStates[(int)stage] = new Sanitarium(this);
             }
             else if (stage == Stage.blacksmith)
@@ -77,6 +69,10 @@ namespace Project_PV
             else if(stage == Stage.quest)
             {
                 gameStates[(int)stage] = new Quest(this);
+            }
+            else if(stage == Stage.entryNewHero)
+            {
+                gameStates[(int)stage] = new EntryNewHero(this);
             }
         }
 
@@ -122,12 +118,14 @@ namespace Project_PV
         {
             gameStates[(int)stage].key_KeyUp(sender, e);
         }
+        
     }
 
     public enum Stage
     {
         title,
         mainMenu, 
+        entryNewHero,
         quest,
         easyState,
         mediumState,
