@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing.Text;
 using System.Diagnostics;
+using System.Media;
 
 namespace Project_PV
 {
@@ -31,14 +32,19 @@ namespace Project_PV
 
         }
 
+        object backgroundMusic = Properties.Resources.ResourceManager.GetObject("tst");
+        
         private void Form1_Load(object sender, EventArgs e)
         {
+           
             try
             {
-                axWindowsMediaPlayer1.URL = "E:\\GitHub\\Project-PV\\Project PV\\assets\\tst.mp3";
+                axWindowsMediaPlayer1.URL = "Resources\\tst.mp3";
                 axWindowsMediaPlayer1.Hide();
                 axWindowsMediaPlayer1.Ctlcontrols.play();
                 axWindowsMediaPlayer1.settings.setMode("loop", true);
+
+                sfx_player.Hide();
             }
             catch (Exception)
             {
@@ -59,7 +65,7 @@ namespace Project_PV
 
             start = nanoTime();
             manager.update();
-            Invalidate();
+            //Invalidate();
             elapsed = nanoTime() - start;
 
             //targettime = 1000/ FPS = 1000 / 60 = ... (miliseconds / frame)

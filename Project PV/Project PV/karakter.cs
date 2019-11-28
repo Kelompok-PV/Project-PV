@@ -56,6 +56,13 @@ namespace Project_PV
             g.DrawImage(img, x, 250, 100, 150);
         }
 
+        //butuh buat shop hero
+        public Image getIdle()
+        {
+            object O = Properties.Resources.ResourceManager.GetObject(hero + "_" + hero_move + "___" + hero_move_now + "_");
+            Image img = (Image)O;
+            return img;
+        }
         
         public Image getIcon()
         {

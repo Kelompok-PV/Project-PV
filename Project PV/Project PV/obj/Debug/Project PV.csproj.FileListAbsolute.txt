@@ -115,3 +115,4 @@ C:\Users\Michael Shan Widodo\Documents\GitHub\Project-PV\Project PV\Project PV\o
 C:\Users\Michael Shan Widodo\Documents\GitHub\Project-PV\Project PV\Project PV\obj\Debug\Project PV.csproj.ResolveComReference.cache
 C:\Users\Michael Shan Widodo\Documents\GitHub\Project-PV\Project PV\Project PV\bin\Debug\Interop.WMPLib.dll
 C:\Users\Michael Shan Widodo\Documents\GitHub\Project-PV\Project PV\Project PV\bin\Debug\AxInterop.WMPLib.dll
+E:\GitHub\Project-PV\Project PV\Project PV\bin\Debug\Resources\tst.mp3

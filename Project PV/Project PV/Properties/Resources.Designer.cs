@@ -213,6 +213,16 @@ namespace Project_PV.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap characterpanel_frames {
+            get {
+                object obj = ResourceManager.GetObject("characterpanel_frames", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap courtyard_backgroundcoba___1_ {
             get {
                 object obj = ResourceManager.GetObject("courtyard_backgroundcoba___1_", resourceCulture);
@@ -993,6 +1003,16 @@ namespace Project_PV.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap quirkheader {
+            get {
+                object obj = ResourceManager.GetObject("quirkheader", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap remove_quirk_negative {
             get {
                 object obj = ResourceManager.GetObject("remove_quirk_negative", resourceCulture);
@@ -1036,6 +1056,16 @@ namespace Project_PV.Properties {
         internal static System.Drawing.Bitmap roster_downarrow {
             get {
                 object obj = ResourceManager.GetObject("roster_downarrow", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap roster_icon_frame_town_event {
+            get {
+                object obj = ResourceManager.GetObject("roster_icon_frame_town_event", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1216,6 +1246,16 @@ namespace Project_PV.Properties {
         internal static System.Drawing.Bitmap sanitarium_icon {
             get {
                 object obj = ResourceManager.GetObject("sanitarium_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap saveslot_overlay {
+            get {
+                object obj = ResourceManager.GetObject("saveslot_overlay", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
