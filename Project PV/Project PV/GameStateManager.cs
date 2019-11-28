@@ -18,7 +18,7 @@ namespace Project_PV
             player = new Player();
             player.gold = 3000;
 
-            this.stage = Stage.quest;
+            this.stage = Stage.abbey;
             player.myCharacter.Add(new ninja("ninnin", 50, new equip[5], 5, 5));
             player.myCharacter.Add(new ninja("ninnin", 50, new equip[5], 5, 5));
             player.currentCharacters[0] = new ninja("ninnin", 50, new equip[5], 5, 5);

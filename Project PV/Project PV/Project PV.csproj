@@ -75,6 +75,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Provision.cs" />
     <Compile Include="Sanitarium.cs" />
     <Compile Include="Quest.cs" />
     <Compile Include="status.cs" />
