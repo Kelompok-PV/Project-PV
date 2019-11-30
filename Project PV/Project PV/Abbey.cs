@@ -20,7 +20,7 @@ namespace Project_PV
 		{
 			this.gsm = gsm;
 			Config.font.AddFontFile("Resources\\DwarvenAxe BB W00 Regular.ttf");
-			title = new Font(Config.font.Families[0], 80, FontStyle.Regular);
+			title = new Font(Config.font.Families[0], 50, FontStyle.Regular);
 
             rect.Location = new PointF(140, 20);
             arrow = (Image)O5;
@@ -64,7 +64,7 @@ namespace Project_PV
 			
 			g.DrawImage(chara, 50, 200, 500, 400);
 			
-			g.DrawImage(arrow, 50, 120,50, 50);
+			g.DrawImage(arrow, 1230, 10,50, 50);
             for (int i = 0; i < 9; i++)
             {
                 g.DrawImage(unlockset[i].Overlay, unlockset[i].X, unlockset[i].Y, 200, 200);
@@ -74,8 +74,8 @@ namespace Project_PV
 			
 			float dpi = g.DpiY;
 
-			g.DrawString(abbey, title, new SolidBrush(Color.Black), new Point(142, 20));
-			g.DrawPath(pen, GetStringPath(abbey, dpi, rect, title, format));
+			g.DrawString(abbey, title, new SolidBrush(Color.Yellow), new Point(142, 30));
+			//g.DrawPath(pen, GetStringPath(abbey, dpi, rect, title, format));
 
 		}
 
@@ -102,7 +102,7 @@ namespace Project_PV
 		public override void mouse_click(object sender, MouseEventArgs e)
 		{
 			Rectangle cursor = new Rectangle(e.X, e.Y, 10, 10);
-			Rectangle back = new Rectangle(50, 120, 50, 50);
+			Rectangle back = new Rectangle(1230, 10, 50, 50);
 			if (cursor.IntersectsWith(back))
 			{
 				gsm.stage = Stage.mainMenu;

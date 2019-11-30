@@ -19,6 +19,7 @@ namespace Project_PV
             player = new Player();
 
             this.stage = Stage.dungeon;
+            player.gold = 3000;
             player.myCharacter.Add(new ninja("ninnin", 50, new equip[5], 5, 5));
             player.currentCharacters[0] = new ninja("ninnin", 50, new equip[5], 5, 5);
             
@@ -62,6 +63,10 @@ namespace Project_PV
             else if(stage == Stage.quest)
             {
                 gameStates[(int)stage] = new Quest(this);
+            }
+            else if(stage == Stage.entryNewHero)
+            {
+                gameStates[(int)stage] = new EntryNewHero(this);
             }
         }
 
@@ -114,6 +119,7 @@ namespace Project_PV
     {
         title,
         mainMenu, 
+        entryNewHero,
         quest,
         easyState,
         mediumState,

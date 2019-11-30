@@ -110,3 +110,10 @@ C:\Users\Fabian\Documents\GitHub\Project-PV-fix\Project PV\Project PV\bin\Debug\
 C:\Users\Fabian\Documents\GitHub\Project-PV-fix\Project PV\Project PV\obj\Debug\Interop.WMPLib.dll
 C:\Users\Fabian\Documents\GitHub\Project-PV-fix\Project PV\Project PV\obj\Debug\AxInterop.WMPLib.dll
 C:\Users\Fabian\Documents\GitHub\Project-PV-fix\Project PV\Project PV\obj\Debug\Project PV.csproj.ResolveComReference.cache
+C:\Users\Michael Shan Widodo\Documents\GitHub\Project-PV\Project PV\Project PV\obj\Debug\Interop.WMPLib.dll
+C:\Users\Michael Shan Widodo\Documents\GitHub\Project-PV\Project PV\Project PV\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\Michael Shan Widodo\Documents\GitHub\Project-PV\Project PV\Project PV\obj\Debug\Project PV.csproj.ResolveComReference.cache
+C:\Users\Michael Shan Widodo\Documents\GitHub\Project-PV\Project PV\Project PV\bin\Debug\Interop.WMPLib.dll
+C:\Users\Michael Shan Widodo\Documents\GitHub\Project-PV\Project PV\Project PV\bin\Debug\AxInterop.WMPLib.dll
+E:\GitHub\Project-PV\Project PV\Project PV\bin\Debug\Resources\tst.mp3
+C:\Users\Michael Shan Widodo\Documents\GitHub\Project-PV\Project PV\Project PV\bin\Debug\Resources\tst.mp3

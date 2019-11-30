@@ -181,17 +181,14 @@ namespace Project_PV
 
                 
             }
-
-            
-
-
         }
-        bool selected = false;  
+        bool selected = false;
+        Rectangle cursor;
         public override void mouse_hover(object sender, MouseEventArgs e)
         {
             x = e.X;
             y = e.Y;
-            //Config.form1.Invalidate(new Rectangle(x,y,50,50));
+            Config.form1.Invalidate();
         }
 
         public override void mouse_leave(object sender, MouseEventArgs e)
@@ -212,13 +209,11 @@ namespace Project_PV
         public int y { get; set; }
         public int index { get; set; }
         public karakter name { get; set; }
-        public Rectangle hit { get; set; }
         public Selected_karacter(int x, int y, int index)
         {
             this.x = x;
             this.y = y;
             this.index = index;
-            hit = new Rectangle(x, y, 52, 52);
         }
 
         public void setKaracter(karakter karakter)
@@ -233,7 +228,7 @@ namespace Project_PV
 
         public Rectangle getSelect()
         {
-            return this.hit;
+            return new Rectangle(x, y, 52, 52);
         }
     }
 }

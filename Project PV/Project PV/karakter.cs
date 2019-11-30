@@ -56,6 +56,13 @@ namespace Project_PV
             g.DrawImage(img, x, 250, 100, 150);
         }
 
+        //butuh buat shop hero
+        public Image getIdle()
+        {
+            object O = Properties.Resources.ResourceManager.GetObject(hero + "_" + hero_move + "___" + hero_move_now + "_");
+            Image img = (Image)O;
+            return img;
+        }
         
         public Image getIcon()
         {
@@ -77,34 +84,34 @@ namespace Project_PV
             skills.Add(new bliding_gas());
         }
     }
-    //class aladin : karakter
-    //{
-    //    public aladin(string nama, string type, int hp, string hero, string hero_move, int hero_move_now, equip[] hero_equip, List<string> dialog, int dodge, int speed) 
-    //        : base(nama, type, hp, hero, "idle", 1, hero_equip, dialog, dodge, speed)
-    //    {
-    //    }
-    //}
-    //class archer : karakter
-    //{
-    //    public archer(string nama, string type, int hp, string hero, string hero_move, int hero_move_now, equip[] hero_equip, List<string> dialog, int dodge, int speed) 
-    //        : base(nama, type, hp, hero, "idle", 1, hero_equip, dialog, dodge, speed)
-    //    {
-    //    }
-    //}
+    class aladin : karakter
+    {
+        public aladin(string nama, int hp, equip[] hero_equip, int dodge, int speed)
+            : base(nama, "aladin", hp, "aladin", "idle", 1, hero_equip, dodge, speed)
+        {
+        }
+    }
+    class archer : karakter
+    {
+        public archer(string nama, int hp, equip[] hero_equip, int dodge, int speed)
+            : base(nama, "archer", hp, "archer", "idle", 1, hero_equip, dodge, speed)
+        {
+        }
+    }
     //class assasin : karakter
     //{
-    //    public assasin(string nama, string type, int hp, string hero, string hero_move, int hero_move_now, equip[] hero_equip, List<string> dialog, int dodge, int speed) 
+    //    public assasin(string nama, int hp, equip[] hero_equip, int dodge, int speed)
     //        : base(nama, type, hp, hero, "idle", 1, hero_equip, dialog, dodge, speed)
     //    {
     //    }
     //}
-    //class druid : karakter
-    //{
-    //    public druid(string nama, string type, int hp, string hero, string hero_move, int hero_move_now, equip[] hero_equip, List<string> dialog, int dodge, int speed) 
-    //        : base(nama, type, hp, hero, "idle", 1, hero_equip, dialog, dodge, speed)
-    //    {
-    //    }
-    //}
+    class druid : karakter
+    {
+        public druid(string nama, int hp, equip[] hero_equip, int dodge, int speed)
+            : base(nama, "druid", hp, "druid", "idle", 1, hero_equip, dodge, speed)
+        {
+        }
+    }
     //class ghostPerson : karakter
     //{
     //    public ghostPerson(string nama, string type, int hp, string hero, string hero_move, int hero_move_now, equip[] hero_equip, List<string> dialog, int dodge, int speed) 
