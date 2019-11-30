@@ -464,6 +464,10 @@
     <None Include="Resources\ability_move.png" />
     <None Include="Resources\ability_pass.png" />
     <None Include="Resources\gold.png" />
+    <None Include="Resources\courtyard_area_ %281%29.png" />
+    <None Include="Resources\courtyard_area_ %282%29.png" />
+    <None Include="Resources\courtyard_area_ %283%29.png" />
+    <None Include="Resources\courtyard_area_ %284%29.png" />
     <Content Include="Resources\Quest\dungeon_progressionbar.png" />
     <Content Include="Resources\Quest\embark_party.background.png" />
     <None Include="Resources\Town\town full_2.png" />

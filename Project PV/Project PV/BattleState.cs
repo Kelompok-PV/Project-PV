@@ -141,7 +141,6 @@ namespace Project_PV
             g.DrawImage((Image)Properties.Resources.ResourceManager.GetObject("side_decor"), 1285, 420, -120, 270);
             
         }
-        bool ceeek = false;
         string aktif = "inv";
         int opacity = 0;
 
@@ -158,11 +157,11 @@ namespace Project_PV
                 zoomin = true;
                 if (gsm.dungeon.kebalik)
                 {
-                    kiri = true;
+                    kiri = false;
                 }
                 else
                 {
-                    kiri = false;
+                    kiri = true;
                 }
             }
 
@@ -170,7 +169,7 @@ namespace Project_PV
             {
                 c = new Point(1000 / 2, 300 / 2);
                 zoomin = true;
-                if (!gsm.dungeon.kebalik)
+                if (gsm.dungeon.kebalik)
                 {
                     kiri = true;
                 }

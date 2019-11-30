@@ -117,3 +117,4 @@ C:\Users\Michael Shan Widodo\Documents\GitHub\Project-PV\Project PV\Project PV\b
 C:\Users\Michael Shan Widodo\Documents\GitHub\Project-PV\Project PV\Project PV\bin\Debug\AxInterop.WMPLib.dll
 E:\GitHub\Project-PV\Project PV\Project PV\bin\Debug\Resources\tst.mp3
 C:\Users\Michael Shan Widodo\Documents\GitHub\Project-PV\Project PV\Project PV\bin\Debug\Resources\tst.mp3
+C:\Users\Fabian\Documents\GitHub\Project-PV-fix\Project PV\Project PV\bin\Debug\Resources\tst.mp3

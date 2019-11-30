@@ -11,12 +11,16 @@ namespace Project_PV
     class BattleAreaState : GameState
     {
         karakter player = new ninja("ninnin", 50, new equip[5],  5, 5);
-        object background = Properties.Resources.ResourceManager.GetObject("courtyard_battleArea_");
+        
         Image imgBack;
         public GameStateManager gsm { get; set; }
         public BattleAreaState(GameStateManager gsm)
         {
             this.gsm = gsm;
+            Random r = new Random();
+            int ind = r.Next(4) + 1;
+
+            object background = Properties.Resources.ResourceManager.GetObject("courtyard_area___"+ind+"_");
             imgBack = (Image)background;
 
         }
@@ -47,7 +51,7 @@ namespace Project_PV
                 gsm.dungeon.ke++;
                 gsm.dungeon.kebalik = false;
                 gsm.dungeon.isAreaBesar = false;
-                
+                gsm.dungeon.Area_panjang[gsm.dungeon.ke - 1].reset();
             }
 
             if (e.KeyData == Keys.A && player.x > 200)

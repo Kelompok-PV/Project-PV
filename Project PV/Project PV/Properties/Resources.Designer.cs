@@ -223,9 +223,9 @@ namespace Project_PV.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap courtyard_backgroundcoba___1_ {
+        internal static System.Drawing.Bitmap courtyard_area___1_ {
             get {
-                object obj = ResourceManager.GetObject("courtyard_backgroundcoba___1_", resourceCulture);
+                object obj = ResourceManager.GetObject("courtyard_area___1_", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -233,9 +233,9 @@ namespace Project_PV.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap courtyard_backgroundcoba___2_ {
+        internal static System.Drawing.Bitmap courtyard_area___2_ {
             get {
-                object obj = ResourceManager.GetObject("courtyard_backgroundcoba___2_", resourceCulture);
+                object obj = ResourceManager.GetObject("courtyard_area___2_", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -243,9 +243,9 @@ namespace Project_PV.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap courtyard_backgroundcoba___3_ {
+        internal static System.Drawing.Bitmap courtyard_area___3_ {
             get {
-                object obj = ResourceManager.GetObject("courtyard_backgroundcoba___3_", resourceCulture);
+                object obj = ResourceManager.GetObject("courtyard_area___3_", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -253,9 +253,9 @@ namespace Project_PV.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap courtyard_battleArea_ {
+        internal static System.Drawing.Bitmap courtyard_area___4_ {
             get {
-                object obj = ResourceManager.GetObject("courtyard_battleArea_", resourceCulture);
+                object obj = ResourceManager.GetObject("courtyard_area___4_", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
