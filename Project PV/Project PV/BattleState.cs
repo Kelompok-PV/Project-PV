@@ -14,11 +14,11 @@ namespace Project_PV
         public List<int> gambar { get; set; }
         public int x { get; set; }
         public karakter player { get; set; }
-        
+
         public BattleState(GameStateManager gsm)
         {
             //player = gsm.getPlayer();
-            player= new ninja("ninnin", 50, new equip[5], 5, 5);
+            player = new ninja("ninnin", 50, new equip[5], 5, 5);
 
             Random r = new Random();
             this.gsm = gsm;
@@ -39,16 +39,15 @@ namespace Project_PV
         {
             throw new NotImplementedException();
         }
-        object last = Properties.Resources.ResourceManager.GetObject("courtyard_lastfix");
-        object door = Properties.Resources.ResourceManager.GetObject("courtyard_doorfix");
-        Image imgLast;
-        Image imgDoor;
-        object O = Properties.Resources.ResourceManager.GetObject("lala");
-
-
-        Image imgpPlayer;
-        Image imgpInv;
-
+        //{
+            object last = Properties.Resources.ResourceManager.GetObject("courtyard_lastfix");
+            object door = Properties.Resources.ResourceManager.GetObject("courtyard_doorfix");
+            Image imgLast;
+            Image imgDoor;
+            object O = Properties.Resources.ResourceManager.GetObject("lala");
+            Image imgpPlayer;
+            Image imgpInv;
+        //}
         public override void draw(Graphics g)
         {
             g.ScaleTransform(zoom, zoom);
@@ -59,24 +58,40 @@ namespace Project_PV
             {
                 g.DrawImage(imgLast, x + 220, 0, -220, 430);
             }
-
-
             //door right
             if (x > -600)
             {
                 g.DrawImage(imgDoor, x + 140, 0, 450, 430);
             }
-            
-            for (int i = 0; i < gambar.Count; i++)
+            if (gsm.dungeon.kebalik)
             {
-                int tmpx = x + 585 + i * 449;
-                if (x>=-1000-(i*449)&&tmpx<1300)
+                for (int i = gambar.Count-1; i >=0 ; i--)
                 {
-                    object background_random = Properties.Resources.ResourceManager.GetObject("courtyard_randomfix___"+gambar[i]+"_");
-                    Image img = (Image)background_random;
-                    g.DrawImage(img, x + 585 + i * 449, 0, 450, 430);
+                    int tampi = 4 - i;
+                    int tmpx = x + 585 + tampi * 449;
+                    if (x >= -1000 - (tampi * 449) && tmpx < 1300)
+                    {
+                        object background_random = Properties.Resources.ResourceManager.GetObject("courtyard_randomfix___" + gambar[i] + "_");
+                        Image img = (Image)background_random;
+                        g.DrawImage(img, x + 585 + tampi * 449, 0, 450, 430);
+                    }
                 }
             }
+            else
+            {
+                for (int i = 0; i < gambar.Count; i++)
+                {
+                    int tmpx = x + 585 + i * 449;
+                    if (x >= -1100 - (i * 449) && tmpx < 1300)
+                    {
+                        object background_random = Properties.Resources.ResourceManager.GetObject("courtyard_randomfix___" + gambar[i] + "_");
+                        Image img = (Image)background_random;
+                        g.DrawImage(img, x + 585 + i * 449, 0, 450, 430);
+                    }
+                }
+            }
+            
+
             if (x<-1800)
             {
                 g.DrawImage(imgLast, x + 950 + 5 * 450, 0, 450, 430);
@@ -128,22 +143,43 @@ namespace Project_PV
         }
         bool ceeek = false;
         string aktif = "inv";
-
         int opacity = 0;
+
+        bool kiri = false;
+
         public override void mouse_click(object sender, MouseEventArgs e)
         {
             //MessageBox.Show(x+"");
             Rectangle mouse = new Rectangle(e.X, e.Y, 1, 1);
+
             if (mouse.IntersectsWith(new Rectangle(x + 250, 150, 200, 250))&&player.x==300 )
             {
                 c = new Point(500 / 2, 300 / 2);
                 zoomin = true;
+                if (gsm.dungeon.kebalik)
+                {
+                    kiri = true;
+                }
+                else
+                {
+                    kiri = false;
+                }
             }
+
             if (mouse.IntersectsWith(new Rectangle(x + 700 + 5 * 450, 20, 450, 450)) && player.x > 900)
             {
                 c = new Point(1000 / 2, 300 / 2);
                 zoomin = true;
+                if (!gsm.dungeon.kebalik)
+                {
+                    kiri = true;
+                }
+                else
+                {
+                    kiri = false;
+                }
             }
+
             if (mouse.IntersectsWith(new Rectangle(1130, 550, 50, 50)))
             {
                 imgpInv = (Image)Properties.Resources.ResourceManager.GetObject("panel_map");
@@ -195,11 +231,24 @@ namespace Project_PV
 
             if (zoom >= 2)
             {
-                gsm.stage = Stage.battleAreaState;
-                gsm.loadState(gsm.stage);
+                if (kiri)
+                {
+                    gsm.dungeon.ke--;
+                }
+                gsm.dungeon.isAreaBesar = true;
+
             }
         }
-
+        public void reset()
+        {
+            x = 0;
+            player.x = 300;
+            zoomin = false;
+            opacity = 0;
+            ox = 0;
+            oy = 0;
+            zoom = 1;
+        }
         public override void key_KeyUp(object sender, KeyEventArgs e)
         {
             player.hero_move_now = 1;

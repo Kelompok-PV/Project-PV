@@ -42,10 +42,24 @@ namespace Project_PV
                 player.x += 10;
                 player.hero_move = "run";
             }
+            else if(e.KeyData == Keys.D && gsm.dungeon.ke<gsm.dungeon.Area_panjang.Count)
+            {
+                gsm.dungeon.ke++;
+                gsm.dungeon.kebalik = false;
+                gsm.dungeon.isAreaBesar = false;
+                
+            }
+
             if (e.KeyData == Keys.A && player.x > 200)
             {
                 player.x -= 10;
                 player.hero_move = "run";
+            }
+            else if (e.KeyData == Keys.A&&gsm.dungeon.ke!=0)
+            {
+                gsm.dungeon.kebalik = true;
+                gsm.dungeon.isAreaBesar = false;
+                gsm.dungeon.Area_panjang[gsm.dungeon.ke - 1].reset();
             }
         }
 
