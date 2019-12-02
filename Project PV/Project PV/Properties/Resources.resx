@@ -613,4 +613,64 @@
   <data name="courtyard_area___4_" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\courtyard_area_ (4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="yeti_attack___1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\yeti_attack_ (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="yeti_attack___2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\yeti_attack_ (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="yeti_attack___3_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\yeti_attack_ (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="yeti_attack___4_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\yeti_attack_ (4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="yeti_idle___10_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\yeti_idle_ (10).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="yeti_idle___11_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\yeti_idle_ (11).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="yeti_idle___12_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\yeti_idle_ (12).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="yeti_idle___13_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\yeti_idle_ (13).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="yeti_idle___14_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\yeti_idle_ (14).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="yeti_idle___15_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\yeti_idle_ (15).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="yeti_idle___16_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\yeti_idle_ (16).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="yeti_idle___1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\yeti_idle_ (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="yeti_idle___2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\yeti_idle_ (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="yeti_idle___3_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\yeti_idle_ (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="yeti_idle___4_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\yeti_idle_ (4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="yeti_idle___5_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\yeti_idle_ (5).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="yeti_idle___6_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\yeti_idle_ (6).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="yeti_idle___7_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\yeti_idle_ (7).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="yeti_idle___8_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\yeti_idle_ (8).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="yeti_idle___9_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\yeti_idle_ (9).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
