@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -14,6 +15,8 @@ namespace Project_PV
         public Stage stage { get; set; }
         public Player player { get; set; }
         public dungeon dungeon { get; set; }
+        SoundPlayer townMusic;
+
         public GameStateManager()
         {
             player = new Player();
@@ -25,6 +28,8 @@ namespace Project_PV
             player.gold = 3000;
             gameStates = new GameState[20];
             loadState(this.stage);
+
+            townMusic = new SoundPlayer(Properties.Resources.town);
         }
 
         public void loadState(Stage stage)
@@ -36,6 +41,8 @@ namespace Project_PV
             else if (stage == Stage.mainMenu)
             {
                 gameStates[(int)stage] = new MainMenu(this);
+                townMusic.PlayLooping();
+
             }
             else if (stage == Stage.dungeon)
             {

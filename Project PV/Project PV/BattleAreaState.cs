@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -13,6 +14,7 @@ namespace Project_PV
         karakter player = new ninja("ninnin");
         object background = Properties.Resources.ResourceManager.GetObject("courtyard_battleArea_");
         Image imgBack;
+        SoundPlayer battleMusic;
         public GameStateManager gsm { get; set; }
         public BattleAreaState(GameStateManager gsm)
         {
@@ -20,6 +22,8 @@ namespace Project_PV
             Random r = new Random();
             int ind = r.Next(4) + 1;
 
+            battleMusic = new SoundPlayer(Properties.Resources.mus_combat_courtyard_hallway_intro__16eb5912_0797_4464_a944_76e38cd0a7e9_);
+            battleMusic.Play();
             object background = Properties.Resources.ResourceManager.GetObject("courtyard_area___"+ind+"_");
             imgBack = (Image)background;
 

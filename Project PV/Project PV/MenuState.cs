@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -16,12 +17,16 @@ namespace Project_PV
         public Graphics g2;
         private int frame;
         public Font title { get; set; }
+
+        SoundPlayer bgMusic;
         public MenuState(GameStateManager gsm)
         {
             this.gsm = gsm;
             btnStart = new Rectangle(548, 554, 200, 50);
             title = new Font(Config.font.Families[0],80,FontStyle.Regular);
             frame = 1;
+            bgMusic = new SoundPlayer(Properties.Resources.titleScreen);
+            bgMusic.PlayLooping();
         }
 
         public override void init()
