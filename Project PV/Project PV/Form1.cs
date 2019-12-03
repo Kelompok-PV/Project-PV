@@ -31,27 +31,10 @@ namespace Project_PV
             manager.draw(g);
 
         }
-
-        object backgroundMusic = Properties.Resources.ResourceManager.GetObject("tst");
-        
         private void Form1_Load(object sender, EventArgs e)
         {
-           
-            try
-            {
-                axWindowsMediaPlayer1.URL = "Resources\\tst.mp3";
-                axWindowsMediaPlayer1.Hide();
-                axWindowsMediaPlayer1.Ctlcontrols.play();
-                axWindowsMediaPlayer1.settings.setMode("loop", true);
-
-                sfx_player.Hide();
-            }
-            catch (Exception)
-            {
-
-                
-            }
-            
+            axWindowsMediaPlayer1.Hide();
+            sfx_player.Hide();
             Config.font.AddFontFile("Resources\\DwarvenAxe BB W00 Regular.ttf");
             manager = new GameStateManager();
         }

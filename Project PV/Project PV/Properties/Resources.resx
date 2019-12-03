@@ -690,5 +690,106 @@
   </data>
   <data name="ninja_skill4___1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ninja_skill4_ (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="mus_combat_courtyard_hallway_intro__16eb5912_0797_4464_a944_76e38cd0a7e9_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sound\music\combat\mus_combat_courtyard_hallway_intro {16eb5912-0797-4464-a944-76e38cd0a7e9}.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="titleScreen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sound\music\title\titleScreen.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="town" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sound\music\town.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="druid_idle___10_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\karakter\druid\Idle\druid_idle (10).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="druid_idle___1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\karakter\druid\Idle\druid_idle (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="druid_idle___2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\karakter\druid\Idle\druid_idle (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="druid_idle___3_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\karakter\druid\Idle\druid_idle (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="druid_idle___4_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\karakter\druid\Idle\druid_idle (4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="druid_idle___5_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\karakter\druid\Idle\druid_idle (5).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="druid_idle___6_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\karakter\druid\Idle\druid_idle (6).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="druid_idle___7_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\karakter\druid\Idle\druid_idle (7).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="druid_idle___8_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\karakter\druid\Idle\druid_idle (8).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="druid_idle___9_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\karakter\druid\Idle\druid_idle (9).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="aladin_idle___10_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\karakter\Aladin\Idle\aladin_idle_ (10).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="aladin_idle___11_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\karakter\Aladin\Idle\aladin_idle_ (11).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="aladin_idle___12_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\karakter\Aladin\Idle\aladin_idle_ (12).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="aladin_idle___1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\karakter\Aladin\Idle\aladin_idle_ (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="aladin_idle___2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\karakter\Aladin\Idle\aladin_idle_ (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="aladin_idle___3_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\karakter\Aladin\Idle\aladin_idle_ (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="aladin_idle___4_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\karakter\Aladin\Idle\aladin_idle_ (4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="aladin_idle___5_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\karakter\Aladin\Idle\aladin_idle_ (5).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="aladin_idle___6_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\karakter\Aladin\Idle\aladin_idle_ (6).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="aladin_idle___7_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\karakter\Aladin\Idle\aladin_idle_ (7).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="aladin_idle___8_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\karakter\Aladin\Idle\aladin_idle_ (8).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="aladin_idle___9_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\karakter\Aladin\Idle\aladin_idle_ (9).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="archer_idle___1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\karakter\Archer\Idle\archer_idle_ (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="archer_idle___2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\karakter\Archer\Idle\archer_idle_ (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="archer_idle___3_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\karakter\Archer\Idle\archer_idle_ (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="archer_idle___4_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\karakter\Archer\Idle\archer_idle_ (4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="archer_idle___5_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\karakter\Archer\Idle\archer_idle_ (5).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="archer_idle___6_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\karakter\Archer\Idle\archer_idle_ (6).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="archer_idle___7_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\karakter\Archer\Idle\archer_idle_ (7).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="archer_idle___8_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\karakter\Archer\Idle\archer_idle_ (8).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="archer_idle___9_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\karakter\Archer\Idle\archer_idle_ (9).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
