@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Linq;
+using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -209,10 +210,10 @@ namespace Project_PV
         {
             Rectangle cursor = new Rectangle(e.X,e.Y,10,10);
             Rectangle embark = new Rectangle(630, 635,200,33);
-            MessageBox.Show(string.Format("{0},{1}",e.X.ToString(), e.Y.ToString()));
+            //MessageBox.Show(string.Format("{0},{1}",e.X.ToString(), e.Y.ToString()));
             closeRect = new Rectangle(987, 260,25,25);
 
-            if (!open)
+            if (!open && !loading)
             {
                 if (cursor.IntersectsWith(sanitarium))
                 {
@@ -385,7 +386,7 @@ namespace Project_PV
         {
             Rectangle cursor = new Rectangle(e.X,e.Y,10,10);
 
-            if (!open)
+            if (!open && !loading)
             {
                 for (int i = 0; i < listBuilding.Count; i++)
                 {

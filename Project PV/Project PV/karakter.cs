@@ -67,7 +67,17 @@ namespace Project_PV
         //butuh buat shop hero
         public Image getIdle()
         {
-            object O = Properties.Resources.ResourceManager.GetObject(hero + "_" + hero_move + "___" + hero_move_now + "_");
+            object O;
+            try
+            {
+                O = Properties.Resources.ResourceManager.GetObject(hero + "_" + hero_move + "___" + hero_move_now + "_");
+            }
+            catch (Exception)
+            {
+                //beda satu _ 
+                O = Properties.Resources.ResourceManager.GetObject(hero + "_" + hero_move + "__" + hero_move_now + "_");
+            }
+            
             Image img = (Image)O;
             return img;
         }
@@ -138,7 +148,7 @@ namespace Project_PV
             skills = new List<Skill>();
             this.hero_equip = new equip[5];
             this.type = "Archer";
-            this.hero = "acrher";
+            this.hero = "archer";
             this.hero_move = "idle";
             this.nama = nama;
             this.maxHp = 20;

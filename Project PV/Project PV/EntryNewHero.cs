@@ -45,7 +45,6 @@ namespace Project_PV
 
                 karakter karakter;
                 int type = rand.Next(4);
-                type = 0;
 
                 switch (type)
                 {
@@ -190,18 +189,13 @@ namespace Project_PV
         Rectangle closeRect;
         public override void mouse_click(object sender, MouseEventArgs e)
         {
-            MessageBox.Show("x: " + e.X + " y: " + e.Y);
+            //MessageBox.Show("x: " + e.X + " y: " + e.Y);
             Rectangle cursor = new Rectangle(e.X, e.Y, 10, 10);
             closeRect = new Rectangle(886, 569,40,40);
 
             if (buy)
             {
-                if (cursor.IntersectsWith(backRect))
-                {
-                    loading = true;
-                    alpha = 128;
-                }
-                else if (cursor.IntersectsWith(buyBtn))
+                if (cursor.IntersectsWith(buyBtn))
                 {
                     player.gold -= newHeroes[index].price;
                     player.myCharacter.Add(newHeroes[index].karakter);
@@ -214,23 +208,32 @@ namespace Project_PV
             }
             else
             {
-                for (int i = 0; i < newHeroes.Count; i++)
+                if (cursor.IntersectsWith(backRect))
                 {
-                    if (cursor.IntersectsWith(newHeroes[i].getHit()))
+                    loading = true;
+                    alpha = 128;
+                }
+                else
+                {
+                    for (int i = 0; i < newHeroes.Count; i++)
                     {
-                        if(player.gold >= newHeroes[i].price)
+                        if (cursor.IntersectsWith(newHeroes[i].getHit()))
                         {
-                            buy = true;
-                            transition = true;
-                            index = i;
-                            break;
-                        }
-                        else
-                        {
-                            
+                            if (player.gold >= newHeroes[i].price)
+                            {
+                                buy = true;
+                                transition = true;
+                                index = i;
+                                break;
+                            }
+                            else
+                            {
+
+                            }
                         }
                     }
                 }
+               
             }
         }
 
