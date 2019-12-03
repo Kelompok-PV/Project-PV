@@ -44,6 +44,9 @@ namespace Project_PV
         protected karakter(string nama)
         {
             this.nama = nama;
+            this.hero_stress = new stress();
+            this.hero_stress.stress_level = 0;
+            this.hero_stress.stress_point = 0;
         }
 
         public void getImage(Graphics g)
@@ -57,11 +60,30 @@ namespace Project_PV
                 gambar(g);
             }
         }
+        public void getImageAttack(Graphics g,int zoom)
+        {
+            try
+            {
+                gambarAttack(g, zoom);
+                hero_move_now++;
+            }
+            catch (Exception)
+            {
+                hero_move_now--;
+                gambarAttack(g,zoom);
+            }
+        }
         public void gambar(Graphics g)
         {
             object O = Properties.Resources.ResourceManager.GetObject(hero + "_" + hero_move + "___" + hero_move_now + "_");
             Image img = (Image)O;
-            g.DrawImage(img, x, 250, 100, 150);
+            g.DrawImage(img, x , 250 , 100 , 150 );
+        }
+        public void gambarAttack(Graphics g,int zoom)
+        {
+            object O = Properties.Resources.ResourceManager.GetObject(hero + "_" + hero_move + "___" + hero_move_now + "_");
+            Image img = (Image)O;
+            g.DrawImage(img, x-zoom/2, 250 - zoom, 100 + zoom, 150 + zoom);
         }
 
         //butuh buat shop hero
@@ -95,10 +117,13 @@ namespace Project_PV
             this.hero_move = "idle";
             this.nama = nama;
             this.hero = "ninja";
+
+            
+
             skills = new List<Skill>();
             skills.Add(new incision());
             skills.Add(new noxius_blast());
-            skills.Add(new battlefield_medicine());
+            skills.Add(new smite());
             skills.Add(new bliding_gas());
         }
     }

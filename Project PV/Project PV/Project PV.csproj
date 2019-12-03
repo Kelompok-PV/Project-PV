@@ -23,6 +23,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -506,6 +507,12 @@
     <None Include="Resources\courtyard_area_ %282%29.png" />
     <None Include="Resources\courtyard_area_ %283%29.png" />
     <None Include="Resources\courtyard_area_ %284%29.png" />
+    <None Include="Resources\ninja_skill1_ %281%29.png" />
+    <None Include="Resources\ninja_skill2_ %281%29.png" />
+    <None Include="Resources\ninja_skill2_ %282%29.png" />
+    <None Include="Resources\ninja_skill4_ %281%29.png" />
+    <None Include="Resources\ninja_skill3_ %281%29.png" />
+    <None Include="Resources\ninja_skill3_ %282%29.png" />
     <Content Include="Resources\Quest\dungeon_progressionbar.png" />
     <Content Include="Resources\Quest\embark_party.background.png" />
     <None Include="Resources\Town\town full_2.png" />
