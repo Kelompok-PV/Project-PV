@@ -19,10 +19,10 @@ namespace Project_PV
             player = new Player();
 
             this.stage = Stage.dungeon;
+            player.myCharacter.Add(new ninja("Hatory"));
+            player.myCharacter.Add(new ninja("Hatory"));
+            player.currentCharacters[0] = new ninja("Hatory");
             player.gold = 3000;
-            player.myCharacter.Add(new ninja("ninnin", 50, new equip[5], 5, 5));
-            player.currentCharacters[0] = new ninja("ninnin", 50, new equip[5], 5, 5);
-            
             gameStates = new GameState[20];
             loadState(this.stage);
         }
