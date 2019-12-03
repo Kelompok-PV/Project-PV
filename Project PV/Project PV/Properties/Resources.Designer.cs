@@ -223,9 +223,9 @@ namespace Project_PV.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap courtyard_backgroundcoba___1_ {
+        internal static System.Drawing.Bitmap courtyard_area___1_ {
             get {
-                object obj = ResourceManager.GetObject("courtyard_backgroundcoba___1_", resourceCulture);
+                object obj = ResourceManager.GetObject("courtyard_area___1_", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -233,9 +233,9 @@ namespace Project_PV.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap courtyard_backgroundcoba___2_ {
+        internal static System.Drawing.Bitmap courtyard_area___2_ {
             get {
-                object obj = ResourceManager.GetObject("courtyard_backgroundcoba___2_", resourceCulture);
+                object obj = ResourceManager.GetObject("courtyard_area___2_", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -243,9 +243,9 @@ namespace Project_PV.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap courtyard_backgroundcoba___3_ {
+        internal static System.Drawing.Bitmap courtyard_area___3_ {
             get {
-                object obj = ResourceManager.GetObject("courtyard_backgroundcoba___3_", resourceCulture);
+                object obj = ResourceManager.GetObject("courtyard_area___3_", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -253,9 +253,9 @@ namespace Project_PV.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap courtyard_battleArea_ {
+        internal static System.Drawing.Bitmap courtyard_area___4_ {
             get {
-                object obj = ResourceManager.GetObject("courtyard_battleArea_", resourceCulture);
+                object obj = ResourceManager.GetObject("courtyard_area___4_", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1706,6 +1706,206 @@ namespace Project_PV.Properties {
         internal static System.Drawing.Bitmap wagon {
             get {
                 object obj = ResourceManager.GetObject("wagon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap yeti_attack___1_ {
+            get {
+                object obj = ResourceManager.GetObject("yeti_attack___1_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap yeti_attack___2_ {
+            get {
+                object obj = ResourceManager.GetObject("yeti_attack___2_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap yeti_attack___3_ {
+            get {
+                object obj = ResourceManager.GetObject("yeti_attack___3_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap yeti_attack___4_ {
+            get {
+                object obj = ResourceManager.GetObject("yeti_attack___4_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap yeti_idle___1_ {
+            get {
+                object obj = ResourceManager.GetObject("yeti_idle___1_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap yeti_idle___10_ {
+            get {
+                object obj = ResourceManager.GetObject("yeti_idle___10_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap yeti_idle___11_ {
+            get {
+                object obj = ResourceManager.GetObject("yeti_idle___11_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap yeti_idle___12_ {
+            get {
+                object obj = ResourceManager.GetObject("yeti_idle___12_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap yeti_idle___13_ {
+            get {
+                object obj = ResourceManager.GetObject("yeti_idle___13_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap yeti_idle___14_ {
+            get {
+                object obj = ResourceManager.GetObject("yeti_idle___14_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap yeti_idle___15_ {
+            get {
+                object obj = ResourceManager.GetObject("yeti_idle___15_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap yeti_idle___16_ {
+            get {
+                object obj = ResourceManager.GetObject("yeti_idle___16_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap yeti_idle___2_ {
+            get {
+                object obj = ResourceManager.GetObject("yeti_idle___2_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap yeti_idle___3_ {
+            get {
+                object obj = ResourceManager.GetObject("yeti_idle___3_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap yeti_idle___4_ {
+            get {
+                object obj = ResourceManager.GetObject("yeti_idle___4_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap yeti_idle___5_ {
+            get {
+                object obj = ResourceManager.GetObject("yeti_idle___5_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap yeti_idle___6_ {
+            get {
+                object obj = ResourceManager.GetObject("yeti_idle___6_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap yeti_idle___7_ {
+            get {
+                object obj = ResourceManager.GetObject("yeti_idle___7_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap yeti_idle___8_ {
+            get {
+                object obj = ResourceManager.GetObject("yeti_idle___8_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap yeti_idle___9_ {
+            get {
+                object obj = ResourceManager.GetObject("yeti_idle___9_", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

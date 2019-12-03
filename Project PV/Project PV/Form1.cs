@@ -65,7 +65,7 @@ namespace Project_PV
 
             start = nanoTime();
             manager.update();
-            //Invalidate();
+            Invalidate();
             elapsed = nanoTime() - start;
 
             //targettime = 1000/ FPS = 1000 / 60 = ... (miliseconds / frame)
