@@ -13,16 +13,16 @@ namespace Project_PV
         public GameState[] gameStates { get; set; }
         public Stage stage { get; set; }
         public Player player { get; set; }
+        public dungeon dungeon { get; set; }
         public GameStateManager()
         {
             player = new Player();
-            player.gold = 3000;
 
             this.stage = Stage.title;
             player.myCharacter.Add(new ninja("Hatory"));
             player.myCharacter.Add(new ninja("Hatory"));
             player.currentCharacters[0] = new ninja("Hatory");
-            
+            player.gold = 3000;
             gameStates = new GameState[20];
             loadState(this.stage);
         }
@@ -37,11 +37,10 @@ namespace Project_PV
             {
                 gameStates[(int)stage] = new MainMenu(this);
             }
-            else if (stage == Stage.battleState)
+            else if (stage == Stage.dungeon)
             {
-                //BattleState bs = new BattleState(this);
-                //bs.player = player.currentCharacters[0];
-                gameStates[(int)stage] = new BattleState(this) ;
+                dungeon = new dungeon(this, 2);
+                gameStates[(int)stage] = dungeon ;
             }
             else if (stage == Stage.sanitarium)
             {
@@ -52,11 +51,6 @@ namespace Project_PV
             else if (stage == Stage.blacksmith)
             {
                 gameStates[(int)stage] = new Blacksmith(this);
-            }
-
-            else if (stage == Stage.battleAreaState)
-            {
-                gameStates[(int)stage] = new BattleAreaState(this);
             }
 			else if(stage == Stage.abbey)
 			{
@@ -130,8 +124,7 @@ namespace Project_PV
         easyState,
         mediumState,
         hardState,
-        battleState,
-        battleAreaState,
+        dungeon,
         gameOver,
         completeStage,
         sanitarium,

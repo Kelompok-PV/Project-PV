@@ -26,13 +26,13 @@ namespace Project_PV
             this.gsm = gsm;
             font = new Rectangle(430, 80, 500, 150);
             Config.font.AddFontFile("Resources\\DwarvenAxe BB W00 Regular.ttf");
-            title = new Font(Config.font.Families[0], 30, FontStyle.Regular);
+            title = new Font(Config.font.Families[0], 50, FontStyle.Regular);
             subtitle = new Font(Config.font.Families[0], 20, FontStyle.Regular);
             paragraph = new Font(Config.font.Families[0], 15, FontStyle.Regular);
             
             text.Add("Sanitarium"); text.Add("Treatment Ward"); text.Add("Medical Ward");
             text.Add("Treat Quirks and other \n problematic behaviors."); text.Add("Treat Diseases, humorous, \n and other physical maladies");
-            ptext.Add(new Point(120, 50)); ptext.Add(new PointF(670, 60)); ptext.Add(new PointF(680, 265));
+            ptext.Add(new Point(120, 30)); ptext.Add(new PointF(670, 60)); ptext.Add(new PointF(680, 265));
             ptext.Add(new Point(650, 90)); ptext.Add(new PointF(650, 300));
 
             background = (Image)O1;
