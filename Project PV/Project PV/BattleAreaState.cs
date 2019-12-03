@@ -54,7 +54,7 @@ namespace Project_PV
             {
                 gsm.dungeon.ke++;
                 gsm.dungeon.kebalik = false;
-                gsm.dungeon.isAreaBesar = false;
+                gsm.dungeon.myLoc = location.jalan;
                 gsm.dungeon.Area_panjang[gsm.dungeon.ke - 1].reset();
             }
 
@@ -66,7 +66,7 @@ namespace Project_PV
             else if (e.KeyData == Keys.A&&gsm.dungeon.ke!=0)
             {
                 gsm.dungeon.kebalik = true;
-                gsm.dungeon.isAreaBesar = false;
+                gsm.dungeon.myLoc = location.jalan;
                 gsm.dungeon.Area_panjang[gsm.dungeon.ke - 1].reset();
             }
         }

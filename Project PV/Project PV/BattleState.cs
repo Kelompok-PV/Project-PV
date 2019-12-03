@@ -17,9 +17,7 @@ namespace Project_PV
 
         public BattleState(GameStateManager gsm)
         {
-            //player = gsm.getPlayer();
-            player= new ninja("ninnin");
-
+            player = gsm.player.currentCharacters[0];
             Random r = new Random();
             this.gsm = gsm;
             gambar = new List<int>();
@@ -234,7 +232,7 @@ namespace Project_PV
                 {
                     gsm.dungeon.ke--;
                 }
-                gsm.dungeon.isAreaBesar = true;
+                gsm.dungeon.myLoc = location.area;
 
             }
         }

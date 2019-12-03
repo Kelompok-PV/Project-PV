@@ -48,6 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Abbey.cs" />
+    <Compile Include="battle.cs" />
     <Compile Include="BattleAreaState.cs" />
     <Compile Include="BattleState.cs" />
     <Compile Include="Blacksmith.cs" />
