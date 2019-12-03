@@ -12,6 +12,7 @@ namespace Project_PV
         public string nama { get; set; }
         public int level { get; set; }
         public int hp { get; set; }
+        public int maxHp { get; set; }
         public List<Skill> skills { get; set; }
         public stress hero_stress { get; set; }
         public string hero { get; set; }//hero-hero_move-hero_move_now hero_move_noww++;
@@ -22,9 +23,10 @@ namespace Project_PV
         public int x { get; set; }
         public string type { get; set; }
         public int dodge { get; set; }
-        public int speed { get; set; }
+        public int min_damage { get; set; }
+        public int max_damage { get; set; }
 
-        protected karakter(string nama,string type ,int hp, string hero, string hero_move, int hero_move_now, equip[] hero_equip, int dodge, int speed)
+        protected karakter(string nama,string type ,int hp, string hero, string hero_move, int hero_move_now, equip[] hero_equip, int dodge,int maxHp,int min_dmg,int damage)
         {
             this.nama = nama;
             this.hp = hp;
@@ -33,9 +35,15 @@ namespace Project_PV
             this.hero_move_now = hero_move_now;
             this.hero_equip = hero_equip;
             this.dodge = dodge;
-            this.speed = speed;
             this.type = type;
             x = 300;
+            this.maxHp = maxHp;
+            this.max_damage = damage;
+        }
+
+        protected karakter(string nama)
+        {
+            this.nama = nama;
         }
 
         public void getImage(Graphics g)
@@ -73,10 +81,20 @@ namespace Project_PV
     }
     class ninja : karakter
     {
-        public ninja(string nama, int hp, equip[] hero_equip,  int dodge, int speed) 
-            : base(nama, "ninja", hp, "ninja", "idle", 1, hero_equip, dodge, speed)
+        //jarak jauh
+        public ninja(string nama) : base(nama)
         {
             this.level = 1;
+            this.min_damage = 5;
+            this.max_damage = 10;
+            this.maxHp = 33;
+            this.dodge = 20;
+            this.hero_equip = new equip[5];
+            this.hp = 33;
+            this.type = "Ninja";
+            this.hero_move = "idle";
+            this.nama = nama;
+            this.hero = "ninja";
             skills = new List<Skill>();
             skills.Add(new incision());
             skills.Add(new noxius_blast());
@@ -86,31 +104,76 @@ namespace Project_PV
     }
     class aladin : karakter
     {
-        public aladin(string nama, int hp, equip[] hero_equip, int dodge, int speed)
-            : base(nama, "aladin", hp, "aladin", "idle", 1, hero_equip, dodge, speed)
+        public aladin(string nama) : base(nama)
         {
+            this.level = 1;
+            skills = new List<Skill>();
+            this.hero_equip = new equip[5];
+            this.type = "Doctor";
+            this.hero = "aladin";
+            this.hero_move = "idle";
+            this.nama = nama;
+            this.maxHp = 22;
+            this.dodge = 15;
+            this.min_damage = 4;
+            this.max_damage = 7;
+            this.hp = 22;
         }
+
+        //jarak jauh
+        public aladin(string nama, int hp, equip[] hero_equip, int dodge,int maxHp,int min_dmg,int damage)
+            : base(nama, "Doctor", hp, "aladin", "idle", 1, hero_equip, dodge,maxHp,min_dmg,damage)
+        {
+            this.level = 1;
+            skills = new List<Skill>();
+        }
+
+
     }
     class archer : karakter
     {
-        public archer(string nama, int hp, equip[] hero_equip, int dodge, int speed)
-            : base(nama, "archer", hp, "archer", "idle", 1, hero_equip, dodge, speed)
+        public archer(string nama) : base(nama)
         {
+            this.level = 1;
+            skills = new List<Skill>();
+            this.hero_equip = new equip[5];
+            this.type = "Archer";
+            this.hero = "acrher";
+            this.hero_move = "idle";
+            this.nama = nama;
+            this.maxHp = 20;
+            this.dodge = 28;
+            this.min_damage = 5;
+            this.max_damage = 10;
+            this.hp = 20;
+        }
+
+        public archer(string nama, int hp, equip[] hero_equip, int dodge, int maxHp,int min_dmg,int damage)
+            : base(nama, "archer", hp, "archer", "idle", 1, hero_equip, dodge, maxHp,min_dmg,damage)
+        {
+            this.level = 1;
+            skills = new List<Skill>();
         }
     }
-    //class assasin : karakter
-    //{
-    //    public assasin(string nama, int hp, equip[] hero_equip, int dodge, int speed)
-    //        : base(nama, type, hp, hero, "idle", 1, hero_equip, dialog, dodge, speed)
-    //    {
-    //    }
-    //}
     class druid : karakter
     {
-        public druid(string nama, int hp, equip[] hero_equip, int dodge, int speed)
-            : base(nama, "druid", hp, "druid", "idle", 1, hero_equip, dodge, speed)
+        //healer
+        public druid(string nama) : base(nama)
         {
+            this.level = 1;
+            skills = new List<Skill>();
+            this.hero_equip = new equip[5];
+            this.type = "Healer";
+            this.hero = "druid";
+            this.hero_move = "idle";
+            this.nama = nama;
+            this.maxHp = 24;
+            this.dodge = 15;
+            this.min_damage = 4;
+            this.max_damage = 8;
+            this.hp = 24;
         }
+
     }
     //class ghostPerson : karakter
     //{

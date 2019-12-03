@@ -10,7 +10,7 @@ namespace Project_PV
 {
     class BattleAreaState : GameState
     {
-        karakter player = new ninja("ninnin", 50, new equip[5],  5, 5);
+        karakter player = new ninja("ninnin");
         object background = Properties.Resources.ResourceManager.GetObject("courtyard_battleArea_");
         Image imgBack;
         public GameStateManager gsm { get; set; }

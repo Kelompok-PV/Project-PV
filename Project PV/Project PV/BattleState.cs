@@ -18,7 +18,7 @@ namespace Project_PV
         public BattleState(GameStateManager gsm)
         {
             //player = gsm.getPlayer();
-            player= new ninja("ninnin", 50, new equip[5], 5, 5);
+            player= new ninja("ninnin");
 
             Random r = new Random();
             this.gsm = gsm;
