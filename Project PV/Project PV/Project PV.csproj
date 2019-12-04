@@ -23,6 +23,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -48,6 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Abbey.cs" />
+    <Compile Include="battle.cs" />
     <Compile Include="BattleAreaState.cs" />
     <Compile Include="BattleState.cs" />
     <Compile Include="Blacksmith.cs" />
@@ -68,6 +70,7 @@
     <Compile Include="karakter.cs" />
     <Compile Include="MainMenu.cs" />
     <Compile Include="MenuState.cs" />
+    <Compile Include="musuh.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -398,6 +401,45 @@
     <None Include="Resources\Quest\hero_slot.background.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\sound\music\town.wav" />
+    <None Include="Resources\sound\music\title\titleScreen.wav" />
+    <None Include="Resources\sound\music\combat\mus_combat_courtyard_hallway_intro {16eb5912-0797-4464-a944-76e38cd0a7e9}.wav" />
+    <None Include="Resources\yeti_attack_ %284%29.png" />
+    <None Include="Resources\yeti_attack_ %283%29.png" />
+    <None Include="Resources\yeti_attack_ %282%29.png" />
+    <None Include="Resources\yeti_attack_ %281%29.png" />
+    <None Include="Resources\yeti_idle_ %2816%29.png" />
+    <None Include="Resources\yeti_idle_ %2815%29.png" />
+    <None Include="Resources\yeti_idle_ %2814%29.png" />
+    <None Include="Resources\yeti_idle_ %2813%29.png" />
+    <None Include="Resources\yeti_idle_ %2812%29.png" />
+    <None Include="Resources\yeti_idle_ %2811%29.png" />
+    <None Include="Resources\yeti_idle_ %2810%29.png" />
+    <None Include="Resources\yeti_idle_ %289%29.png" />
+    <None Include="Resources\yeti_idle_ %288%29.png" />
+    <None Include="Resources\yeti_idle_ %287%29.png" />
+    <None Include="Resources\yeti_idle_ %286%29.png" />
+    <None Include="Resources\yeti_idle_ %285%29.png" />
+    <None Include="Resources\yeti_idle_ %284%29.png" />
+    <None Include="Resources\yeti_idle_ %283%29.png" />
+    <None Include="Resources\yeti_idle_ %282%29.png" />
+    <None Include="Resources\yeti_idle_ %281%29.png" />
+    <None Include="Resources\Yetigo_idle %2816%29.png" />
+    <None Include="Resources\Yetigo_idle %2815%29.png" />
+    <None Include="Resources\Yetigo_idle %2814%29.png" />
+    <None Include="Resources\Yetigo_idle %2813%29.png" />
+    <None Include="Resources\Yetigo_idle %2812%29.png" />
+    <None Include="Resources\Yetigo_idle %2811%29.png" />
+    <None Include="Resources\Yetigo_idle %2810%29.png" />
+    <None Include="Resources\Yetigo_idle %289%29.png" />
+    <None Include="Resources\Yetigo_idle %288%29.png" />
+    <None Include="Resources\Yetigo_idle %287%29.png" />
+    <None Include="Resources\Yetigo_idle %286%29.png" />
+    <None Include="Resources\Yetigo_idle %285%29.png" />
+    <None Include="Resources\Yetigo_idle %284%29.png" />
+    <None Include="Resources\Yetigo_idle %283%29.png" />
+    <None Include="Resources\Yetigo_idle %282%29.png" />
+    <None Include="Resources\Yetigo_idle %281%29.png" />
     <None Include="Resources\stats\characterpanel_frames.png" />
     <None Include="Resources\roster\roster_icon_frame_town_event.png" />
     <None Include="Resources\stats\saveslot_overlay.png" />
@@ -480,6 +522,43 @@
     <None Include="Resources\inv_provision+_0.png" />
     <None Include="Resources\inv_provision+_2.png" />
     <None Include="Resources\inv_provision+_3.png" />
+    <None Include="Resources\ninja_skill1_ %281%29.png" />
+    <None Include="Resources\ninja_skill2_ %281%29.png" />
+    <None Include="Resources\ninja_skill2_ %282%29.png" />
+    <None Include="Resources\ninja_skill4_ %281%29.png" />
+    <None Include="Resources\ninja_skill3_ %281%29.png" />
+    <None Include="Resources\ninja_skill3_ %282%29.png" />
+    <None Include="Resources\karakter\druid\Idle\druid_idle %281%29.png" />
+    <None Include="Resources\karakter\druid\Idle\druid_idle %282%29.png" />
+    <None Include="Resources\karakter\druid\Idle\druid_idle %283%29.png" />
+    <None Include="Resources\karakter\druid\Idle\druid_idle %284%29.png" />
+    <None Include="Resources\karakter\druid\Idle\druid_idle %285%29.png" />
+    <None Include="Resources\karakter\druid\Idle\druid_idle %286%29.png" />
+    <None Include="Resources\karakter\druid\Idle\druid_idle %287%29.png" />
+    <None Include="Resources\karakter\druid\Idle\druid_idle %288%29.png" />
+    <None Include="Resources\karakter\druid\Idle\druid_idle %289%29.png" />
+    <None Include="Resources\karakter\druid\Idle\druid_idle %2810%29.png" />
+    <None Include="Resources\karakter\Archer\Idle\archer_idle_ %281%29.png" />
+    <None Include="Resources\karakter\Archer\Idle\archer_idle_ %282%29.png" />
+    <None Include="Resources\karakter\Archer\Idle\archer_idle_ %283%29.png" />
+    <None Include="Resources\karakter\Archer\Idle\archer_idle_ %284%29.png" />
+    <None Include="Resources\karakter\Archer\Idle\archer_idle_ %285%29.png" />
+    <None Include="Resources\karakter\Archer\Idle\archer_idle_ %286%29.png" />
+    <None Include="Resources\karakter\Archer\Idle\archer_idle_ %287%29.png" />
+    <None Include="Resources\karakter\Archer\Idle\archer_idle_ %288%29.png" />
+    <None Include="Resources\karakter\Archer\Idle\archer_idle_ %289%29.png" />
+    <None Include="Resources\karakter\Aladin\Idle\aladin_idle_ %281%29.png" />
+    <None Include="Resources\karakter\Aladin\Idle\aladin_idle_ %282%29.png" />
+    <None Include="Resources\karakter\Aladin\Idle\aladin_idle_ %283%29.png" />
+    <None Include="Resources\karakter\Aladin\Idle\aladin_idle_ %284%29.png" />
+    <None Include="Resources\karakter\Aladin\Idle\aladin_idle_ %285%29.png" />
+    <None Include="Resources\karakter\Aladin\Idle\aladin_idle_ %286%29.png" />
+    <None Include="Resources\karakter\Aladin\Idle\aladin_idle_ %287%29.png" />
+    <None Include="Resources\karakter\Aladin\Idle\aladin_idle_ %288%29.png" />
+    <None Include="Resources\karakter\Aladin\Idle\aladin_idle_ %289%29.png" />
+    <None Include="Resources\karakter\Aladin\Idle\aladin_idle_ %2810%29.png" />
+    <None Include="Resources\karakter\Aladin\Idle\aladin_idle_ %2811%29.png" />
+    <None Include="Resources\karakter\Aladin\Idle\aladin_idle_ %2812%29.png" />
     <Content Include="Resources\Quest\dungeon_progressionbar.png" />
     <Content Include="Resources\Quest\embark_party.background.png" />
     <None Include="Resources\Town\town full_2.png" />

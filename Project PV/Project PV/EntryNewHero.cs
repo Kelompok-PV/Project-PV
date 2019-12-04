@@ -14,7 +14,7 @@ namespace Project_PV
         Bitmap iconMer_img;
         Bitmap characterCoach;
         Bitmap backBtn;
-        Rectangle closeRect;
+        Rectangle backRect;
         private Player player;
         Bitmap frame;
         List<newHero> newHeroes;
@@ -29,7 +29,7 @@ namespace Project_PV
             iconMer_img = Properties.Resources.stage_coach_icon;
             characterCoach = Properties.Resources.stage_coach_character;
             backBtn = Properties.Resources.progression_close;
-            closeRect = new Rectangle(1232, 33, 30, 30);
+            backRect = new Rectangle(1232, 33, 30, 30);
             player = gsm.getPlayer();
 
             newHeroes = new List<newHero>();
@@ -45,23 +45,24 @@ namespace Project_PV
 
                 karakter karakter;
                 int type = rand.Next(4);
-                type = 0;
+
                 switch (type)
                 {
                     case 0:
-                        karakter = new ninja("Ninjaa", 50, new equip[5], 30, 100);
+                        karakter = new ninja("Hatory");
                         break;
                     case 1:
-                        karakter = new aladin("Aladeen", 50, new equip[5], 30, 100);
+                        karakter = new aladin("Aladeen");
                         break;
                     case 2:
-                        karakter = new druid("Druid", 50, new equip[5], 30, 100);
+                        karakter = new druid("Druid");
                         break;
                     default:
-                        karakter = new archer("Archer", 50, new equip[5], 30, 100);
+                        karakter = new archer("Archer");
                         break;
                 }
                 newHeroes[i].karakter = karakter;
+
             }
 
             frameStats = Properties.Resources.characterpanel_frames;
@@ -84,7 +85,7 @@ namespace Project_PV
 
         object O1;
         Image img1;
-        Rectangle buyBtn = new Rectangle(747, 598, 100, 50);
+        Rectangle buyBtn = new Rectangle(747, 568, 100, 50);
         public override void draw(Graphics g)
         {
             g.DrawImage(background, 0, 0, 1300, 730);
@@ -137,9 +138,22 @@ namespace Project_PV
                 if (!transition)
                 {
                     //base stats
+                    Font titleName = new Font(Config.font.Families[0],25, FontStyle.Regular);
+                    g.DrawString(newHeroes[index].karakter.nama, titleName, new SolidBrush(Color.FromArgb(250, 231, 162)), 360, 258);
+                    titleName = new Font(Config.font.Families[0], 14, FontStyle.Regular);
+                    g.DrawString(newHeroes[index].karakter.type, titleName, new SolidBrush(Color.FromArgb(250, 231, 162)), 360, 258+50);
                     g.DrawString("Base Stats", name, new SolidBrush(Color.FromArgb(250, 231, 162)), 533, 415);
                     g.FillRectangle(new SolidBrush(Color.FromArgb(200, Color.Red)), buyBtn);
-                    g.DrawString("Buy Hero", price, new SolidBrush(Color.FromArgb(250, 231, 162)), buyBtn.X+10,buyBtn.Y+5);
+                    g.DrawString("Buy Hero", price, new SolidBrush(Color.FromArgb(250, 231, 162)), buyBtn.X+5,buyBtn.Y+5);
+                    Font font1 = new Font("ARIAL",10,FontStyle.Regular);
+                    Point desc = new Point(449, 442);
+                    g.DrawString("Max HP  " + newHeroes[index].karakter.maxHp, font1, new SolidBrush(Color.White), desc.X, desc.Y);
+                    g.DrawString("Dodge   " + newHeroes[index].karakter.dodge, font1, new SolidBrush(Color.White), desc.X+75, desc.Y);
+                    g.DrawString("Damage  " + newHeroes[index].karakter.max_damage, font1, new SolidBrush(Color.White), desc.X+150, desc.Y);
+                    O1 = Properties.Resources.progression_close;
+                    img1 = (Bitmap)O1;
+                    g.DrawImage(img1, closeRect);
+
                     //idle
                     try
                     {
@@ -172,42 +186,54 @@ namespace Project_PV
         {
             
         }
-
+        Rectangle closeRect;
         public override void mouse_click(object sender, MouseEventArgs e)
         {
-            MessageBox.Show("x: " + e.X + " y: " + e.Y);
+            //MessageBox.Show("x: " + e.X + " y: " + e.Y);
             Rectangle cursor = new Rectangle(e.X, e.Y, 10, 10);
+            closeRect = new Rectangle(886, 569,40,40);
 
-            if (cursor.IntersectsWith(closeRect))
+            if (buy)
             {
-                loading = true;
-                alpha = 128;
-
-            }
-            else if (cursor.IntersectsWith(buyBtn))
-            {
-                player.gold -= newHeroes[index].price;
-                disposeBuy = true;
+                if (cursor.IntersectsWith(buyBtn))
+                {
+                    player.gold -= newHeroes[index].price;
+                    player.myCharacter.Add(newHeroes[index].karakter);
+                    disposeBuy = true;
+                }
+                else if (cursor.IntersectsWith(closeRect))
+                {
+                    disposeBuy = true;
+                }
             }
             else
             {
-                for (int i = 0; i < newHeroes.Count; i++)
+                if (cursor.IntersectsWith(backRect))
                 {
-                    if (cursor.IntersectsWith(newHeroes[i].getHit()))
+                    loading = true;
+                    alpha = 128;
+                }
+                else
+                {
+                    for (int i = 0; i < newHeroes.Count; i++)
                     {
-                        if(player.gold >= newHeroes[i].price)
+                        if (cursor.IntersectsWith(newHeroes[i].getHit()))
                         {
-                            buy = true;
-                            transition = true;
-                            index = i;
-                            break;
-                        }
-                        else
-                        {
-                            
+                            if (player.gold >= newHeroes[i].price)
+                            {
+                                buy = true;
+                                transition = true;
+                                index = i;
+                                break;
+                            }
+                            else
+                            {
+
+                            }
                         }
                     }
                 }
+               
             }
         }
 

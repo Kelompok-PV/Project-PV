@@ -37,7 +37,7 @@ namespace Project_PV
 
         public void getImage(Graphics g)
         {
-            object O = Properties.Resources.ResourceManager.GetObject("inventory"+1);
+            object O = Properties.Resources.ResourceManager.GetObject("inventory"+this.id);
             Image img = (Image)O;
             g.DrawImage(img,0,0,50,50);
         }
