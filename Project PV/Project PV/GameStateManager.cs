@@ -75,6 +75,10 @@ namespace Project_PV
             {
                 gameStates[(int)stage] = new EntryNewHero(this);
             }
+            else if (stage == Stage.provision)
+            {
+                gameStates[(int)stage] = new Provision(this);
+            }
         }
 
         public void unloadState(Stage stage)
@@ -137,6 +141,7 @@ namespace Project_PV
         sanitarium,
         blacksmith,
 		abbey,
-		guild
+		guild,
+        provision
     }
 }

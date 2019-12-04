@@ -613,6 +613,41 @@
   <data name="courtyard_area___4_" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\courtyard_area_ (4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="inventory_grid_background_party" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\inventory_grid_background_party.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="inventory_grid_background_store" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\inventory_grid_background_store.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="provision_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\provision.background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="provision_character" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\provision.character.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="provision_character_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\provision.character_background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="provision_dd_character" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\provision.dd.character.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="provision_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\provision.icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="currency_gold_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\currency.gold.icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="inv_provision__1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\inv_provision+_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="inv_provision__0" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\inv_provision+_0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="inv_provision__2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\inv_provision+_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="inv_provision__3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\inv_provision+_3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   <data name="yeti_attack___1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\yeti_attack_ (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
