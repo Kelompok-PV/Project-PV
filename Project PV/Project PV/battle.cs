@@ -2,10 +2,14 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Imaging;
+using System.IO;
 using System.Linq;
+using System.Media;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Media;
 
 namespace Project_PV
 {
@@ -18,6 +22,12 @@ namespace Project_PV
 
         public List<int> locSkill { get; set; }
 
+
+        //SoundPlayer battleMusic;
+        //SoundPlayer sfx;
+
+        
+
         string aktif = "inv";
 
         int pilih_attack = -1;
@@ -29,13 +39,23 @@ namespace Project_PV
         int zoom_bkg = 0;
 
         int timer_attack = 0;
+
+        MediaPlayer myPlayer = new MediaPlayer();
+        MediaPlayer sfx = new MediaPlayer();
         public battle(GameStateManager gsm,Image back)
         {
+
+            //battleMusic = new SoundPlayer(Properties.Resources.mus_combat_courtyard_hallway_intro__16eb5912_0797_4464_a944_76e38cd0a7e9_);
+            //battleMusic.PlaySync();
+            string RunningPath = AppDomain.CurrentDomain.BaseDirectory;
+            string FileName = string.Format("{0}Resources\\sound\\music\\combat\\battle.wav", Path.GetFullPath(Path.Combine(RunningPath, @"..\..\")));
+            myPlayer.Open(new System.Uri(FileName));
+            myPlayer.MediaEnded += new EventHandler(Media_Ended);
+            myPlayer.Play();
             this.gsm = gsm;
             player = gsm.player.currentCharacters[0];
             musuh = new List<musuh>();
             musuh.Add(new yeti(700));
-            back = Properties.Resources.courtyard_area___1_;
             background =back;
 
             imgpPlayer = (Image)Properties.Resources.ResourceManager.GetObject("panel_player2");
@@ -51,6 +71,13 @@ namespace Project_PV
         }
         Image imgpPlayer;
         Image imgpInv;
+
+        private void Media_Ended(object sender, EventArgs e)
+        {
+            myPlayer.Position = TimeSpan.Zero;
+            myPlayer.Play();
+        }
+
         public override void draw(Graphics g)
         {
             if (!serang&&!serang_musuh)
@@ -99,6 +126,8 @@ namespace Project_PV
             g.DrawImage(imgpInv, 70 + 550, 420, 550, 270);
             //MessageBox.Show((Image)imgpInv+"");
             Font font = new Font("Arial", 15.0f);
+
+            System.Drawing.Brush br = new SolidBrush(System.Drawing.Color.White);
             if (aktif == "inv")
             {
                 for (int i = 0; i < 2; i++)
@@ -106,32 +135,31 @@ namespace Project_PV
                     for (int j = 0; j < 8; j++)
                     {
                         g.DrawImage((Image)Properties.Resources.ResourceManager.GetObject("gold"), (float)(640 + j * 61.5), 440 + i * 120, 50, 110);
-                        g.DrawString("11", font, new SolidBrush(Color.White), (float)(640 + j * 61.5), 445 + i * 120);
+                        g.DrawString("11", font, br, (float)(640 + j * 61.5), 445 + i * 120);
                     }
                 }
             }
             g.DrawImage((Image)Properties.Resources.ResourceManager.GetObject("side_decor"), 1285, 420, -120, 270);
 
+            g.DrawString("ACC        " , new Font("Arial", 12, FontStyle.Regular), br,145,587);
+            g.DrawString("CRIT       " , new Font("Arial", 12, FontStyle.Regular), br,145,602);
+            g.DrawString("DMG        " , new Font("Arial", 12, FontStyle.Regular), br,145,617);
+            g.DrawString("DODGE      " , new Font("Arial", 12, FontStyle.Regular), br,145,632);
+            g.DrawString("PROT       " , new Font("Arial", 12, FontStyle.Regular), br,145,647);
 
-            g.DrawString("ACC        " , new Font("Arial", 12, FontStyle.Regular), new SolidBrush(Color.White),145,587);
-            g.DrawString("CRIT       " , new Font("Arial", 12, FontStyle.Regular), new SolidBrush(Color.White),145,602);
-            g.DrawString("DMG        " , new Font("Arial", 12, FontStyle.Regular), new SolidBrush(Color.White),145,617);
-            g.DrawString("DODGE      " , new Font("Arial", 12, FontStyle.Regular), new SolidBrush(Color.White),145,632);
-            g.DrawString("PROT       " , new Font("Arial", 12, FontStyle.Regular), new SolidBrush(Color.White),145,647);
+            g.DrawString(acc, new Font("Arial", 12, FontStyle.Regular), br,   210, 587);
+            g.DrawString(crit, new Font("Arial", 12, FontStyle.Regular), br,  210, 602);
+            g.DrawString(dmg_min+"-" +dmg_max, new Font("Arial", 12, FontStyle.Regular), br,   210, 617);
+            g.DrawString(dodge, new Font("Arial", 12, FontStyle.Regular), br, 210, 632);
+            g.DrawString(prot, new Font("Arial", 12, FontStyle.Regular), br,  210, 647);
 
-            g.DrawString(acc, new Font("Arial", 12, FontStyle.Regular), new SolidBrush(Color.White),   210, 587);
-            g.DrawString(crit, new Font("Arial", 12, FontStyle.Regular), new SolidBrush(Color.White),  210, 602);
-            g.DrawString(dmg_min+"-" +dmg_max, new Font("Arial", 12, FontStyle.Regular), new SolidBrush(Color.White),   210, 617);
-            g.DrawString(dodge, new Font("Arial", 12, FontStyle.Regular), new SolidBrush(Color.White), 210, 632);
-            g.DrawString(prot, new Font("Arial", 12, FontStyle.Regular), new SolidBrush(Color.White),  210, 647);
-
-            g.DrawString(player.hp+"/"+player.maxHp, new Font("Arial", 12, FontStyle.Regular), new SolidBrush(Color.DarkRed), 178 ,530);
-            g.DrawString(player.hero_stress.stress_point+"/"+200, new Font("Arial", 12, FontStyle.Regular), new SolidBrush(Color.White), 178 ,550);
+            g.DrawString(player.hp+"/"+player.maxHp, new Font("Arial", 12, FontStyle.Regular), new SolidBrush(System.Drawing.Color.DarkRed), 178 ,530);
+            g.DrawString(player.hero_stress.stress_point+"/"+200, new Font("Arial", 12, FontStyle.Regular), br, 178 ,550);
             
-            g.DrawString(player.nama, new Font("Arial", 15, FontStyle.Regular), new SolidBrush(Color.White), 200, 445);
-            g.DrawString(player.type, new Font("Arial", 13, FontStyle.Regular), new SolidBrush(Color.White), 200, 475);
+            g.DrawString(player.nama, new Font("Arial", 15, FontStyle.Regular), br, 200, 445);
+            g.DrawString(player.type, new Font("Arial", 13, FontStyle.Regular), br, 200, 475);
 
-            g.DrawString(musuh[0].hp+"", new Font("Arial", 13, FontStyle.Regular), new SolidBrush(Color.White), 700, 400);
+            g.DrawString(musuh[0].hp+"", new Font("Arial", 13, FontStyle.Regular), br, 700, 400);
         }
 
         string dmg_min =   "10";
@@ -315,6 +343,14 @@ namespace Project_PV
                     player.x = 520;
                     player.hero_move = "skill" + (pilih_attack + 1);
                     player.hero_move_now = 1;
+                    //sfx= new SoundPlayer(Properties.Resources.ninja_attack_1);
+                    //sfx.LoadAsync();
+
+                    sfx.Stop();
+                    string RunningPath = AppDomain.CurrentDomain.BaseDirectory;
+                    string FileName = string.Format("{0}Resources\\char_share_imp_sword.wav", Path.GetFullPath(Path.Combine(RunningPath, @"..\..\")));
+                    sfx.Open(new System.Uri(FileName));
+                    sfx.Play();
                 }
             }
             //}
@@ -380,7 +416,7 @@ namespace Project_PV
             if (delay_aktif)
             {
                 timer_attack++;
-                if (timer_attack == 15)
+                if (timer_attack == 30)
                 {
                     Random r = new Random();
                     int pilih_attack_musuh = r.Next(0, 4);
@@ -393,6 +429,12 @@ namespace Project_PV
                     delay_aktif = false;
                     timer_attack = 0;
                     serang_musuh = true;
+                    sfx.Stop();
+                    string RunningPath = AppDomain.CurrentDomain.BaseDirectory;
+                    string FileName = string.Format("{0}Resources\\yeti_attack_sfx_1.wav", Path.GetFullPath(Path.Combine(RunningPath, @"..\..\")));
+                    sfx.Open(new System.Uri(FileName));
+                    sfx.Play();
+
                 }
             }
         }

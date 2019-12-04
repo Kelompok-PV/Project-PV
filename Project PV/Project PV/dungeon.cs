@@ -23,7 +23,8 @@ namespace Project_PV
             Area_panjang = new List<BattleState>();
             ke = 0;
             kebalik = false;
-            myLoc = location.area;
+            myLoc = location.battle;
+            btl = new battle(gsm, Properties.Resources.courtyard_area___1_);
             for (int i = 0; i < panjang; i++)
             {
                 if (i != 0)
