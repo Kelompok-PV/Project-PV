@@ -473,6 +473,16 @@ namespace Project_PV.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap currency_gold_icon {
+            get {
+                object obj = ResourceManager.GetObject("currency_gold_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap currency_gold_large_icon {
             get {
                 object obj = ResourceManager.GetObject("currency_gold_large_icon", resourceCulture);
@@ -646,6 +656,66 @@ namespace Project_PV.Properties {
         internal static System.Drawing.Bitmap hero_slot_positive_frame {
             get {
                 object obj = ResourceManager.GetObject("hero_slot_positive_frame", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap inv_provision__0 {
+            get {
+                object obj = ResourceManager.GetObject("inv_provision__0", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap inv_provision__1 {
+            get {
+                object obj = ResourceManager.GetObject("inv_provision__1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap inv_provision__2 {
+            get {
+                object obj = ResourceManager.GetObject("inv_provision__2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap inv_provision__3 {
+            get {
+                object obj = ResourceManager.GetObject("inv_provision__3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap inventory_grid_background_party {
+            get {
+                object obj = ResourceManager.GetObject("inventory_grid_background_party", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap inventory_grid_background_store {
+            get {
+                object obj = ResourceManager.GetObject("inventory_grid_background_store", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -986,6 +1056,56 @@ namespace Project_PV.Properties {
         internal static System.Drawing.Bitmap progression_forward {
             get {
                 object obj = ResourceManager.GetObject("progression_forward", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap provision_background {
+            get {
+                object obj = ResourceManager.GetObject("provision_background", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap provision_character {
+            get {
+                object obj = ResourceManager.GetObject("provision_character", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap provision_character_background {
+            get {
+                object obj = ResourceManager.GetObject("provision_character_background", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap provision_dd_character {
+            get {
+                object obj = ResourceManager.GetObject("provision_dd_character", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap provision_icon {
+            get {
+                object obj = ResourceManager.GetObject("provision_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

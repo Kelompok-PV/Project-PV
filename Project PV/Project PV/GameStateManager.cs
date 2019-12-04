@@ -18,10 +18,10 @@ namespace Project_PV
         {
             player = new Player();
 
-            this.stage = Stage.dungeon;
+            this.stage = Stage.provision;
             player.gold = 3000;
-            player.myCharacter.Add(new ninja("ninnin", 50, new equip[5], 5, 5));
-            player.currentCharacters[0] = new ninja("ninnin", 50, new equip[5], 5, 5);
+            //player.myCharacter.Add(new ninja("ninnin", 50, new equip[5], 5, 5));
+            //player.currentCharacters[0] = new ninja("ninnin", 50, new equip[5], 5, 5);
             
             gameStates = new GameState[20];
             loadState(this.stage);
@@ -67,6 +67,10 @@ namespace Project_PV
             else if(stage == Stage.entryNewHero)
             {
                 gameStates[(int)stage] = new EntryNewHero(this);
+            }
+            else if (stage == Stage.provision)
+            {
+                gameStates[(int)stage] = new Provision(this);
             }
         }
 
@@ -130,6 +134,7 @@ namespace Project_PV
         sanitarium,
         blacksmith,
 		abbey,
-		guild
+		guild,
+        provision
     }
 }
