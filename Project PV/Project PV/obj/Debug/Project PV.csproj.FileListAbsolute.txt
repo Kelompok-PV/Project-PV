@@ -127,3 +127,5 @@ C:\Users\Fabian\Documents\GitHub\Project-PV-fix\Project PV\Project PV\bin\Debug\
 C:\Users\Fabian-Lepi\Documents\GitHub\Project-PV\Project PV\Project PV\bin\Debug\Resources\tst.mp3
 C:\Users\Fabian\Documents\GitHub\Project-PV-fix\Project PV\Project PV\bin\Debug\WindowsBase.dll
 C:\Users\Fabian\Documents\GitHub\Project-PV-fix\Project PV\Project PV\obj\Debug\Project PV.csproj.CopyComplete
+C:\Users\Fabian-Lepi\Documents\GitHub\Project-PV\Project PV\Project PV\bin\Debug\WindowsBase.dll
+C:\Users\Fabian-Lepi\Documents\GitHub\Project-PV\Project PV\Project PV\obj\Debug\Project PV.csproj.CopyComplete

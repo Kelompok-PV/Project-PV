@@ -21,7 +21,7 @@ namespace Project_PV
         {
             player = new Player();
 
-            this.stage = Stage.dungeon;
+            this.stage = Stage.title;
             player.myCharacter.Add(new ninja("Hatory"));
             player.myCharacter.Add(new ninja("Hatory"));
             player.currentCharacters[0] = new ninja("Hatory");
@@ -46,6 +46,7 @@ namespace Project_PV
             }
             else if (stage == Stage.dungeon)
             {
+                townMusic.Stop();
                 dungeon = new dungeon(this, 2);
                 gameStates[(int)stage] = dungeon ;
             }

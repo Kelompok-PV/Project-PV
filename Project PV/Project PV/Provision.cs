@@ -59,7 +59,7 @@ namespace Project_PV
             lisinv.Add(new TheCure(posisi[16], posisi[17], 1));
             lisinv.Add(new PotentSalve(posisi[18], posisi[19], 1));
 
-
+            go = new Rectangle(580, 638, 200, 33);
         }
         object O1 = Project_PV.Properties.Resources.provision_background;
         Image backgroundblur;
@@ -80,6 +80,7 @@ namespace Project_PV
         Image grid;
 
         int ctr = 0;
+        Rectangle go;
         public override void draw(Graphics g)
         {
             g.DrawImage(backgroundblur, 0, 0, 1300, 700);
@@ -189,7 +190,11 @@ namespace Project_PV
                     kena = false;
             }
 
-            
+            if (cursor.IntersectsWith(go))
+            {
+                gsm.stage = Stage.dungeon;
+                gsm.loadState(gsm.stage);
+            }
         }
 
         public override void mouse_hover(object sender, MouseEventArgs e)

@@ -40,6 +40,9 @@ namespace Project_PV
                 rosterField.Add(new Rectangle(xRoster + 10, yRoster[i], 260, 80));
                 yRoster.Add(yRoster[i]);
             }
+
+            battleRect = new Rectangle(875, 174,200, 200);
+
         }
         int xRoster = 1105;
         public override void draw(Graphics g)
@@ -130,6 +133,8 @@ namespace Project_PV
                 g.DrawImage(player.myCharacter[index].getIcon(), x,y, 50, 50);
             }
 
+            g.FillRectangle(new SolidBrush(Color.Red), battleRect);
+
         }
         List<Rectangle> rosterField = new List<Rectangle>();
         int index = -1;
@@ -148,6 +153,7 @@ namespace Project_PV
             
         }
         int x, y;
+        Rectangle battleRect;
         public override void mouse_click(object sender, MouseEventArgs e)
         {
             //MessageBox.Show(string.Format("{0},{1}",e.X,e.Y));
@@ -180,6 +186,13 @@ namespace Project_PV
                 }
 
                 
+            }
+
+            if (battleRect.IntersectsWith(cursor))
+            {
+                gsm.stage = Stage.provision;
+                gsm.loadState(gsm.stage);
+
             }
         }
         bool selected = false;
