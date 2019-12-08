@@ -73,6 +73,19 @@ namespace Project_PV
             skill_efek[0] = efek.stun; icon = Properties.Resources.skill___4_;
         }
     }
+
+    public class smite : Skill
+    {
+        public smite()
+           : base("Smite", new efek[1], new int[4], new int[4], new status(), 0)
+        {
+            rank[0] = 0; rank[1] = 0; rank[2] = 1; rank[3] = 1;
+            target[0] = 1; target[1] = 1; target[2] = 0; target[3] = 0;
+            status_skill = new status(6, 8, 0, 70, 0,-1);
+            skill_efek[0] = efek.stun; icon = Properties.Resources.skill___3_;
+        }
+    }
+
     public class yeti1 : Skill
     {
         public yeti1()

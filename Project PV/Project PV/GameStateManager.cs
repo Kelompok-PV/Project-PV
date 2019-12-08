@@ -46,6 +46,7 @@ namespace Project_PV
             }
             else if (stage == Stage.dungeon)
             {
+                townMusic.Stop();
                 dungeon = new dungeon(this, 2);
                 gameStates[(int)stage] = dungeon ;
             }
@@ -74,6 +75,10 @@ namespace Project_PV
             else if(stage == Stage.entryNewHero)
             {
                 gameStates[(int)stage] = new EntryNewHero(this);
+            }
+            else if (stage == Stage.provision)
+            {
+                gameStates[(int)stage] = new Provision(this);
             }
         }
 
@@ -137,6 +142,7 @@ namespace Project_PV
         sanitarium,
         blacksmith,
 		abbey,
-		guild
+		guild,
+        provision
     }
 }

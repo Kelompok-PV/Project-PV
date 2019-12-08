@@ -233,7 +233,11 @@ namespace Project_PV
                     gsm.dungeon.ke--;
                 }
                 gsm.dungeon.myLoc = location.area;
-
+                if (gsm.dungeon.Area_besar[gsm.dungeon.ke].battle == false)
+                {
+                    gsm.dungeon.myLoc = location.battle;
+                    gsm.dungeon.btl = new battle(gsm,gsm.dungeon.Area_besar[gsm.dungeon.ke].imgBack);
+                }
             }
         }
         public void reset()

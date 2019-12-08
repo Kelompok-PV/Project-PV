@@ -613,6 +613,42 @@
   <data name="courtyard_area___4_" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\courtyard_area_ (4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="inventory_grid_background_party" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\inventory_grid_background_party.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="inventory_grid_background_store" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\inventory_grid_background_store.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="provision_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\provision.background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="provision_character" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\provision.character.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="provision_character_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\provision.character_background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="provision_dd_character" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\provision.dd.character.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="provision_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\provision.icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="currency_gold_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\currency.gold.icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="inv_provision__1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\inv_provision+_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="inv_provision__0" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\inv_provision+_0.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="inv_provision__2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\inv_provision+_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="inv_provision__3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\inv_provision+_3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="yeti_attack___1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\yeti_attack_ (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -673,8 +709,23 @@
   <data name="yeti_idle___9_" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\yeti_idle_ (9).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="mus_combat_courtyard_hallway_intro__16eb5912_0797_4464_a944_76e38cd0a7e9_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\sound\music\combat\mus_combat_courtyard_hallway_intro {16eb5912-0797-4464-a944-76e38cd0a7e9}.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="ninja_skill1___1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ninja_skill1_ (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ninja_skill2___1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ninja_skill2_ (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ninja_skill2___2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ninja_skill2_ (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ninja_skill3___1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ninja_skill3_ (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ninja_skill3___2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ninja_skill3_ (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ninja_skill4___1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ninja_skill4_ (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="titleScreen" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sound\music\title\titleScreen.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -774,5 +825,14 @@
   </data>
   <data name="archer_idle___9_" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\karakter\Archer\Idle\archer_idle_ (9).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="battle" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sound\music\combat\battle.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="ninja_attack_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ninja_attack_1.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="yeti_attack_sfx_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\yeti_attack_sfx_1.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 </root>

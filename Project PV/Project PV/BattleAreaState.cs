@@ -13,22 +13,26 @@ namespace Project_PV
     {
         karakter player = new ninja("ninnin");
         object background = Properties.Resources.ResourceManager.GetObject("courtyard_battleArea_");
-        Image imgBack;
-        SoundPlayer battleMusic;
+        public Image imgBack { get; set; }
+        public bool battle { get; set; }
         public GameStateManager gsm { get; set; }
         public BattleAreaState(GameStateManager gsm)
         {
             this.gsm = gsm;
             Random r = new Random();
             int ind = r.Next(4) + 1;
+            battle = false;
 
-            battleMusic = new SoundPlayer(Properties.Resources.mus_combat_courtyard_hallway_intro__16eb5912_0797_4464_a944_76e38cd0a7e9_);
-            battleMusic.Play();
             object background = Properties.Resources.ResourceManager.GetObject("courtyard_area___"+ind+"_");
             imgBack = (Image)background;
 
+            imgpPlayer = (Image)Properties.Resources.ResourceManager.GetObject("panel_player2");
+            imgpInv = (Image)Properties.Resources.ResourceManager.GetObject("panel_inventory");
         }
 
+        Image imgpPlayer;
+        Image imgpInv;
+        string aktif = "inv";
         public override void draw(Graphics g)
         {
 
@@ -36,6 +40,35 @@ namespace Project_PV
 
             player.getImage(g);
             player.hero_move_now++;
+
+            g.DrawImage((Image)Properties.Resources.ResourceManager.GetObject("side_decor"), 0, 420, 120, 270);
+            g.DrawImage(imgpPlayer, 70 + 22, 420, 528, 100);
+            g.DrawImage((Image)Properties.Resources.ResourceManager.GetObject(player.hero + "_icon"), 135, 440, 68, 68);
+
+            for (int i = 0; i < 4; i++)
+            {
+                g.DrawImage(player.skills[i].icon, 308 + 55 * i, 447, 52, 52);
+            }
+            g.DrawImage((Image)Properties.Resources.ResourceManager.GetObject("ability_move"), 308 + 55 * 4, 447, 52, 52);
+            g.DrawImage((Image)Properties.Resources.ResourceManager.GetObject("ability_pass"), 308 + 55 * 5, 447, 10, 52);
+
+
+            g.DrawImage((Image)Properties.Resources.ResourceManager.GetObject("panel_stat"), 70 + 50, 520, 500, 170);
+            g.DrawImage(imgpInv, 70 + 550, 420, 550, 270);
+            //MessageBox.Show((Image)imgpInv+"");
+            Font font = new Font("Arial", 15.0f);
+            if (aktif == "inv")
+            {
+                for (int i = 0; i < 2; i++)
+                {
+                    for (int j = 0; j < 8; j++)
+                    {
+                        g.DrawImage((Image)Properties.Resources.ResourceManager.GetObject("gold"), (float)(640 + j * 61.5), 440 + i * 120, 50, 110);
+                        g.DrawString("11", font, new SolidBrush(Color.White), (float)(640 + j * 61.5), 445 + i * 120);
+                    }
+                }
+            }
+            g.DrawImage((Image)Properties.Resources.ResourceManager.GetObject("side_decor"), 1285, 420, -120, 270);
         }
 
         public override void init()
@@ -56,6 +89,15 @@ namespace Project_PV
                 gsm.dungeon.kebalik = false;
                 gsm.dungeon.myLoc = location.jalan;
                 gsm.dungeon.Area_panjang[gsm.dungeon.ke - 1].reset();
+            }
+            else if(e.KeyData == Keys.D)
+            {
+                DialogResult dr = MessageBox.Show("Yakin Keluar","Ke Desa",MessageBoxButtons.YesNo);
+                if (dr == DialogResult.Yes)
+                {
+                    gsm.stage = Stage.mainMenu;
+                    gsm.loadState(gsm.stage);
+                }
             }
 
             if (e.KeyData == Keys.A && player.x > 200)

@@ -13,41 +13,61 @@ namespace Project_PV
         public string tipe { get; set; }
         public string tipe_gerak { get; set; }
         public int tipe_gerak_ke { get; set; }
+        public int x { get; set; }
 
-        public musuh(int hp, List<Skill> skill, string tipe, string tipe_gerak, int tipe_gerak_ke)
+        public musuh(int hp, List<Skill> skill, string tipe, string tipe_gerak, int tipe_gerak_ke,int x)
         {
             this.hp = hp;
             this.skill = skill;
             this.tipe = tipe;
             this.tipe_gerak = tipe_gerak;
             this.tipe_gerak_ke = tipe_gerak_ke;
+            this.x = x;
         }
 
-        public void getImage(Graphics g,int x)
+        public void getImage(Graphics g)
         {
             try
             {
-                gambar(g,x);
+                gambar(g);
             }
             catch (Exception)
             {
                 tipe_gerak_ke = 1;
-                gambar(g,x);
+                gambar(g);
             }
         }
-        public void gambar(Graphics g,int x)
+        public void gambar(Graphics g)
         {
             object O = Properties.Resources.ResourceManager.GetObject(tipe + "_" + tipe_gerak + "___" + tipe_gerak_ke+ "_");
             Image img = (Image)O;
             g.DrawImage(img, x, 250, 100, 150);
         }
-
+        public void getImageAttack(Graphics g, int zoom)
+        {
+            try
+            {
+                gambarAttack(g, zoom);
+                //tipe_gerak_ke++;
+            }
+            catch (Exception)
+            {
+                //tipe_gerak_ke--;
+                gambarAttack(g, zoom);
+            }
+        }
+        public void gambarAttack(Graphics g, int zoom)
+        {
+            object O = Properties.Resources.ResourceManager.GetObject(tipe + "_" + tipe_gerak + "___" + tipe_gerak_ke + "_");
+            Image img = (Image)O;
+            g.DrawImage(img, x - zoom / 2, 250 - zoom, 100 + zoom, 150 + zoom);
+        }
     }
 
     class yeti : musuh
     {
-        public yeti()
-            : base(100,new List<Skill>(),"yeti","idle",1)
+        public yeti(int x)
+            : base(20,new List<Skill>(),"yeti","idle",1,x)
         {
             skill.Add(new yeti1());
             skill.Add(new yeti2());

@@ -371,6 +371,15 @@ namespace Project_PV.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream battle {
+            get {
+                return ResourceManager.GetStream("battle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap blacksmith_character {
@@ -683,6 +692,16 @@ namespace Project_PV.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap currency_gold_icon {
+            get {
+                object obj = ResourceManager.GetObject("currency_gold_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap currency_gold_large_icon {
             get {
                 object obj = ResourceManager.GetObject("currency_gold_large_icon", resourceCulture);
@@ -963,6 +982,66 @@ namespace Project_PV.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap inv_provision__0 {
+            get {
+                object obj = ResourceManager.GetObject("inv_provision__0", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap inv_provision__1 {
+            get {
+                object obj = ResourceManager.GetObject("inv_provision__1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap inv_provision__2 {
+            get {
+                object obj = ResourceManager.GetObject("inv_provision__2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap inv_provision__3 {
+            get {
+                object obj = ResourceManager.GetObject("inv_provision__3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap inventory_grid_background_party {
+            get {
+                object obj = ResourceManager.GetObject("inventory_grid_background_party", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap inventory_grid_background_store {
+            get {
+                object obj = ResourceManager.GetObject("inventory_grid_background_store", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap lala {
             get {
                 object obj = ResourceManager.GetObject("lala", resourceCulture);
@@ -993,9 +1072,9 @@ namespace Project_PV.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream mus_combat_courtyard_hallway_intro__16eb5912_0797_4464_a944_76e38cd0a7e9_ {
+        internal static System.IO.UnmanagedMemoryStream ninja_attack_1 {
             get {
-                return ResourceManager.GetStream("mus_combat_courtyard_hallway_intro__16eb5912_0797_4464_a944_76e38cd0a7e9_", resourceCulture);
+                return ResourceManager.GetStream("ninja_attack_1", resourceCulture);
             }
         }
         
@@ -1222,6 +1301,66 @@ namespace Project_PV.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ninja_skill1___1_ {
+            get {
+                object obj = ResourceManager.GetObject("ninja_skill1___1_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ninja_skill2___1_ {
+            get {
+                object obj = ResourceManager.GetObject("ninja_skill2___1_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ninja_skill2___2_ {
+            get {
+                object obj = ResourceManager.GetObject("ninja_skill2___2_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ninja_skill3___1_ {
+            get {
+                object obj = ResourceManager.GetObject("ninja_skill3___1_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ninja_skill3___2_ {
+            get {
+                object obj = ResourceManager.GetObject("ninja_skill3___2_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ninja_skill4___1_ {
+            get {
+                object obj = ResourceManager.GetObject("ninja_skill4___1_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap panel_inventory {
             get {
                 object obj = ResourceManager.GetObject("panel_inventory", resourceCulture);
@@ -1305,6 +1444,56 @@ namespace Project_PV.Properties {
         internal static System.Drawing.Bitmap progression_forward {
             get {
                 object obj = ResourceManager.GetObject("progression_forward", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap provision_background {
+            get {
+                object obj = ResourceManager.GetObject("provision_background", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap provision_character {
+            get {
+                object obj = ResourceManager.GetObject("provision_character", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap provision_character_background {
+            get {
+                object obj = ResourceManager.GetObject("provision_character_background", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap provision_dd_character {
+            get {
+                object obj = ResourceManager.GetObject("provision_dd_character", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap provision_icon {
+            get {
+                object obj = ResourceManager.GetObject("provision_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -2084,6 +2273,15 @@ namespace Project_PV.Properties {
             get {
                 object obj = ResourceManager.GetObject("yeti_attack___4_", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream yeti_attack_sfx_1 {
+            get {
+                return ResourceManager.GetStream("yeti_attack_sfx_1", resourceCulture);
             }
         }
         
