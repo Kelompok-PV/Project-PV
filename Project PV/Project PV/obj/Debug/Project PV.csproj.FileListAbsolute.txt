@@ -129,3 +129,28 @@ C:\Users\Fabian\Documents\GitHub\Project-PV-fix\Project PV\Project PV\bin\Debug\
 C:\Users\Fabian\Documents\GitHub\Project-PV-fix\Project PV\Project PV\obj\Debug\Project PV.csproj.CopyComplete
 C:\Users\Fabian-Lepi\Documents\GitHub\Project-PV\Project PV\Project PV\bin\Debug\WindowsBase.dll
 C:\Users\Fabian-Lepi\Documents\GitHub\Project-PV\Project PV\Project PV\obj\Debug\Project PV.csproj.CopyComplete
+C:\xampp\htdocs\Project-PV\Project PV\Project PV\bin\Debug\Resources\DwarvenAxe BB W00 Regular.ttf
+C:\xampp\htdocs\Project-PV\Project PV\Project PV\bin\Debug\Resources\The_Blood.png
+C:\xampp\htdocs\Project-PV\Project PV\Project PV\bin\Debug\Resources\background.jpg
+C:\xampp\htdocs\Project-PV\Project PV\Project PV\bin\Debug\Resources\button.jpg
+C:\xampp\htdocs\Project-PV\Project PV\Project PV\bin\Debug\Resources\font.png
+C:\xampp\htdocs\Project-PV\Project PV\Project PV\bin\Debug\Resources\town_backdrop.png
+C:\xampp\htdocs\Project-PV\Project PV\Project PV\bin\Debug\Resources\town_bg.png
+C:\xampp\htdocs\Project-PV\Project PV\Project PV\bin\Debug\Resources\arrow.png
+C:\xampp\htdocs\Project-PV\Project PV\Project PV\bin\Debug\Resources\tst.mp3
+C:\xampp\htdocs\Project-PV\Project PV\Project PV\bin\Debug\Project PV.exe.config
+C:\xampp\htdocs\Project-PV\Project PV\Project PV\bin\Debug\Project PV.exe
+C:\xampp\htdocs\Project-PV\Project PV\Project PV\bin\Debug\Project PV.pdb
+C:\xampp\htdocs\Project-PV\Project PV\Project PV\bin\Debug\WindowsBase.dll
+C:\xampp\htdocs\Project-PV\Project PV\Project PV\bin\Debug\Interop.WMPLib.dll
+C:\xampp\htdocs\Project-PV\Project PV\Project PV\bin\Debug\AxInterop.WMPLib.dll
+C:\xampp\htdocs\Project-PV\Project PV\Project PV\obj\Debug\Project PV.csprojAssemblyReference.cache
+C:\xampp\htdocs\Project-PV\Project PV\Project PV\obj\Debug\Interop.WMPLib.dll
+C:\xampp\htdocs\Project-PV\Project PV\Project PV\obj\Debug\AxInterop.WMPLib.dll
+C:\xampp\htdocs\Project-PV\Project PV\Project PV\obj\Debug\Project PV.csproj.ResolveComReference.cache
+C:\xampp\htdocs\Project-PV\Project PV\Project PV\obj\Debug\Project_PV.Form1.resources
+C:\xampp\htdocs\Project-PV\Project PV\Project PV\obj\Debug\Project_PV.Properties.Resources.resources
+C:\xampp\htdocs\Project-PV\Project PV\Project PV\obj\Debug\Project PV.csproj.GenerateResource.cache
+C:\xampp\htdocs\Project-PV\Project PV\Project PV\obj\Debug\Project PV.csproj.CopyComplete
+C:\xampp\htdocs\Project-PV\Project PV\Project PV\obj\Debug\Project PV.exe
+C:\xampp\htdocs\Project-PV\Project PV\Project PV\obj\Debug\Project PV.pdb

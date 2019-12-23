@@ -17,14 +17,13 @@ namespace Project_PV
     {
         public Image background{ get; set; }
         public List<musuh> musuh { get; set; }
-        public karakter player { get; set; }
+        public List<karakter> player { get; set; }
         GameStateManager gsm;
 
         public List<int> locSkill { get; set; }
 
 
-        //SoundPlayer battleMusic;
-        //SoundPlayer sfx;
+        
 
         
 
@@ -35,6 +34,7 @@ namespace Project_PV
         bool serang_musuh = false;
         bool delay_aktif = false;
 
+        int pilihHero = 0;
         int zoom = 0;
         int zoom_bkg = 0;
 
@@ -44,16 +44,18 @@ namespace Project_PV
         MediaPlayer sfx = new MediaPlayer();
         public battle(GameStateManager gsm,Image back)
         {
-
-            //battleMusic = new SoundPlayer(Properties.Resources.mus_combat_courtyard_hallway_intro__16eb5912_0797_4464_a944_76e38cd0a7e9_);
-            //battleMusic.PlaySync();
             string RunningPath = AppDomain.CurrentDomain.BaseDirectory;
             string FileName = string.Format("{0}Resources\\sound\\music\\combat\\battle.wav", Path.GetFullPath(Path.Combine(RunningPath, @"..\..\")));
             myPlayer.Open(new System.Uri(FileName));
             myPlayer.MediaEnded += new EventHandler(Media_Ended);
             myPlayer.Play();
+
+
             this.gsm = gsm;
-            player = gsm.player.currentCharacters[0];
+            player = new List<karakter>(); ;
+            player.Add(gsm.player.currentCharacters[0]);
+            player.Add(gsm.player.currentCharacters[1]);
+
             musuh = new List<musuh>();
             musuh.Add(new yeti(700));
             background =back;
@@ -67,7 +69,10 @@ namespace Project_PV
             locSkill.Add(420);
             locSkill.Add(476);
 
-            player.x = 350;
+            for (int i = 0; i < player.Count; i++)
+            {
+                player[i].x = 350 - 100 * i;
+            }
         }
         Image imgpPlayer;
         Image imgpInv;
@@ -98,25 +103,29 @@ namespace Project_PV
             {
                 musuh[0].getImageAttack(g, zoom);
             }
+
             if (!serang && !serang_musuh)
             {
-                player.getImage(g);
-                player.hero_move_now++;
+                for (int i = 0; i < player.Count; i++)
+                {
+                    player[i].getImage(g);
+                    player[i].hero_move_now++;
+                }
             }
             else
             {
-                player.getImageAttack(g,zoom);
+                player[pilihHero].getImageAttack(g,zoom);
             }
 
 
 
             g.DrawImage((Image)Properties.Resources.ResourceManager.GetObject("side_decor"), 0, 420, 120, 270);
             g.DrawImage(imgpPlayer, 70 + 22, 420, 528, 100);
-            g.DrawImage((Image)Properties.Resources.ResourceManager.GetObject(player.hero + "_icon"), 135, 440, 68, 68);
+            g.DrawImage((Image)Properties.Resources.ResourceManager.GetObject(player[0].hero + "_icon"), 135, 440, 68, 68);
 
             for (int i = 0; i < 4; i++)
             {
-                g.DrawImage(player.skills[i].icon, 308 + 55 * i, 447, 52, 52);
+                g.DrawImage(player[pilihHero].skills[i].icon, 308 + 55 * i, 447, 52, 52);
             }
             g.DrawImage((Image)Properties.Resources.ResourceManager.GetObject("ability_move"), 308 + 55 * 4, 447, 52, 52);
             g.DrawImage((Image)Properties.Resources.ResourceManager.GetObject("ability_pass"), 308 + 55 * 5, 447, 10, 52);
@@ -153,11 +162,11 @@ namespace Project_PV
             g.DrawString(dodge, new Font("Arial", 12, FontStyle.Regular), br, 210, 632);
             g.DrawString(prot, new Font("Arial", 12, FontStyle.Regular), br,  210, 647);
 
-            g.DrawString(player.hp+"/"+player.maxHp, new Font("Arial", 12, FontStyle.Regular), new SolidBrush(System.Drawing.Color.DarkRed), 178 ,530);
-            g.DrawString(player.hero_stress.stress_point+"/"+200, new Font("Arial", 12, FontStyle.Regular), br, 178 ,550);
+            g.DrawString(player[pilihHero].hp+"/"+player[pilihHero].maxHp, new Font("Arial", 12, FontStyle.Regular), new SolidBrush(System.Drawing.Color.DarkRed), 178 ,530);
+            g.DrawString(player[pilihHero].hero_stress.stress_point+"/"+200, new Font("Arial", 12, FontStyle.Regular), br, 178 ,550);
             
-            g.DrawString(player.nama, new Font("Arial", 15, FontStyle.Regular), br, 200, 445);
-            g.DrawString(player.type, new Font("Arial", 13, FontStyle.Regular), br, 200, 475);
+            g.DrawString(player[pilihHero].nama, new Font("Arial", 15, FontStyle.Regular), br, 200, 445);
+            g.DrawString(player[pilihHero].type, new Font("Arial", 13, FontStyle.Regular), br, 200, 475);
 
             g.DrawString(musuh[0].hp+"", new Font("Arial", 13, FontStyle.Regular), br, 700, 400);
         }
@@ -321,11 +330,11 @@ namespace Project_PV
                 if (mouse.IntersectsWith(skill))
                 {
                     pilih_attack = i;
-                    dmg_min = player.skills[i].status_skill.dmg_min+"";
-                    dmg_max = player.skills[i].status_skill.dmg_max+"";
-                    acc = player.skills[i].status_skill.acc + "";
-                    crit = player.skills[i].status_skill.crit + "%";
-                    prot = player.skills[i].status_skill.def + "";
+                    dmg_min = player[pilihHero].skills[i].status_skill.dmg_min+"";
+                    dmg_max = player[pilihHero].skills[i].status_skill.dmg_max+"";
+                    acc =  player[pilihHero].skills[i].status_skill.acc + "";
+                    crit = player[pilihHero].skills[i].status_skill.crit + "%";
+                    prot = player[pilihHero].skills[i].status_skill.def + "";
                 }
             }
             //for (int i = 0; i < musuh.Count; i++)
@@ -337,12 +346,12 @@ namespace Project_PV
                 if (pilih_attack != -1)
                 {
                     Random r = new Random();
-                    int dmg_atk = r.Next(player.skills[pilih_attack].status_skill.dmg_min, player.skills[pilih_attack].status_skill.dmg_max + 1);
+                    int dmg_atk = r.Next(player[pilihHero].skills[pilih_attack].status_skill.dmg_min, player[pilihHero].skills[pilih_attack].status_skill.dmg_max + 1);
                     musuh[0].hp -= dmg_atk;
                     serang = true;
-                    player.x = 520;
-                    player.hero_move = "skill" + (pilih_attack + 1);
-                    player.hero_move_now = 1;
+                    player[pilihHero].x = 520;
+                    player[pilihHero].hero_move = "skill" + (pilih_attack + 1);
+                    player[pilihHero].hero_move_now = 1;
                     //sfx= new SoundPlayer(Properties.Resources.ninja_attack_1);
                     //sfx.LoadAsync();
 
@@ -376,7 +385,7 @@ namespace Project_PV
             if (serang)
             {
                 timer_attack++;
-                player.x += 1;
+                player[pilihHero].x += 1;
             }
 
             if (serang_musuh)
@@ -389,9 +398,9 @@ namespace Project_PV
                 timer_attack = 0;
                 zoom = 0;
                 zoom_bkg = 0;
-                player.x = 300;
-                player.hero_move = "idle";
-                player.hero_move_now = 1;
+                player[pilihHero].x = 350;
+                player[pilihHero].hero_move = "idle";
+                player[pilihHero].hero_move_now = 1;
                 serang = false;
                 delay_aktif = true;
                 if (musuh[0].hp <= 0)
@@ -410,7 +419,7 @@ namespace Project_PV
                 musuh[0].tipe_gerak = "idle";
                 musuh[0].tipe_gerak_ke = 1;
                 serang_musuh = false;
-                player.x = 350;
+                player[pilihHero].x = 350;
             }
 
             if (delay_aktif)
@@ -421,9 +430,9 @@ namespace Project_PV
                     Random r = new Random();
                     int pilih_attack_musuh = r.Next(0, 4);
                     int dmg_atk = r.Next(musuh[0].skill[pilih_attack_musuh].status_skill.dmg_min, musuh[0].skill[pilih_attack_musuh].status_skill.dmg_max + 1);
-                    player.hp -= dmg_atk;
+                    player[pilihHero].hp -= dmg_atk;
                     musuh[0].x = 650;
-                    player.x = 450;
+                    player[pilihHero].x = 450;
                     musuh[0].tipe_gerak = "attack";
                     musuh[0].tipe_gerak_ke = 1;
                     delay_aktif = false;
