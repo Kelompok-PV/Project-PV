@@ -371,6 +371,15 @@ namespace Project_PV.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream battle {
+            get {
+                return ResourceManager.GetStream("battle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap blacksmith_character {
@@ -1063,9 +1072,9 @@ namespace Project_PV.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream mus_combat_courtyard_hallway_intro__16eb5912_0797_4464_a944_76e38cd0a7e9_ {
+        internal static System.IO.UnmanagedMemoryStream ninja_attack_1 {
             get {
-                return ResourceManager.GetStream("mus_combat_courtyard_hallway_intro__16eb5912_0797_4464_a944_76e38cd0a7e9_", resourceCulture);
+                return ResourceManager.GetStream("ninja_attack_1", resourceCulture);
             }
         }
         
@@ -2264,6 +2273,15 @@ namespace Project_PV.Properties {
             get {
                 object obj = ResourceManager.GetObject("yeti_attack___4_", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream yeti_attack_sfx_1 {
+            get {
+                return ResourceManager.GetStream("yeti_attack_sfx_1", resourceCulture);
             }
         }
         

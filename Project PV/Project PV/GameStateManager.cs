@@ -30,6 +30,10 @@ namespace Project_PV
             //player.myCharacter.Add(new ninja("Hatory"));
             //player.myCharacter.Add(new ninja("Hatory"));
             //player.currentCharacters[0] = new ninja("Hatory");
+            this.stage = Stage.title;
+            player.myCharacter.Add(new ninja("Hatory"));
+            player.myCharacter.Add(new ninja("Hatory"));
+            player.currentCharacters[0] = new ninja("Hatory");
             player.gold = 3000;
             gameStates = new GameState[20];
             loadState(this.stage);
@@ -51,6 +55,7 @@ namespace Project_PV
             }
             else if (stage == Stage.dungeon)
             {
+                townMusic.Stop();
                 dungeon = new dungeon(this, 2);
                 gameStates[(int)stage] = dungeon ;
             }

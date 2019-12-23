@@ -24,6 +24,7 @@ namespace Project_PV
             ke = 0;
             kebalik = false;
             myLoc = location.area;
+            //btl = new battle(gsm, Properties.Resources.courtyard_area___1_);
             for (int i = 0; i < panjang; i++)
             {
                 if (i != 0)
