@@ -98,19 +98,16 @@ namespace Project_PV
             for (int i = 0; i < 2; i++)
             {
                 for (int j = 0; j < 5; j++)
-                {
-                    if (ctr == 9)
+                {   
+                    g.DrawImage((Image)Properties.Resources.ResourceManager.GetObject("inv_provision__" + 0), 620 + j * 60, 85 + i * 112, 55, 100);
+                    g.DrawImage((Image)Properties.Resources.ResourceManager.GetObject("currency_gold_icon"), 630 + j * 60, 182 + i * 112, 15, 15);
+                    g.DrawString(lisinv[ctr].harga + "", price, new SolidBrush(Color.FromArgb(202, 179, 112)), 642 + j * 60, 184 + i * 112);
+                    g.DrawString(lisinv[ctr].jumlah + "", font, new SolidBrush(Color.FromArgb(202, 179, 112)), (float)(622 + j * 61.5), 88 + i * 112);
+                    ctr++;
+                    if (ctr == 10)
                     {
                         ctr = 0;
-                    }
-                    else
-                    {
-                        g.DrawImage((Image)Properties.Resources.ResourceManager.GetObject("inv_provision__" + 0), 620 + j * 60, 85 + i * 112, 55, 100);
-                        g.DrawImage((Image)Properties.Resources.ResourceManager.GetObject("currency_gold_icon"), 630 + j * 60, 182 + i * 112, 15, 15);
-                        g.DrawString(lisinv[ctr].harga + "", price, new SolidBrush(Color.FromArgb(202, 179, 112)), 642 + j * 60, 184 + i * 112);
-                        g.DrawString(lisinv[ctr].jumlah + "", font, new SolidBrush(Color.FromArgb(202, 179, 112)), (float)(622 + j * 61.5), 88 + i * 112);
-                        ctr++;
-                    }
+                    }   
                 }
             }
 
