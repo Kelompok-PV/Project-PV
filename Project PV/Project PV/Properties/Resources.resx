@@ -835,4 +835,34 @@
   <data name="yeti_attack_sfx_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\yeti_attack_sfx_1.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="Boarman_idl__10_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\board_man\Boarman idle\Boarman_idl (10).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Boarman_idl__1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\board_man\Boarman idle\Boarman_idl (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Boarman_idl__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\board_man\Boarman idle\Boarman_idl (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Boarman_idl__3_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\board_man\Boarman idle\Boarman_idl (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Boarman_idl__4_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\board_man\Boarman idle\Boarman_idl (4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Boarman_idl__5_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\board_man\Boarman idle\Boarman_idl (5).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Boarman_idl__6_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\board_man\Boarman idle\Boarman_idl (6).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Boarman_idl__7_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\board_man\Boarman idle\Boarman_idl (7).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Boarman_idl__8_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\board_man\Boarman idle\Boarman_idl (8).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Boarman_idl__9_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\board_man\Boarman idle\Boarman_idl (9).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

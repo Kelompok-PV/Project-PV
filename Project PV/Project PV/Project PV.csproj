@@ -567,6 +567,16 @@
     <None Include="Resources\karakter\Aladin\Idle\aladin_idle_ %2812%29.png" />
     <None Include="Resources\char_share_imp_sword.wav" />
     <None Include="Resources\ninja_attack_1.wav" />
+    <None Include="Resources\board_man\Boarman idle\Boarman_idl %281%29.png" />
+    <None Include="Resources\board_man\Boarman idle\Boarman_idl %282%29.png" />
+    <None Include="Resources\board_man\Boarman idle\Boarman_idl %283%29.png" />
+    <None Include="Resources\board_man\Boarman idle\Boarman_idl %284%29.png" />
+    <None Include="Resources\board_man\Boarman idle\Boarman_idl %285%29.png" />
+    <None Include="Resources\board_man\Boarman idle\Boarman_idl %286%29.png" />
+    <None Include="Resources\board_man\Boarman idle\Boarman_idl %287%29.png" />
+    <None Include="Resources\board_man\Boarman idle\Boarman_idl %288%29.png" />
+    <None Include="Resources\board_man\Boarman idle\Boarman_idl %289%29.png" />
+    <None Include="Resources\board_man\Boarman idle\Boarman_idl %2810%29.png" />
     <Content Include="Resources\Quest\dungeon_progressionbar.png" />
     <Content Include="Resources\Quest\embark_party.background.png" />
     <None Include="Resources\Town\town full_2.png" />

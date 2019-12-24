@@ -1,0 +1,146 @@
+blight = damage tiap turn dari hp awal kena
+bleed = damage tiap turn dari hp turn itu
+stun
+
+Doctor
+
+Noxious Blast{
+ rank = 0-2
+ Target= 0-1
+ damage = 2-4 tiap level tambah 1
+ accuracy = 70% +5
+ crit_mod = 20% +5
+ blight = 10% tiap level tambah 1 (efek nya 3-5 turn)
+}
+
+Incision{
+    rank = 1-3
+    Target= 0-1
+    damage = 0-1 tiap level tambah 1
+    accuracy = 60% +5
+    crit_mod = 20% +5
+    blight = 10% tiap level tambah 1
+}
+
+Battlefield Medicine{
+    rank = 0-1
+    Target= 0-3
+    heal = 1-2 tiap level tambah 1
+    accuracy = 100%
+    crit_mod = 20% +5
+    blight = 10% tiap level tambah 1
+}
+
+Blinding Gas{
+    rank = 0-1
+    Target= kena 2-3
+    damage = 3-4 tiap level tambah 1
+    accuracy = 70% +5
+    crit_mod = 20% +5
+    stun = 100% pemakaian +1
+    limit pemakaian = 3
+}
+
+Vestal
+Divine Grace{
+    rank = 0-1
+    Target= 0-3
+    heal = 4-5 tiap level tambah 1
+    accuracy = 100%
+    crit_mod = 20% +5
+}
+Divine Comfort{
+    rank = 0-2
+    Target= semua
+    heal = 1-3 tiap level tambah 1
+    accuracy = 100%
+    crit_mod = 20% +5
+}
+Dazzling Light{
+    rank = 0-2
+    Target= 0-2
+    damage = 1-2 tiap level tambah 1
+    accuracy = 65% +5
+    crit_mod = 20% +5
+    stun = 100% 
+}
+Judgement{
+    rank = 0-1
+    Target= 0-3
+    damage = 0-1 tiap level tambah 1
+    accuracy = 55% +5
+    crit_mod = 20% +5
+}
+
+Crusader // mele
+
+Smite{
+    rank = 2-3
+    Target= kena 0-1
+    damage = 6-8 tiap level tambah 1
+    accuracy = 70% +5
+    crit_mod = 0% +5
+}
+
+Zealous Accusation{
+    rank = 2-3
+    Target= 0-1
+    damage = 3-4 tiap level tambah 1
+    accuracy = 60% +5
+    crit_mod = 0% +5
+    stun = 100% 
+}
+
+Holy Lance{
+    rank = 0-1
+    Target= 1-3
+    damage = 3-4 tiap level tambah 1
+    accuracy = 55% +5
+    crit_mod = 22% +5
+    
+}
+Inspiring Cry{
+    rank = 0-3
+    Target= 0-3
+    heal = 1 tiap level tambah 1
+    accuracy = 100%
+    crit_mod = 0% +5
+    stress = -5 +5 
+}
+
+Shieldbreaker //range
+
+Pierce{
+    rank = 1-3
+    Target= 0-3
+    heal = 5-7 tiap level tambah 1
+    accuracy = 60% +5
+    crit_mod = 20% +5
+    armor = hilang kan armor 
+}
+
+Adder's Kiss {
+    rank = 3
+    Target= 0-1
+    damage = 4-6 tiap level tambah 1
+    accuracy = 60% +5
+    crit_mod = 20% +5
+    blight = 10% tiap level tambah 1 (efek nya 3-5 turn)
+}
+
+Captivate{
+    rank = 1-2
+    Target= 1-2
+    damage = 2-4 tiap level tambah 1
+    accuracy = 60% +5
+    crit_mod = 20% +5
+    blight = 10% tiap level tambah 1 (efek nya 3-5 turn)
+    marked = +40% damage ke musuh yang marked (efek nya 3-5 turn)
+}
+Impale{
+    rank = 3
+    Target= semua kena
+    damage = 4-6 tiap level tambah 1
+    accuracy = 60% +5
+    crit_mod = 22% +5
+}

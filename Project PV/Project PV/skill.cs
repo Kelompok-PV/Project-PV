@@ -11,10 +11,14 @@ namespace Project_PV
         public string nama { get; set; }
         public efek[] skill_efek { get; set; }
         public int[] rank{ get; set; }
+        public int accuracy { get; set; }
+        public int crit_mod { get; set; }
         public int[] target{ get; set; }
         public status status_skill{ get; set; }
         public int efek_kena { get; set; }
         public Image icon { get; set; }
+        public int max_damage { get; set; }
+        public int min_damage { get; set; }
 
         public Skill(string nama, efek[] skill_efek, int[] rank, int[] target, status status_skill, int efek_kena)
         {
@@ -25,7 +29,11 @@ namespace Project_PV
             this.status_skill = status_skill;
             this.efek_kena = efek_kena;
         }
+        public Skill()
+        {
 
+        }
+        
     }
     public class noxius_blast : Skill
     {
@@ -132,6 +140,62 @@ namespace Project_PV
             status_skill = new status(3, 4, 20, 70, 0, 3);
             skill_efek[0] = efek.stun;
             icon = Properties.Resources.yeti_attack___4_;
+        }
+    }
+    public class Boarman1 : Skill
+    {
+        public Boarman1()
+        {
+            nama = "boarman1";
+            rank = new int[3];
+            rank[0] = 1;
+            rank[1] = 2;
+            rank[2] = 3;
+            target = new int[2];
+            target[0] = 1;
+            target[1] = 2;
+            accuracy = 70;
+            crit_mod = 50;
+            max_damage = 5;
+            min_damage = 3;
+        }
+    }
+    public class Boarman2 : Skill
+    {
+        public Boarman2()
+        {
+            nama = "boarman2";
+            rank = new int[3];
+            rank[0] = 1;
+            rank[1] = 2;
+            rank[2] = 3;
+            target = new int[3];
+            target[0] = 1;
+            target[1] = 2;
+            target[2] = 3;
+            accuracy = 70;
+            crit_mod = 25;
+            max_damage = 4;
+            min_damage = 2;
+        }
+    }
+    public class Boarman3 : Skill
+    {
+        public Boarman3()
+        {
+            nama = "boarman3";
+            rank = new int[3];
+            rank[0] = 1;
+            rank[1] = 2;
+            rank[2] = 3;
+            target = new int[4];
+            target[0] = 1;
+            target[1] = 2;
+            target[2] = 3;
+            accuracy = 70;
+            crit_mod = 25;
+            max_damage = 4;
+            min_damage = 2;
         }
     }
     public enum efek

@@ -156,13 +156,6 @@ namespace Project_PV
         }
 
         //jarak jauh
-        public aladin(string nama, int hp, equip[] hero_equip, int dodge,int maxHp,int min_dmg,int damage)
-            : base(nama, "Doctor", hp, "aladin", "idle", 1, hero_equip, dodge,maxHp,min_dmg,damage)
-        {
-            this.level = 1;
-            skills = new List<Skill>();
-        }
-
 
     }
     class archer : karakter
@@ -181,13 +174,6 @@ namespace Project_PV
             this.min_damage = 5;
             this.max_damage = 10;
             this.hp = 20;
-        }
-
-        public archer(string nama, int hp, equip[] hero_equip, int dodge, int maxHp,int min_dmg,int damage)
-            : base(nama, "archer", hp, "archer", "idle", 1, hero_equip, dodge, maxHp,min_dmg,damage)
-        {
-            this.level = 1;
-            skills = new List<Skill>();
         }
     }
     class druid : karakter

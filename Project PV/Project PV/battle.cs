@@ -92,7 +92,7 @@ namespace Project_PV
             if (!serang && !serang_musuh)
             {
                 musuh[0].getImage(g);
-                musuh[0].tipe_gerak_ke++;
+                musuh[0].musuh_move_now++;
             }
             else
             {
@@ -407,8 +407,8 @@ namespace Project_PV
                 zoom = 0;
                 zoom_bkg = 0;
                 musuh[0].x = 700;
-                musuh[0].tipe_gerak = "idle";
-                musuh[0].tipe_gerak_ke = 1;
+                musuh[0].musuh_move = "idle";
+                musuh[0].musuh_move_now = 1;
                 serang_musuh = false;
                 player.x = 350;
             }
@@ -424,8 +424,8 @@ namespace Project_PV
                     player.hp -= dmg_atk;
                     musuh[0].x = 650;
                     player.x = 450;
-                    musuh[0].tipe_gerak = "attack";
-                    musuh[0].tipe_gerak_ke = 1;
+                    musuh[0].musuh_move = "attack";
+                    musuh[0].musuh_move_now = 1;
                     delay_aktif = false;
                     timer_attack = 0;
                     serang_musuh = true;
