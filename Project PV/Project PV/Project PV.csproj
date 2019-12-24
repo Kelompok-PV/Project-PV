@@ -406,6 +406,14 @@
     <None Include="Resources\Quest\hero_slot.background.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\vestal.ability.judgement.png" />
+    <None Include="Resources\vestal.ability.divine.grace.png" />
+    <None Include="Resources\vestal.ability.divine.comfort.png" />
+    <None Include="Resources\vestal.ability.dazzling.light.png" />
+    <None Include="Resources\shieldbreaker.ability.pierce.png" />
+    <None Include="Resources\shieldbreaker.ability.impale.png" />
+    <None Include="Resources\shieldbreaker.ability.captivate.png" />
+    <None Include="Resources\shieldbreaker.ability.adder.kiss.png" />
     <None Include="Resources\yeti_attack_sfx_1.wav" />
     <None Include="Resources\sound\music\town.wav" />
     <None Include="Resources\sound\music\title\titleScreen.wav" />
@@ -577,6 +585,14 @@
     <None Include="Resources\board_man\Boarman idle\Boarman_idl %288%29.png" />
     <None Include="Resources\board_man\Boarman idle\Boarman_idl %289%29.png" />
     <None Include="Resources\board_man\Boarman idle\Boarman_idl %2810%29.png" />
+    <None Include="Resources\crusader.ability.holy.lance.png" />
+    <None Include="Resources\crusader.ability.inspiring.cry.png" />
+    <None Include="Resources\crusader.ability.smite.png" />
+    <None Include="Resources\crusader.ability.zealous.accusation.png" />
+    <None Include="Resources\plague_doctor.ability.battlefield.medicine.png" />
+    <None Include="Resources\plague_doctor.ability.blinding.gas.png" />
+    <None Include="Resources\plague_doctor.ability.incision.png" />
+    <None Include="Resources\plague_doctor.ability.noxious.blast.png" />
     <Content Include="Resources\Quest\dungeon_progressionbar.png" />
     <Content Include="Resources\Quest\embark_party.background.png" />
     <None Include="Resources\Town\town full_2.png" />

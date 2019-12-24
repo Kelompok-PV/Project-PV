@@ -432,7 +432,7 @@ namespace Project_PV
                     int dmg_atk = r.Next(musuh[0].skill[pilih_attack_musuh].status_skill.dmg_min, musuh[0].skill[pilih_attack_musuh].status_skill.dmg_max + 1);
                     player[pilihHero].hp -= dmg_atk;
                     musuh[0].x = 650;
-                    player.x = 450;
+                    player[0].x = 450;
                     musuh[0].musuh_move = "attack";
                     musuh[0].musuh_move_now = 1;
                     delay_aktif = false;
