@@ -27,7 +27,7 @@ namespace Project_PV
         public int max_damage { get; set; }
         public int speed { get; set; }
 
-        protected karakter(string nama,string type ,int hp, string hero, string hero_move, int hero_move_now, equip[] hero_equip, int dodge,int maxHp,int min_dmg,int damage)
+        protected karakter(string nama,string type ,int hp, string hero, string hero_move, int hero_move_now, equip[] hero_equip, int dodge,int maxHp,int min_dmg,int damage,int speed)
         {
             this.nama = nama;
             this.hp = hp;
@@ -40,6 +40,7 @@ namespace Project_PV
             x = 300;
             this.maxHp = maxHp;
             this.max_damage = damage;
+            this.speed=speed;;
         }
 
         protected karakter(string nama)
@@ -127,6 +128,7 @@ namespace Project_PV
             this.hp = 33;
             this.type = "Range";
             this.hero_move = "idle";
+            this.speed = 10;
             this.nama = nama;
             this.hero = "ninja";
             

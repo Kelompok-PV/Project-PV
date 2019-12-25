@@ -76,7 +76,7 @@ namespace Project_PV
             this.dodge = 0;
             this.hp = maxHp;
             this.x = x;
-            this.speed = 5;
+            this.speed = 15;
 
             skill.Add(new yeti1());
             skill.Add(new yeti2());
