@@ -42,7 +42,7 @@ namespace Project_PV
             g.DrawImage(img,0,0,50,50);
         }
 
-        public void getEffect(Inventory inv,karakter karakterPilih)
+        void getEffect(Inventory inv,karakter karakterPilih)
         {
             if (inv is LargeFood)
             {
