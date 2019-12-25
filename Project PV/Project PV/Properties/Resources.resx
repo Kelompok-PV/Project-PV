@@ -913,4 +913,151 @@
   <data name="vestal_ability_judgement" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\vestal.ability.judgement.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="giantlady_idle__1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\karakter\giantLady\idle_fix\giantlady_idle (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="giantlady_idle__2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\karakter\giantLady\idle_fix\giantlady_idle (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="giantlady_idle__3_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\karakter\giantLady\idle_fix\giantlady_idle (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="giantlady_idle__4_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\karakter\giantLady\idle_fix\giantlady_idle (4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="giantlady_idle__5_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\karakter\giantLady\idle_fix\giantlady_idle (5).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="giantlady_idle__6_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\karakter\giantLady\idle_fix\giantlady_idle (6).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="giantlady_idle__7_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\karakter\giantLady\idle_fix\giantlady_idle (7).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="giantlady_idle__8_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\karakter\giantLady\idle_fix\giantlady_idle (8).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="giantlady_idle__9_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\karakter\giantLady\idle_fix\giantlady_idle (9).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hercules_idle___1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\karakter\hercules\Idle2\hercules_idle_ (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hercules_idle___2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\karakter\hercules\Idle2\hercules_idle_ (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hercules_idle___3_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\karakter\hercules\Idle2\hercules_idle_ (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hercules_idle___4_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\karakter\hercules\Idle2\hercules_idle_ (4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hercules_idle___5_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\karakter\hercules\Idle2\hercules_idle_ (5).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hercules_idle___6_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\karakter\hercules\Idle2\hercules_idle_ (6).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hercules_idle___7_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\karakter\hercules\Idle2\hercules_idle_ (7).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hercules_idle___8_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\karakter\hercules\Idle2\hercules_idle_ (8).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iceWoman_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon_character\iceWoman_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iceWoman_idle___1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\karakter\iceWoman\Idle\iceWoman_idle (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iceWoman_idle___2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\karakter\iceWoman\Idle\iceWoman_idle (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iceWoman_idle___3_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\karakter\iceWoman\Idle\iceWoman_idle (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iceWoman_idle___4_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\karakter\iceWoman\Idle\iceWoman_idle (4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iceWoman_idle___5_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\karakter\iceWoman\Idle\iceWoman_idle (5).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iceWoman_idle___6_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\karakter\iceWoman\Idle\iceWoman_idle (6).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iceWoman_idle___7_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\karakter\iceWoman\Idle\iceWoman_idle (7).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="iceWoman_idle___8_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\karakter\iceWoman\Idle\iceWoman_idle (8).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="String" xml:space="preserve">
+    <value>tonyStark_idle___1_</value>
+  </data>
+  <data name="tonyStark_idle__10_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\karakter\tonyStark\Idle\tonyStark_idle (10).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tonyStark_idle__11_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\karakter\tonyStark\Idle\tonyStark_idle (11).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tonyStark_idle__12_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\karakter\tonyStark\Idle\tonyStark_idle (12).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tonyStark_idle__13_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\karakter\tonyStark\Idle\tonyStark_idle (13).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tonyStark_idle__14_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\karakter\tonyStark\Idle\tonyStark_idle (14).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tonyStark_idle__15_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\karakter\tonyStark\Idle\tonyStark_idle (15).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tonyStark_idle__16_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\karakter\tonyStark\Idle\tonyStark_idle (16).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tonyStark_idle__17_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\karakter\tonyStark\Idle\tonyStark_idle (17).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tonyStark_idle__18_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\karakter\tonyStark\Idle\tonyStark_idle (18).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tonyStark_idle__19_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\karakter\tonyStark\Idle\tonyStark_idle (19).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tonyStark_idle__20_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\karakter\tonyStark\Idle\tonyStark_idle (20).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tonyStark_idle__21_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\karakter\tonyStark\Idle\tonyStark_idle (21).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tonyStark_idle__22_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\karakter\tonyStark\Idle\tonyStark_idle (22).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tonyStark_idle__7_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\karakter\tonyStark\Idle\tonyStark_idle (7).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tonyStark_idle__8_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\karakter\tonyStark\Idle\tonyStark_idle (8).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tonyStark_idle__9_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\karakter\tonyStark\Idle\tonyStark_idle (9).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tonyStark_idle___1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\karakter\tonyStark\Idle\tonyStark_idle (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tonyStark_idle___2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\karakter\tonyStark\Idle\tonyStark_idle (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tonyStark_idle___3_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\karakter\tonyStark\Idle\tonyStark_idle (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tonyStark_idle___4_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\karakter\tonyStark\Idle\tonyStark_idle (4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tonyStark_idle___5_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\karakter\tonyStark\Idle\tonyStark_idle (5).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tonyStark_idle___6_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\karakter\tonyStark\Idle\tonyStark_idle (6).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

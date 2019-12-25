@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Drawing;
 namespace Project_PV
 {
-    public abstract class Inventory
+    abstract class Inventory
     {
         public int x { get; set; }
         public int y { get; set; }

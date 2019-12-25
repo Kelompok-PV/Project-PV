@@ -25,6 +25,7 @@ namespace Project_PV
         public int dodge { get; set; }
         public int min_damage { get; set; }
         public int max_damage { get; set; }
+        public int speed { get; set; }
 
         protected karakter(string nama,string type ,int hp, string hero, string hero_move, int hero_move_now, equip[] hero_equip, int dodge,int maxHp,int min_dmg,int damage)
         {
@@ -124,18 +125,41 @@ namespace Project_PV
             this.dodge = 20;
             this.hero_equip = new equip[5];
             this.hp = 33;
-            this.type = "Ninja";
+            this.type = "Range";
             this.hero_move = "idle";
             this.nama = nama;
             this.hero = "ninja";
-
             
-
             skills = new List<Skill>();
-            skills.Add(new incision());
-            skills.Add(new noxius_blast());
-            skills.Add(new smite());
-            skills.Add(new bliding_gas());
+            skills.Add(new pierce());
+            skills.Add(new adders_kiss());
+            skills.Add(new captivate());
+            skills.Add(new impale());
+            speed = 3;
+        }
+    }
+    //jarak jauh
+    class archer : karakter
+    {
+        public archer(string nama) : base(nama)
+        {
+            this.level = 1;
+            skills = new List<Skill>();
+            skills.Add(new pierce());
+            skills.Add(new adders_kiss());
+            skills.Add(new captivate());
+            skills.Add(new impale());
+            this.hero_equip = new equip[5];
+            this.type = "Range";
+            this.hero = "archer";
+            this.hero_move = "idle";
+            this.nama = nama;
+            this.maxHp = 20;
+            this.dodge = 28;
+            this.min_damage = 5;
+            this.max_damage = 10;
+            this.hp = 20;
+            speed = 3;
         }
     }
     class aladin : karakter
@@ -144,6 +168,10 @@ namespace Project_PV
         {
             this.level = 1;
             skills = new List<Skill>();
+            skills.Add(new noxius_blast());
+            skills.Add(new incision());
+            skills.Add(new battlefield_medicine());
+            skills.Add(new bliding_gas());
             this.hero_equip = new equip[5];
             this.type = "Doctor";
             this.hero = "aladin";
@@ -154,27 +182,30 @@ namespace Project_PV
             this.min_damage = 4;
             this.max_damage = 7;
             this.hp = 22;
+            speed = 1;
         }
-
-        //jarak jauh
-
     }
-    class archer : karakter
+    class Tony : karakter
     {
-        public archer(string nama) : base(nama)
+        public Tony(string nama) : base(nama)
         {
             this.level = 1;
             skills = new List<Skill>();
+            skills.Add(new noxius_blast());
+            skills.Add(new incision());
+            skills.Add(new battlefield_medicine());
+            skills.Add(new bliding_gas());
             this.hero_equip = new equip[5];
-            this.type = "Archer";
-            this.hero = "archer";
+            this.type = "Doctor";
+            this.hero = "tonyStark";
             this.hero_move = "idle";
             this.nama = nama;
-            this.maxHp = 20;
-            this.dodge = 28;
-            this.min_damage = 5;
-            this.max_damage = 10;
-            this.hp = 20;
+            this.maxHp = 24;
+            this.dodge = 0;
+            this.min_damage = 4;
+            this.max_damage = 8;
+            this.hp = maxHp;
+            speed = 4;
         }
     }
     class druid : karakter
@@ -184,6 +215,10 @@ namespace Project_PV
         {
             this.level = 1;
             skills = new List<Skill>();
+            skills.Add(new divine_grace());
+            skills.Add(new divine_comfort());
+            skills.Add(new dazzling_light());
+            skills.Add(new judgement());
             this.hero_equip = new equip[5];
             this.type = "Healer";
             this.hero = "druid";
@@ -194,30 +229,84 @@ namespace Project_PV
             this.min_damage = 4;
             this.max_damage = 8;
             this.hp = 24;
+            speed = 4;
         }
-
     }
-    //class ghostPerson : karakter
-    //{
-    //    public ghostPerson(string nama, string type, int hp, string hero, string hero_move, int hero_move_now, equip[] hero_equip, List<string> dialog, int dodge, int speed) 
-    //        : base(nama, type, hp, hero, "idle", 1, hero_equip, dialog, dodge, speed)
-    //    {
-    //    }
-    //}
-    //class giantLady : karakter
-    //{
-    //    public giantLady(string nama, string type, int hp, string hero, string hero_move, int hero_move_now, equip[] hero_equip, List<string> dialog, int dodge, int speed) 
-    //        : base(nama, type, hp, hero, "idle", 1, hero_equip, dialog, dodge, speed)
-    //    {
-    //    }
-    //}
-    //class herbalist : karakter
-    //{
-    //    public herbalist(string nama, string type, int hp, string hero, string hero_move, int hero_move_now, equip[] hero_equip, List<string> dialog, int dodge, int speed) 
-    //        : base(nama, type, hp, hero, "idle", 1, hero_equip, dialog, dodge, speed)
-    //    {
-    //    }
-    //}
+    class IceWoman : karakter
+    {
+        //healer
+        public IceWoman(string nama) : base(nama)
+        {
+            this.level = 1;
+            skills = new List<Skill>();
+            skills.Add(new divine_grace());
+            skills.Add(new divine_comfort());
+            skills.Add(new dazzling_light());
+            skills.Add(new judgement());
+            this.hero_equip = new equip[5];
+            this.type = "Healer";
+            this.hero = "iceWoman";
+            this.hero_move = "idle";
+            this.nama = nama;
+            this.maxHp = 20;
+            this.dodge = 10;
+            this.min_damage = 4;
+            this.max_damage = 8;
+            this.hp = maxHp;
+            speed = 8;
+        }
+    }
+    class Hercules : karakter
+    {
+        public Hercules(string nama) : base(nama)
+        {
+            this.nama = nama;
+            level = 1;
+            skills = new List<Skill>();
+            skills.Add(new smite());
+            skills.Add(new zealous_accusation());
+            skills.Add(new holy_lance());
+            skills.Add(new inspiring_cry());
+            this.hero_equip = new equip[5];
+            this.type = "Melee";
+            this.hero = "hercules";
+            this.hero_move = "idle";
+            this.nama = nama;
+            this.maxHp = 31;
+            this.dodge = 5;
+            this.min_damage = 5;
+            this.max_damage = 9;
+            this.hp = maxHp;
+            speed = 3;
+        }
+    }
+    class giantLady : karakter
+    {
+        public giantLady(string nama) : base(nama)
+        {
+            this.nama = nama;
+            level = 1;
+            skills = new List<Skill>();
+            skills.Add(new smite());
+            skills.Add(new zealous_accusation());
+            skills.Add(new holy_lance());
+            skills.Add(new inspiring_cry());
+            this.hero_equip = new equip[5];
+            this.type = "Melee";
+            this.hero = "giantLady";
+            this.hero_move = "idle";
+            this.nama = nama;
+            this.maxHp = 26;
+            this.dodge = 10;
+            this.min_damage = 6;
+            this.max_damage = 12;
+            this.hp = maxHp;
+            speed = 3;
+        }
+    }
+
+
+
     public enum buff
     {
         poison,

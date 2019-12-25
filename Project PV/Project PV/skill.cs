@@ -89,8 +89,7 @@ namespace Project_PV
             icon = Properties.Resources.plague_doctor_ability_blinding_gas;
         }
     }
-
-    public class divine_grace : Skill
+    class divine_grace : Skill
     {
         public divine_grace()
            : base("Divine Grace", new efek[1], new int[4], new int[4], new status(), 100)
@@ -103,7 +102,7 @@ namespace Project_PV
         }
     }
 
-    public class divine_comfort : Skill
+    class divine_comfort : Skill
     {
         public divine_comfort()
            : base("Divine Comfort", new efek[1], new int[4], new int[4], new status(), 100)
@@ -115,8 +114,7 @@ namespace Project_PV
             icon = Properties.Resources.vestal_ability_divine_comfort;
         }
     }
-
-    public class dazzling_light : Skill
+    class dazzling_light : Skill
     {
         public dazzling_light()
            : base("Dazzling Light", new efek[1], new int[4], new int[4], new status(), 100)
@@ -128,8 +126,7 @@ namespace Project_PV
             icon = Properties.Resources.vestal_ability_dazzling_light;
         }
     }
-
-    public class judgement : Skill
+    class judgement : Skill
     {
         public judgement()
            : base("Judgement", new efek[1], new int[4], new int[4], new status(), 100)
@@ -155,7 +152,7 @@ namespace Project_PV
         }
     }
 
-    public class zealous_accusation : Skill
+    class zealous_accusation : Skill
     {
         public zealous_accusation()
            : base("Divine Comfort", new efek[1], new int[4], new int[4], new status(), 100)
@@ -167,8 +164,7 @@ namespace Project_PV
             icon = Properties.Resources.crusader_ability_zealous_accusation;
         }
     }
-
-    public class holy_lance : Skill
+    class holy_lance : Skill
     {
         public holy_lance()
            : base("Holy Lance", new efek[1], new int[4], new int[4], new status(), 100)
@@ -180,7 +176,7 @@ namespace Project_PV
             icon = Properties.Resources.crusader_ability_holy_lance;
         }
     }
-    public class inspiring_cry : Skill
+    class inspiring_cry : Skill
     {
         public inspiring_cry()
            : base("Inspiring Cry", new efek[1], new int[4], new int[4], new status(), 0)
@@ -192,8 +188,7 @@ namespace Project_PV
             icon = Properties.Resources.crusader_ability_inspiring_cry;
         }
     }
-
-    public class pierce : Skill
+    class pierce : Skill
     {
         public pierce()
            : base("Pierce", new efek[1], new int[4], new int[4], new status(), 0)
@@ -205,8 +200,7 @@ namespace Project_PV
             icon = Properties.Resources.shieldbreaker_ability_pierce;
         }
     }
-
-    public class adders_kiss : Skill
+    class adders_kiss : Skill
     {
         public adders_kiss()
            : base("Adder's Kiss", new efek[1], new int[4], new int[4], new status(), 0)
@@ -218,8 +212,7 @@ namespace Project_PV
             icon = Properties.Resources.shieldbreaker_ability_adder_kiss;
         }
     }
-
-    public class captivate : Skill
+    class captivate : Skill
     {
         public captivate()
            : base("Captivate", new efek[1], new int[4], new int[4], new status(), 0)
@@ -231,8 +224,7 @@ namespace Project_PV
             icon = Properties.Resources.shieldbreaker_ability_captivate;
         }
     }
-
-    public class impale : Skill
+    class impale : Skill
     {
         public impale()
            : base("Impale", new efek[1], new int[4], new int[4], new status(), 0)
@@ -244,7 +236,6 @@ namespace Project_PV
             icon = Properties.Resources.shieldbreaker_ability_impale;
         }
     }
-
     class yeti1 : Skill
     {
         public yeti1()
@@ -871,5 +862,7 @@ namespace Project_PV
         bleed ,
         stun,
         marked,
+        armor,
+        stress
     }
 }

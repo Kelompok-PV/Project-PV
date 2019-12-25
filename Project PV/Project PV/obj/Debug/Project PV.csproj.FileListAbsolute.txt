@@ -156,3 +156,5 @@ C:\xampp\htdocs\Project-PV\Project PV\Project PV\obj\Debug\Project PV.csproj.Gen
 C:\xampp\htdocs\Project-PV\Project PV\Project PV\obj\Debug\Project PV.csproj.CopyComplete
 C:\xampp\htdocs\Project-PV\Project PV\Project PV\obj\Debug\Project PV.exe
 C:\xampp\htdocs\Project-PV\Project PV\Project PV\obj\Debug\Project PV.pdb
+E:\GitHub\Project-PV\Project PV\Project PV\bin\Debug\Resources\icon_character\iceWoman_icon.png
+E:\GitHub\Project-PV\Project PV\Project PV\bin\Debug\Resources\icon_character\giantLady_icon.png
