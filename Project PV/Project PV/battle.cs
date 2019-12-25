@@ -22,11 +22,6 @@ namespace Project_PV
 
         public List<int> locSkill { get; set; }
 
-
-        
-
-        
-
         string aktif = "inv";
 
         int pilih_attack = -1;

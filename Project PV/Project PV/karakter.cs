@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Project_PV
 {
-    public abstract class karakter
+    abstract class karakter
     {
         public string nama { get; set; }
         public int level { get; set; }
@@ -18,7 +18,7 @@ namespace Project_PV
         public string hero { get; set; }//hero-hero_move-hero_move_now hero_move_noww++;
         public string hero_move { get; set; }
         public int hero_move_now { get; set; }
-        public buff hero_buff { get; set; }
+        public List<efek> hero_buff { get; set; }
         public equip[] hero_equip { get; set; }
         public int x { get; set; }
         public string type { get; set; }
@@ -44,6 +44,7 @@ namespace Project_PV
         protected karakter(string nama)
         {
             this.nama = nama;
+            hero_buff = new List<efek>();
             this.hero_stress = new stress();
             this.hero_stress.stress_level = 0;
             this.hero_stress.stress_point = 0;
