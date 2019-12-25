@@ -30,7 +30,9 @@ namespace Project_PV
         bool delay_aktif = false;
 
         int pilihHero = 0;
+        int targetHero = 0;
         int pilihMusuh= 0;
+        int targetMusuh= 0;
         int zoom = 0;
         int zoom_bkg = 0;
 
@@ -56,7 +58,7 @@ namespace Project_PV
             player.Add(gsm.player.currentCharacters[1]);
 
             musuh = new List<musuh>();
-            for (int i = 0; i < 1; i++)
+            for (int i = 0; i < 3; i++)
             {
                 musuh.Add(new yeti(700+i*100));
                 turnAttack.Add(new turn(0, i, musuh[i].speed));
@@ -122,12 +124,23 @@ namespace Project_PV
 
             if (!serang && !serang_musuh)
             {
-                musuh[0].getImage(g);
-                musuh[0].musuh_move_now++;
+                for (int i = 0; i < musuh.Count; i++)
+                {
+                    musuh[i].getImage(g);
+                    musuh[i].musuh_move_now++;
+                }
             }
             else
             {
-                musuh[0].getImageAttack(g, zoom);
+                for (int i = 0; i < musuh.Count; i++)
+                {
+                    if (pilihMusuh != i)
+                    {
+                        musuh[i].getImage(g);
+                        musuh[i].musuh_move_now++;
+                    }
+                }
+                musuh[pilihMusuh].getImageAttack(g, zoom);
             }
 
             if (!serang && !serang_musuh)
@@ -247,32 +260,32 @@ namespace Project_PV
                     prot = player[pilihHero].skills[i].status_skill.def + "";
                 }
             }
-            //for (int i = 0; i < musuh.Count; i++)
-            //{
-            Rectangle recMusuh = new Rectangle(700, 250, 100, 150);
-            if (mouse.IntersectsWith(recMusuh))
+            for (int i = 0; i < musuh.Count; i++)
             {
-
-                if (pilih_attack != -1 && serang == false && serang_musuh == false)
+                Rectangle recMusuh = new Rectangle(musuh[i].x, 250, 100, 150);
+                if (mouse.IntersectsWith(recMusuh))
                 {
-                    Random r = new Random();
-                    int dmg_atk = r.Next(player[pilihHero].skills[pilih_attack].status_skill.dmg_min, player[pilihHero].skills[pilih_attack].status_skill.dmg_max + 1);
-                    musuh[0].hp -= dmg_atk;
-                    serang = true;
-                    player[pilihHero].x = 520;
-                    player[pilihHero].hero_move = "skill" + (pilih_attack + 1);
-                    player[pilihHero].hero_move_now = 1;
-                    //sfx= new SoundPlayer(Properties.Resources.ninja_attack_1);
-                    //sfx.LoadAsync();
 
-                    sfx.Stop();
-                    string RunningPath = AppDomain.CurrentDomain.BaseDirectory;
-                    string FileName = string.Format("{0}Resources\\char_share_imp_sword.wav", Path.GetFullPath(Path.Combine(RunningPath, @"..\..\")));
-                    sfx.Open(new System.Uri(FileName));
-                    sfx.Play();
+                    if (pilih_attack != -1 && serang == false && serang_musuh == false)
+                    {
+                        Random r = new Random();
+                        int dmg_atk = r.Next(player[pilihHero].skills[pilih_attack].status_skill.dmg_min, player[pilihHero].skills[pilih_attack].status_skill.dmg_max + 1);
+                        musuh[i].hp -= dmg_atk;
+                        serang = true;
+                        player[pilihHero].x = 520;
+                        player[pilihHero].hero_move = "skill" + (pilih_attack + 1);
+                        player[pilihHero].hero_move_now = 1;
+                        //sfx= new SoundPlayer(Properties.Resources.ninja_attack_1);
+                        //sfx.LoadAsync();
+
+                        sfx.Stop();
+                        string RunningPath = AppDomain.CurrentDomain.BaseDirectory;
+                        string FileName = string.Format("{0}Resources\\char_share_imp_sword.wav", Path.GetFullPath(Path.Combine(RunningPath, @"..\..\")));
+                        sfx.Open(new System.Uri(FileName));
+                        sfx.Play();
+                    }
                 }
             }
-            //}
 
             for (int i = 0; i < player.Count; i++)
             {
