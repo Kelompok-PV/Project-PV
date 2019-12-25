@@ -727,9 +727,6 @@
   <data name="ninja_skill4___1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ninja_skill4_ (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="mus_combat_courtyard_hallway_intro__16eb5912_0797_4464_a944_76e38cd0a7e9_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\sound\music\combat\mus_combat_courtyard_hallway_intro {16eb5912-0797-4464-a944-76e38cd0a7e9}.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="titleScreen" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sound\music\title\titleScreen.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -867,5 +864,53 @@
   </data>
   <data name="Boarman_idl__9_" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\board_man\Boarman idle\Boarman_idl (9).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="crusader_ability_holy_lance" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\crusader.ability.holy.lance.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="crusader_ability_inspiring_cry" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\crusader.ability.inspiring.cry.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="crusader_ability_smite" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\crusader.ability.smite.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="crusader_ability_zealous_accusation" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\crusader.ability.zealous.accusation.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="plague_doctor_ability_battlefield_medicine" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\plague_doctor.ability.battlefield.medicine.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="plague_doctor_ability_blinding_gas" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\plague_doctor.ability.blinding.gas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="plague_doctor_ability_incision" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\plague_doctor.ability.incision.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="plague_doctor_ability_noxious_blast" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\plague_doctor.ability.noxious.blast.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="shieldbreaker_ability_adder_kiss" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\shieldbreaker.ability.adder.kiss.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="shieldbreaker_ability_captivate" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\shieldbreaker.ability.captivate.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="shieldbreaker_ability_impale" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\shieldbreaker.ability.impale.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="shieldbreaker_ability_pierce" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\shieldbreaker.ability.pierce.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="vestal_ability_dazzling_light" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\vestal.ability.dazzling.light.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="vestal_ability_divine_comfort" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\vestal.ability.divine.comfort.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="vestal_ability_divine_grace" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\vestal.ability.divine.grace.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="vestal_ability_judgement" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\vestal.ability.judgement.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

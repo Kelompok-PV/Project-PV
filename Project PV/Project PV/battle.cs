@@ -109,6 +109,14 @@ namespace Project_PV
             }
             else
             {
+                for (int i = 0; i < player.Count; i++)
+                {
+                    if (pilihHero != i)
+                    {
+                        player[i].getImage(g);
+                        player[i].hero_move_now++;
+                    }
+                }
                 player[pilihHero].getImageAttack(g,zoom);
             }
 
@@ -118,7 +126,7 @@ namespace Project_PV
             g.DrawImage(imgpPlayer, 70 + 22, 420, 528, 100);
             g.DrawImage((Image)Properties.Resources.ResourceManager.GetObject(player[0].hero + "_icon"), 135, 440, 68, 68);
 
-            for (int i = 0; i < 4; i++)
+            for (int i = 0; i < player[pilihHero].skills.Count; i++)
             {
                 g.DrawImage(player[pilihHero].skills[i].icon, 308 + 55 * i, 447, 52, 52);
             }
@@ -358,6 +366,15 @@ namespace Project_PV
                 }
             }
             //}
+
+            for (int i = 0; i < player.Count; i++)
+            {
+                Rectangle recPlayer = new Rectangle(player[i].x, 250, 100, 150);
+                if (recPlayer.IntersectsWith(mouse))
+                {
+                    pilihHero = i;
+                }
+            }
         }
 
         public override void mouse_hover(object sender, MouseEventArgs e)
@@ -427,7 +444,7 @@ namespace Project_PV
                     int dmg_atk = r.Next(musuh[0].skill[pilih_attack_musuh].status_skill.dmg_min, musuh[0].skill[pilih_attack_musuh].status_skill.dmg_max + 1);
                     player[pilihHero].hp -= dmg_atk;
                     musuh[0].x = 650;
-                    player.x = 450;
+                    player[0].x = 450;
                     musuh[0].musuh_move = "attack";
                     musuh[0].musuh_move_now = 1;
                     delay_aktif = false;

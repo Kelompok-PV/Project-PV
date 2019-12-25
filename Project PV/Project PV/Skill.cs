@@ -43,14 +43,14 @@ namespace Project_PV
     class noxius_blast : Skill
     {
         public noxius_blast()
-           : base("noxius_blast",new efek[1],new int[4],new int[4],new status(),10)
+           : base("Noxius Blast", new efek[1], new int[4], new int[4], new status(), 10)
         {
 
-            rank[0]   = 1; rank[1]   = 1; rank[2]   = 1; rank[3] = 0;
+            rank[0] = 1; rank[1] = 1; rank[2] = 1; rank[3] = 0;
             target[0] = 1; target[1] = 1; target[2] = 0; target[3] = 0;
-            status_skill = new status(2,4,20,70,0,-1);
+            status_skill = new status(2, 4, 20, 70, 0, -1);
             skill_efek[0] = efek.blight;
-            icon = Properties.Resources.skill___1_;
+            icon = Properties.Resources.plague_doctor_ability_noxious_blast;
         }
     }
     class incision : Skill
@@ -61,18 +61,20 @@ namespace Project_PV
             rank[0] = 0; rank[1] = 1; rank[2] = 1; rank[3] = 1;
             target[0] = 1; target[1] = 1; target[2] = 0; target[3] = 0;
             status_skill = new status(0, 1, 20, 60, 0, -1);
-            skill_efek[0] = efek.blight; icon = Properties.Resources.skill___2_;
+            skill_efek[0] = efek.blight;
+            icon = Properties.Resources.plague_doctor_ability_incision;
         }
     }
     class battlefield_medicine : Skill
     {
         public battlefield_medicine()
-           : base("battlefield medicine", new efek[1], new int[4], new int[4], new status(), 10)
+           : base("Battlefield Medicine", new efek[1], new int[4], new int[4], new status(), 10)
         {
             rank[0] = 1; rank[1] = 1; rank[2] = 0; rank[3] = 0;
             target[0] = 1; target[1] = 1; target[2] = 1; target[3] = 1;
             status_skill = new status(1, 2, 20, 100, 0, -1);
-            skill_efek[0] = efek.blight; icon = Properties.Resources.skill___3_;
+            skill_efek[0] = efek.blight;
+            icon = Properties.Resources.plague_doctor_ability_battlefield_medicine;
         }
     }
     class bliding_gas: Skill
@@ -83,7 +85,60 @@ namespace Project_PV
             rank[0] = 1; rank[1] = 1; rank[2] = 0; rank[3] = 0;
             target[0] = 0; target[1] = 0; target[2] = 1; target[3] = 1;
             status_skill = new status(3, 4, 20, 70, 0, 3);
-            skill_efek[0] = efek.stun; icon = Properties.Resources.skill___4_;
+            skill_efek[0] = efek.stun;
+            icon = Properties.Resources.plague_doctor_ability_blinding_gas;
+        }
+    }
+
+    public class divine_grace : Skill
+    {
+        public divine_grace()
+           : base("Divine Grace", new efek[1], new int[4], new int[4], new status(), 100)
+        {
+            rank[0] = 1; rank[1] = 1; rank[2] = 0; rank[3] = 0;
+            target[0] = 1; target[1] = 1; target[2] = 1; target[3] = 1;
+            status_skill = new status(4, 5, 20, 100, 0, -1);
+            //skill_efek[0] = efek.stun; 
+            icon = Properties.Resources.vestal_ability_divine_grace;
+        }
+    }
+
+    public class divine_comfort : Skill
+    {
+        public divine_comfort()
+           : base("Divine Comfort", new efek[1], new int[4], new int[4], new status(), 100)
+        {
+            rank[0] = 1; rank[1] = 1; rank[2] = 1; rank[3] = 0;
+            target[0] = 1; target[1] = 1; target[2] = 1; target[3] = 1;
+            status_skill = new status(1, 3, 20, 100, 0, -1);
+            //skill_efek[0] = efek.stun; 
+            icon = Properties.Resources.vestal_ability_divine_comfort;
+        }
+    }
+
+    public class dazzling_light : Skill
+    {
+        public dazzling_light()
+           : base("Dazzling Light", new efek[1], new int[4], new int[4], new status(), 100)
+        {
+            rank[0] = 1; rank[1] = 1; rank[2] = 1; rank[3] = 0;
+            target[0] = 1; target[1] = 1; target[2] = 1; target[3] = 0;
+            status_skill = new status(1, 2, 20, 65, 0, -1);
+            skill_efek[0] = efek.stun;
+            icon = Properties.Resources.vestal_ability_dazzling_light;
+        }
+    }
+
+    public class judgement : Skill
+    {
+        public judgement()
+           : base("Judgement", new efek[1], new int[4], new int[4], new status(), 100)
+        {
+            rank[0] = 1; rank[1] = 1; rank[2] = 0; rank[3] = 0;
+            target[0] = 1; target[1] = 1; target[2] = 1; target[3] = 1;
+            status_skill = new status(1, 3, 20, 55, 0, -1);
+            //skill_efek[0] = efek.stun; 
+            icon = Properties.Resources.vestal_ability_judgement;
         }
     }
 
@@ -94,8 +149,99 @@ namespace Project_PV
         {
             rank[0] = 0; rank[1] = 0; rank[2] = 1; rank[3] = 1;
             target[0] = 1; target[1] = 1; target[2] = 0; target[3] = 0;
-            status_skill = new status(6, 8, 0, 70, 0,-1);
-            skill_efek[0] = efek.stun; icon = Properties.Resources.skill___3_;
+            status_skill = new status(6, 8, 0, 70, 0, -1);
+            skill_efek[0] = efek.stun; 
+            icon = Properties.Resources.crusader_ability_smite;
+        }
+    }
+
+    public class zealous_accusation : Skill
+    {
+        public zealous_accusation()
+           : base("Divine Comfort", new efek[1], new int[4], new int[4], new status(), 100)
+        {
+            rank[0] = 0; rank[1] = 0; rank[2] = 1; rank[3] = 1;
+            target[0] = 1; target[1] = 1; target[2] = 0; target[3] = 0;
+            status_skill = new status(3, 4, 0, 60, 0, -1);
+            skill_efek[0] = efek.stun;
+            icon = Properties.Resources.crusader_ability_zealous_accusation;
+        }
+    }
+
+    public class holy_lance : Skill
+    {
+        public holy_lance()
+           : base("Holy Lance", new efek[1], new int[4], new int[4], new status(), 100)
+        {
+            rank[0] = 1; rank[1] = 1; rank[2] = 0; rank[3] = 0;
+            target[0] = 0; target[1] = 1; target[2] = 1; target[3] = 1;
+            status_skill = new status(3, 4, 22, 55, 0, -1);
+            //skill_efek[0] = efek.stun; 
+            icon = Properties.Resources.crusader_ability_holy_lance;
+        }
+    }
+    public class inspiring_cry : Skill
+    {
+        public inspiring_cry()
+           : base("Inspiring Cry", new efek[1], new int[4], new int[4], new status(), 0)
+        {
+            rank[0] = 1; rank[1] = 1; rank[2] = 1; rank[3] = 1;
+            target[0] = 1; target[1] = 1; target[2] = 1; target[3] = 1;
+            status_skill = new status(0, 1, 0, 100, 0, -1);
+            skill_efek[0] = efek.stress;
+            icon = Properties.Resources.crusader_ability_inspiring_cry;
+        }
+    }
+
+    public class pierce : Skill
+    {
+        public pierce()
+           : base("Pierce", new efek[1], new int[4], new int[4], new status(), 0)
+        {
+            rank[0] = 0; rank[1] = 1; rank[2] = 1; rank[3] = 1;
+            target[0] = 1; target[1] = 1; target[2] = 1; target[3] = 1;
+            status_skill = new status(5, 7, 20, 60, 0, -1);
+            skill_efek[0] = efek.armor;
+            icon = Properties.Resources.shieldbreaker_ability_pierce;
+        }
+    }
+
+    public class adders_kiss : Skill
+    {
+        public adders_kiss()
+           : base("Adder's Kiss", new efek[1], new int[4], new int[4], new status(), 0)
+        {
+            rank[0] = 0; rank[1] = 0; rank[2] = 0; rank[3] = 1;
+            target[0] = 1; target[1] = 1; target[2] = 0; target[3] = 0;
+            status_skill = new status(4, 6, 20, 60, 0, -1);
+            skill_efek[0] = efek.blight;
+            icon = Properties.Resources.shieldbreaker_ability_adder_kiss;
+        }
+    }
+
+    public class captivate : Skill
+    {
+        public captivate()
+           : base("Captivate", new efek[1], new int[4], new int[4], new status(), 0)
+        {
+            rank[0] = 0; rank[1] = 1; rank[2] = 1; rank[3] = 0;
+            target[0] = 0; target[1] = 1; target[2] = 1; target[3] = 0;
+            status_skill = new status(2, 4, 20, 60, 0, -1);
+            skill_efek[0] = efek.marked;
+            icon = Properties.Resources.shieldbreaker_ability_captivate;
+        }
+    }
+
+    public class impale : Skill
+    {
+        public impale()
+           : base("Impale", new efek[1], new int[4], new int[4], new status(), 0)
+        {
+            rank[0] = 0; rank[1] = 0; rank[2] = 0; rank[3] = 1;
+            target[0] = 1; target[1] = 1; target[2] = 1; target[3] = 1;
+            status_skill = new status(4, 6, 22, 60, 0, -1);
+            //skill_efek[0] = efek.; 
+            icon = Properties.Resources.shieldbreaker_ability_impale;
         }
     }
 

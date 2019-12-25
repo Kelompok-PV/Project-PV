@@ -792,6 +792,46 @@ namespace Project_PV.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap crusader_ability_holy_lance {
+            get {
+                object obj = ResourceManager.GetObject("crusader_ability_holy_lance", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap crusader_ability_inspiring_cry {
+            get {
+                object obj = ResourceManager.GetObject("crusader_ability_inspiring_cry", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap crusader_ability_smite {
+            get {
+                object obj = ResourceManager.GetObject("crusader_ability_smite", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap crusader_ability_zealous_accusation {
+            get {
+                object obj = ResourceManager.GetObject("crusader_ability_zealous_accusation", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap currency_gold_icon {
             get {
                 object obj = ResourceManager.GetObject("currency_gold_icon", resourceCulture);
@@ -1521,6 +1561,46 @@ namespace Project_PV.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap plague_doctor_ability_battlefield_medicine {
+            get {
+                object obj = ResourceManager.GetObject("plague_doctor_ability_battlefield_medicine", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap plague_doctor_ability_blinding_gas {
+            get {
+                object obj = ResourceManager.GetObject("plague_doctor_ability_blinding_gas", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap plague_doctor_ability_incision {
+            get {
+                object obj = ResourceManager.GetObject("plague_doctor_ability_incision", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap plague_doctor_ability_noxious_blast {
+            get {
+                object obj = ResourceManager.GetObject("plague_doctor_ability_noxious_blast", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap progression_bar {
             get {
                 object obj = ResourceManager.GetObject("progression_bar", resourceCulture);
@@ -1874,6 +1954,46 @@ namespace Project_PV.Properties {
         internal static System.Drawing.Bitmap selected_charslide {
             get {
                 object obj = ResourceManager.GetObject("selected_charslide", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap shieldbreaker_ability_adder_kiss {
+            get {
+                object obj = ResourceManager.GetObject("shieldbreaker_ability_adder_kiss", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap shieldbreaker_ability_captivate {
+            get {
+                object obj = ResourceManager.GetObject("shieldbreaker_ability_captivate", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap shieldbreaker_ability_impale {
+            get {
+                object obj = ResourceManager.GetObject("shieldbreaker_ability_impale", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap shieldbreaker_ability_pierce {
+            get {
+                object obj = ResourceManager.GetObject("shieldbreaker_ability_pierce", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -2323,6 +2443,46 @@ namespace Project_PV.Properties {
             get {
                 object obj = ResourceManager.GetObject("tst", resourceCulture);
                 return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap vestal_ability_dazzling_light {
+            get {
+                object obj = ResourceManager.GetObject("vestal_ability_dazzling_light", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap vestal_ability_divine_comfort {
+            get {
+                object obj = ResourceManager.GetObject("vestal_ability_divine_comfort", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap vestal_ability_divine_grace {
+            get {
+                object obj = ResourceManager.GetObject("vestal_ability_divine_grace", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap vestal_ability_judgement {
+            get {
+                object obj = ResourceManager.GetObject("vestal_ability_judgement", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
