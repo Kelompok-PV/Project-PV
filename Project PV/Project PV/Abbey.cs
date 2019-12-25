@@ -23,6 +23,7 @@ namespace Project_PV
 		List<int> yRoster;
 		private Player player;
 		List<Rectangle> rosterField = new List<Rectangle>();
+		List<int> statusabbey = new List<int>();
 		public Abbey(GameStateManager gsm)
 		{
 			this.gsm = gsm;
@@ -42,27 +43,30 @@ namespace Project_PV
             for (int i = 0; i < 2; i++)
             {
                 unlockset.Add(new unlockoverlay(cx, cy));
-               
-                    cx += 130;
-                
-            }
-			cy += 210;
-			cx = 960;
-			for (int i = 0; i < 2; i++)
-			{
-				unlockset.Add(new unlockoverlay(cx, cy));
-
+				karacters.Add(new Selected_karacter(cx - 65, cy + 65, i + 1));
+				statusabbey.Add(-1);
 				cx += 130;
-
+				
 			}
 			cy += 210;
 			cx = 960;
 			for (int i = 0; i < 2; i++)
 			{
 				unlockset.Add(new unlockoverlay(cx, cy));
-
+				karacters.Add(new Selected_karacter(cx - 65, cy + 65, i + 1));
+				statusabbey.Add(-1);
 				cx += 130;
-
+				
+			}
+			cy += 210;
+			cx = 960;
+			for (int i = 0; i < 2; i++)
+			{
+				unlockset.Add(new unlockoverlay(cx, cy));
+				karacters.Add(new Selected_karacter(cx - 65, cy + 65, i + 1));
+				statusabbey.Add(-1);
+				cx += 130;
+				
 			}
 			//rooster add
 			frameObj = Properties.Resources.rosterelement_res1;
@@ -75,6 +79,8 @@ namespace Project_PV
 				rosterField.Add(new Rectangle(xRoster + 10, yRoster[i], 260, 80));
 				yRoster.Add(yRoster[i]);
 			}
+
+			
 		}
 
 		int xRoster = 1105;
@@ -140,6 +146,21 @@ namespace Project_PV
 			if (selected && index != -1)
 			{
 				g.DrawImage(player.myCharacter[index].getIcon(), x, y, 50, 50);
+			}
+
+			for (int i = 0; i < karacters.Count; i++)
+			{
+				//g.DrawImage(img1, karacters[i].x, karacters[i].y, 52, 52);
+
+				try
+				{
+					g.DrawImage(karacters[i].GetKarakter().getIcon(), karacters[i].x, karacters[i].y, 90,90);
+				}
+				catch (Exception)
+				{
+
+				}
+				//g.FillRectangle(new SolidBrush(Color.Red), karacters[i].x, karacters[i].y, 100,100);
 			}
 
 		}
