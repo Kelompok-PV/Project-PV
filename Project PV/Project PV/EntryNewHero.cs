@@ -44,8 +44,8 @@ namespace Project_PV
                 yRoster += 75;
 
                 karakter karakter;
-                int type = rand.Next(4);
-
+                int type = rand.Next(8);
+                type = 5;
                 switch (type)
                 {
                     case 0:
@@ -57,8 +57,20 @@ namespace Project_PV
                     case 2:
                         karakter = new druid("Druid");
                         break;
-                    default:
+                    case 3:
                         karakter = new archer("Archer");
+                        break;
+                    case 4:
+                        karakter = new giantLady("Rukka");
+                        break;
+                    case 5:
+                        karakter = new Tony("Stark");
+                        break;
+                    case 6:
+                        karakter = new IceWoman("Frozen");
+                        break;
+                    default:
+                        karakter = new Hercules("Herher");
                         break;
                 }
                 newHeroes[i].karakter = karakter;

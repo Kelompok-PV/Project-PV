@@ -89,7 +89,6 @@ namespace Project_PV
             icon = Properties.Resources.plague_doctor_ability_blinding_gas;
         }
     }
-
     class divine_grace : Skill
     {
         public divine_grace()
@@ -115,7 +114,6 @@ namespace Project_PV
             icon = Properties.Resources.vestal_ability_divine_comfort;
         }
     }
-
     class dazzling_light : Skill
     {
         public dazzling_light()
@@ -128,7 +126,6 @@ namespace Project_PV
             icon = Properties.Resources.vestal_ability_dazzling_light;
         }
     }
-
     class judgement : Skill
     {
         public judgement()
@@ -167,7 +164,6 @@ namespace Project_PV
             icon = Properties.Resources.crusader_ability_zealous_accusation;
         }
     }
-
     class holy_lance : Skill
     {
         public holy_lance()
@@ -192,7 +188,6 @@ namespace Project_PV
             icon = Properties.Resources.crusader_ability_inspiring_cry;
         }
     }
-
     class pierce : Skill
     {
         public pierce()
@@ -205,7 +200,6 @@ namespace Project_PV
             icon = Properties.Resources.shieldbreaker_ability_pierce;
         }
     }
-
     class adders_kiss : Skill
     {
         public adders_kiss()
@@ -218,7 +212,6 @@ namespace Project_PV
             icon = Properties.Resources.shieldbreaker_ability_adder_kiss;
         }
     }
-
     class captivate : Skill
     {
         public captivate()
@@ -231,7 +224,6 @@ namespace Project_PV
             icon = Properties.Resources.shieldbreaker_ability_captivate;
         }
     }
-
     class impale : Skill
     {
         public impale()
@@ -244,7 +236,6 @@ namespace Project_PV
             icon = Properties.Resources.shieldbreaker_ability_impale;
         }
     }
-
     class yeti1 : Skill
     {
         public yeti1()

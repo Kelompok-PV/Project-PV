@@ -506,7 +506,9 @@
     <None Include="Resources\icon_character\aladin_icon.png" />
     <None Include="Resources\icon_character\archer_icon.png" />
     <None Include="Resources\icon_character\druid_icon.png" />
-    <None Include="Resources\icon_character\giantLady_icon.png" />
+    <None Include="Resources\icon_character\giantLady_icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="Resources\icon_character\hercules_icon.png" />
     <None Include="Resources\icon_character\ninja_icon.png" />
     <None Include="Resources\icon_character\tonyStark_icon.png" />
@@ -593,6 +595,56 @@
     <None Include="Resources\plague_doctor.ability.blinding.gas.png" />
     <None Include="Resources\plague_doctor.ability.incision.png" />
     <None Include="Resources\plague_doctor.ability.noxious.blast.png" />
+    <None Include="Resources\icon_character\iceWoman_icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\karakter\giantLady\idle_fix\giantlady_idle %281%29.png" />
+    <None Include="Resources\karakter\giantLady\idle_fix\giantlady_idle %282%29.png" />
+    <None Include="Resources\karakter\giantLady\idle_fix\giantlady_idle %283%29.png" />
+    <None Include="Resources\karakter\giantLady\idle_fix\giantlady_idle %284%29.png" />
+    <None Include="Resources\karakter\giantLady\idle_fix\giantlady_idle %285%29.png" />
+    <None Include="Resources\karakter\giantLady\idle_fix\giantlady_idle %286%29.png" />
+    <None Include="Resources\karakter\giantLady\idle_fix\giantlady_idle %287%29.png" />
+    <None Include="Resources\karakter\giantLady\idle_fix\giantlady_idle %288%29.png" />
+    <None Include="Resources\karakter\giantLady\idle_fix\giantlady_idle %289%29.png" />
+    <None Include="Resources\karakter\hercules\Idle2\hercules_idle_ %281%29.png" />
+    <None Include="Resources\karakter\hercules\Idle2\hercules_idle_ %282%29.png" />
+    <None Include="Resources\karakter\hercules\Idle2\hercules_idle_ %283%29.png" />
+    <None Include="Resources\karakter\hercules\Idle2\hercules_idle_ %284%29.png" />
+    <None Include="Resources\karakter\hercules\Idle2\hercules_idle_ %285%29.png" />
+    <None Include="Resources\karakter\hercules\Idle2\hercules_idle_ %286%29.png" />
+    <None Include="Resources\karakter\hercules\Idle2\hercules_idle_ %287%29.png" />
+    <None Include="Resources\karakter\hercules\Idle2\hercules_idle_ %288%29.png" />
+    <None Include="Resources\karakter\tonyStark\Idle\tonyStark_idle %281%29.png" />
+    <None Include="Resources\karakter\tonyStark\Idle\tonyStark_idle %282%29.png" />
+    <None Include="Resources\karakter\tonyStark\Idle\tonyStark_idle %283%29.png" />
+    <None Include="Resources\karakter\tonyStark\Idle\tonyStark_idle %284%29.png" />
+    <None Include="Resources\karakter\tonyStark\Idle\tonyStark_idle %285%29.png" />
+    <None Include="Resources\karakter\tonyStark\Idle\tonyStark_idle %286%29.png" />
+    <None Include="Resources\karakter\tonyStark\Idle\tonyStark_idle %287%29.png" />
+    <None Include="Resources\karakter\tonyStark\Idle\tonyStark_idle %288%29.png" />
+    <None Include="Resources\karakter\tonyStark\Idle\tonyStark_idle %289%29.png" />
+    <None Include="Resources\karakter\tonyStark\Idle\tonyStark_idle %2810%29.png" />
+    <None Include="Resources\karakter\tonyStark\Idle\tonyStark_idle %2811%29.png" />
+    <None Include="Resources\karakter\tonyStark\Idle\tonyStark_idle %2812%29.png" />
+    <None Include="Resources\karakter\tonyStark\Idle\tonyStark_idle %2813%29.png" />
+    <None Include="Resources\karakter\tonyStark\Idle\tonyStark_idle %2814%29.png" />
+    <None Include="Resources\karakter\tonyStark\Idle\tonyStark_idle %2815%29.png" />
+    <None Include="Resources\karakter\tonyStark\Idle\tonyStark_idle %2816%29.png" />
+    <None Include="Resources\karakter\tonyStark\Idle\tonyStark_idle %2817%29.png" />
+    <None Include="Resources\karakter\tonyStark\Idle\tonyStark_idle %2818%29.png" />
+    <None Include="Resources\karakter\tonyStark\Idle\tonyStark_idle %2819%29.png" />
+    <None Include="Resources\karakter\tonyStark\Idle\tonyStark_idle %2820%29.png" />
+    <None Include="Resources\karakter\tonyStark\Idle\tonyStark_idle %2821%29.png" />
+    <None Include="Resources\karakter\tonyStark\Idle\tonyStark_idle %2822%29.png" />
+    <None Include="Resources\karakter\iceWoman\Idle\iceWoman_idle %281%29.png" />
+    <None Include="Resources\karakter\iceWoman\Idle\iceWoman_idle %282%29.png" />
+    <None Include="Resources\karakter\iceWoman\Idle\iceWoman_idle %283%29.png" />
+    <None Include="Resources\karakter\iceWoman\Idle\iceWoman_idle %284%29.png" />
+    <None Include="Resources\karakter\iceWoman\Idle\iceWoman_idle %285%29.png" />
+    <None Include="Resources\karakter\iceWoman\Idle\iceWoman_idle %286%29.png" />
+    <None Include="Resources\karakter\iceWoman\Idle\iceWoman_idle %287%29.png" />
+    <None Include="Resources\karakter\iceWoman\Idle\iceWoman_idle %288%29.png" />
     <None Include="Resources\aladin_skill1 %281%29.png" />
     <None Include="Resources\aladin_skill1 %282%29.png" />
     <None Include="Resources\aladin_skill1 %283%29.png" />

@@ -1172,6 +1172,96 @@ namespace Project_PV.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap giantlady_idle__1_ {
+            get {
+                object obj = ResourceManager.GetObject("giantlady_idle__1_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap giantlady_idle__2_ {
+            get {
+                object obj = ResourceManager.GetObject("giantlady_idle__2_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap giantlady_idle__3_ {
+            get {
+                object obj = ResourceManager.GetObject("giantlady_idle__3_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap giantlady_idle__4_ {
+            get {
+                object obj = ResourceManager.GetObject("giantlady_idle__4_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap giantlady_idle__5_ {
+            get {
+                object obj = ResourceManager.GetObject("giantlady_idle__5_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap giantlady_idle__6_ {
+            get {
+                object obj = ResourceManager.GetObject("giantlady_idle__6_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap giantlady_idle__7_ {
+            get {
+                object obj = ResourceManager.GetObject("giantlady_idle__7_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap giantlady_idle__8_ {
+            get {
+                object obj = ResourceManager.GetObject("giantlady_idle__8_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap giantlady_idle__9_ {
+            get {
+                object obj = ResourceManager.GetObject("giantlady_idle__9_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap gold {
             get {
                 object obj = ResourceManager.GetObject("gold", resourceCulture);
@@ -1242,6 +1332,86 @@ namespace Project_PV.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap hercules_idle___1_ {
+            get {
+                object obj = ResourceManager.GetObject("hercules_idle___1_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap hercules_idle___2_ {
+            get {
+                object obj = ResourceManager.GetObject("hercules_idle___2_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap hercules_idle___3_ {
+            get {
+                object obj = ResourceManager.GetObject("hercules_idle___3_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap hercules_idle___4_ {
+            get {
+                object obj = ResourceManager.GetObject("hercules_idle___4_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap hercules_idle___5_ {
+            get {
+                object obj = ResourceManager.GetObject("hercules_idle___5_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap hercules_idle___6_ {
+            get {
+                object obj = ResourceManager.GetObject("hercules_idle___6_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap hercules_idle___7_ {
+            get {
+                object obj = ResourceManager.GetObject("hercules_idle___7_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap hercules_idle___8_ {
+            get {
+                object obj = ResourceManager.GetObject("hercules_idle___8_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap hero_slot_background {
             get {
                 object obj = ResourceManager.GetObject("hero_slot_background", resourceCulture);
@@ -1255,6 +1425,96 @@ namespace Project_PV.Properties {
         internal static System.Drawing.Bitmap hero_slot_positive_frame {
             get {
                 object obj = ResourceManager.GetObject("hero_slot_positive_frame", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iceWoman_icon {
+            get {
+                object obj = ResourceManager.GetObject("iceWoman_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iceWoman_idle___1_ {
+            get {
+                object obj = ResourceManager.GetObject("iceWoman_idle___1_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iceWoman_idle___2_ {
+            get {
+                object obj = ResourceManager.GetObject("iceWoman_idle___2_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iceWoman_idle___3_ {
+            get {
+                object obj = ResourceManager.GetObject("iceWoman_idle___3_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iceWoman_idle___4_ {
+            get {
+                object obj = ResourceManager.GetObject("iceWoman_idle___4_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iceWoman_idle___5_ {
+            get {
+                object obj = ResourceManager.GetObject("iceWoman_idle___5_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iceWoman_idle___6_ {
+            get {
+                object obj = ResourceManager.GetObject("iceWoman_idle___6_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iceWoman_idle___7_ {
+            get {
+                object obj = ResourceManager.GetObject("iceWoman_idle___7_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iceWoman_idle___8_ {
+            get {
+                object obj = ResourceManager.GetObject("iceWoman_idle___8_", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -2279,6 +2539,15 @@ namespace Project_PV.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to tonyStark_idle___1_.
+        /// </summary>
+        internal static string String {
+            get {
+                return ResourceManager.GetString("String", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap The_Blood {
@@ -2303,6 +2572,226 @@ namespace Project_PV.Properties {
         internal static System.Drawing.Bitmap tonyStark_icon {
             get {
                 object obj = ResourceManager.GetObject("tonyStark_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tonyStark_idle___1_ {
+            get {
+                object obj = ResourceManager.GetObject("tonyStark_idle___1_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tonyStark_idle___2_ {
+            get {
+                object obj = ResourceManager.GetObject("tonyStark_idle___2_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tonyStark_idle___3_ {
+            get {
+                object obj = ResourceManager.GetObject("tonyStark_idle___3_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tonyStark_idle___4_ {
+            get {
+                object obj = ResourceManager.GetObject("tonyStark_idle___4_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tonyStark_idle___5_ {
+            get {
+                object obj = ResourceManager.GetObject("tonyStark_idle___5_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tonyStark_idle___6_ {
+            get {
+                object obj = ResourceManager.GetObject("tonyStark_idle___6_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tonyStark_idle__10_ {
+            get {
+                object obj = ResourceManager.GetObject("tonyStark_idle__10_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tonyStark_idle__11_ {
+            get {
+                object obj = ResourceManager.GetObject("tonyStark_idle__11_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tonyStark_idle__12_ {
+            get {
+                object obj = ResourceManager.GetObject("tonyStark_idle__12_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tonyStark_idle__13_ {
+            get {
+                object obj = ResourceManager.GetObject("tonyStark_idle__13_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tonyStark_idle__14_ {
+            get {
+                object obj = ResourceManager.GetObject("tonyStark_idle__14_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tonyStark_idle__15_ {
+            get {
+                object obj = ResourceManager.GetObject("tonyStark_idle__15_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tonyStark_idle__16_ {
+            get {
+                object obj = ResourceManager.GetObject("tonyStark_idle__16_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tonyStark_idle__17_ {
+            get {
+                object obj = ResourceManager.GetObject("tonyStark_idle__17_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tonyStark_idle__18_ {
+            get {
+                object obj = ResourceManager.GetObject("tonyStark_idle__18_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tonyStark_idle__19_ {
+            get {
+                object obj = ResourceManager.GetObject("tonyStark_idle__19_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tonyStark_idle__20_ {
+            get {
+                object obj = ResourceManager.GetObject("tonyStark_idle__20_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tonyStark_idle__21_ {
+            get {
+                object obj = ResourceManager.GetObject("tonyStark_idle__21_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tonyStark_idle__22_ {
+            get {
+                object obj = ResourceManager.GetObject("tonyStark_idle__22_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tonyStark_idle__7_ {
+            get {
+                object obj = ResourceManager.GetObject("tonyStark_idle__7_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tonyStark_idle__8_ {
+            get {
+                object obj = ResourceManager.GetObject("tonyStark_idle__8_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tonyStark_idle__9_ {
+            get {
+                object obj = ResourceManager.GetObject("tonyStark_idle__9_", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
