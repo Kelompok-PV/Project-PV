@@ -25,8 +25,9 @@ namespace Project_PV
         public int dodge { get; set; }
         public int min_damage { get; set; }
         public int max_damage { get; set; }
+        public int speed { get; set; }
 
-        protected karakter(string nama,string type ,int hp, string hero, string hero_move, int hero_move_now, equip[] hero_equip, int dodge,int maxHp,int min_dmg,int damage)
+        protected karakter(string nama,string type ,int hp, string hero, string hero_move, int hero_move_now, equip[] hero_equip, int dodge,int maxHp,int min_dmg,int damage,int speed)
         {
             this.nama = nama;
             this.hp = hp;
@@ -39,6 +40,7 @@ namespace Project_PV
             x = 300;
             this.maxHp = maxHp;
             this.max_damage = damage;
+            this.speed=speed;;
         }
 
         protected karakter(string nama)
@@ -125,6 +127,7 @@ namespace Project_PV
             this.hp = 33;
             this.type = "Ninja";
             this.hero_move = "idle";
+            this.speed = 10;
             this.nama = nama;
             this.hero = "ninja";
 
@@ -153,6 +156,14 @@ namespace Project_PV
             this.min_damage = 4;
             this.max_damage = 7;
             this.hp = 22;
+            this.speed = 20;
+
+
+            skills = new List<Skill>();
+            skills.Add(new divine_comfort());
+            skills.Add(new divine_comfort());
+            skills.Add(new smite());
+            skills.Add(new bliding_gas());
         }
 
         //jarak jauh

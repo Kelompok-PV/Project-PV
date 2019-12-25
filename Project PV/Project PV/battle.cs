@@ -23,10 +23,6 @@ namespace Project_PV
         public List<int> locSkill { get; set; }
 
 
-        
-
-        
-
         string aktif = "inv";
 
         int pilih_attack = -1;
@@ -35,6 +31,7 @@ namespace Project_PV
         bool delay_aktif = false;
 
         int pilihHero = 0;
+        int pilihMusuh= 0;
         int zoom = 0;
         int zoom_bkg = 0;
 
@@ -42,6 +39,9 @@ namespace Project_PV
 
         MediaPlayer myPlayer = new MediaPlayer();
         MediaPlayer sfx = new MediaPlayer();
+
+        List<turn> turnAttack = new List<turn>();
+        int turn_ke = 0;
         public battle(GameStateManager gsm,Image back)
         {
             string RunningPath = AppDomain.CurrentDomain.BaseDirectory;
@@ -57,11 +57,12 @@ namespace Project_PV
             player.Add(gsm.player.currentCharacters[1]);
 
             musuh = new List<musuh>();
-            musuh.Add(new yeti(700));
-            background =back;
+            for (int i = 0; i < 1; i++)
+            {
+                musuh.Add(new yeti(700+i*100));
+                turnAttack.Add(new turn(0, i, musuh[i].speed));
+            }
 
-            imgpPlayer = (Image)Properties.Resources.ResourceManager.GetObject("panel_player2");
-            imgpInv = (Image)Properties.Resources.ResourceManager.GetObject("panel_inventory");
 
             locSkill = new List<int>();
             locSkill.Add(310);
@@ -72,6 +73,32 @@ namespace Project_PV
             for (int i = 0; i < player.Count; i++)
             {
                 player[i].x = 350 - 100 * i;
+                turnAttack.Add(new turn(1, i, player[i].speed));
+            }
+
+            for (int i = 0; i < turnAttack.Count-1; i++)
+            {
+                for (int j = 0; j < turnAttack.Count - i-1; j++)
+                {
+                    if (turnAttack[j].speed < turnAttack[j + 1].speed)
+                    {
+
+                        turn temp = turnAttack[j];
+                        turnAttack[j] = turnAttack[j + 1];
+                        turnAttack[j + 1] = temp;
+                    }
+                }
+            }
+
+
+
+            background = back;
+            imgpPlayer = (Image)Properties.Resources.ResourceManager.GetObject("panel_player2");
+            imgpInv = (Image)Properties.Resources.ResourceManager.GetObject("panel_inventory");
+
+            if (turnAttack[0].jenis == 1)
+            {
+                pilihHero = turnAttack[0].ke;
             }
         }
         Image imgpPlayer;
@@ -187,130 +214,6 @@ namespace Project_PV
         string prot =  "10";
 
 
-        public Image SetImageOpacity(Image image, float opacity)
-        {
-            try
-            {
-                //create a Bitmap the size of the image provided  
-                Bitmap bmp = new Bitmap(image.Width, image.Height);
-
-                //create a graphics object from the image  
-                using (Graphics gfx = Graphics.FromImage(bmp))
-                {
-
-                    //create a color matrix object  
-                    ColorMatrix matrix = new ColorMatrix();
-
-                    //set the opacity  
-                    matrix.Matrix33 = opacity;
-
-                    //create image attributes  
-                    ImageAttributes attributes = new ImageAttributes();
-
-                    //set the color(opacity) of the image  
-                    attributes.SetColorMatrix(matrix, ColorMatrixFlag.Default, ColorAdjustType.Bitmap);
-
-                    //now draw the image  
-                    gfx.DrawImage(image, new Rectangle(0, 0, bmp.Width, bmp.Height), 0, 0, image.Width, image.Height, GraphicsUnit.Pixel, attributes);
-                }
-                return bmp;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-                return null;
-            }
-        }
-        //private Bitmap FastBoxBlur(Bitmap img, int radius)
-        //{
-        //    int kSize = radius;
-        //    if (kSize % 2 == 0) kSize++;
-        //    Bitmap Hblur = img;
-        //    float Avg = (float)1 / kSize;
-        //    for (int j = 0; j < img.Height; j++)
-        //    {
-
-        //        float[] hSum = new float[] { 0f, 0f, 0f, 0f };
-        //        float[] iAvg = new float[] { 0f, 0f, 0f, 0f };
-
-        //        for (int x = 0; x < kSize; x++)
-        //        {
-        //            Color tmpColor = img.GetPixel(x, j);
-        //            hSum[0] += tmpColor.A;
-        //            hSum[1] += tmpColor.R;
-        //            hSum[2] += tmpColor.G;
-        //            hSum[3] += tmpColor.B;
-        //        }
-        //        iAvg[0] = hSum[0] * Avg;
-        //        iAvg[1] = hSum[1] * Avg;
-        //        iAvg[2] = hSum[2] * Avg;
-        //        iAvg[3] = hSum[3] * Avg;
-        //        for (int i = 0; i < img.Width; i++)
-        //        {
-        //            if (i - kSize / 2 >= 0 && i + 1 + kSize / 2 < img.Width)
-        //            {
-        //                int pros = i - kSize / 2;
-        //                Color tmp_pColor = img.GetPixel(pros, j);
-        //                hSum[0] -= tmp_pColor.A;
-        //                hSum[1] -= tmp_pColor.R;
-        //                hSum[2] -= tmp_pColor.G;
-        //                hSum[3] -= tmp_pColor.B;
-        //                Color tmp_nColor = img.GetPixel(i + 1 + kSize / 2, j);
-        //                hSum[0] += tmp_nColor.A;
-        //                hSum[1] += tmp_nColor.R;
-        //                hSum[2] += tmp_nColor.G;
-        //                hSum[3] += tmp_nColor.B;
-        //                //
-        //                iAvg[0] = hSum[0] * Avg;
-        //                iAvg[1] = hSum[1] * Avg;
-        //                iAvg[2] = hSum[2] * Avg;
-        //                iAvg[3] = hSum[3] * Avg;
-        //                Hblur.SetPixel(i, j, Color.FromArgb((int)iAvg[0], (int)iAvg[1], (int)iAvg[2], (int)iAvg[3]));
-        //            }
-        //        }
-        //    }
-        //    Bitmap total = Hblur;
-        //    for (int i = 0; i < Hblur.Width; i++)
-        //    {
-        //        float[] tSum = new float[] { 0f, 0f, 0f, 0f };
-        //        float[] iAvg = new float[] { 0f, 0f, 0f, 0f };
-        //        for (int y = 0; y < kSize; y++)
-        //        {
-        //            Color tmpColor = Hblur.GetPixel(i, y);
-        //            tSum[0] += tmpColor.A;
-        //            tSum[1] += tmpColor.R;
-        //            tSum[2] += tmpColor.G;
-        //            tSum[3] += tmpColor.B;
-        //            iAvg[0] = tSum[0] * Avg;
-        //            iAvg[1] = tSum[1] * Avg;
-        //            iAvg[2] = tSum[2] * Avg;
-        //            iAvg[3] = tSum[3] * Avg;
-
-        //            for (int j = 0; j < Hblur.Height; j++) {
-        //                if (j - kSize / 2 >= 0 && j + 1 + kSize / 2 < Hblur.Height) {
-        //                    int pros = j - kSize / 2;
-        //                    Color tmp_pColor = Hblur.GetPixel(i, pros);
-        //                    tSum[0] -= tmp_pColor.A;
-        //                    tSum[1] -= tmp_pColor.R;
-        //                    tSum[2] -= tmp_pColor.G;
-        //                    tSum[3] -= tmp_pColor.B;
-        //                    Color tmp_nColor = Hblur.GetPixel(i, j + 1 + kSize / 2);
-        //                    tSum[0] += tmp_nColor.A;
-        //                    tSum[1] += tmp_nColor.R;
-        //                    tSum[2] += tmp_nColor.G;
-        //                    tSum[3] += tmp_nColor.B;
-        //                    //
-        //                    iAvg[0] = tSum[0] * Avg;
-        //                    iAvg[1] = tSum[1] * Avg;
-        //                    iAvg[2] = tSum[2] * Avg;
-        //                    iAvg[3] = tSum[3] * Avg;
-        //                }
-        //                total.SetPixel(i, j, Color.FromArgb((int)iAvg[0], (int)iAvg[1], (int)iAvg[2], (int)iAvg[3]));
-        //            }
-        //        }
-        //    }
-        //    return total;
-        //}
         public override void init()
         {
             
@@ -351,7 +254,7 @@ namespace Project_PV
             if (mouse.IntersectsWith(recMusuh))
             {
 
-                if (pilih_attack != -1)
+                if (pilih_attack != -1 && serang == false && serang_musuh == false)
                 {
                     Random r = new Random();
                     int dmg_atk = r.Next(player[pilihHero].skills[pilih_attack].status_skill.dmg_min, player[pilihHero].skills[pilih_attack].status_skill.dmg_max + 1);
@@ -394,11 +297,12 @@ namespace Project_PV
 
         public override void update()
         {
-            if (zoom <= 80 && (serang == true||serang_musuh==true))
+            if (zoom <= 80 && (serang == true || serang_musuh == true))
             {
                 zoom += 30;
                 zoom_bkg += 70;
             }
+
             if (serang)
             {
                 timer_attack++;
@@ -410,33 +314,36 @@ namespace Project_PV
                 timer_attack++;
                 musuh[0].x -= 1;
             }
-            if (timer_attack == 30&&serang==true)
+            if (timer_attack == 30 && serang == true)
             {
                 timer_attack = 0;
                 zoom = 0;
                 zoom_bkg = 0;
-                player[pilihHero].x = 350;
+                player[pilihHero].x = 350 - 100 * pilihHero;
                 player[pilihHero].hero_move = "idle";
                 player[pilihHero].hero_move_now = 1;
                 serang = false;
-                delay_aktif = true;
                 if (musuh[0].hp <= 0)
                 {
                     gsm.dungeon.myLoc = location.area;
                     gsm.dungeon.Area_besar[gsm.dungeon.ke].battle = true;
                 }
+                gantiTurn();
             }
 
-            if (timer_attack == 30&&serang_musuh==true)
+            if (timer_attack == 30 && serang_musuh == true)
             {
                 timer_attack = 0;
                 zoom = 0;
                 zoom_bkg = 0;
-                musuh[0].x = 700;
-                musuh[0].musuh_move = "idle";
-                musuh[0].musuh_move_now = 1;
+                musuh[pilihMusuh].x = 700;
+                musuh[pilihMusuh].musuh_move = "idle";
+                musuh[pilihMusuh].musuh_move_now = 1;
                 serang_musuh = false;
-                player[pilihHero].x = 350;
+                player[pilihHero].x = 350 - 100 * pilihHero;
+                gantiTurn();
+
+              
             }
 
             if (delay_aktif)
@@ -448,10 +355,10 @@ namespace Project_PV
                     int pilih_attack_musuh = r.Next(0, 4);
                     int dmg_atk = r.Next(musuh[0].skill[pilih_attack_musuh].status_skill.dmg_min, musuh[0].skill[pilih_attack_musuh].status_skill.dmg_max + 1);
                     player[pilihHero].hp -= dmg_atk;
-                    musuh[0].x = 650;
-                    player[0].x = 450;
-                    musuh[0].musuh_move = "attack";
-                    musuh[0].musuh_move_now = 1;
+                    musuh[pilihMusuh].x = 650;
+                    player[pilihHero].x = 350 - 100 * pilihHero;
+                    musuh[pilihMusuh].musuh_move = "attack";
+                    musuh[pilihMusuh].musuh_move_now = 1;
                     delay_aktif = false;
                     timer_attack = 0;
                     serang_musuh = true;
@@ -463,6 +370,49 @@ namespace Project_PV
 
                 }
             }
+        }
+
+        public void gantiTurn()
+        {
+            try
+            {
+                turn_ke++;
+                if (turnAttack[turn_ke].jenis == 1)
+                {
+                    pilihHero = turnAttack[turn_ke].ke;
+                }
+                else
+                {
+                    delay_aktif = true;
+                }
+            }
+            catch (Exception)
+            {
+
+                turn_ke = 0;
+
+                if (turnAttack[turn_ke].jenis == 1)
+                {
+                    pilihHero = turnAttack[turn_ke].ke;
+                }
+                else
+                {
+                    delay_aktif = true;
+                }
+            }
+        }
+    }
+
+    public class turn
+    {
+        public int jenis { get; set; }
+        public int ke { get; set; }
+        public int speed { get; set; }
+        public turn(int jenis, int ke,int speed)
+        {
+            this.jenis = jenis;
+            this.ke = ke;
+            this.speed = speed;
         }
     }
 }

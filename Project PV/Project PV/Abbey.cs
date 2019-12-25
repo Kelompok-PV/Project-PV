@@ -12,7 +12,7 @@ namespace Project_PV
 	class Abbey : GameState
 	{
 		List<unlockoverlay> unlockset = new List<unlockoverlay>();
-		int cx =960, cy = 50,tx=600,ty1=100,ty2,ty3;
+        int cx = 960, cy = 50;
 		public Font title { get; set; }
 		public Font subtitle { get; set; }
 		public Font content { get; set; }
@@ -94,8 +94,6 @@ namespace Project_PV
         Pen pen = new Pen(new SolidBrush(Color.Red), 2);
         StringFormat format = StringFormat.GenericTypographic;
 
-		object O1z ;
-		Image img1;
 
 		Font font = new Font(Config.font.Families[0], 12, FontStyle.Regular);
 
