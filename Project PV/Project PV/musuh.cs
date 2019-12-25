@@ -89,6 +89,10 @@ namespace Project_PV
         public Boarman(int x) : base(x)
         {
             skill = new List<Skill>();
+            skill.Add(new Boarman1());
+            skill.Add(new Boarman2());
+            skill.Add(new Boarman3());
+            skill.Add(new Boarman4());
             this.name = "Boarman";
             this.musuh_move = "idle";
             this.maxHp = 12;
@@ -103,6 +107,10 @@ namespace Project_PV
         public FlameEater(int x) : base(x)
         {
             skill = new List<Skill>();
+            skill.Add(new FlameEater1());
+            skill.Add(new FlameEater2());
+            skill.Add(new FlameEater3());
+            skill.Add(new FlameEater4());
             this.name = "flame";
             this.musuh_move = "idle";
             this.maxHp = 35;
@@ -117,6 +125,10 @@ namespace Project_PV
         public Gargoyle(int x) : base(x)
         {
             skill = new List<Skill>();
+            skill.Add(new Gargoyle1());
+            skill.Add(new Gargoyle2());
+            skill.Add(new Gargoyle3());
+            skill.Add(new Gargoyle4());
             this.name = "Gargoyle";
             this.musuh_move = "idle";
             this.maxHp = 25;
@@ -131,6 +143,10 @@ namespace Project_PV
         public GiantGoblin(int x) : base(x)
         {
             skill = new List<Skill>();
+            skill.Add(new GiantGoblin1());
+            skill.Add(new GiantGoblin2());
+            skill.Add(new GiantGoblin3());
+            skill.Add(new GiantGoblin4());
             this.name = "giant";
             this.musuh_move = "idle";
             this.maxHp = 25;
@@ -145,6 +161,10 @@ namespace Project_PV
         public Larry(int x) : base(x)
         {
             skill = new List<Skill>();
+            skill.Add(new Larry1());
+            skill.Add(new Larry2());
+            skill.Add(new Larry3());
+            skill.Add(new Larry4());
             this.name = "Larry";
             this.musuh_move = "idle";
             this.maxHp = 8;
@@ -159,6 +179,10 @@ namespace Project_PV
         public Skeleton_soldier(int x) : base(x)
         {
             skill = new List<Skill>();
+            skill.Add(new Skeleton_soldier1());
+            skill.Add(new Skeleton_soldier2());
+            skill.Add(new Skeleton_soldier3());
+            skill.Add(new Skeleton_soldier4());
             this.name = "Skeleton_soldier";
             this.musuh_move = "idle";
             this.maxHp = 8;
