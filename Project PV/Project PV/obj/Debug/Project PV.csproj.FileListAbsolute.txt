@@ -162,3 +162,5 @@ E:\GitHub\Project-PV\Project PV\Project PV\bin\Debug\Resources\icon_character\ic
 E:\GitHub\Project-PV\Project PV\Project PV\bin\Debug\Resources\icon_character\giantLady_icon.png
 C:\Users\Fendy\Documents\GitHub\Project-PV\Project PV\Project PV\bin\Debug\Resources\icon_character\giantLady_icon.png
 C:\Users\Fendy\Documents\GitHub\Project-PV\Project PV\Project PV\bin\Debug\Resources\icon_character\iceWoman_icon.png
+C:\xampp\htdocs\Project-PV\Project PV\Project PV\bin\Debug\Resources\icon_character\giantLady_icon.png
+C:\xampp\htdocs\Project-PV\Project PV\Project PV\bin\Debug\Resources\icon_character\iceWoman_icon.png

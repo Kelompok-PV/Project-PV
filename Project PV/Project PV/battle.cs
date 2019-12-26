@@ -202,7 +202,7 @@ namespace Project_PV
 
             g.DrawImage((Image)Properties.Resources.ResourceManager.GetObject("side_decor"), 0, 420, 120, 270);
             g.DrawImage(imgpPlayer, 70 + 22, 420, 528, 100);
-            g.DrawImage((Image)Properties.Resources.ResourceManager.GetObject(player[0].hero + "_icon"), 135, 440, 68, 68);
+            g.DrawImage((Image)Properties.Resources.ResourceManager.GetObject(player[pilihHero].hero + "_icon"), 135, 440, 68, 68);
 
             for (int i = 0; i < player[pilihHero].skills.Count; i++)
             {
@@ -303,7 +303,7 @@ namespace Project_PV
                 if (mouse.IntersectsWith(recMusuh))
                 {
                     targetMusuh = i;
-                    if (pilih_attack != -1 && serang == false && serang_musuh == false&&zoom==0)
+                    if (pilih_attack != -1 && turnAttack[turn_ke].jenis==1&&turnAttack[turn_ke].ke==pilihHero)
                     {
                         int dmg_atk = r.Next(player[pilihHero].skills[pilih_attack].status_skill.dmg_min, player[pilihHero].skills[pilih_attack].status_skill.dmg_max + 1);
                         musuh[i].hp -= dmg_atk;
@@ -319,6 +319,9 @@ namespace Project_PV
                         string FileName = string.Format("{0}Resources\\char_share_imp_sword.wav", Path.GetFullPath(Path.Combine(RunningPath, @"..\..\")));
                         sfx.Open(new System.Uri(FileName));
                         sfx.Play();
+                    }else if(turnAttack[turn_ke].ke != pilihHero)
+                    {
+                        MessageBox.Show("salah pilih hero");
                     }
                 }
             }
