@@ -77,7 +77,7 @@ namespace Project_PV
                 turnAttack.Add(new turn(1, i, player[i].speed));
             }
 
-            for (int i = 0; i < turnAttack.Count-1; i++)
+            for (int i = 0; i < turnAttack.Count; i++)
             {
                 for (int j = 0; j < turnAttack.Count - i-1; j++)
                 {
@@ -90,9 +90,6 @@ namespace Project_PV
                     }
                 }
             }
-
-
-
             background = back;
             imgpPlayer = (Image)Properties.Resources.ResourceManager.GetObject("panel_player2");
             imgpInv = (Image)Properties.Resources.ResourceManager.GetObject("panel_inventory");
@@ -100,6 +97,11 @@ namespace Project_PV
             if (turnAttack[0].jenis == 1)
             {
                 pilihHero = turnAttack[0].ke;
+            }
+            else
+            {
+                pilihMusuh = turnAttack[0].ke;
+                delay_aktif = true;
             }
         }
         Image imgpPlayer;
@@ -132,15 +134,31 @@ namespace Project_PV
             }
             else
             {
-                for (int i = 0; i < musuh.Count; i++)
+                
+                if (serang )
                 {
-                    if (pilihMusuh != i)
+                    for (int i = 0; i < musuh.Count; i++)
                     {
-                        musuh[i].getImage(g);
-                        musuh[i].musuh_move_now++;
+                        if (targetMusuh != i)
+                        {
+                            musuh[i].getImage(g);
+                            musuh[i].musuh_move_now++;
+                        }
                     }
+                    musuh[targetMusuh].getImageAttack(g, zoom);
                 }
-                musuh[pilihMusuh].getImageAttack(g, zoom);
+                if(serang_musuh)
+                {
+                    for (int i = 0; i < musuh.Count; i++)
+                    {
+                        if (pilihMusuh != i)
+                        {
+                            musuh[i].getImage(g);
+                            musuh[i].musuh_move_now++;
+                        }
+                    }
+                    musuh[pilihMusuh].getImageAttack(g, zoom);
+                }
             }
 
             if (!serang && !serang_musuh)
@@ -153,15 +171,31 @@ namespace Project_PV
             }
             else
             {
-                for (int i = 0; i < player.Count; i++)
+                if (serang)
                 {
-                    if (pilihHero != i)
+                    for (int i = 0; i < player.Count; i++)
                     {
-                        player[i].getImage(g);
-                        player[i].hero_move_now++;
+                        if (pilihHero != i)
+                        {
+                            player[i].getImage(g);
+                            player[i].hero_move_now++;
+                        }
                     }
+                    player[pilihHero].getImageAttack(g, zoom);
                 }
-                player[pilihHero].getImageAttack(g,zoom);
+                if (serang_musuh)
+                {
+
+                    for (int i = 0; i < player.Count; i++)
+                    {
+                        if (targetHero != i)
+                        {
+                            player[i].getImage(g);
+                            player[i].hero_move_now++;
+                        }
+                    }
+                    player[targetHero].getImageAttack(g, zoom);
+                }
             }
 
 
@@ -215,7 +249,10 @@ namespace Project_PV
             g.DrawString(player[pilihHero].nama, new Font("Arial", 15, FontStyle.Regular), br, 200, 445);
             g.DrawString(player[pilihHero].type, new Font("Arial", 13, FontStyle.Regular), br, 200, 475);
 
-            g.DrawString(musuh[0].hp+"", new Font("Arial", 13, FontStyle.Regular), br, 700, 400);
+            for (int i = 0; i < musuh.Count; i++)
+            {
+                g.DrawString(musuh[i].hp + "", new Font("Arial", 13, FontStyle.Regular), br, musuh[i].x, 400);
+            }
         }
 
         string dmg_min =   "10";
@@ -265,10 +302,9 @@ namespace Project_PV
                 Rectangle recMusuh = new Rectangle(musuh[i].x, 250, 100, 150);
                 if (mouse.IntersectsWith(recMusuh))
                 {
-
-                    if (pilih_attack != -1 && serang == false && serang_musuh == false)
+                    targetMusuh = i;
+                    if (pilih_attack != -1 && serang == false && serang_musuh == false&&zoom==0)
                     {
-                        Random r = new Random();
                         int dmg_atk = r.Next(player[pilihHero].skills[pilih_attack].status_skill.dmg_min, player[pilihHero].skills[pilih_attack].status_skill.dmg_max + 1);
                         musuh[i].hp -= dmg_atk;
                         serang = true;
@@ -304,8 +340,9 @@ namespace Project_PV
 
         public override void mouse_leave(object sender, MouseEventArgs e)
         {
-            
+
         }
+        Random r = new Random();
 
         public override void update()
         {
@@ -335,7 +372,7 @@ namespace Project_PV
                 player[pilihHero].hero_move = "idle";
                 player[pilihHero].hero_move_now = 1;
                 serang = false;
-                if (musuh[0].hp <= 0)
+                if (musuh.Count==0)
                 {
                     gsm.dungeon.myLoc = location.area;
                     gsm.dungeon.Area_besar[gsm.dungeon.ke].battle = true;
@@ -352,10 +389,8 @@ namespace Project_PV
                 musuh[pilihMusuh].musuh_move = "idle";
                 musuh[pilihMusuh].musuh_move_now = 1;
                 serang_musuh = false;
-                player[pilihHero].x = 350 - 100 * pilihHero;
+                player[targetHero].x = 350 - 100 * targetHero;
                 gantiTurn();
-
-              
             }
 
             if (delay_aktif)
@@ -363,12 +398,12 @@ namespace Project_PV
                 timer_attack++;
                 if (timer_attack == 30)
                 {
-                    Random r = new Random();
                     int pilih_attack_musuh = r.Next(0, 4);
                     int dmg_atk = r.Next(musuh[0].skill[pilih_attack_musuh].status_skill.dmg_min, musuh[0].skill[pilih_attack_musuh].status_skill.dmg_max + 1);
-                    player[pilihHero].hp -= dmg_atk;
+                    targetHero = r.Next(player.Count);
+                    player[targetHero].hp -= dmg_atk;
                     musuh[pilihMusuh].x = 650;
-                    player[pilihHero].x = 350 - 100 * pilihHero;
+                    player[targetHero].x = 450;
                     musuh[pilihMusuh].musuh_move = "attack";
                     musuh[pilihMusuh].musuh_move_now = 1;
                     delay_aktif = false;

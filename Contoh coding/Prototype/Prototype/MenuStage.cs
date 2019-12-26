@@ -37,7 +37,7 @@ namespace Prototype
             background = new Background("Back2.gif");
 
             titleBrush = new SolidBrush(Color.Pink);
-            ff = new FontFamily("Century Gothic");
+            ff = new FontFamily("Arial");
         }
 
         public override void Draw(Graphics g)
