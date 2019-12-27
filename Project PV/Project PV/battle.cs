@@ -77,16 +77,15 @@ namespace Project_PV
                 turnAttack.Add(new turn(1, i, player[i].speed));
             }
 
-            for (int i = 0; i < turnAttack.Count; i++)
+            for (int i = 0; i < turnAttack.Count-1; i++)
             {
-                for (int j = 0; j < turnAttack.Count - i-1; j++)
+                for (int j = i; j < turnAttack.Count - i-1; j++)
                 {
-                    if (turnAttack[j].speed < turnAttack[j + 1].speed)
+                    if (turnAttack[i].speed < turnAttack[j].speed)
                     {
-
-                        turn temp = turnAttack[j];
-                        turnAttack[j] = turnAttack[j + 1];
-                        turnAttack[j + 1] = temp;
+                        turn temp = turnAttack[i];
+                        turnAttack[i] = turnAttack[j];
+                        turnAttack[j] = temp;
                     }
                 }
             }
@@ -215,6 +214,7 @@ namespace Project_PV
             {
                 g.DrawImage(player[pilihHero].skills[i].icon, 308 + 55 * i, 447, 52, 52);
             }
+            g.DrawImage((Image)Properties.Resources.pilihSkill, 308 + 55 * pilih_attack, 447, 52, 52);
             g.DrawImage((Image)Properties.Resources.ResourceManager.GetObject("ability_move"), 308 + 55 * 4, 447, 52, 52);
             g.DrawImage((Image)Properties.Resources.ResourceManager.GetObject("ability_pass"), 308 + 55 * 5, 447, 10, 52);
 
@@ -327,20 +327,35 @@ namespace Project_PV
                     targetMusuh = i;
                     if (pilih_attack != -1 && turnAttack[turn_ke].jenis==1&&turnAttack[turn_ke].ke==pilihHero)
                     {
-                        int dmg_atk = r.Next(player[pilihHero].skills[pilih_attack].status_skill.dmg_min, player[pilihHero].skills[pilih_attack].status_skill.dmg_max + 1);
-                        musuh[i].hp -= dmg_atk;
-                        serang = true;
-                        player[pilihHero].x = 520;
-                        player[pilihHero].hero_move = "skill" + (pilih_attack + 1);
-                        player[pilihHero].hero_move_now = 1;
-                        //sfx= new SoundPlayer(Properties.Resources.ninja_attack_1);
-                        //sfx.LoadAsync();
 
-                        sfx.Stop();
-                        string RunningPath = AppDomain.CurrentDomain.BaseDirectory;
-                        string FileName = string.Format("{0}Resources\\char_share_imp_sword.wav", Path.GetFullPath(Path.Combine(RunningPath, @"..\..\")));
-                        sfx.Open(new System.Uri(FileName));
-                        sfx.Play();
+                        if (player[turnAttack[turn_ke].ke].skills[pilih_attack].target[turnAttack[turn_ke].ke] ==1)
+                        {
+                            if (player[turnAttack[turn_ke].ke].skills[pilih_attack].target[targetMusuh] == 1)
+                            {
+                                int dmg_atk = r.Next(player[pilihHero].skills[pilih_attack].status_skill.dmg_min, player[pilihHero].skills[pilih_attack].status_skill.dmg_max + 1);
+                                musuh[i].hp -= dmg_atk;
+                                serang = true;
+                                player[pilihHero].x = 520;
+                                player[pilihHero].hero_move = "skill" + (pilih_attack + 1);
+                                player[pilihHero].hero_move_now = 1;
+                                //sfx= new SoundPlayer(Properties.Resources.ninja_attack_1);
+                                //sfx.LoadAsync();
+
+                                sfx.Stop();
+                                string RunningPath = AppDomain.CurrentDomain.BaseDirectory;
+                                string FileName = string.Format("{0}Resources\\char_share_imp_sword.wav", Path.GetFullPath(Path.Combine(RunningPath, @"..\..\")));
+                                sfx.Open(new System.Uri(FileName));
+                                sfx.Play();
+                            }
+                            else
+                            {
+                                MessageBox.Show("attack tidak sesuai target");
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Posisi tidak pas");
+                        }
                     }else if(turnAttack[turn_ke].ke != pilihHero)
                     {
                         MessageBox.Show("salah pilih hero");

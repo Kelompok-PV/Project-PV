@@ -128,7 +128,7 @@ namespace Project_PV
             this.hp = 33;
             this.type = "Range";
             this.hero_move = "idle";
-            this.speed = 10;
+            this.speed = 20;
             this.nama = nama;
             this.hero = "ninja";
             
@@ -137,7 +137,6 @@ namespace Project_PV
             skills.Add(new adders_kiss());
             skills.Add(new captivate());
             skills.Add(new impale());
-            speed = 3;
         }
     }
     //jarak jauh

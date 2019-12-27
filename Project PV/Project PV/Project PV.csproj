@@ -675,6 +675,7 @@
     <None Include="Resources\aladin_skill3_ %282%29.png" />
     <None Include="Resources\aladin_skill4_ %281%29.png" />
     <None Include="Resources\pilihhero.png.png" />
+    <None Include="Resources\pilihSkill.png" />
     <Content Include="Resources\Quest\dungeon_progressionbar.png" />
     <Content Include="Resources\Quest\embark_party.background.png" />
     <None Include="Resources\Town\town full_2.png" />

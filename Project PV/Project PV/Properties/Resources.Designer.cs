@@ -1971,6 +1971,16 @@ namespace Project_PV.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap pilihSkill {
+            get {
+                object obj = ResourceManager.GetObject("pilihSkill", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap plague_doctor_ability_battlefield_medicine {
             get {
                 object obj = ResourceManager.GetObject("plague_doctor_ability_battlefield_medicine", resourceCulture);
