@@ -24,7 +24,7 @@ namespace Project_PV
 
         string aktif = "inv";
 
-        int pilih_attack = -1;
+        int pilih_attack = 0;
         bool serang = false;
         bool serang_musuh = false;
         bool delay_aktif = false;
@@ -103,6 +103,13 @@ namespace Project_PV
                 pilihMusuh = turnAttack[0].ke;
                 delay_aktif = true;
             }
+
+
+            dmg_min = player[pilihHero].skills[pilih_attack].status_skill.dmg_min + "";
+            dmg_max = player[pilihHero].skills[pilih_attack].status_skill.dmg_max + "";
+            acc = player[pilihHero].skills[pilih_attack].status_skill.acc + "";
+            crit = player[pilihHero].skills[pilih_attack].status_skill.crit + "%";
+            prot = player[pilihHero].skills[pilih_attack].status_skill.def + "";
         }
         Image imgpPlayer;
         Image imgpInv;
@@ -214,6 +221,20 @@ namespace Project_PV
 
             g.DrawImage((Image)Properties.Resources.ResourceManager.GetObject("panel_stat"), 70 + 50, 520, 500, 170);
             g.DrawImage(imgpInv, 70 + 550, 420, 550, 270);
+            if (turnAttack[turn_ke].jenis == 1&&zoom==0)
+            {
+                g.DrawImage((Image)Properties.Resources.pilihhero, player[turnAttack[turn_ke].ke].x - gerak_icon + 20, 330, (gerak_icon * 2) + 50, 100);
+                for (int i = 0; i < 4; i++)
+                {
+                    if (player[turnAttack[turn_ke].ke].skills[pilih_attack].target[i] == 1&&i<musuh.Count)
+                    {
+                        if (musuh[i].hp > 0)
+                        {
+                            g.DrawImage((Image)Properties.Resources.target, musuh[i].x - gerak_icon + 20, 330, (gerak_icon * 2) + 50, 100);
+                        }
+                    }
+                }
+            }
             //MessageBox.Show((Image)imgpInv+"");
             Font font = new Font("Arial", 15.0f);
 
@@ -262,7 +283,8 @@ namespace Project_PV
         string dodge = "0";
         string prot =  "10";
 
-
+        bool gerak = false;
+        int gerak_icon = 0;
         public override void init()
         {
             
@@ -292,9 +314,9 @@ namespace Project_PV
                     pilih_attack = i;
                     dmg_min = player[pilihHero].skills[i].status_skill.dmg_min+"";
                     dmg_max = player[pilihHero].skills[i].status_skill.dmg_max+"";
-                    acc =  player[pilihHero].skills[i].status_skill.acc + "";
-                    crit = player[pilihHero].skills[i].status_skill.crit + "%";
-                    prot = player[pilihHero].skills[i].status_skill.def + "";
+                    acc =  player[pilihHero].   skills[i].status_skill.acc + "";
+                    crit = player[pilihHero].   skills[i].status_skill.crit + "%";
+                    prot = player[pilihHero].   skills[i].status_skill.def + "";
                 }
             }
             for (int i = 0; i < musuh.Count; i++)
@@ -349,6 +371,25 @@ namespace Project_PV
 
         public override void update()
         {
+
+            if (!gerak)
+            {
+                gerak_icon+=2;
+            }
+
+            else
+            {
+                gerak_icon -= 2;
+            }
+            if (gerak_icon > 20 && !gerak)
+            {
+                gerak = true;
+            }
+            if (gerak_icon < 0 && gerak)
+            {
+                gerak = false;
+            }
+
             if (zoom <= 80 && (serang == true || serang_musuh == true))
             {
                 zoom += 30;
