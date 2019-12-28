@@ -406,6 +406,13 @@
     <None Include="Resources\Quest\hero_slot.background.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\skill_attribute_disease.png" />
+    <None Include="Resources\skill_attribute_tag.png" />
+    <None Include="Resources\skill_attribute_stun.png" />
+    <None Include="Resources\skill_attribute_stress.png" />
+    <None Include="Resources\skill_attribute_heal.png" />
+    <None Include="Resources\skill_attribute_guard.png" />
+    <None Include="Resources\skill_attribute_bleed.png" />
     <None Include="Resources\Yellow_dot.png" />
     <None Include="Resources\Red_dot.png" />
     <None Include="Resources\target.png.png" />

@@ -1123,4 +1123,25 @@
   <data name="health_pip_full" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\health_pip_full.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="skill_attribute_bleed" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\skill_attribute_bleed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="skill_attribute_disease" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\skill_attribute_disease.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="skill_attribute_guard" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\skill_attribute_guard.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="skill_attribute_heal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\skill_attribute_heal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="skill_attribute_stress" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\skill_attribute_stress.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="skill_attribute_stun" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\skill_attribute_stun.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="skill_attribute_tag" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\skill_attribute_tag.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

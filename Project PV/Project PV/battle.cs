@@ -301,6 +301,28 @@ namespace Project_PV
                 int hitung_panjang = (int)(80 / temp_hp);
                 g.DrawImage((Image)Properties.Resources.health_pip_full, musuh[i].x+5, 420, hitung_panjang, 10);
             }
+            for (int i = 0; i < player.Count; i++)
+            {
+                for (int j = 0; j < player[i].hero_buff.Count; j++)
+                {
+                    if (player[i].hero_buff[j] == efek.bleed)
+                    {
+                        g.DrawImage((Image)Properties.Resources.skill_attribute_bleed, player[i].x + 15 * j, 410, 30, 30);
+                    }
+                    if (player[i].hero_buff[j] == efek.blight)
+                    {
+                        g.DrawImage((Image)Properties.Resources.skill_attribute_disease, player[i].x + 15 * j, 410, 30, 30);
+                    }
+                    if (player[i].hero_buff[j] == efek.marked)
+                    {
+                        g.DrawImage((Image)Properties.Resources.skill_attribute_tag, player[i].x + 15 * j, 410, 30, 30);
+                    }
+                    if (player[i].hero_buff[j] == efek.stun)
+                    {
+                        g.DrawImage((Image)Properties.Resources.skill_attribute_stun, player[i].x + 15 * j, 410, 30, 30);
+                    }
+                }
+            }
         }
 
         string dmg_min =   "10";
@@ -581,10 +603,6 @@ namespace Project_PV
                     player[pilihHero].marked = false;
                     for (int i = 0; i < player[pilihHero].hero_buff.Count; i++)
                     {
-                        if (player[pilihHero].hero_buff[i]==efek.armor)
-                        {
-
-                        }
                         if (player[pilihHero].hero_buff[i] == efek.bleed)
                         {
                             player[pilihHero].hp -= player[pilihHero].hp / 10;

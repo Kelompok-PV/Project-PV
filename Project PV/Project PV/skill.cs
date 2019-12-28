@@ -724,6 +724,7 @@ namespace Project_PV
             {
                 karakters[i].hp -= 3;
                 karakters[i].hero_buff.Add(skill_efek[0]);
+                karakters[i].hero_buff_turn.Add(5);
             }
         }
     }
