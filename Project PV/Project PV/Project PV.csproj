@@ -406,6 +406,8 @@
     <None Include="Resources\Quest\hero_slot.background.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Yellow_dot.png" />
+    <None Include="Resources\Red_dot.png" />
     <None Include="Resources\target.png.png" />
     <None Include="Resources\vestal.ability.judgement.png" />
     <None Include="Resources\vestal.ability.divine.grace.png" />
@@ -676,6 +678,8 @@
     <None Include="Resources\aladin_skill4_ %281%29.png" />
     <None Include="Resources\pilihhero.png.png" />
     <None Include="Resources\pilihSkill.png" />
+    <None Include="Resources\Grey_dot.png" />
+    <None Include="Resources\health_pip_full.png" />
     <Content Include="Resources\Quest\dungeon_progressionbar.png" />
     <Content Include="Resources\Quest\embark_party.background.png" />
     <None Include="Resources\Town\town full_2.png" />

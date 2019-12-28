@@ -1272,6 +1272,16 @@ namespace Project_PV.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Grey_dot {
+            get {
+                object obj = ResourceManager.GetObject("Grey_dot", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap grunge_arrow_2_6 {
             get {
                 object obj = ResourceManager.GetObject("grunge_arrow_2_6", resourceCulture);
@@ -1315,6 +1325,16 @@ namespace Project_PV.Properties {
         internal static System.Drawing.Bitmap guild_town_button {
             get {
                 object obj = ResourceManager.GetObject("guild_town_button", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap health_pip_full {
+            get {
+                object obj = ResourceManager.GetObject("health_pip_full", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -2114,6 +2134,16 @@ namespace Project_PV.Properties {
         internal static System.Drawing.Bitmap quirkheader {
             get {
                 object obj = ResourceManager.GetObject("quirkheader", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Red_dot {
+            get {
+                object obj = ResourceManager.GetObject("Red_dot", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -3151,6 +3181,16 @@ namespace Project_PV.Properties {
         internal static System.Drawing.Bitmap wagon {
             get {
                 object obj = ResourceManager.GetObject("wagon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Yellow_dot {
+            get {
+                object obj = ResourceManager.GetObject("Yellow_dot", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

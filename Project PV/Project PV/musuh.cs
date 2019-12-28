@@ -17,10 +17,15 @@ namespace Project_PV
         public int x { get; set; }
         public int speed { get; set; }
         public int dodge { get; set; }
-
+        public List<efek> musuh_buff { get; set; }
+        public List<int> musuh_buff_turn { get; set; }
+        public bool marked { get; set; }
         public musuh(int x)
         {
             this.x = x;
+            musuh_buff = new List<efek>();
+            musuh_buff_turn = new List<int>();
+            marked = false;
         }
 
         public void getImage(Graphics g)
@@ -42,19 +47,6 @@ namespace Project_PV
             g.DrawImage(img, x, 250, 100, 150);
         }
         public void getImageAttack(Graphics g, int zoom)
-        {
-            try
-            {
-                gambarAttack(g, zoom);
-                //tipe_gerak_ke++;
-            }
-            catch (Exception)
-            {
-                //tipe_gerak_ke--;
-                gambarAttack(g, zoom);
-            }
-        }
-        public void gambarAttack(Graphics g, int zoom)
         {
             object O = Properties.Resources.ResourceManager.GetObject(name + "_" + musuh_move + "___" + musuh_move_now + "_");
             Image img = (Image)O;

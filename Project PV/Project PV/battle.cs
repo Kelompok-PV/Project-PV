@@ -28,6 +28,7 @@ namespace Project_PV
         bool serang = false;
         bool serang_musuh = false;
         bool delay_aktif = false;
+        bool ganti_posisi = false;
 
         int pilihHero = 0;
         int targetHero = 0;
@@ -215,18 +216,21 @@ namespace Project_PV
                 g.DrawImage(player[pilihHero].skills[i].icon, 308 + 55 * i, 447, 52, 52);
             }
             g.DrawImage((Image)Properties.Resources.pilihSkill, 308 + 55 * pilih_attack, 447, 52, 52);
+
+
             g.DrawImage((Image)Properties.Resources.ResourceManager.GetObject("ability_move"), 308 + 55 * 4, 447, 52, 52);
             g.DrawImage((Image)Properties.Resources.ResourceManager.GetObject("ability_pass"), 308 + 55 * 5, 447, 10, 52);
 
 
             g.DrawImage((Image)Properties.Resources.ResourceManager.GetObject("panel_stat"), 70 + 50, 520, 500, 170);
             g.DrawImage(imgpInv, 70 + 550, 420, 550, 270);
-            if (turnAttack[turn_ke].jenis == 1&&zoom==0)
+
+            if (turnAttack[turn_ke].jenis == 1 && zoom == 0)
             {
                 g.DrawImage((Image)Properties.Resources.pilihhero, player[turnAttack[turn_ke].ke].x - gerak_icon + 20, 330, (gerak_icon * 2) + 50, 100);
                 for (int i = 0; i < 4; i++)
                 {
-                    if (player[turnAttack[turn_ke].ke].skills[pilih_attack].target[i] == 1&&i<musuh.Count)
+                    if (player[pilihHero].skills[pilih_attack].target[i] == 1 && i < musuh.Count)
                     {
                         if (musuh[i].hp > 0)
                         {
@@ -235,7 +239,7 @@ namespace Project_PV
                     }
                 }
             }
-            //MessageBox.Show((Image)imgpInv+"");
+            ////MessageBox.Show((Image)imgpInv+"");
             Font font = new Font("Arial", 15.0f);
 
             System.Drawing.Brush br = new SolidBrush(System.Drawing.Color.White);
@@ -252,27 +256,50 @@ namespace Project_PV
             }
             g.DrawImage((Image)Properties.Resources.ResourceManager.GetObject("side_decor"), 1285, 420, -120, 270);
 
-            g.DrawString("ACC        " , new Font("Arial", 12, FontStyle.Regular), br,145,587);
-            g.DrawString("CRIT       " , new Font("Arial", 12, FontStyle.Regular), br,145,602);
-            g.DrawString("DMG        " , new Font("Arial", 12, FontStyle.Regular), br,145,617);
-            g.DrawString("DODGE      " , new Font("Arial", 12, FontStyle.Regular), br,145,632);
-            g.DrawString("PROT       " , new Font("Arial", 12, FontStyle.Regular), br,145,647);
+            for (int i = 0; i < 4; i++)
+            {
+                if (player[pilihHero].skills[pilih_attack].rank[i] == 1)
+                {
+                    g.DrawImage((Image)Properties.Resources.Yellow_dot, 145 + 10 * i, 575, 10, 10);
+                }
+                else
+                {
+                    g.DrawImage((Image)Properties.Resources.Grey_dot, 145 + 10 * i, 575, 10, 10);
+                }
 
-            g.DrawString(acc, new Font("Arial", 12, FontStyle.Regular), br,   210, 587);
-            g.DrawString(crit, new Font("Arial", 12, FontStyle.Regular), br,  210, 602);
-            g.DrawString(dmg_min+"-" +dmg_max, new Font("Arial", 12, FontStyle.Regular), br,   210, 617);
+                if (player[pilihHero].skills[pilih_attack].target[i] == 1)
+                {
+                    g.DrawImage((Image)Properties.Resources.Red_dot, 200 + 10 * i, 575, 10, 10);
+                }
+                else
+                {
+                    g.DrawImage((Image)Properties.Resources.Grey_dot, 200 + 10 * i, 575, 10, 10);
+                }
+            }
+
+            g.DrawString("ACC        ", new Font("Arial", 12, FontStyle.Regular), br, 145, 587);
+            g.DrawString("CRIT       ", new Font("Arial", 12, FontStyle.Regular), br, 145, 602);
+            g.DrawString("DMG        ", new Font("Arial", 12, FontStyle.Regular), br, 145, 617);
+            g.DrawString("DODGE      ", new Font("Arial", 12, FontStyle.Regular), br, 145, 632);
+            g.DrawString("PROT       ", new Font("Arial", 12, FontStyle.Regular), br, 145, 647);
+
+            g.DrawString(acc, new Font("Arial", 12, FontStyle.Regular), br, 210, 587);
+            g.DrawString(crit, new Font("Arial", 12, FontStyle.Regular), br, 210, 602);
+            g.DrawString(dmg_min + "-" + dmg_max, new Font("Arial", 12, FontStyle.Regular), br, 210, 617);
             g.DrawString(dodge, new Font("Arial", 12, FontStyle.Regular), br, 210, 632);
-            g.DrawString(prot, new Font("Arial", 12, FontStyle.Regular), br,  210, 647);
+            g.DrawString(prot, new Font("Arial", 12, FontStyle.Regular), br, 210, 647);
 
-            g.DrawString(player[pilihHero].hp+"/"+player[pilihHero].maxHp, new Font("Arial", 12, FontStyle.Regular), new SolidBrush(System.Drawing.Color.DarkRed), 178 ,530);
-            g.DrawString(player[pilihHero].hero_stress.stress_point+"/"+200, new Font("Arial", 12, FontStyle.Regular), br, 178 ,550);
-            
+            g.DrawString(player[pilihHero].hp + "/" + player[pilihHero].maxHp, new Font("Arial", 12, FontStyle.Regular), new SolidBrush(System.Drawing.Color.DarkRed), 178, 530);
+            g.DrawString(player[pilihHero].hero_stress.stress_point + "/" + 200, new Font("Arial", 12, FontStyle.Regular), br, 178, 550);
+
             g.DrawString(player[pilihHero].nama, new Font("Arial", 15, FontStyle.Regular), br, 200, 445);
             g.DrawString(player[pilihHero].type, new Font("Arial", 13, FontStyle.Regular), br, 200, 475);
 
             for (int i = 0; i < musuh.Count; i++)
             {
-                g.DrawString(musuh[i].hp + "", new Font("Arial", 13, FontStyle.Regular), br, musuh[i].x, 400);
+                int temp_hp = musuh[i].maxHp / musuh[i].hp;
+                int hitung_panjang = (int)(80 / temp_hp);
+                g.DrawImage((Image)Properties.Resources.health_pip_full, musuh[i].x+5, 420, hitung_panjang, 10);
             }
         }
 
@@ -327,7 +354,6 @@ namespace Project_PV
                     targetMusuh = i;
                     if (pilih_attack != -1 && turnAttack[turn_ke].jenis==1&&turnAttack[turn_ke].ke==pilihHero)
                     {
-
                         if (player[turnAttack[turn_ke].ke].skills[pilih_attack].target[turnAttack[turn_ke].ke] ==1)
                         {
                             if (player[turnAttack[turn_ke].ke].skills[pilih_attack].target[targetMusuh] == 1)
@@ -368,11 +394,32 @@ namespace Project_PV
                 Rectangle recPlayer = new Rectangle(player[i].x, 250, 100, 150);
                 if (recPlayer.IntersectsWith(mouse))
                 {
-                    pilihHero = i;
+                    if (ganti_posisi)
+                    {
+                        targetHero = i;
+                        //int swap_char= player[targetHero].x;
+                        //player[targetHero].x = player[pilihHero].x;
+                        //player[pilihHero].x = swap_char;
+                        gerak_geser = 10 * Math.Abs(pilihHero - targetHero);
+                        gerak_geser_max = 100 * Math.Abs(pilihHero - targetHero);
+                        timer_geser = true;
+                    }
+                    else
+                    {
+                        pilihHero = i;
+                    }
                 }
             }
-        }
 
+            Rectangle recPilih = new Rectangle(308 + 55 * 4, 447, 52, 52);
+            if (mouse.IntersectsWith(recPilih))
+            {
+                ganti_posisi = true;
+            }
+        }
+        int gerak_geser = 0;
+        int gerak_geser_max = 0;
+        bool timer_geser = false;
         public override void mouse_hover(object sender, MouseEventArgs e)
         {
 
@@ -420,7 +467,7 @@ namespace Project_PV
             if (serang_musuh)
             {
                 timer_attack++;
-                musuh[0].x -= 1;
+                musuh[pilihMusuh].x -= 1;
             }
             if (timer_attack == 30 && serang == true)
             {
@@ -444,9 +491,9 @@ namespace Project_PV
                 timer_attack = 0;
                 zoom = 0;
                 zoom_bkg = 0;
-                musuh[pilihMusuh].x = 700;
-                musuh[pilihMusuh].musuh_move = "idle";
+                musuh[pilihMusuh].x = 700 + pilihMusuh * 100;
                 musuh[pilihMusuh].musuh_move_now = 1;
+                musuh[pilihMusuh].musuh_move = "idle";
                 serang_musuh = false;
                 player[targetHero].x = 350 - 100 * targetHero;
                 gantiTurn();
@@ -457,23 +504,68 @@ namespace Project_PV
                 timer_attack++;
                 if (timer_attack == 30)
                 {
-                    int pilih_attack_musuh = r.Next(0, 4);
-                    int dmg_atk = r.Next(musuh[0].skill[pilih_attack_musuh].status_skill.dmg_min, musuh[0].skill[pilih_attack_musuh].status_skill.dmg_max + 1);
+                    
                     targetHero = r.Next(player.Count);
-                    player[targetHero].hp -= dmg_atk;
+                    int pilih_attack_musuh = r.Next(0, 4);
+                    musuh[pilihMusuh].skill[pilih_attack_musuh].getDamageSkill(targetHero, player);
                     musuh[pilihMusuh].x = 650;
                     player[targetHero].x = 450;
-                    musuh[pilihMusuh].musuh_move = "attack";
                     musuh[pilihMusuh].musuh_move_now = 1;
+                    musuh[pilihMusuh].musuh_move = "attack";
                     delay_aktif = false;
                     timer_attack = 0;
                     serang_musuh = true;
-                    sfx.Stop();
-                    string RunningPath = AppDomain.CurrentDomain.BaseDirectory;
-                    string FileName = string.Format("{0}Resources\\yeti_attack_sfx_1.wav", Path.GetFullPath(Path.Combine(RunningPath, @"..\..\")));
-                    sfx.Open(new System.Uri(FileName));
-                    sfx.Play();
+                    //sfx.Stop();
+                    //string RunningPath = AppDomain.CurrentDomain.BaseDirectory;
+                    //string FileName = string.Format("{0}Resources\\yeti_attack_sfx_1.wav", Path.GetFullPath(Path.Combine(RunningPath, @"..\..\")));
+                    //sfx.Open(new System.Uri(FileName));
+                    //sfx.Play();
 
+                }
+            }
+
+            if (timer_geser)
+            {
+                if (0 == gerak_geser_max)
+                {
+                    timer_geser = false;
+                    ganti_posisi = false;
+
+
+                    karakter swap_char = player[pilihHero];
+                    player[pilihHero] = player[targetHero];
+                    player[targetHero] = swap_char;
+
+
+
+                    int tmp_ind = turnAttack[turn_ke].ke;//0
+                    for (int i = 0; i < turnAttack.Count; i++)
+                    {
+                        if (turnAttack[i].jenis == 1 && turnAttack[i].ke == targetHero)
+                        {
+                            turnAttack[turn_ke].ke = turnAttack[i].ke;
+                            turnAttack[i].ke = tmp_ind;
+                        }
+                    }
+
+                    tmp_ind = pilihHero;
+                    pilihHero = targetHero;
+                    targetHero = tmp_ind;
+                    gantiTurn();
+                }
+                else
+                {
+                    if (pilihHero >= targetHero)
+                    {
+                        player[pilihHero].x +=gerak_geser;
+                        player[targetHero].x -=gerak_geser;
+                    }
+                    else
+                    {
+                        player[pilihHero].x -= gerak_geser;
+                        player[targetHero].x += gerak_geser;
+                    }
+                    gerak_geser_max -= gerak_geser;
                 }
             }
         }
@@ -486,17 +578,83 @@ namespace Project_PV
                 if (turnAttack[turn_ke].jenis == 1)
                 {
                     pilihHero = turnAttack[turn_ke].ke;
+                    player[pilihHero].marked = false;
+                    for (int i = 0; i < player[pilihHero].hero_buff.Count; i++)
+                    {
+                        if (player[pilihHero].hero_buff[i]==efek.armor)
+                        {
+
+                        }
+                        if (player[pilihHero].hero_buff[i] == efek.bleed)
+                        {
+                            player[pilihHero].hp -= player[pilihHero].hp / 10;
+                        }
+                        if (player[pilihHero].hero_buff[i] == efek.blight)
+                        {
+                            player[pilihHero].hp -= (player[pilihHero].maxHp / 10);
+                        }
+                        if (player[pilihHero].hero_buff[i] == efek.marked)
+                        {
+                            player[pilihHero].marked = true;
+                        }
+                        if (player[pilihHero].hero_buff[i] == efek.stress)
+                        {
+                            player[pilihHero].hero_stress.stress_point += 10;
+                        }
+                        if (player[pilihHero].hero_buff[i] == efek.stun)
+                        {
+                            gantiTurn();
+                        }
+                        player[pilihHero].hero_buff_turn[i]--;
+                        if (player[pilihHero].hero_buff_turn[i] == 0)
+                        {
+                            player[pilihHero].hero_buff_turn.RemoveAt(i);
+                            player[pilihHero].hero_buff.RemoveAt(i);
+                            i--;
+                        }
+                    }
                 }
                 else
                 {
                     delay_aktif = true;
+                    pilihMusuh = turnAttack[turn_ke].ke;
+                    musuh[pilihMusuh].marked = false;
+                    for (int i = 0; i < musuh[pilihMusuh].musuh_buff.Count; i++)
+                    {
+                        if (musuh[pilihMusuh].musuh_buff[i] == efek.armor)
+                        {
+
+                        }
+                        if (musuh[pilihMusuh].musuh_buff[i] == efek.bleed)
+                        {
+                            musuh[pilihMusuh].hp -= musuh[pilihMusuh].hp / 10;
+                        }
+                        if (musuh[pilihMusuh].musuh_buff[i] == efek.blight)
+                        {
+                            musuh[pilihMusuh].hp -= (musuh[pilihMusuh].maxHp / 10);
+                        }
+                        if (musuh[pilihMusuh].musuh_buff[i] == efek.marked)
+                        {
+                            musuh[pilihMusuh].marked = true;
+                        }
+                        if (musuh[pilihMusuh].musuh_buff[i] == efek.stun)
+                        {
+                            gantiTurn();
+                        }
+                        musuh[pilihMusuh].musuh_buff_turn[i]--;
+                        if (musuh[pilihMusuh].musuh_buff_turn[i] == 0)
+                        {
+                            musuh[pilihMusuh].musuh_buff_turn.RemoveAt(i);
+                            musuh[pilihMusuh].musuh_buff.RemoveAt(i);
+                            i--;
+                        }
+                    }
                 }
             }
             catch (Exception)
             {
 
                 turn_ke = 0;
-
                 if (turnAttack[turn_ke].jenis == 1)
                 {
                     pilihHero = turnAttack[turn_ke].ke;

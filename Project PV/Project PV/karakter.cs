@@ -19,6 +19,7 @@ namespace Project_PV
         public string hero_move { get; set; }
         public int hero_move_now { get; set; }
         public List<efek> hero_buff { get; set; }
+        public List<int> hero_buff_turn{ get; set; }
         public equip[] hero_equip { get; set; }
         public int x { get; set; }
         public string type { get; set; }
@@ -26,6 +27,7 @@ namespace Project_PV
         public int min_damage { get; set; }
         public int max_damage { get; set; }
         public int speed { get; set; }
+        public bool marked { get; set; }
 
         protected karakter(string nama,string type ,int hp, string hero, string hero_move, int hero_move_now, equip[] hero_equip, int dodge,int maxHp,int min_dmg,int damage,int speed)
         {
@@ -47,9 +49,16 @@ namespace Project_PV
         {
             this.nama = nama;
             hero_buff = new List<efek>();
+            hero_buff_turn = new List<int>();
             this.hero_stress = new stress();
             this.hero_stress.stress_level = 0;
             this.hero_stress.stress_point = 0;
+            marked = false;
+        }
+
+        public void turn_efek()
+        {
+
         }
 
         public void getImage(Graphics g)
