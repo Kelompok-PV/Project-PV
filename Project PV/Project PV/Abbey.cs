@@ -24,9 +24,13 @@ namespace Project_PV
 		private Player player;
 		List<Rectangle> rosterField = new List<Rectangle>();
 		List<int> statusabbey = new List<int>();
+		bool transition = false;
+		private List<rosterList> roster;
+
 		public Abbey(GameStateManager gsm)
 		{
 			this.gsm = gsm;
+			roster = new List<rosterList>();
 			yRoster = new List<int>();
 			karacters = new List<Selected_karacter>();
 			Config.font.AddFontFile("Resources\\DwarvenAxe BB W00 Regular.ttf");
@@ -100,6 +104,7 @@ namespace Project_PV
         Pen pen = new Pen(new SolidBrush(Color.Red), 2);
         StringFormat format = StringFormat.GenericTypographic;
 
+		int indexHero = -1;
 
 		Font font = new Font(Config.font.Families[0], 12, FontStyle.Regular);
 
@@ -150,18 +155,51 @@ namespace Project_PV
 
 			for (int i = 0; i < karacters.Count; i++)
 			{
-				//g.DrawImage(img1, karacters[i].x, karacters[i].y, 52, 52);
-
+				
 				try
 				{
 					g.DrawImage(karacters[i].GetKarakter().getIcon(), karacters[i].x, karacters[i].y, 90,90);
+					transition = true;
 				}
 				catch (Exception)
 				{
 
 				}
-				//g.FillRectangle(new SolidBrush(Color.Red), karacters[i].x, karacters[i].y, 100,100);
 			}
+			
+
+			//if (!transition)
+			//{
+			//	//g.FillRectangle(new SolidBrush(Color.FromArgb(200, Color.Black)), 0, 0, 1300, 730);
+			//	//g.FillRectangle(new SolidBrush(Color.Black), xBuy, 240, widthBuy, 388);
+			//	//g.DrawRectangle(new Pen(Color.Gold), xBuy, 240, widthBuy, 388);
+			//	//g.DrawImage(frameStats, xBuy, 240, widthBuy, 388);
+			//	//g.DrawImage(close, closeRect);
+
+			//	Font titleName = new Font(Config.font.Families[0], 25, FontStyle.Regular);
+			//	Font name = new Font(Config.font.Families[0], 16, FontStyle.Regular);
+			//	g.DrawString(roster[indexHero].karakter.nama, titleName, new SolidBrush(Color.FromArgb(250, 231, 162)), 360, 258);
+			//	titleName = new Font(Config.font.Families[0], 14, FontStyle.Regular);
+			//	g.DrawString(roster[indexHero].karakter.type, titleName, new SolidBrush(Color.FromArgb(250, 231, 162)), 360, 258 + 50);
+			//	g.DrawString("Base Stats", name, new SolidBrush(Color.FromArgb(250, 231, 162)), 533, 415);
+			//	Font font1 = new Font("ARIAL", 10, FontStyle.Regular);
+			//	Point desc = new Point(449, 442);
+			//	g.DrawString("Max HP  " + roster[indexHero].karakter.maxHp, font1, new SolidBrush(Color.White), desc.X, desc.Y);
+			//	g.DrawString("Dodge   " + roster[indexHero].karakter.dodge, font1, new SolidBrush(Color.White), desc.X + 75, desc.Y);
+			//	g.DrawString("Damage  " + roster[indexHero].karakter.max_damage, font1, new SolidBrush(Color.White), desc.X + 150, desc.Y);
+
+			//	//idle
+			//	try
+			//	{
+			//		g.DrawImage(roster[indexHero].karakter.getIdle(), 335, 452, 100, 150);
+			//		roster[indexHero].karakter.hero_move_now++;
+			//	}
+			//	catch (Exception)
+			//	{
+			//		roster[indexHero].karakter.hero_move_now = 1;
+			//		g.DrawImage(roster[indexHero].karakter.getIdle(), 335, 452, 100, 150);
+			//	}
+			//}
 
 		}
 
@@ -204,6 +242,7 @@ namespace Project_PV
 					if (rosterField[i].IntersectsWith(cursor))
 					{
 						index = i;
+						indexHero= i;
 						selected = true;
 						break;
 					}
