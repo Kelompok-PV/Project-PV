@@ -11,7 +11,7 @@ namespace Project_PV
         public int gold { get; set; }
         public string name { get; set; }
         public List<karakter> myCharacter { get; set; }
-        public karakter[] currentCharacters { get; set; }
+        public List<karakter> currentCharacters { get; set; }
         public Inventory[] inventoryAktif { get; set; }
 
         public Player()
@@ -19,7 +19,7 @@ namespace Project_PV
             gold = 0;
             name = "yomama";
             myCharacter = new List<karakter>();
-            currentCharacters = new karakter[4];
+            currentCharacters = new List<karakter>();
             inventoryAktif = new Inventory[16];
         }
 

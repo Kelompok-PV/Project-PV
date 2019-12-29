@@ -13,11 +13,11 @@ namespace Project_PV
         public GameStateManager gsm { get; set; }
         public List<int> gambar { get; set; }
         public int x { get; set; }
-        public karakter player { get; set; }
+        public List<karakter> player { get; set; }
 
         public BattleState(GameStateManager gsm)
         {
-            player = gsm.player.currentCharacters[0];
+            player = gsm.player.currentCharacters;
             Random r = new Random();
             this.gsm = gsm;
             gambar = new List<int>();
@@ -101,8 +101,8 @@ namespace Project_PV
             }
             
 
-            player.getImage(g);
-            player.hero_move_now++;
+            player[0].getImage(g);
+            player[0].hero_move_now++;
 
             if (zoomin==true)
             {
@@ -111,11 +111,11 @@ namespace Project_PV
 
             g.DrawImage((Image)Properties.Resources.ResourceManager.GetObject("side_decor"), 0, 420, 120, 270);
             g.DrawImage(imgpPlayer, 70 + 22, 420, 528, 100);
-            g.DrawImage((Image)Properties.Resources.ResourceManager.GetObject(player.hero + "_icon"), 135, 440, 68, 68);
+            g.DrawImage((Image)Properties.Resources.ResourceManager.GetObject(player[0].hero + "_icon"), 135, 440, 68, 68);
 
             for (int i = 0; i < 4; i++)
             {
-                g.DrawImage(player.skills[i].icon, 308+55*i, 447, 52, 52);
+                g.DrawImage(player[0].skills[i].icon, 308+55*i, 447, 52, 52);
             }
             g.DrawImage((Image)Properties.Resources.ResourceManager.GetObject("ability_move"), 308 + 55 * 4, 447, 52, 52);
             g.DrawImage((Image)Properties.Resources.ResourceManager.GetObject("ability_pass"), 308 + 55 * 5, 447, 10, 52);
@@ -149,7 +149,7 @@ namespace Project_PV
             //MessageBox.Show(x+"");
             Rectangle mouse = new Rectangle(e.X, e.Y, 1, 1);
 
-            if (mouse.IntersectsWith(new Rectangle(x + 250, 150, 200, 250))&&player.x==300 )
+            if (mouse.IntersectsWith(new Rectangle(x + 250, 150, 200, 250))&&player[0].x==300 )
             {
                 c = new Point(500 / 2, 300 / 2);
                 zoomin = true;
@@ -163,7 +163,7 @@ namespace Project_PV
                 }
             }
 
-            if (mouse.IntersectsWith(new Rectangle(x + 700 + 5 * 450, 20, 450, 450)) && player.x > 900)
+            if (mouse.IntersectsWith(new Rectangle(x + 700 + 5 * 450, 20, 450, 450)) && player[0].x > 900)
             {
                 c = new Point(1000 / 2, 300 / 2);
                 zoomin = true;
@@ -193,22 +193,22 @@ namespace Project_PV
             if (e.KeyData == Keys.D&&x>-2000)
             {
                 x -= 10;
-                player.hero_move = "run";
+                player[0].hero_move = "run";
             }
-            else if(e.KeyData == Keys.D&&player.x<1050)
+            else if(e.KeyData == Keys.D&&player[0].x<1050)
             {
-                player.x += 10;
-                player.hero_move = "run";
+                player[0].x += 10;
+                player[0].hero_move = "run";
             }
-            if (e.KeyData == Keys.A && player.x > 300)
+            if (e.KeyData == Keys.A && player[0].x > 300)
             {
-                player.x -= 10;
-                player.hero_move = "run";
+                player[0].x -= 10;
+                player[0].hero_move = "run";
             }
             else if (e.KeyData == Keys.A&&x<0)
             {
                 x += 10;
-                player.hero_move = "run";
+                player[0].hero_move = "run";
             }
         }
         float zoom = 1;
@@ -243,7 +243,7 @@ namespace Project_PV
         public void reset()
         {
             x = 0;
-            player.x = 300;
+            player[0].x = 300;
             zoomin = false;
             opacity = 0;
             ox = 0;
@@ -252,8 +252,8 @@ namespace Project_PV
         }
         public override void key_KeyUp(object sender, KeyEventArgs e)
         {
-            player.hero_move_now = 1;
-            player.hero_move = "idle";
+            player[0].hero_move_now = 1;
+            player[0].hero_move = "idle";
         }
 
         public override void mouse_hover(object sender, MouseEventArgs e)

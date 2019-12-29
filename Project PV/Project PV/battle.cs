@@ -59,7 +59,7 @@ namespace Project_PV
             player.Add(gsm.player.currentCharacters[1]);
 
             musuh = new List<musuh>();
-            for (int i = 0; i < 3; i++)
+            for (int i = 0; i < 1; i++)
             {
                 musuh.Add(new yeti(700+i*100));
                 turnAttack.Add(new turn(0, i, musuh[i].speed));
@@ -386,8 +386,6 @@ namespace Project_PV
                                 player[pilihHero].x = 520;
                                 player[pilihHero].hero_move = "skill" + (pilih_attack + 1);
                                 player[pilihHero].hero_move_now = 1;
-                                //sfx= new SoundPlayer(Properties.Resources.ninja_attack_1);
-                                //sfx.LoadAsync();
 
                                 sfx.Stop();
                                 string RunningPath = AppDomain.CurrentDomain.BaseDirectory;
@@ -500,11 +498,27 @@ namespace Project_PV
                 player[pilihHero].hero_move = "idle";
                 player[pilihHero].hero_move_now = 1;
                 serang = false;
-                if (musuh.Count==0)
+                if (musuh[targetMusuh].hp<=0)
                 {
-                    gsm.dungeon.myLoc = location.area;
-                    gsm.dungeon.Area_besar[gsm.dungeon.ke].battle = true;
+                    for (int i = 0; i < turnAttack.Count; i++)
+                    {
+                        if (turnAttack[i].jenis == 0)
+                        {
+                            if (turnAttack[i].ke==musuh.Count)
+                            {
+                                turnAttack.RemoveAt(i);
+                                i--;
+                            }
+                            else if (turnAttack[i].ke>targetMusuh)
+                            {
+                                turnAttack[i].ke--;
+                                musuh[i].x -= 100;
+                            }
+                        }
+                    }
+                    musuh.RemoveAt(targetMusuh);
                 }
+                winCondition();
                 gantiTurn();
             }
 
@@ -518,6 +532,28 @@ namespace Project_PV
                 musuh[pilihMusuh].musuh_move = "idle";
                 serang_musuh = false;
                 player[targetHero].x = 350 - 100 * targetHero;
+
+                if (player[targetHero].hp <= 0)
+                {
+                    for (int i = 0; i < turnAttack.Count; i++)
+                    {
+                        if (turnAttack[i].jenis == 1)
+                        {
+                            if (turnAttack[i].ke == player.Count)
+                            {
+                                turnAttack.RemoveAt(i);
+                                i--;
+                            }
+                            else if (turnAttack[i].ke > targetHero)
+                            {
+                                turnAttack[i].ke--;
+                                player[i].x += 100;
+                            }
+                        }
+                    }
+                    player.RemoveAt(targetHero);
+                }
+
                 gantiTurn();
             }
 
@@ -592,6 +628,16 @@ namespace Project_PV
             }
         }
 
+        public void winCondition()
+        {
+            if (musuh.Count == 0)
+            {
+                gsm.player.currentCharacters = player;
+                gsm.dungeon.myLoc = location.area;
+                gsm.dungeon.Area_besar[gsm.dungeon.ke].battle = true;
+            }
+        }
+
         public void gantiTurn()
         {
             try
@@ -639,10 +685,6 @@ namespace Project_PV
                     musuh[pilihMusuh].marked = false;
                     for (int i = 0; i < musuh[pilihMusuh].musuh_buff.Count; i++)
                     {
-                        if (musuh[pilihMusuh].musuh_buff[i] == efek.armor)
-                        {
-
-                        }
                         if (musuh[pilihMusuh].musuh_buff[i] == efek.bleed)
                         {
                             musuh[pilihMusuh].hp -= musuh[pilihMusuh].hp / 10;

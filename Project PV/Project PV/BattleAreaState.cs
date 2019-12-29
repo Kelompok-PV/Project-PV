@@ -11,7 +11,7 @@ namespace Project_PV
 {
     class BattleAreaState : GameState
     {
-        karakter player = new ninja("ninnin");
+        public List<karakter> player { get; set; }
         object background = Properties.Resources.ResourceManager.GetObject("courtyard_battleArea_");
         public Image imgBack { get; set; }
         public bool battle { get; set; }
@@ -22,6 +22,8 @@ namespace Project_PV
             Random r = new Random();
             int ind = r.Next(4) + 1;
             battle = false;
+
+            player = gsm.player.currentCharacters;
 
             object background = Properties.Resources.ResourceManager.GetObject("courtyard_area___"+ind+"_");
             imgBack = (Image)background;
@@ -38,16 +40,16 @@ namespace Project_PV
 
             g.DrawImage(imgBack, 0, 0, 1300, 450);
 
-            player.getImage(g);
-            player.hero_move_now++;
+            player[0].getImage(g);
+            player[0].hero_move_now++;
 
             g.DrawImage((Image)Properties.Resources.ResourceManager.GetObject("side_decor"), 0, 420, 120, 270);
             g.DrawImage(imgpPlayer, 70 + 22, 420, 528, 100);
-            g.DrawImage((Image)Properties.Resources.ResourceManager.GetObject(player.hero + "_icon"), 135, 440, 68, 68);
+            g.DrawImage((Image)Properties.Resources.ResourceManager.GetObject(player[0].hero + "_icon"), 135, 440, 68, 68);
 
             for (int i = 0; i < 4; i++)
             {
-                g.DrawImage(player.skills[i].icon, 308 + 55 * i, 447, 52, 52);
+                g.DrawImage(player[0].skills[i].icon, 308 + 55 * i, 447, 52, 52);
             }
             g.DrawImage((Image)Properties.Resources.ResourceManager.GetObject("ability_move"), 308 + 55 * 4, 447, 52, 52);
             g.DrawImage((Image)Properties.Resources.ResourceManager.GetObject("ability_pass"), 308 + 55 * 5, 447, 10, 52);
@@ -69,6 +71,40 @@ namespace Project_PV
                 }
             }
             g.DrawImage((Image)Properties.Resources.ResourceManager.GetObject("side_decor"), 1285, 420, -120, 270);
+
+            drawStatus(g);
+
+        }
+        string dmg_min = "10";
+        string dmg_max = "10";
+        string acc = "10";
+        string crit = "10";
+        string dodge = "0";
+        string prot = "10";
+
+        public void drawStatus(Graphics g)
+        {
+
+            Font font = new Font("Arial", 15.0f);
+            System.Drawing.Brush br = new SolidBrush(System.Drawing.Color.White);
+
+            g.DrawString("ACC        ", new Font("Arial", 12, FontStyle.Regular), br, 145, 587);
+            g.DrawString("CRIT       ", new Font("Arial", 12, FontStyle.Regular), br, 145, 602);
+            g.DrawString("DMG        ", new Font("Arial", 12, FontStyle.Regular), br, 145, 617);
+            g.DrawString("DODGE      ", new Font("Arial", 12, FontStyle.Regular), br, 145, 632);
+            g.DrawString("PROT       ", new Font("Arial", 12, FontStyle.Regular), br, 145, 647);
+
+            g.DrawString(acc, new Font("Arial", 12, FontStyle.Regular), br, 210, 587);
+            g.DrawString(crit, new Font("Arial", 12, FontStyle.Regular), br, 210, 602);
+            g.DrawString(dmg_min + "-" + dmg_max, new Font("Arial", 12, FontStyle.Regular), br, 210, 617);
+            g.DrawString(dodge, new Font("Arial", 12, FontStyle.Regular), br, 210, 632);
+            g.DrawString(prot, new Font("Arial", 12, FontStyle.Regular), br, 210, 647);
+
+            g.DrawString(player[0].hp + "/" + player[0].maxHp, new Font("Arial", 12, FontStyle.Regular), new SolidBrush(System.Drawing.Color.DarkRed), 178, 530);
+            g.DrawString(player[0].hero_stress.stress_point + "/" + 200, new Font("Arial", 12, FontStyle.Regular), br, 178, 550);
+
+            g.DrawString(player[0].nama, new Font("Arial", 15, FontStyle.Regular), br, 200, 445);
+            g.DrawString(player[0].type, new Font("Arial", 13, FontStyle.Regular), br, 200, 475);
         }
 
         public override void init()
@@ -78,10 +114,10 @@ namespace Project_PV
 
         public override void key_keydown(object sender, KeyEventArgs e)
         {
-            if (e.KeyData == Keys.D && player.x < 1150)
+            if (e.KeyData == Keys.D && player[0].x < 1150)
             {
-                player.x += 10;
-                player.hero_move = "run";
+                player[0].x += 10;
+                player[0].hero_move = "run";
             }
             else if(e.KeyData == Keys.D && gsm.dungeon.ke<gsm.dungeon.Area_panjang.Count)
             {
@@ -100,10 +136,10 @@ namespace Project_PV
                 }
             }
 
-            if (e.KeyData == Keys.A && player.x > 200)
+            if (e.KeyData == Keys.A && player[0].x > 200)
             {
-                player.x -= 10;
-                player.hero_move = "run";
+                player[0].x -= 10;
+                player[0].hero_move = "run";
             }
             else if (e.KeyData == Keys.A&&gsm.dungeon.ke!=0)
             {
@@ -115,8 +151,8 @@ namespace Project_PV
 
         public override void key_KeyUp(object sender, KeyEventArgs e)
         {
-            player.hero_move_now = 1;
-            player.hero_move = "idle";
+            player[0].hero_move_now = 1;
+            player[0].hero_move = "idle";
         }
 
         public override void mouse_click(object sender, MouseEventArgs e)

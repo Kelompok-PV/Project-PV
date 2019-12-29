@@ -21,11 +21,11 @@ namespace Project_PV
         {
             player = new Player();
 
-            this.stage = Stage.abbey;
+            this.stage = Stage.dungeon;
             player.myCharacter.Add(new ninja("Hatory"));
-            player.myCharacter.Add(new ninja("Hatory"));
-            player.currentCharacters[0] = new ninja("Hatory");
-            player.currentCharacters[1] = new aladin("Hatory");
+            player.myCharacter.Add(new aladin("Hatory"));
+            player.currentCharacters.Add(player.myCharacter[0]);
+            player.currentCharacters.Add(player.myCharacter[1]);
             player.gold = 3000;
             gameStates = new GameState[20];
             loadState(this.stage);
