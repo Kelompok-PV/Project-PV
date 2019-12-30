@@ -24,12 +24,14 @@ namespace Project_PV
 		private Player player;
 		List<Rectangle> rosterField = new List<Rectangle>();
 		List<int> statusabbey = new List<int>();
-		bool transition = true;
+		bool transition = false;
 		Bitmap frameStats;
 
 		public Abbey(GameStateManager gsm)
 		{
 			this.gsm = gsm;
+			yes = new Rectangle();
+			no = new Rectangle();
 			yRoster = new List<int>();
 			karacters = new List<Selected_karacter>();
 			Config.font.AddFontFile("Resources\\DwarvenAxe BB W00 Regular.ttf");
@@ -105,7 +107,8 @@ namespace Project_PV
         StringFormat format = StringFormat.GenericTypographic;
 
 		int indexHero = -1;
-
+		Rectangle yes;
+		Rectangle no;
 		Font font = new Font(Config.font.Families[0], 12, FontStyle.Regular);
 
 		public override void draw(Graphics g)
@@ -161,59 +164,65 @@ namespace Project_PV
 					// gambar karakter pada tempat e ketika di taruh
 					
 					g.DrawImage(karacters[i].GetKarakter().getIcon(), karacters[i].x, karacters[i].y, 90,90);
-					string type = "";
-					// gambar panel persetujuan
-					if (i < 2)
-					{
-						type = "Cloister";
-					}
-					else if(i>= 2 && i<4)
-					{
-						type = "Transept";
-					}
-					else
-					{
-						type = "Flagellation Bring";
-					}
-					g.FillRectangle(new SolidBrush(Color.FromArgb(200, Color.Black)), 0, 0, 1300, 730);
-					g.FillRectangle(new SolidBrush(Color.Black),250, 240, 750, 388);
-					g.DrawRectangle(new Pen(Color.Gold),250, 240,750, 388);
-					g.DrawImage(frameStats, 260, 242, 740, 368);
-					Font titleName = new Font(Config.font.Families[0], 30, FontStyle.Regular);
-					Font name = new Font(Config.font.Families[0], 16, FontStyle.Regular);
-					g.DrawString("Lets Pray for Your Hero: "+ type, titleName, new SolidBrush(Color.Yellow), 350, 258);
-					titleName = new Font(Config.font.Families[0], 25, FontStyle.Regular);
-					g.DrawString("Your Choice?", titleName, new SolidBrush(Color.FromArgb(250, 231, 162)), 750, 360);
-					g.DrawString(player.currentCharacters[indexsimp].nama, titleName, new SolidBrush(Color.FromArgb(250, 231, 162)), 360, 360);
-					titleName = new Font(Config.font.Families[0], 20, FontStyle.Regular);
-					g.DrawString("Yes", titleName, new SolidBrush(Color.FromArgb(250, 231, 162)),780, 395);
-					g.DrawString("No", titleName, new SolidBrush(Color.FromArgb(250, 231, 162)), 830, 395);
-					Font font1 = new Font("ARIAL", 10, FontStyle.Regular);
+					simp = i;
 					
-					//idle di dalam status
-					try
-					{
-						g.DrawImage(player.currentCharacters[indexsimp].getIdle(), 335, 400, 150, 200);
-						player.currentCharacters[indexsimp].hero_move_now++;
-					}
-					catch (Exception)
-					{
-						player.currentCharacters[indexsimp].hero_move_now = 1;
-						g.DrawImage(player.currentCharacters[indexsimp].getIdle(), 335, 400,150, 200);
-					}
 				}
 				catch (Exception)
 				{
-
 				}
 			}
+			string type = "";
+			// gambar panel persetujuan
+			if (simp != -1 )
+			{
 
+				if (simp < 2)
+				{
+					type = "Cloister";
+				}
+				else if (simp >= 2 && simp < 4)
+				{
+					type = "Transept";
+				}
+				else
+				{
+					type = "Flagellation Bring";
+				}
+				g.FillRectangle(new SolidBrush(Color.FromArgb(200, Color.Black)), 0, 0, 1300, 730);
+				g.FillRectangle(new SolidBrush(Color.Black), 250, 240, 750, 388);
+				g.DrawRectangle(new Pen(Color.Gold), 250, 240, 750, 388);
+				g.DrawImage(frameStats, 260, 242, 740, 368);
+				Font titleName = new Font(Config.font.Families[0], 30, FontStyle.Regular);
+				Font name = new Font(Config.font.Families[0], 16, FontStyle.Regular);
+				g.DrawString("Lets Pray for Your Hero: " + type+simp, titleName, new SolidBrush(Color.Yellow), 350, 258);
+				titleName = new Font(Config.font.Families[0], 25, FontStyle.Regular);
+				g.DrawString("Your Choice?", titleName, new SolidBrush(Color.FromArgb(250, 231, 162)), 750, 360);
+				g.DrawString(player.currentCharacters[indexsimp].nama, titleName, new SolidBrush(Color.FromArgb(250, 231, 162)), 360, 360);
+				g.DrawString("Stress Status", titleName, new SolidBrush(Color.FromArgb(250, 231, 162)), 550, 360);
+				titleName = new Font(Config.font.Families[0], 20, FontStyle.Regular);
+				g.DrawString("Yes", titleName, new SolidBrush(Color.FromArgb(250, 231, 162)), 780, 395);
+				yes = new Rectangle(780, 395, 20, 20);
+				g.DrawString("No", titleName, new SolidBrush(Color.FromArgb(250, 231, 162)), 830, 395);
+				no = new Rectangle(830, 395, 20, 20);
+				Font font1 = new Font("ARIAL", 10, FontStyle.Regular);
 
-			
-
+				//idle di dalam status
+				try
+				{
+					g.DrawImage(player.currentCharacters[indexsimp].getIdle(), 335, 400, 150, 200);
+					player.currentCharacters[indexsimp].hero_move_now++;
+				}
+				catch (Exception)
+				{
+					player.currentCharacters[indexsimp].hero_move_now = 1;
+					g.DrawImage(player.currentCharacters[indexsimp].getIdle(), 335, 400, 150, 200);
+				}
+			}
 		}
 
-        private GraphicsPath GetStringPath(string s, float dpi, RectangleF rect, Font font, StringFormat format)
+		int simp = -1;
+
+		private GraphicsPath GetStringPath(string s, float dpi, RectangleF rect, Font font, StringFormat format)
         {
             GraphicsPath path = new GraphicsPath();
             // Convert font size into appropriate coordinates
@@ -275,6 +284,24 @@ namespace Project_PV
 				}
 				
 
+			}
+
+			if (cursor.IntersectsWith(yes))
+			{
+				
+				simp = -1;
+				//MessageBox.Show("yes");
+				Config.form1.Invalidate();
+
+			} else if (cursor.IntersectsWith(no))
+			{
+				int tmpx = karacters[simp].x;
+				int tmpy = karacters[simp].y;
+				int tmindex = karacters[simp].index;
+				karacters.RemoveAt(simp);
+				simp = -1;
+				karacters.Add(new Selected_karacter(tmpx, tmpy, tmindex));
+				Config.form1.Invalidate();
 			}
 		}
 		int indexsimp = -1;
