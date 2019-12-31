@@ -194,11 +194,13 @@ namespace Project_PV
 				g.DrawImage(frameStats, 260, 242, 740, 368);
 				Font titleName = new Font(Config.font.Families[0], 30, FontStyle.Regular);
 				Font name = new Font(Config.font.Families[0], 16, FontStyle.Regular);
+				Font stress = new Font(Config.font.Families[0], 20, FontStyle.Regular);
 				g.DrawString("Lets Pray for Your Hero: " + type+simp, titleName, new SolidBrush(Color.Yellow), 350, 258);
 				titleName = new Font(Config.font.Families[0], 25, FontStyle.Regular);
 				g.DrawString("Your Choice?", titleName, new SolidBrush(Color.FromArgb(250, 231, 162)), 750, 360);
 				g.DrawString(player.currentCharacters[indexsimp].nama, titleName, new SolidBrush(Color.FromArgb(250, 231, 162)), 360, 360);
 				g.DrawString("Stress Status", titleName, new SolidBrush(Color.FromArgb(250, 231, 162)), 550, 360);
+				g.DrawString(player.currentCharacters[indexsimp].hero_stress.stress_level+": "+ player.currentCharacters[indexsimp].hero_stress.stress_point, stress, new SolidBrush(Color.FromArgb(250, 231, 162)), 580, 400);
 				titleName = new Font(Config.font.Families[0], 20, FontStyle.Regular);
 				g.DrawString("Yes", titleName, new SolidBrush(Color.FromArgb(250, 231, 162)), 780, 395);
 				yes = new Rectangle(780, 395, 20, 20);
@@ -288,19 +290,71 @@ namespace Project_PV
 
 			if (cursor.IntersectsWith(yes))
 			{
-				
-				simp = -1;
-				//MessageBox.Show("yes");
+
+				if (simp < 2)
+				{
+					if(player.currentCharacters[indexsimp].hero_stress.stress_point== 0)
+					{
+						MessageBox.Show("Hero ini tidak stress");
+						karacters.RemoveAt(simp);
+						simp = -1;
+
+					}
+					else
+					{
+						player.currentCharacters[indexsimp].hero_stress.stress_point -= 10;
+						if (player.currentCharacters[indexsimp].hero_stress.stress_point < 0)
+						{
+							player.currentCharacters[indexsimp].hero_stress.stress_point = 0;
+						}
+						karacters.RemoveAt(simp);
+						simp = -1;
+					}
+				}
+				else if (simp >= 2 && simp < 4)
+				{
+					if (player.currentCharacters[indexsimp].hero_stress.stress_point == 0)
+					{
+						MessageBox.Show("Hero ini tidak stress");
+						karacters.RemoveAt(simp);
+						simp = -1;
+					}
+					else
+					{
+						player.currentCharacters[indexsimp].hero_stress.stress_point -= 50;
+						if (player.currentCharacters[indexsimp].hero_stress.stress_point < 0)
+						{
+							player.currentCharacters[indexsimp].hero_stress.stress_point = 0;
+						}
+						karacters.RemoveAt(simp);
+						simp = -1;
+					}
+				}
+				else
+				{
+					if (player.currentCharacters[indexsimp].hero_stress.stress_point == 0)
+					{
+						MessageBox.Show("Hero ini tidak stress");
+						karacters.RemoveAt(simp);
+						simp = -1;
+					}
+					else
+					{
+						player.currentCharacters[indexsimp].hero_stress.stress_point =0;
+						karacters.RemoveAt(simp);
+						simp = -1;
+					}
+				}
 				Config.form1.Invalidate();
 
 			} else if (cursor.IntersectsWith(no))
 			{
-				int tmpx = karacters[simp].x;
-				int tmpy = karacters[simp].y;
-				int tmindex = karacters[simp].index;
+				//int tmpx = karacters[simp].x;
+				//int tmpy = karacters[simp].y;
+				//int tmindex = karacters[simp].index;
 				karacters.RemoveAt(simp);
 				simp = -1;
-				karacters.Add(new Selected_karacter(tmpx, tmpy, tmindex));
+				//karacters.Add(new Selected_karacter(tmpx, tmpy, tmindex));
 				Config.form1.Invalidate();
 			}
 		}
