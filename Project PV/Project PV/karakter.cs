@@ -140,12 +140,13 @@ namespace Project_PV
             this.speed = 20;
             this.nama = nama;
             this.hero = "ninja";
-            
             skills = new List<Skill>();
             skills.Add(new pierce());
             skills.Add(new adders_kiss());
             skills.Add(new captivate());
             skills.Add(new impale());
+			this.hero_equip[0].nama = "Dagger";
+			//this.hero_equip[0].img = ;
         }
     }
     //jarak jauh

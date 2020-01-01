@@ -696,6 +696,8 @@
     <None Include="Resources\inv_supply+skeleton_key.png" />
     <None Include="Resources\inv_supply+torch.png" />
     <None Include="Resources\inv_gem+emerald.png" />
+    <None Include="Resources\back-e.jpg" />
+    <None Include="Resources\back-e2.jpg" />
     <Content Include="Resources\Quest\dungeon_progressionbar.png" />
     <Content Include="Resources\Quest\embark_party.background.png" />
     <None Include="Resources\Town\town full_2.png" />
