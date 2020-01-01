@@ -287,17 +287,16 @@ namespace Project_PV
 				
 
 			}
-
+			bool close = false;
 			if (cursor.IntersectsWith(yes))
 			{
-
+				
 				if (simp < 2)
 				{
 					if(player.currentCharacters[indexsimp].hero_stress.stress_point== 0)
 					{
 						MessageBox.Show("Hero ini tidak stress");
-						karacters.RemoveAt(simp);
-						simp = -1;
+						close = true;
 
 					}
 					else
@@ -307,8 +306,7 @@ namespace Project_PV
 						{
 							player.currentCharacters[indexsimp].hero_stress.stress_point = 0;
 						}
-						karacters.RemoveAt(simp);
-						simp = -1;
+						close = true;
 					}
 				}
 				else if (simp >= 2 && simp < 4)
@@ -316,8 +314,7 @@ namespace Project_PV
 					if (player.currentCharacters[indexsimp].hero_stress.stress_point == 0)
 					{
 						MessageBox.Show("Hero ini tidak stress");
-						karacters.RemoveAt(simp);
-						simp = -1;
+						close = true;
 					}
 					else
 					{
@@ -326,8 +323,7 @@ namespace Project_PV
 						{
 							player.currentCharacters[indexsimp].hero_stress.stress_point = 0;
 						}
-						karacters.RemoveAt(simp);
-						simp = -1;
+						close = true;
 					}
 				}
 				else
@@ -335,26 +331,27 @@ namespace Project_PV
 					if (player.currentCharacters[indexsimp].hero_stress.stress_point == 0)
 					{
 						MessageBox.Show("Hero ini tidak stress");
-						karacters.RemoveAt(simp);
-						simp = -1;
+						close = true;
 					}
 					else
 					{
 						player.currentCharacters[indexsimp].hero_stress.stress_point =0;
-						karacters.RemoveAt(simp);
-						simp = -1;
+						close = true;
 					}
 				}
 				Config.form1.Invalidate();
 
 			} else if (cursor.IntersectsWith(no))
 			{
-				//int tmpx = karacters[simp].x;
-				//int tmpy = karacters[simp].y;
-				//int tmindex = karacters[simp].index;
-				karacters.RemoveAt(simp);
+				close = true;				
+			}
+			if(close == true)
+			{
+				int tmpx = karacters[simp].x;
+				int tmpy = karacters[simp].y;
+				int tmindex = karacters[simp].index;
+				karacters[simp] = new Selected_karacter(tmpx, tmpy, tmindex);
 				simp = -1;
-				//karacters.Add(new Selected_karacter(tmpx, tmpy, tmindex));
 				Config.form1.Invalidate();
 			}
 		}
