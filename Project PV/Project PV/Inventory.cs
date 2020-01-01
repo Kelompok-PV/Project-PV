@@ -89,19 +89,19 @@ namespace Project_PV
     }
     class LargeFood : Inventory
     {
-        public LargeFood(int x, int y, int jumlah) : base(x, y, "Large Food", jumlah, 250, 1, "")
+        public LargeFood(int x, int y, int jumlah) : base(x, y, "Large Food", jumlah, 75, 1, "")
         {
         }
 
         public LargeFood(int x, int y, int jumlah, int id, string desc) 
-            : base(x, y, "Large Food", jumlah, 250, 1, desc)
+            : base(x, y, "Large Food", jumlah, 0, 1, desc)
         {
         }
 
     }
     class SmallFood : Inventory
     {
-        public SmallFood(int x, int y, int jumlah) : base(x, y, "Small Food", jumlah, 100, 2, "")
+        public SmallFood(int x, int y, int jumlah) : base(x, y, "Small Food", jumlah, 75, 2, "")
         {
         }
 
@@ -112,7 +112,7 @@ namespace Project_PV
     }
     class Torch : Inventory
     {
-        public Torch(int x, int y, int jumlah) : base(x, y, "Torch", jumlah, 50, 3, "")
+        public Torch(int x, int y, int jumlah) : base(x, y, "Torch", jumlah, 75, 3, "")
         {
         }
 
@@ -123,7 +123,7 @@ namespace Project_PV
     }
     class Bandage : Inventory
     {
-        public Bandage(int x, int y, int jumlah) : base(x, y, "Bandage", jumlah, 75, 4, "")
+        public Bandage(int x, int y, int jumlah) : base(x, y, "Bandage", jumlah, 150, 4, "")
         {
         }
 
@@ -134,7 +134,7 @@ namespace Project_PV
     }
     class Gold : Inventory
     {
-        public Gold(int x, int y, int jumlah) : base(x, y, "Gold", jumlah, 150, 5, "")
+        public Gold(int x, int y, int jumlah) : base(x, y, "Gold", jumlah, 200, 5, "")
         {
         }
 
@@ -145,7 +145,7 @@ namespace Project_PV
     }
     class Jewel : Inventory
     {
-        public Jewel(int x, int y, int jumlah) : base(x, y, "Jewel", jumlah, 125, 6, "")
+        public Jewel(int x, int y, int jumlah) : base(x, y, "Jewel", jumlah, 250, 6, "")
         {
         }
 
@@ -156,7 +156,7 @@ namespace Project_PV
     }
     class Key : Inventory
     {
-        public Key(int x, int y, int jumlah) : base(x, y, "Key", jumlah, 100, 7, "")
+        public Key(int x, int y, int jumlah) : base(x, y, "Key", jumlah, 200, 7, "")
         {
         }
 
@@ -167,7 +167,7 @@ namespace Project_PV
     }
     class Shovel : Inventory
     {
-        public Shovel(int x, int y, int jumlah) : base(x, y, "Shovel", jumlah, 275, 8, "")
+        public Shovel(int x, int y, int jumlah) : base(x, y, "Shovel", jumlah, 250, 8, "")
         {
         }
 
@@ -178,7 +178,7 @@ namespace Project_PV
     }
     class TheCure : Inventory
     {
-        public TheCure(int x, int y, int jumlah) : base(x, y, "TheCure", jumlah, 50, 9, "")
+        public TheCure(int x, int y, int jumlah) : base(x, y, "TheCure", jumlah, 0, 9, "")
         {
         }
 

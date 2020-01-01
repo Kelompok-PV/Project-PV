@@ -687,6 +687,17 @@
     <None Include="Resources\pilihSkill.png" />
     <None Include="Resources\Grey_dot.png" />
     <None Include="Resources\health_pip_full.png" />
+    <None Include="Resources\ability_none.png" />
+    <None Include="Resources\inv_estate+the_cure.png" />
+    <None Include="Resources\inv_gold+_3.png" />
+    <None Include="Resources\inv_supply+bandage.png" />
+    <None Include="Resources\inv_supply+holy_water.png" />
+    <None Include="Resources\inv_supply+shovel.png" />
+    <None Include="Resources\inv_supply+skeleton_key.png" />
+    <None Include="Resources\inv_supply+torch.png" />
+    <None Include="Resources\inv_gem+emerald.png" />
+    <None Include="Resources\back-e.jpg" />
+    <None Include="Resources\back-e2.jpg" />
     <Content Include="Resources\Quest\dungeon_progressionbar.png" />
     <Content Include="Resources\Quest\embark_party.background.png" />
     <None Include="Resources\Town\town full_2.png" />
