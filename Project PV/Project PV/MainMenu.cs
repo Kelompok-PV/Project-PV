@@ -217,7 +217,11 @@ namespace Project_PV
             {
                 if (cursor.IntersectsWith(sanitarium))
                 {
-                    MessageBox.Show("sanitarium");
+                    Stage temp = gsm.stage;
+                    gsm.unloadState(temp);
+
+                    gsm.stage = Stage.sanitarium;
+                    gsm.loadState(gsm.stage);
                 }
                 else if (cursor.IntersectsWith(guild))
                 {

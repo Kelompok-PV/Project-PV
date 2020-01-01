@@ -1144,4 +1144,31 @@
   <data name="skill_attribute_tag" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\skill_attribute_tag.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ability_none" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ability_none.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="inv_estate_the_cure" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\inv_estate+the_cure.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="inv_gem_emerald" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\inv_gem+emerald.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="inv_gold__3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\inv_gold+_3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="inv_supply_bandage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\inv_supply+bandage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="inv_supply_holy_water" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\inv_supply+holy_water.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="inv_supply_shovel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\inv_supply+shovel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="inv_supply_skeleton_key" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\inv_supply+skeleton_key.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="inv_supply_torch" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\inv_supply+torch.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

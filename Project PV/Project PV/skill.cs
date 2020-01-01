@@ -38,7 +38,12 @@ namespace Project_PV
         {
             
         }
-        
+
+        public virtual void getDamageSkill(int targetSkill, List<musuh> musuhs)
+        {
+
+        }
+
     }
     class noxius_blast : Skill
     {
@@ -52,6 +57,14 @@ namespace Project_PV
             skill_efek[0] = efek.blight;
             icon = Properties.Resources.plague_doctor_ability_noxious_blast;
         }
+
+        public override void getDamageSkill(int targetSkill, List<musuh> musuhs)
+        {
+            Random rand = new Random();
+            int damage = rand.Next(min_damage, max_damage);
+            musuhs[targetSkill].hp -= damage;
+            musuhs[targetSkill].musuh_buff.Add(skill_efek[0]);
+        }
     }
     class incision : Skill
     {
@@ -63,6 +76,14 @@ namespace Project_PV
             status_skill = new status(0, 1, 20, 60, 0, -1);
             skill_efek[0] = efek.blight;
             icon = Properties.Resources.plague_doctor_ability_incision;
+        }
+
+        public override void getDamageSkill(int targetSkill, List<musuh> musuhs)
+        {
+            Random rand = new Random();
+            int damage = rand.Next(min_damage, max_damage);
+            musuhs[targetSkill].hp -= damage;
+            musuhs[targetSkill].musuh_buff.Add(skill_efek[0]);
         }
     }
     class battlefield_medicine : Skill
@@ -76,6 +97,13 @@ namespace Project_PV
             skill_efek[0] = efek.blight;
             icon = Properties.Resources.plague_doctor_ability_battlefield_medicine;
         }
+        public override void getDamageSkill(int targetSkill, List<musuh> musuhs)
+        {
+            Random rand = new Random();
+            int damage = rand.Next(min_damage, max_damage);
+            musuhs[targetSkill].hp -= damage;
+            musuhs[targetSkill].musuh_buff.Add(skill_efek[0]);
+        }
     }
     class bliding_gas: Skill
     {
@@ -88,6 +116,16 @@ namespace Project_PV
             skill_efek[0] = efek.stun;
             icon = Properties.Resources.plague_doctor_ability_blinding_gas;
         }
+        public override void getDamageSkill(int targetSkill, List<musuh> musuhs)
+        {
+            Random rand = new Random();
+            int damage = rand.Next(min_damage, max_damage);
+            for (int i = 2; i < target.Length; i++)
+            {
+                musuhs[target[i]].hp -= damage;
+                musuhs[target[i]].musuh_buff.Add(skill_efek[0]);
+            }
+        }
     }
     class divine_grace : Skill
     {
@@ -96,9 +134,16 @@ namespace Project_PV
         {
             rank[0] = 1; rank[1] = 1; rank[2] = 0; rank[3] = 0;
             target[0] = 1; target[1] = 1; target[2] = 1; target[3] = 1;
-            status_skill = new status(4, 5, 20, 100, 0, -1);
-            //skill_efek[0] = efek.stun; 
+            status_skill = new status(0, 0, 20, 100, 0, -1);
+            skill_efek[0] = efek.heal; 
             icon = Properties.Resources.vestal_ability_divine_grace;
+        }
+        public override void getDamageSkill(int targetSkill, List<karakter> karakters)
+        {
+            Random rand = new Random();
+            int damage = rand.Next(min_damage, max_damage);
+            karakters[targetSkill].hp += damage;
+            karakters[targetSkill].hero_buff.Add(skill_efek[0]);
         }
     }
 
@@ -109,9 +154,16 @@ namespace Project_PV
         {
             rank[0] = 1; rank[1] = 1; rank[2] = 1; rank[3] = 0;
             target[0] = 1; target[1] = 1; target[2] = 1; target[3] = 1;
-            status_skill = new status(1, 3, 20, 100, 0, -1);
-            //skill_efek[0] = efek.stun; 
+            status_skill = new status(0, 0, 20, 100, 0, -1);
+            skill_efek[0] = efek.heal; 
             icon = Properties.Resources.vestal_ability_divine_comfort;
+        }
+        public override void getDamageSkill(int targetSkill, List<karakter> karakters)
+        {
+            Random rand = new Random();
+            int damage = rand.Next(min_damage, max_damage);
+            karakters[targetSkill].hp += damage;
+            karakters[targetSkill].hero_buff.Add(skill_efek[0]);
         }
     }
     class dazzling_light : Skill
@@ -125,6 +177,13 @@ namespace Project_PV
             skill_efek[0] = efek.stun;
             icon = Properties.Resources.vestal_ability_dazzling_light;
         }
+        public override void getDamageSkill(int targetSkill, List<musuh> musuhs)
+        {
+            Random rand = new Random();
+            int damage = rand.Next(min_damage, max_damage);
+            musuhs[targetSkill].hp -= damage;
+            musuhs[targetSkill].musuh_buff.Add(skill_efek[0]);
+        }
     }
     class judgement : Skill
     {
@@ -136,6 +195,12 @@ namespace Project_PV
             status_skill = new status(1, 3, 20, 55, 0, -1);
             //skill_efek[0] = efek.stun; 
             icon = Properties.Resources.vestal_ability_judgement;
+        }
+        public override void getDamageSkill(int targetSkill, List<musuh> musuhs)
+        {
+            Random rand = new Random();
+            int damage = rand.Next(min_damage, max_damage);
+            musuhs[targetSkill].hp -= damage;
         }
     }
 
@@ -150,18 +215,35 @@ namespace Project_PV
             skill_efek[0] = efek.stun; 
             icon = Properties.Resources.crusader_ability_smite;
         }
+        public override void getDamageSkill(int targetSkill, List<musuh> musuhs)
+        {
+            Random rand = new Random();
+            int damage = rand.Next(min_damage, max_damage);
+            for (int i = 0; i < 2; i++)
+            {
+                musuhs[target[i]].hp -= damage;
+                musuhs[target[i]].musuh_buff.Add(skill_efek[0]);
+            }
+        }
     }
 
     class zealous_accusation : Skill
     {
         public zealous_accusation()
-           : base("Divine Comfort", new efek[1], new int[4], new int[4], new status(), 100)
+           : base("Zealous Accusation", new efek[1], new int[4], new int[4], new status(), 100)
         {
             rank[0] = 0; rank[1] = 0; rank[2] = 1; rank[3] = 1;
             target[0] = 1; target[1] = 1; target[2] = 0; target[3] = 0;
             status_skill = new status(3, 4, 0, 60, 0, -1);
             skill_efek[0] = efek.stun;
             icon = Properties.Resources.crusader_ability_zealous_accusation;
+        }
+        public override void getDamageSkill(int targetSkill, List<musuh> musuhs)
+        {
+            Random rand = new Random();
+            int damage = rand.Next(min_damage, max_damage);
+            musuhs[targetSkill].hp -= damage;
+            musuhs[targetSkill].musuh_buff.Add(skill_efek[0]);
         }
     }
     class holy_lance : Skill
@@ -175,6 +257,12 @@ namespace Project_PV
             //skill_efek[0] = efek.stun; 
             icon = Properties.Resources.crusader_ability_holy_lance;
         }
+        public override void getDamageSkill(int targetSkill, List<musuh> musuhs)
+        {
+            Random rand = new Random();
+            int damage = rand.Next(min_damage, max_damage);
+            musuhs[targetSkill].hp -= damage;
+        }
     }
     class inspiring_cry : Skill
     {
@@ -186,6 +274,13 @@ namespace Project_PV
             status_skill = new status(0, 1, 0, 100, 0, -1);
             skill_efek[0] = efek.stress;
             icon = Properties.Resources.crusader_ability_inspiring_cry;
+        }
+        public override void getDamageSkill(int targetSkill, List<karakter> karakters)
+        {
+            Random rand = new Random();
+            int damage = rand.Next(min_damage, max_damage);
+            karakters[targetSkill].hp += damage;
+            karakters[targetSkill].hero_stress.stress_point -= 5;
         }
     }
     class pierce : Skill
@@ -199,6 +294,12 @@ namespace Project_PV
             skill_efek[0] = efek.armor;
             icon = Properties.Resources.shieldbreaker_ability_pierce;
         }
+        public override void getDamageSkill(int targetSkill, List<musuh> musuhs)
+        {
+            Random rand = new Random();
+            int damage = rand.Next(min_damage, max_damage);
+            musuhs[targetSkill].hp += damage;
+        }
     }
     class adders_kiss : Skill
     {
@@ -211,17 +312,33 @@ namespace Project_PV
             skill_efek[0] = efek.blight;
             icon = Properties.Resources.shieldbreaker_ability_adder_kiss;
         }
+        public override void getDamageSkill(int targetSkill, List<musuh> musuhs)
+        {
+            Random rand = new Random();
+            int damage = rand.Next(min_damage, max_damage);
+            musuhs[targetSkill].hp -= damage;
+            musuhs[targetSkill].musuh_buff.Add(skill_efek[0]);
+        }
     }
     class captivate : Skill
     {
         public captivate()
-           : base("Captivate", new efek[1], new int[4], new int[4], new status(), 0)
+           : base("Captivate", new efek[2], new int[4], new int[4], new status(), 0)
         {
             rank[0] = 0; rank[1] = 1; rank[2] = 1; rank[3] = 0;
             target[0] = 0; target[1] = 1; target[2] = 1; target[3] = 0;
             status_skill = new status(2, 4, 20, 60, 0, -1);
-            skill_efek[0] = efek.marked;
+            skill_efek[0] = efek.blight;
+            skill_efek[1] = efek.marked;
             icon = Properties.Resources.shieldbreaker_ability_captivate;
+        }
+        public override void getDamageSkill(int targetSkill, List<musuh> musuhs)
+        {
+            Random rand = new Random();
+            int damage = rand.Next(min_damage, max_damage);
+            musuhs[targetSkill].hp -= damage;
+            musuhs[targetSkill].musuh_buff.Add(skill_efek[0]);
+            musuhs[targetSkill].musuh_buff.Add(skill_efek[1]);
         }
     }
     class impale : Skill
@@ -234,6 +351,16 @@ namespace Project_PV
             status_skill = new status(4, 6, 22, 60, 0, -1);
             //skill_efek[0] = efek.; 
             icon = Properties.Resources.shieldbreaker_ability_impale;
+        }
+
+        public override void getDamageSkill(int targetSkill, List<musuh> musuhs)
+        {
+            Random rand = new Random();
+            int damage = rand.Next(min_damage, max_damage);
+            for (int i = 0; i < target.Length; i++)
+            {
+                musuhs[target[i]].hp -= damage;
+            }
         }
     }
     class yeti1 : Skill
@@ -864,6 +991,7 @@ namespace Project_PV
         stun,
         marked,
         armor,
-        stress
+        stress,
+        heal
     }
 }

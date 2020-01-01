@@ -113,6 +113,16 @@ namespace Project_PV.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ability_none {
+            get {
+                object obj = ResourceManager.GetObject("ability_none", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ability_pass {
             get {
                 object obj = ResourceManager.GetObject("ability_pass", resourceCulture);
@@ -1542,6 +1552,36 @@ namespace Project_PV.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap inv_estate_the_cure {
+            get {
+                object obj = ResourceManager.GetObject("inv_estate_the_cure", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap inv_gem_emerald {
+            get {
+                object obj = ResourceManager.GetObject("inv_gem_emerald", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap inv_gold__3 {
+            get {
+                object obj = ResourceManager.GetObject("inv_gold__3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap inv_provision__0 {
             get {
                 object obj = ResourceManager.GetObject("inv_provision__0", resourceCulture);
@@ -1575,6 +1615,56 @@ namespace Project_PV.Properties {
         internal static System.Drawing.Bitmap inv_provision__3 {
             get {
                 object obj = ResourceManager.GetObject("inv_provision__3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap inv_supply_bandage {
+            get {
+                object obj = ResourceManager.GetObject("inv_supply_bandage", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap inv_supply_holy_water {
+            get {
+                object obj = ResourceManager.GetObject("inv_supply_holy_water", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap inv_supply_shovel {
+            get {
+                object obj = ResourceManager.GetObject("inv_supply_shovel", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap inv_supply_skeleton_key {
+            get {
+                object obj = ResourceManager.GetObject("inv_supply_skeleton_key", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap inv_supply_torch {
+            get {
+                object obj = ResourceManager.GetObject("inv_supply_torch", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
