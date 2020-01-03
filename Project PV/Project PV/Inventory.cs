@@ -4,8 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.IO;
 namespace Project_PV
 {
+
+    [Serializable]
     abstract class Inventory
     {
         public int x { get; set; }
@@ -87,6 +92,7 @@ namespace Project_PV
             }
         }
     }
+    
     class LargeFood : Inventory
     {
         public LargeFood(int x, int y, int jumlah) : base(x, y, "Large Food", jumlah, 75, 1, "")
@@ -99,6 +105,7 @@ namespace Project_PV
         }
 
     }
+    
     class SmallFood : Inventory
     {
         public SmallFood(int x, int y, int jumlah) : base(x, y, "Small Food", jumlah, 75, 2, "")
@@ -110,6 +117,7 @@ namespace Project_PV
         {
         }
     }
+    
     class Torch : Inventory
     {
         public Torch(int x, int y, int jumlah) : base(x, y, "Torch", jumlah, 75, 3, "")
@@ -121,6 +129,7 @@ namespace Project_PV
         {
         }
     }
+    
     class Bandage : Inventory
     {
         public Bandage(int x, int y, int jumlah) : base(x, y, "Bandage", jumlah, 150, 4, "")
@@ -132,6 +141,7 @@ namespace Project_PV
         {
         }
     }
+    
     class Gold : Inventory
     {
         public Gold(int x, int y, int jumlah) : base(x, y, "Gold", jumlah, 200, 5, "")
@@ -143,6 +153,7 @@ namespace Project_PV
         {
         }
     }
+    
     class Jewel : Inventory
     {
         public Jewel(int x, int y, int jumlah) : base(x, y, "Jewel", jumlah, 250, 6, "")
@@ -154,6 +165,7 @@ namespace Project_PV
         {
         }
     }
+    
     class Key : Inventory
     {
         public Key(int x, int y, int jumlah) : base(x, y, "Key", jumlah, 200, 7, "")
@@ -165,6 +177,7 @@ namespace Project_PV
         {
         }
     }
+    
     class Shovel : Inventory
     {
         public Shovel(int x, int y, int jumlah) : base(x, y, "Shovel", jumlah, 250, 8, "")
@@ -176,6 +189,7 @@ namespace Project_PV
         {
         }
     }
+    
     class TheCure : Inventory
     {
         public TheCure(int x, int y, int jumlah) : base(x, y, "TheCure", jumlah, 0, 9, "")
@@ -187,6 +201,7 @@ namespace Project_PV
         {
         }
     }
+    
     class PotentSalve : Inventory
     {
         public PotentSalve(int x, int y, int jumlah) : base(x, y, "Potent Salve", jumlah, 300, 10, "")

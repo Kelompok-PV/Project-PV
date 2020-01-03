@@ -9,6 +9,7 @@ using System.Windows.Forms;
 
 namespace Project_PV
 {
+    
     class BattleAreaState : GameState
     {
         public List<karakter> player { get; set; }

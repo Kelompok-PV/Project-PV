@@ -4,9 +4,12 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.IO;
 namespace Project_PV
 {
+    [Serializable]
     abstract class karakter
     {
         public string nama { get; set; }
@@ -18,8 +21,8 @@ namespace Project_PV
         public string hero { get; set; }//hero-hero_move-hero_move_now hero_move_noww++;
         public string hero_move { get; set; }
         public int hero_move_now { get; set; }
-        public List<efek> hero_buff { get; set; }
-        public List<int> hero_buff_turn{ get; set; }
+        public efek hero_buff { get; set; }
+        public int hero_buff_turn{ get; set; }
         public equip[] hero_equip { get; set; }
         public int x { get; set; }
         public string type { get; set; }
@@ -48,8 +51,8 @@ namespace Project_PV
         protected karakter(string nama)
         {
             this.nama = nama;
-            hero_buff = new List<efek>();
-            hero_buff_turn = new List<int>();
+            hero_buff = efek.none;
+            hero_buff_turn = 0;
             this.hero_stress = new stress();
             this.hero_stress.stress_level = 0;
             this.hero_stress.stress_point = 0;
@@ -123,6 +126,7 @@ namespace Project_PV
             return iconImg;
         }
     }
+    
     class ninja : karakter
     {
         //jarak jauh
@@ -145,11 +149,12 @@ namespace Project_PV
             skills.Add(new adders_kiss());
             skills.Add(new captivate());
             skills.Add(new impale());
-			this.hero_equip[0].nama = "Dagger";
+			//this.hero_equip[0].nama = "Dagger";
 			//this.hero_equip[0].img = ;
         }
     }
     //jarak jauh
+    
     class archer : karakter
     {
         public archer(string nama) : base(nama)
@@ -173,6 +178,7 @@ namespace Project_PV
             speed = 3;
         }
     }
+    
     class aladin : karakter
     {
         public aladin(string nama) : base(nama)
@@ -196,6 +202,7 @@ namespace Project_PV
             speed = 1;
         }
     }
+    
     class Tony : karakter
     {
         public Tony(string nama) : base(nama)
@@ -219,6 +226,7 @@ namespace Project_PV
             speed = 4;
         }
     }
+    
     class druid : karakter
     {
         //healer
@@ -243,6 +251,7 @@ namespace Project_PV
             speed = 4;
         }
     }
+    
     class IceWoman : karakter
     {
         //healer
@@ -267,6 +276,7 @@ namespace Project_PV
             speed = 8;
         }
     }
+    
     class Hercules : karakter
     {
         public Hercules(string nama) : base(nama)
@@ -291,6 +301,7 @@ namespace Project_PV
             speed = 3;
         }
     }
+    
     class giantLady : karakter
     {
         public giantLady(string nama) : base(nama)
@@ -314,13 +325,5 @@ namespace Project_PV
             this.hp = maxHp;
             speed = 3;
         }
-    }
-
-
-
-    public enum buff
-    {
-        poison,
-        bleed
     }
 }

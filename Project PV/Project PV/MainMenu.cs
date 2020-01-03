@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace Project_PV
 {
+    
     class MainMenu : GameState
     {
         public GameStateManager gsm { get; set; }
@@ -262,7 +263,6 @@ namespace Project_PV
                             indexHero = i;
                             open = true;
                             transition = true;
-                            break;
                         }
                     }
                 }
@@ -274,10 +274,6 @@ namespace Project_PV
                     disposeBuy = true;
                 }
             }
-            
-
-           
-            
             
         }
 
@@ -325,14 +321,14 @@ namespace Project_PV
                 }
             }
 
-            if (open)
-            {
-                openTrans++;
-                if(openTrans >= 20)
-                {
-                    transition = false;
-                }
-            }
+            //if (open)
+            //{
+            //    openTrans++;
+            //    if(openTrans >= 20)
+            //    {
+            //        transition = false;
+            //    }
+            //}
 
             if (disposeBuy)
             {
@@ -341,6 +337,7 @@ namespace Project_PV
                     widthBuy = 10;
                     open = false;
                     disposeBuy = false;
+                    transition = false;
                     Config.form1.Invalidate();
                 }
                 else
@@ -413,6 +410,7 @@ namespace Project_PV
 
         
     }
+    
     class coordinate
     {
         public int x { get; set; }
@@ -428,7 +426,7 @@ namespace Project_PV
             this.subtitle = subtitle;
         }
     }
-
+    
     class rosterList
     {
         public int x { get; set; }

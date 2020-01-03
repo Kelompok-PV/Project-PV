@@ -13,6 +13,7 @@ using System.Windows.Media;
 
 namespace Project_PV
 {
+    
     class battle : GameState
     {
         public Image background{ get; set; }
@@ -303,24 +304,21 @@ namespace Project_PV
             }
             for (int i = 0; i < player.Count; i++)
             {
-                for (int j = 0; j < player[i].hero_buff.Count; j++)
+                if (player[i].hero_buff == efek.bleed)
                 {
-                    if (player[i].hero_buff[j] == efek.bleed)
-                    {
-                        g.DrawImage((Image)Properties.Resources.skill_attribute_bleed, player[i].x + 15 * j, 410, 30, 30);
-                    }
-                    if (player[i].hero_buff[j] == efek.blight)
-                    {
-                        g.DrawImage((Image)Properties.Resources.skill_attribute_disease, player[i].x + 15 * j, 410, 30, 30);
-                    }
-                    if (player[i].hero_buff[j] == efek.marked)
-                    {
-                        g.DrawImage((Image)Properties.Resources.skill_attribute_tag, player[i].x + 15 * j, 410, 30, 30);
-                    }
-                    if (player[i].hero_buff[j] == efek.stun)
-                    {
-                        g.DrawImage((Image)Properties.Resources.skill_attribute_stun, player[i].x + 15 * j, 410, 30, 30);
-                    }
+                    g.DrawImage((Image)Properties.Resources.skill_attribute_bleed, player[i].x + 15, 410, 30, 30);
+                }
+                if (player[i].hero_buff == efek.blight)
+                {
+                    g.DrawImage((Image)Properties.Resources.skill_attribute_disease, player[i].x + 15, 410, 30, 30);
+                }
+                if (player[i].hero_buff == efek.marked)
+                {
+                    g.DrawImage((Image)Properties.Resources.skill_attribute_tag, player[i].x + 15, 410, 30, 30);
+                }
+                if (player[i].hero_buff == efek.stun)
+                {
+                    g.DrawImage((Image)Properties.Resources.skill_attribute_stun, player[i].x + 15, 410, 30, 30);
                 }
             }
         }
@@ -647,35 +645,31 @@ namespace Project_PV
                 {
                     pilihHero = turnAttack[turn_ke].ke;
                     player[pilihHero].marked = false;
-                    for (int i = 0; i < player[pilihHero].hero_buff.Count; i++)
+                    if (player[pilihHero].hero_buff == efek.bleed)
                     {
-                        if (player[pilihHero].hero_buff[i] == efek.bleed)
-                        {
-                            player[pilihHero].hp -= player[pilihHero].hp / 10;
-                        }
-                        if (player[pilihHero].hero_buff[i] == efek.blight)
-                        {
-                            player[pilihHero].hp -= (player[pilihHero].maxHp / 10);
-                        }
-                        if (player[pilihHero].hero_buff[i] == efek.marked)
-                        {
-                            player[pilihHero].marked = true;
-                        }
-                        if (player[pilihHero].hero_buff[i] == efek.stress)
-                        {
-                            player[pilihHero].hero_stress.stress_point += 10;
-                        }
-                        if (player[pilihHero].hero_buff[i] == efek.stun)
-                        {
-                            gantiTurn();
-                        }
-                        player[pilihHero].hero_buff_turn[i]--;
-                        if (player[pilihHero].hero_buff_turn[i] == 0)
-                        {
-                            player[pilihHero].hero_buff_turn.RemoveAt(i);
-                            player[pilihHero].hero_buff.RemoveAt(i);
-                            i--;
-                        }
+                        player[pilihHero].hp -= player[pilihHero].hp / 10;
+                    }
+                    if (player[pilihHero].hero_buff == efek.blight)
+                    {
+                        player[pilihHero].hp -= (player[pilihHero].maxHp / 10);
+                    }
+                    if (player[pilihHero].hero_buff == efek.marked)
+                    {
+                        player[pilihHero].marked = true;
+                    }
+                    if (player[pilihHero].hero_buff == efek.stress)
+                    {
+                        player[pilihHero].hero_stress.stress_point += 10;
+                    }
+                    if (player[pilihHero].hero_buff == efek.stun)
+                    {
+                        gantiTurn();
+                    }
+                    player[pilihHero].hero_buff_turn--;
+                    if (player[pilihHero].hero_buff_turn == 0)
+                    {
+                        player[pilihHero].hero_buff_turn = 0;
+                        player[pilihHero].hero_buff = efek.none;
                     }
                 }
                 else
@@ -726,8 +720,8 @@ namespace Project_PV
             }
         }
     }
-
-    public class turn
+    
+    class turn
     {
         public int jenis { get; set; }
         public int ke { get; set; }

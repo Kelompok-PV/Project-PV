@@ -8,10 +8,12 @@ using System.Drawing;
 
 namespace Project_PV
 {
+    [Serializable]
     static class Config
     {
         public static PrivateFontCollection font = new PrivateFontCollection();
         public static RectangleF rect;
         public static Form1 form1;
+        
     }
 }

@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using System.Drawing;
 namespace Project_PV
 {
+
+    [Serializable]
     abstract class Skill
     {
         public string nama { get; set; }
@@ -45,6 +47,7 @@ namespace Project_PV
         }
 
     }
+    
     class noxius_blast : Skill
     {
         public noxius_blast()
@@ -66,6 +69,7 @@ namespace Project_PV
             musuhs[targetSkill].musuh_buff.Add(skill_efek[0]);
         }
     }
+    
     class incision : Skill
     {
         public incision()
@@ -86,6 +90,7 @@ namespace Project_PV
             musuhs[targetSkill].musuh_buff.Add(skill_efek[0]);
         }
     }
+    
     class battlefield_medicine : Skill
     {
         public battlefield_medicine()
@@ -105,6 +110,7 @@ namespace Project_PV
             musuhs[targetSkill].musuh_buff.Add(skill_efek[0]);
         }
     }
+    
     class bliding_gas: Skill
     {
         public bliding_gas()
@@ -127,6 +133,7 @@ namespace Project_PV
             }
         }
     }
+    
     class divine_grace : Skill
     {
         public divine_grace()
@@ -143,10 +150,10 @@ namespace Project_PV
             Random rand = new Random();
             int damage = rand.Next(min_damage, max_damage);
             karakters[targetSkill].hp += damage;
-            karakters[targetSkill].hero_buff.Add(skill_efek[0]);
+            karakters[targetSkill].hero_buff = skill_efek[0];
         }
     }
-
+    
     class divine_comfort : Skill
     {
         public divine_comfort()
@@ -163,9 +170,10 @@ namespace Project_PV
             Random rand = new Random();
             int damage = rand.Next(min_damage, max_damage);
             karakters[targetSkill].hp += damage;
-            karakters[targetSkill].hero_buff.Add(skill_efek[0]);
+            karakters[targetSkill].hero_buff = skill_efek[0];
         }
     }
+    
     class dazzling_light : Skill
     {
         public dazzling_light()
@@ -185,6 +193,7 @@ namespace Project_PV
             musuhs[targetSkill].musuh_buff.Add(skill_efek[0]);
         }
     }
+    
     class judgement : Skill
     {
         public judgement()
@@ -203,7 +212,7 @@ namespace Project_PV
             musuhs[targetSkill].hp -= damage;
         }
     }
-
+    
     class smite : Skill
     {
         public smite()
@@ -226,7 +235,7 @@ namespace Project_PV
             }
         }
     }
-
+    
     class zealous_accusation : Skill
     {
         public zealous_accusation()
@@ -246,6 +255,7 @@ namespace Project_PV
             musuhs[targetSkill].musuh_buff.Add(skill_efek[0]);
         }
     }
+    
     class holy_lance : Skill
     {
         public holy_lance()
@@ -264,6 +274,7 @@ namespace Project_PV
             musuhs[targetSkill].hp -= damage;
         }
     }
+    
     class inspiring_cry : Skill
     {
         public inspiring_cry()
@@ -283,6 +294,7 @@ namespace Project_PV
             karakters[targetSkill].hero_stress.stress_point -= 5;
         }
     }
+    
     class pierce : Skill
     {
         public pierce()
@@ -320,7 +332,7 @@ namespace Project_PV
             musuhs[targetSkill].musuh_buff.Add(skill_efek[0]);
         }
     }
-    class captivate : Skill
+     class captivate : Skill
     {
         public captivate()
            : base("Captivate", new efek[2], new int[4], new int[4], new status(), 0)
@@ -341,7 +353,7 @@ namespace Project_PV
             musuhs[targetSkill].musuh_buff.Add(skill_efek[1]);
         }
     }
-    class impale : Skill
+     class impale : Skill
     {
         public impale()
            : base("Impale", new efek[1], new int[4], new int[4], new status(), 0)
@@ -363,7 +375,7 @@ namespace Project_PV
             }
         }
     }
-    class yeti1 : Skill
+     class yeti1 : Skill
     {
         public yeti1()
            : base("yeti1", new efek[1], new int[4], new int[4], new status(), 100)
@@ -375,7 +387,7 @@ namespace Project_PV
             icon = Properties.Resources.yeti_attack___1_;
         }
     }
-    class yeti2 : Skill
+     class yeti2 : Skill
     {
         public yeti2()
            : base("yeti2", new efek[1], new int[4], new int[4], new status(), 100)
@@ -387,7 +399,7 @@ namespace Project_PV
             icon = Properties.Resources.yeti_attack___2_;
         }
     }
-    class yeti3 : Skill
+     class yeti3 : Skill
     {
         public yeti3()
            : base("yeti3", new efek[1], new int[4], new int[4], new status(), 100)
@@ -399,7 +411,7 @@ namespace Project_PV
             icon = Properties.Resources.yeti_attack___3_;
         }
     }
-    class yeti4 : Skill
+     class yeti4 : Skill
     {
         public yeti4()
            : base("yeti4", new efek[1], new int[4], new int[4], new status(), 100)
@@ -411,7 +423,7 @@ namespace Project_PV
             icon = Properties.Resources.yeti_attack___4_;
         }
     }
-    class Boarman1 : Skill
+     class Boarman1 : Skill
     {
         public Boarman1()
         {
@@ -435,7 +447,7 @@ namespace Project_PV
             
         }
     }
-    class Boarman2 : Skill
+     class Boarman2 : Skill
     {
         public Boarman2()
         {
@@ -454,7 +466,7 @@ namespace Project_PV
             min_damage = 2;
         }
     }
-    class Boarman3 : Skill
+     class Boarman3 : Skill
     {
         public Boarman3()
         {
@@ -476,7 +488,7 @@ namespace Project_PV
             skill_efek[0] = efek.bleed;
         }
     }
-    class Boarman4 : Skill
+     class Boarman4 : Skill
     {
         public Boarman4()
         {
@@ -495,7 +507,7 @@ namespace Project_PV
         }
     }
 
-    class FlameEater1 : Skill
+     class FlameEater1 : Skill
     {
         public FlameEater1()
         {
@@ -522,14 +534,14 @@ namespace Project_PV
             for (int i = 0; i < karakters.Count; i++)
             {
                 karakters[i].hero_stress.stress_point += 5;
-                karakters[i].hero_buff.Add(skill_efek[0]);
+                karakters[i].hero_buff = skill_efek[0];
                 karakters[i].hp -= min_damage; //karna pasti damage nya 1
             }
             
         }
     }
 
-    class FlameEater2 : Skill
+     class FlameEater2 : Skill
     {
         public FlameEater2()
         {
@@ -554,13 +566,13 @@ namespace Project_PV
         public override void getDamageSkill(int targetSkill, List<karakter> karakters)
         {
             karakters[targetSkill].hero_stress.stress_point += 5;
-            karakters[targetSkill].hero_buff.Add(skill_efek[0]);
+            karakters[targetSkill].hero_buff = skill_efek[0];
             Random rand = new Random();
             int damage = rand.Next(min_damage, max_damage);
             karakters[targetSkill].hp -= damage;
         }
     }
-    class FlameEater3 : Skill
+     class FlameEater3 : Skill
     {
         public FlameEater3()
         {
@@ -582,7 +594,7 @@ namespace Project_PV
             karakters[targetSkill].hp -= damage;
         }
     }
-    class FlameEater4 : Skill
+     class FlameEater4 : Skill
     {
         public FlameEater4()
         {
@@ -605,7 +617,7 @@ namespace Project_PV
             karakters[targetSkill].hp -= damage;
         }
     }
-    class Gargoyle1 : Skill
+     class Gargoyle1 : Skill
     {
         public Gargoyle1()
         {
@@ -632,7 +644,7 @@ namespace Project_PV
             }
         }
     }
-    class Gargoyle2 : Skill
+     class Gargoyle2 : Skill
     {
         public Gargoyle2()
         {
@@ -656,7 +668,7 @@ namespace Project_PV
             karakters[targetSkill].hp -= damage;
         }
     }
-    class Gargoyle3 : Skill
+     class Gargoyle3 : Skill
     {
         public Gargoyle3()
         {
@@ -678,11 +690,10 @@ namespace Project_PV
             Random rand = new Random();
             int damage = rand.Next(min_damage, max_damage);
             karakters[targetSkill].hp -= damage;
-            karakters[targetSkill].hero_buff.Add(skill_efek[0]);
-            karakters[targetSkill].hero_buff.Add(skill_efek[1]);
+            karakters[targetSkill].hero_buff = skill_efek[1];
         }
     }
-    class Gargoyle4 : Skill
+     class Gargoyle4 : Skill
     {
         public Gargoyle4()
         {
@@ -703,7 +714,7 @@ namespace Project_PV
             karakters[targetSkill].hp -= damage;            
         }
     }
-    class GiantGoblin1 : Skill
+     class GiantGoblin1 : Skill
     {
         public GiantGoblin1()
         {
@@ -724,12 +735,11 @@ namespace Project_PV
             for (int i = 0; i < karakters.Count; i++)
             {
                 karakters[i].hp -= 1;
-                karakters[i].hero_buff.Add(skill_efek[0]);
-                karakters[i].hero_buff.Add(skill_efek[1]);
+                karakters[i].hero_buff = skill_efek[1];
             }
         }
     }
-    class GiantGoblin2 : Skill
+     class GiantGoblin2 : Skill
     {
         public GiantGoblin2()
         {
@@ -750,13 +760,12 @@ namespace Project_PV
             for (int i = 0; i < karakters.Count; i++)
             {
                 karakters[i].hp -= 1;
-                karakters[i].hero_buff.Add(skill_efek[0]);
-                karakters[i].hero_buff.Add(skill_efek[1]);
+                karakters[i].hero_buff = skill_efek[0];
                 karakters[i].hero_stress.stress_point += 10;
             }
         }
     }
-    class GiantGoblin3 : Skill
+     class GiantGoblin3 : Skill
     {
         public GiantGoblin3()
         {
@@ -778,7 +787,7 @@ namespace Project_PV
             karakters[targetSkill].hp -= damage;
         }
     }
-    class GiantGoblin4 : Skill
+     class GiantGoblin4 : Skill
     {
         public GiantGoblin4()
         {
@@ -799,12 +808,12 @@ namespace Project_PV
             for (int i = 0; i < karakters.Count; i++)
             {
                 karakters[i].hp -= 1;
-                karakters[i].hero_buff.Add(skill_efek[0]);
+                karakters[i].hero_buff = skill_efek[0];
                 karakters[i].hero_stress.stress_point += 10;
             }
         }
     }
-    class Larry1 : Skill
+     class Larry1 : Skill
     {
         public Larry1()
         {
@@ -825,11 +834,11 @@ namespace Project_PV
             for (int i = 0; i < karakters.Count; i++)
             {
                 karakters[i].hp -= 3;
-                karakters[i].hero_buff.Add(skill_efek[0]);
+                karakters[i].hero_buff = skill_efek[0];
             }
         }
     }
-    class Larry2 : Skill
+     class Larry2 : Skill
     {
         public Larry2()
         {
@@ -850,12 +859,12 @@ namespace Project_PV
             for (int i = 0; i < karakters.Count; i++)
             {
                 karakters[i].hp -= 3;
-                karakters[i].hero_buff.Add(skill_efek[0]);
-                karakters[i].hero_buff_turn.Add(5);
+                karakters[i].hero_buff = skill_efek[0];
+                karakters[i].hero_buff_turn = 5;
             }
         }
     }
-    class Larry3 : Skill
+     class Larry3 : Skill
     {
         public Larry3()
         {
@@ -878,7 +887,7 @@ namespace Project_PV
             }
         }
     }
-    class Larry4 : Skill
+     class Larry4 : Skill
     {
         public Larry4()
         {
@@ -900,7 +909,7 @@ namespace Project_PV
             karakters[targetSkill].hero_stress.stress_point += 15;
         }
     }
-    class Skeleton_soldier1 : Skill
+     class Skeleton_soldier1 : Skill
     {
         public Skeleton_soldier1()
         {
@@ -921,7 +930,7 @@ namespace Project_PV
             karakters[targetSkill].hp -= damage;
         }
     }
-    class Skeleton_soldier2 : Skill
+     class Skeleton_soldier2 : Skill
     {
         public Skeleton_soldier2()
         {
@@ -942,7 +951,7 @@ namespace Project_PV
             karakters[targetSkill].hp -= damage;
         }
     }
-    class Skeleton_soldier3 : Skill
+     class Skeleton_soldier3 : Skill
     {
         public Skeleton_soldier3()
         {
@@ -963,7 +972,7 @@ namespace Project_PV
             karakters[targetSkill].hp -= damage;
         }
     }
-    class Skeleton_soldier4 : Skill
+     class Skeleton_soldier4 : Skill
     {
         public Skeleton_soldier4()
         {
@@ -986,6 +995,7 @@ namespace Project_PV
     }
     public enum efek
     {
+        none,
         blight ,
         bleed ,
         stun,

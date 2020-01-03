@@ -8,6 +8,7 @@ using System.Windows.Forms;
 
 namespace Project_PV
 {
+    
     class Blacksmith : GameState
     {
         GameStateManager gsm { get; set; }

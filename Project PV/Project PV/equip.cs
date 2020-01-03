@@ -7,7 +7,8 @@ using System.Threading.Tasks;
 
 namespace Project_PV
 {
-    public class equip
+    
+    class equip
     {
         public string nama { get; set; }
         public string type { get; set; }
