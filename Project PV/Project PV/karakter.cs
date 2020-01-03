@@ -96,6 +96,7 @@ namespace Project_PV
         }
         public void gambarAttack(Graphics g,int zoom)
         {
+            //System.Windows.Forms.MessageBox.Show(hero + "_" + hero_move + "___" + hero_move_now + "_");
             object O = Properties.Resources.ResourceManager.GetObject(hero + "_" + hero_move + "___" + hero_move_now + "_");
             Image img = (Image)O;
             g.DrawImage(img, x-zoom/2, 250 - zoom, 100 + zoom, 150 + zoom);
