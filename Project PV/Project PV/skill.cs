@@ -169,8 +169,6 @@ namespace Project_PV
         {
             for (int i = 0; i < karakters.Count; i++)
             {
-                Random rand = new Random();
-                int damage = rand.Next(status_skill.dmg_min, status_skill.dmg_max);
                 karakters[i].hp += damage;
             }
         }
@@ -370,7 +368,7 @@ namespace Project_PV
         {
             Random rand = new Random();
             int damage = rand.Next(status_skill.dmg_min, status_skill.dmg_max);
-            for (int i = 0; i < target.Length; i++)
+            for (int i = 0; i < musuhs.Count; i++)
             {
                 try
                 {
@@ -391,11 +389,24 @@ namespace Project_PV
         public yeti1()
            : base("yeti1", new efek[1], new int[4], new int[4], new status(), 100)
         {
-            rank[0] = 1; rank[1] = 1; rank[2] = 0; rank[3] = 0;
-            target[0] = 0; target[1] = 0; target[2] = 1; target[3] = 1;
-            status_skill = new status(3, 4, 20, 70, 0, 3);
-            skill_efek[0] = efek.stun; 
+            rank = new int[1];
+            rank[0] = 4;
+            target = new int[4];
+            target[0] = 0;
+            target[1] = 1;
+            target[2] = 2;
+            target[3] = 3;
+            accuracy = 42;
+            crit_mod = 0;
+            max_damage = 4;
+            min_damage = 2;
             icon = Properties.Resources.yeti_attack___1_;
+        }
+        public override void getDamageSkill(int targetSkill, List<karakter> karakters)
+        {
+            Random rand = new Random();
+            int damage = rand.Next(min_damage, max_damage);
+            karakters[targetSkill].hp -= damage;
         }
     }
      class yeti2 : Skill
@@ -405,9 +416,17 @@ namespace Project_PV
         {
             rank[0] = 1; rank[1] = 1; rank[2] = 0; rank[3] = 0;
             target[0] = 0; target[1] = 0; target[2] = 1; target[3] = 1;
-            status_skill = new status(3, 4, 20, 70, 0, 3);
-            skill_efek[0] = efek.stun;
             icon = Properties.Resources.yeti_attack___2_;
+            accuracy = 70;
+            crit_mod = 25;
+            max_damage = 8;
+            min_damage = 4;
+        }
+        public override void getDamageSkill(int targetSkill, List<karakter> karakters)
+        {
+            Random rand = new Random();
+            int damage = rand.Next(min_damage, max_damage);
+            karakters[targetSkill].hp -= damage;
         }
     }
      class yeti3 : Skill
@@ -417,9 +436,19 @@ namespace Project_PV
         {
             rank[0] = 1; rank[1] = 1; rank[2] = 0; rank[3] = 0;
             target[0] = 0; target[1] = 0; target[2] = 1; target[3] = 1;
-            status_skill = new status(3, 4, 20, 70, 0, 3);
             skill_efek[0] = efek.stun;
             icon = Properties.Resources.yeti_attack___3_;
+            accuracy = 70;
+            crit_mod = 25;
+            max_damage = 4;
+            min_damage = 2;
+        }
+        public override void getDamageSkill(int targetSkill, List<karakter> karakters)
+        {
+            karakters[targetSkill].hero_buff = skill_efek[0];
+            Random rand = new Random();
+            int damage = rand.Next(min_damage, max_damage);
+            karakters[targetSkill].hp -= damage;
         }
     }
      class yeti4 : Skill
@@ -429,9 +458,20 @@ namespace Project_PV
         {
             rank[0] = 1; rank[1] = 1; rank[2] = 0; rank[3] = 0;
             target[0] = 0; target[1] = 0; target[2] = 1; target[3] = 1;
-            status_skill = new status(3, 4, 20, 70, 0, 3);
             skill_efek[0] = efek.stun;
             icon = Properties.Resources.yeti_attack___4_;
+            accuracy = 70;
+            crit_mod = 50;
+            max_damage = 5;
+            min_damage = 3;
+
+        }
+        public override void getDamageSkill(int targetSkill, List<karakter> karakters)
+        {
+            karakters[targetSkill].hero_buff = skill_efek[0];
+            Random rand = new Random();
+            int damage = rand.Next(min_damage, max_damage);
+            karakters[targetSkill].hp -= damage;
         }
     }
      class Boarman1 : Skill
@@ -455,7 +495,12 @@ namespace Project_PV
 
         public override void getDamageSkill(int targetSkill, List<karakter> karakters)
         {
-            
+            for (int i = 0; i < karakters.Count; i++)
+            {
+                karakters[i].hero_stress.stress_point += 5;
+                karakters[i].hero_buff = skill_efek[0];
+                karakters[i].hp -= min_damage; //karna pasti damage nya 1
+            }
         }
     }
      class Boarman2 : Skill
@@ -475,6 +520,12 @@ namespace Project_PV
             crit_mod = 25;
             max_damage = 4;
             min_damage = 2;
+        }
+        public override void getDamageSkill(int targetSkill, List<karakter> karakters)
+        {
+            Random rand = new Random();
+            int damage = rand.Next(min_damage, max_damage);
+            karakters[targetSkill].hp -= damage;
         }
     }
      class Boarman3 : Skill
@@ -498,6 +549,13 @@ namespace Project_PV
             skill_efek = new efek[1];
             skill_efek[0] = efek.bleed;
         }
+        public override void getDamageSkill(int targetSkill, List<karakter> karakters)
+        {
+            karakters[targetSkill].hero_buff = skill_efek[0];
+            Random rand = new Random();
+            int damage = rand.Next(min_damage, max_damage);
+            karakters[targetSkill].hp -= damage;
+        }
     }
      class Boarman4 : Skill
     {
@@ -515,6 +573,13 @@ namespace Project_PV
             crit_mod = 0;
             max_damage = 4;
             min_damage = 2;
+        }
+
+        public override void getDamageSkill(int targetSkill, List<karakter> karakters)
+        {
+            Random rand = new Random();
+            int damage = rand.Next(min_damage, max_damage);
+            karakters[targetSkill].hp -= damage;
         }
     }
 
@@ -548,7 +613,6 @@ namespace Project_PV
                 karakters[i].hero_buff = skill_efek[0];
                 karakters[i].hp -= min_damage; //karna pasti damage nya 1
             }
-            
         }
     }
 
