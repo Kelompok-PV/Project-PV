@@ -8,6 +8,7 @@ using System.Windows.Forms;
 
 namespace Project_PV
 {
+    
     class Quest : GameState
     {
         private Player player;
@@ -41,8 +42,11 @@ namespace Project_PV
                 yRoster.Add(yRoster[i]);
             }
 
-            battleRect = new Rectangle(875, 174,200, 200);
+            battleRect[0] = new Rectangle(892, 68, 190, 97);
+            battleRect[1] = new Rectangle(704, 156, 190, 97);
+            battleRect[2] = new Rectangle(492, 261, 190, 97);
 
+            player.currentCharacters = new List<karakter>();
         }
         int xRoster = 1105;
         public override void draw(Graphics g)
@@ -133,7 +137,11 @@ namespace Project_PV
                 g.DrawImage(player.myCharacter[index].getIcon(), x,y, 50, 50);
             }
 
-            g.FillRectangle(new SolidBrush(Color.Red), battleRect);
+            for (int i = 0; i < battleRect.Length; i++)
+            {
+                g.FillRectangle(new SolidBrush(Color.FromArgb(180, Color.Black)), battleRect[i]);
+            }
+
 
         }
         List<Rectangle> rosterField = new List<Rectangle>();
@@ -153,7 +161,7 @@ namespace Project_PV
             
         }
         int x, y;
-        Rectangle battleRect;
+        Rectangle[] battleRect = new Rectangle[3];
         public override void mouse_click(object sender, MouseEventArgs e)
         {
             //MessageBox.Show(string.Format("{0},{1}",e.X,e.Y));
@@ -179,21 +187,22 @@ namespace Project_PV
                     {
                         selected = false;
                         karacters[i].setKaracter(player.myCharacter[index]);
-                        player.currentCharacters[i] = karacters[i].GetKarakter();
+                        player.currentCharacters.Add(karacters[i].GetKarakter());
                         index = -1;
                         break;
                     }
                 }
-
-                
             }
 
-            if (battleRect.IntersectsWith(cursor))
+            for (int i = 0; i < battleRect.Length; i++)
             {
-                gsm.stage = Stage.provision;
-                gsm.loadState(gsm.stage);
-
+                if (battleRect[i].IntersectsWith(cursor))
+                {
+                    gsm.stage = Stage.provision;
+                    gsm.loadState(gsm.stage);
+                }
             }
+            
         }
         bool selected = false;
         Rectangle cursor;
@@ -215,7 +224,7 @@ namespace Project_PV
         }
 
     }
-
+    
     class Selected_karacter
     {
         public int x { get; set; }

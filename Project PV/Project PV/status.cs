@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Project_PV
 {
-    public class status
+    
+    class status
     {
         public int dmg_min { get; set; }
         public int dmg_max { get; set; }

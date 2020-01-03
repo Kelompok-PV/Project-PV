@@ -9,6 +9,7 @@ using System.Windows.Forms;
 
 namespace Project_PV
 {
+    
 	class Abbey : GameState
 	{
 		List<unlockoverlay> unlockset = new List<unlockoverlay>();
@@ -380,8 +381,7 @@ namespace Project_PV
         }
 
     }
-	
-	class unlockoverlay
+    class unlockoverlay
 	{
 		int x;
 		int y;

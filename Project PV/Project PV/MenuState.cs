@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace Project_PV
 {
+    
     class MenuState : GameState
     {
         public Rectangle btnStart { get; set; }
@@ -18,15 +19,15 @@ namespace Project_PV
         private int frame;
         public Font title { get; set; }
 
-        SoundPlayer bgMusic;
+        //SoundPlayer bgMusic;
         public MenuState(GameStateManager gsm)
         {
             this.gsm = gsm;
             btnStart = new Rectangle(548, 554, 200, 50);
             title = new Font(Config.font.Families[0],80,FontStyle.Regular);
             frame = 1;
-            bgMusic = new SoundPlayer(Properties.Resources.titleScreen);
-            bgMusic.PlayLooping();
+           // bgMusic = new SoundPlayer(Properties.Resources.titleScreen);
+           // bgMusic.PlayLooping();
         }
 
         public override void init()

@@ -9,7 +9,8 @@ using System.Windows.Forms;
 
 namespace Project_PV
 {
-	class Guild : GameState
+    
+    class Guild : GameState
 	{
 
 		public Font title { get; set; }

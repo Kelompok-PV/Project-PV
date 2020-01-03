@@ -8,6 +8,7 @@ using System.Windows.Forms;
 
 namespace Project_PV
 {
+
     abstract class GameState
     {
         public abstract void init();
