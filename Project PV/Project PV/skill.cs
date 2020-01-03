@@ -64,7 +64,7 @@ namespace Project_PV
         public override void getDamageSkill(int targetSkill, List<musuh> musuhs)
         {
             Random rand = new Random();
-            int damage = rand.Next(min_damage, max_damage);
+            int damage = rand.Next(status_skill.dmg_min, status_skill.dmg_max);
             musuhs[targetSkill].hp -= damage;
             musuhs[targetSkill].musuh_buff.Add(skill_efek[0]);
         }
@@ -85,7 +85,7 @@ namespace Project_PV
         public override void getDamageSkill(int targetSkill, List<musuh> musuhs)
         {
             Random rand = new Random();
-            int damage = rand.Next(min_damage, max_damage);
+            int damage = rand.Next(status_skill.dmg_min, status_skill.dmg_max);
             musuhs[targetSkill].hp -= damage;
             musuhs[targetSkill].musuh_buff.Add(skill_efek[0]);
         }
@@ -105,7 +105,7 @@ namespace Project_PV
         public override void getDamageSkill(int targetSkill, List<musuh> musuhs)
         {
             Random rand = new Random();
-            int damage = rand.Next(min_damage, max_damage);
+            int damage = rand.Next(status_skill.dmg_min, status_skill.dmg_max);
             musuhs[targetSkill].hp -= damage;
             musuhs[targetSkill].musuh_buff.Add(skill_efek[0]);
         }
@@ -125,7 +125,7 @@ namespace Project_PV
         public override void getDamageSkill(int targetSkill, List<musuh> musuhs)
         {
             Random rand = new Random();
-            int damage = rand.Next(min_damage, max_damage);
+            int damage = rand.Next(status_skill.dmg_min, status_skill.dmg_max);
             for (int i = 2; i < target.Length; i++)
             {
                 musuhs[target[i]].hp -= damage;
@@ -141,14 +141,14 @@ namespace Project_PV
         {
             rank[0] = 1; rank[1] = 1; rank[2] = 0; rank[3] = 0;
             target[0] = 1; target[1] = 1; target[2] = 1; target[3] = 1;
-            status_skill = new status(0, 0, 20, 100, 0, -1);
+            status_skill = new status(4, 5, 20, 100, 0, -1);
             skill_efek[0] = efek.heal; 
             icon = Properties.Resources.vestal_ability_divine_grace;
         }
         public override void getDamageSkill(int targetSkill, List<karakter> karakters)
         {
             Random rand = new Random();
-            int damage = rand.Next(min_damage, max_damage);
+            int damage = rand.Next(status_skill.dmg_min, status_skill.dmg_max);
             karakters[targetSkill].hp += damage;
             karakters[targetSkill].hero_buff = skill_efek[0];
         }
@@ -161,7 +161,7 @@ namespace Project_PV
         {
             rank[0] = 1; rank[1] = 1; rank[2] = 1; rank[3] = 0;
             target[0] = 1; target[1] = 1; target[2] = 1; target[3] = 1;
-            status_skill = new status(0, 0, 20, 100, 0, -1);
+            status_skill = new status(1, 3, 20, 100, 0, -1);
             skill_efek[0] = efek.heal; 
             icon = Properties.Resources.vestal_ability_divine_comfort;
         }
@@ -171,6 +171,12 @@ namespace Project_PV
             int damage = rand.Next(min_damage, max_damage);
             karakters[targetSkill].hp += damage;
             karakters[targetSkill].hero_buff = skill_efek[0];
+            for (int i = 0; i < karakters.Count; i++)
+            {
+                Random rand = new Random();
+                int damage = rand.Next(status_skill.dmg_min, status_skill.dmg_max);
+                karakters[i].hp += damage;
+            }
         }
     }
     
@@ -188,7 +194,7 @@ namespace Project_PV
         public override void getDamageSkill(int targetSkill, List<musuh> musuhs)
         {
             Random rand = new Random();
-            int damage = rand.Next(min_damage, max_damage);
+            int damage = rand.Next(status_skill.dmg_min, status_skill.dmg_max);
             musuhs[targetSkill].hp -= damage;
             musuhs[targetSkill].musuh_buff.Add(skill_efek[0]);
         }
@@ -208,7 +214,7 @@ namespace Project_PV
         public override void getDamageSkill(int targetSkill, List<musuh> musuhs)
         {
             Random rand = new Random();
-            int damage = rand.Next(min_damage, max_damage);
+            int damage = rand.Next(status_skill.dmg_min, status_skill.dmg_max);
             musuhs[targetSkill].hp -= damage;
         }
     }
@@ -227,7 +233,7 @@ namespace Project_PV
         public override void getDamageSkill(int targetSkill, List<musuh> musuhs)
         {
             Random rand = new Random();
-            int damage = rand.Next(min_damage, max_damage);
+            int damage = rand.Next(status_skill.dmg_min, status_skill.dmg_max);
             for (int i = 0; i < 2; i++)
             {
                 musuhs[target[i]].hp -= damage;
@@ -250,7 +256,7 @@ namespace Project_PV
         public override void getDamageSkill(int targetSkill, List<musuh> musuhs)
         {
             Random rand = new Random();
-            int damage = rand.Next(min_damage, max_damage);
+            int damage = rand.Next(status_skill.dmg_min, status_skill.dmg_max);
             musuhs[targetSkill].hp -= damage;
             musuhs[targetSkill].musuh_buff.Add(skill_efek[0]);
         }
@@ -270,7 +276,7 @@ namespace Project_PV
         public override void getDamageSkill(int targetSkill, List<musuh> musuhs)
         {
             Random rand = new Random();
-            int damage = rand.Next(min_damage, max_damage);
+            int damage = rand.Next(status_skill.dmg_min, status_skill.dmg_max);
             musuhs[targetSkill].hp -= damage;
         }
     }
@@ -289,7 +295,7 @@ namespace Project_PV
         public override void getDamageSkill(int targetSkill, List<karakter> karakters)
         {
             Random rand = new Random();
-            int damage = rand.Next(min_damage, max_damage);
+            int damage = rand.Next(status_skill.dmg_min, status_skill.dmg_max);
             karakters[targetSkill].hp += damage;
             karakters[targetSkill].hero_stress.stress_point -= 5;
         }
@@ -309,7 +315,7 @@ namespace Project_PV
         public override void getDamageSkill(int targetSkill, List<musuh> musuhs)
         {
             Random rand = new Random();
-            int damage = rand.Next(min_damage, max_damage);
+            int damage = rand.Next(status_skill.dmg_min, status_skill.dmg_max);
             musuhs[targetSkill].hp += damage;
         }
     }
@@ -327,7 +333,7 @@ namespace Project_PV
         public override void getDamageSkill(int targetSkill, List<musuh> musuhs)
         {
             Random rand = new Random();
-            int damage = rand.Next(min_damage, max_damage);
+            int damage = rand.Next(status_skill.dmg_min, status_skill.dmg_max);
             musuhs[targetSkill].hp -= damage;
             musuhs[targetSkill].musuh_buff.Add(skill_efek[0]);
         }
@@ -347,7 +353,7 @@ namespace Project_PV
         public override void getDamageSkill(int targetSkill, List<musuh> musuhs)
         {
             Random rand = new Random();
-            int damage = rand.Next(min_damage, max_damage);
+            int damage = rand.Next(status_skill.dmg_min, status_skill.dmg_max);
             musuhs[targetSkill].hp -= damage;
             musuhs[targetSkill].musuh_buff.Add(skill_efek[0]);
             musuhs[targetSkill].musuh_buff.Add(skill_efek[1]);
@@ -368,7 +374,7 @@ namespace Project_PV
         public override void getDamageSkill(int targetSkill, List<musuh> musuhs)
         {
             Random rand = new Random();
-            int damage = rand.Next(min_damage, max_damage);
+            int damage = rand.Next(status_skill.dmg_min, status_skill.dmg_max);
             for (int i = 0; i < target.Length; i++)
             {
                 musuhs[target[i]].hp -= damage;

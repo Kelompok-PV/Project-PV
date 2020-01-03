@@ -151,6 +151,9 @@ namespace Project_PV
             skills.Add(new impale());
 			//this.hero_equip[0].nama = "Dagger";
 			//this.hero_equip[0].img = ;
+			//this.hero_equip[1].nama = "Ninja Suit";
+			//this.hero_equip[0].stat_plus.crit =+7;
+			//this.hero_equip[1].stat_plus.def =+7;
         }
     }
     //jarak jauh
@@ -176,6 +179,10 @@ namespace Project_PV
             this.max_damage = 10;
             this.hp = 20;
             speed = 3;
+			//this.hero_equip[0].nama = "Long Bow";
+			//this.hero_equip[1].nama = "Traveler Robe";
+			//this.hero_equip[0].stat_plus.dmg_max += 8;
+			//this.hero_equip[1].stat_plus.acc += 6;
         }
     }
     
@@ -187,7 +194,7 @@ namespace Project_PV
             skills = new List<Skill>();
             skills.Add(new noxius_blast());
             skills.Add(new incision());
-            skills.Add(new battlefield_medicine());
+            skills.Add(new divine_comfort());
             skills.Add(new bliding_gas());
             this.hero_equip = new equip[5];
             this.type = "Doctor";
@@ -200,6 +207,10 @@ namespace Project_PV
             this.max_damage = 7;
             this.hp = 22;
             speed = 1;
+			//this.hero_equip[0].nama = "Good Magic Wand";
+			//this.hero_equip[1].nama = "Tranquil Robe";
+			//this.hero_equip[0].stat_plus.dmg_min += 7;
+			//this.hero_equip[1].stat_plus.def += 7;
         }
     }
     
@@ -224,6 +235,9 @@ namespace Project_PV
             this.max_damage = 8;
             this.hp = maxHp;
             speed = 4;
+			//this.hero_equip[0].nama = "Tony's googles";
+			//this.hero_equip[1].nama = "Iron Suit";
+			//this.hero_equip[0].stat_plus.def += 6;
         }
     }
     
@@ -249,6 +263,10 @@ namespace Project_PV
             this.max_damage = 8;
             this.hp = 24;
             speed = 4;
+			//this.hero_equip[0].nama = "Great Elf Staff";
+			//this.hero_equip[1].nama = "Mythic Robe";
+			//this.hero_equip[0].stat_plus.acc += 5;
+			//this.hero_equip[1].stat_plus.def += 5;
         }
     }
     
@@ -274,7 +292,11 @@ namespace Project_PV
             this.max_damage = 8;
             this.hp = maxHp;
             speed = 8;
-        }
+			//this.hero_equip[0].nama = "Lunar Magic Wand";
+			//this.hero_equip[1].nama = "Ice Queen Cloak";
+			//this.hero_equip[0].stat_plus.def += 6;
+			//this.hero_equip[1].stat_plus.dmg_max += 3;
+		}
     }
     
     class Hercules : karakter
@@ -299,6 +321,10 @@ namespace Project_PV
             this.max_damage = 9;
             this.hp = maxHp;
             speed = 3;
+			//this.hero_equip[0].nama = "Skull Crusher";
+			//this.hero_equip[1].nama = "Beast Sallet";
+			//this.hero_equip[0].stat_plus.dmg_max += 7;
+			//this.hero_equip[1].stat_plus.def += 8;
         }
     }
     
@@ -324,6 +350,10 @@ namespace Project_PV
             this.max_damage = 12;
             this.hp = maxHp;
             speed = 3;
+			//this.hero_equip[0].nama = "Hatchet";
+			//this.hero_equip[1].nama = "Leather Armor";
+			//this.hero_equip[0].stat_plus.dmg_min += 5;
+			//this.hero_equip[1].stat_plus.def += 9;
         }
     }
 }
