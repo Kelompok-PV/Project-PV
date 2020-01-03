@@ -380,8 +380,8 @@ namespace Project_PV
                         {
                             if (player[turnAttack[turn_ke].ke].skills[pilih_attack].target[targetMusuh] == 1)
                             {
-                                int dmg_atk = r.Next(player[pilihHero].skills[pilih_attack].status_skill.dmg_min, player[pilihHero].skills[pilih_attack].status_skill.dmg_max + 1);
-                                musuh[i].hp -= dmg_atk;
+                                player[turnAttack[turn_ke].ke].skills[pilih_attack].getDamageSkill(i,musuh);
+                                
                                 serang = true;
                                 player[pilihHero].x = 520;
                                 player[pilihHero].hero_move = "skill" + (pilih_attack + 1);
@@ -417,12 +417,14 @@ namespace Project_PV
                     if (ganti_posisi)
                     {
                         targetHero = i;
-                        //int swap_char= player[targetHero].x;
-                        //player[targetHero].x = player[pilihHero].x;
-                        //player[pilihHero].x = swap_char;
                         gerak_geser = 10 * Math.Abs(pilihHero - targetHero);
                         gerak_geser_max = 100 * Math.Abs(pilihHero - targetHero);
                         timer_geser = true;
+                    }else if (turnAttack[turn_ke].jenis==1&& player[turnAttack[turn_ke].ke].skills[pilih_attack].skill_efek[0] == efek.heal)
+                    {
+                            player[turnAttack[turn_ke].ke].skills[pilih_attack].getDamageSkill(i, player);
+                            gantiTurn();
+                        
                     }
                     else
                     {

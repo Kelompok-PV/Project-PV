@@ -145,7 +145,7 @@ namespace Project_PV
             skills.Add(new adders_kiss());
             skills.Add(new captivate());
             skills.Add(new impale());
-			this.hero_equip[0].nama = "Dagger";
+			//this.hero_equip[0].nama = "Dagger";
 			//this.hero_equip[0].img = ;
         }
     }
@@ -181,7 +181,7 @@ namespace Project_PV
             skills = new List<Skill>();
             skills.Add(new noxius_blast());
             skills.Add(new incision());
-            skills.Add(new battlefield_medicine());
+            skills.Add(new divine_comfort());
             skills.Add(new bliding_gas());
             this.hero_equip = new equip[5];
             this.type = "Doctor";
