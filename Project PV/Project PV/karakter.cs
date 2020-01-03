@@ -145,10 +145,6 @@ namespace Project_PV
             skills.Add(new adders_kiss());
             skills.Add(new captivate());
             skills.Add(new impale());
-			this.hero_equip[0].nama = "Dagger";
-			this.hero_equip[1].nama = "Ninja Suit";
-			this.hero_equip[0].stat_plus.crit =+7;
-			this.hero_equip[1].stat_plus.def =+7;
         }
     }
     //jarak jauh

@@ -654,30 +654,48 @@ namespace Project_PV
                         if (player[pilihHero].hero_buff[i] == efek.bleed)
                         {
                             player[pilihHero].hp -= player[pilihHero].hp / 10;
+                            player[pilihHero].hero_stress.stress_point += 10;
                         }
                         if (player[pilihHero].hero_buff[i] == efek.blight)
                         {
                             player[pilihHero].hp -= (player[pilihHero].maxHp / 10);
-                        }
-                        if (player[pilihHero].hero_buff[i] == efek.marked)
-                        {
-                            player[pilihHero].marked = true;
-                        }
-                        if (player[pilihHero].hero_buff[i] == efek.stress)
-                        {
                             player[pilihHero].hero_stress.stress_point += 10;
                         }
                         if (player[pilihHero].hero_buff[i] == efek.stun)
                         {
                             gantiTurn();
+                            player[pilihHero].hero_stress.stress_point += 20;
                         }
                         player[pilihHero].hero_buff_turn[i]--;
-                        if (player[pilihHero].hero_buff_turn[i] == 0)
+                        if (player[pilihHero].hero_buff_turn[i] == 0||(player[pilihHero].hero_stress.stress_level==stress_stage.depresi&&player[pilihHero].hero_stress.stress_point>=100))
                         {
                             player[pilihHero].hero_buff_turn.RemoveAt(i);
                             player[pilihHero].hero_buff.RemoveAt(i);
                             i--;
+                            for (int j = 0; j < player.Count; j++)
+                            {
+                                if (j != i)
+                                {
+                                    player[j].hero_stress.stress_point += 20;
+                                }
+                            }
                         }
+                        else
+                        {
+                            if(player[pilihHero].hero_stress.stress_point >= 100)
+                            {
+                                player[pilihHero].hero_stress.stress_level = stress_stage.depresi;
+                                player[pilihHero].hero_stress.stress_point = 0;
+                                for (int j = 0; j < player.Count; j++)
+                                {
+                                    if (j != i)
+                                    {
+                                        player[j].hero_stress.stress_point += 10;
+                                    }
+                                }
+                            }
+                        }
+
                     }
                 }
                 else
