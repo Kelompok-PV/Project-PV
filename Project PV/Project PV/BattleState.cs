@@ -36,8 +36,29 @@ namespace Project_PV
             imgpPlayer = (Image)Properties.Resources.ResourceManager.GetObject("panel_player2");
             imgpInv = (Image)Properties.Resources.ResourceManager.GetObject("panel_inventory");
             //drawInventory();
+
+            //random barang jatuh
+            for (int i = 0; i < 5; i++)
+            {
+                int typeInv = rand.Next(10);
+                if (typeInv == 0) { int jumlah = rand.Next(1, 8); inv_found[i] = new LargeFood(walk_and_found[i], 334, jumlah); inv_found_rect[i] = new Rectangle(walk_and_found[i], 334, 50, 50); }
+                else if (typeInv == 1) { int jumlah = rand.Next(1, 8); inv_found[i] = new LargeFood(walk_and_found[i], 334, jumlah); inv_found_rect[i] = new Rectangle(walk_and_found[i], 334, 50, 50); }
+                else if (typeInv == 2) { int jumlah = rand.Next(1, 8); inv_found[i] = new SmallFood(walk_and_found[i], 334, jumlah); inv_found_rect[i] = new Rectangle(walk_and_found[i], 334, 50, 50); }
+                else if (typeInv == 3) { int jumlah = rand.Next(1, 8); inv_found[i] = new Torch(walk_and_found[i], 334, jumlah); inv_found_rect[i] = new Rectangle(walk_and_found[i], 334, 50, 50); }
+                else if (typeInv == 4) { int jumlah = rand.Next(1, 8); inv_found[i] = new Bandage(walk_and_found[i], 334, jumlah); inv_found_rect[i] = new Rectangle(walk_and_found[i], 334, 50, 50); }
+                else if (typeInv == 5) { int jumlah = rand.Next(1, 8); inv_found[i] = new Gold(walk_and_found[i], 334, jumlah); inv_found_rect[i] = new Rectangle(walk_and_found[i], 334, 50, 50); }
+                else if (typeInv == 6) { int jumlah = rand.Next(1, 8); inv_found[i] = new Jewel(walk_and_found[i], 334, jumlah); inv_found_rect[i] = new Rectangle(walk_and_found[i], 334, 50, 50); }
+                else if (typeInv == 7) { int jumlah = rand.Next(1, 8); inv_found[i] = new Key(walk_and_found[i], 334, jumlah); inv_found_rect[i] = new Rectangle(walk_and_found[i], 334, 50, 50); }
+                else if (typeInv == 8) { int jumlah = rand.Next(1, 8); inv_found[i] = new Shovel(walk_and_found[i], 334, jumlah); inv_found_rect[i] = new Rectangle(walk_and_found[i], 334, 50, 50); }
+                else if (typeInv == 9) { int jumlah = rand.Next(1, 8); inv_found[i] = new TheCure(walk_and_found[i], 334, jumlah); inv_found_rect[i] = new Rectangle(walk_and_found[i], 334, 50, 50); }
+            }
         }
 
+        int[] walk_and_found = { 1292, 2584, 3876, 5168, 6460 };
+        bool[] inv_grab = { false, false, false, false, false};
+        Inventory[] inv_found = new Inventory[5];
+        Rectangle[] inv_found_rect = new Rectangle[5];
+        Random rand = new Random();
         public override void init()
         {
             throw new NotImplementedException();
@@ -150,7 +171,17 @@ namespace Project_PV
                 }
             }
             g.DrawImage((Image)Properties.Resources.ResourceManager.GetObject("side_decor"), 1285, 420, -120, 270);
-            
+
+            //barang jatuh di jalan
+            for (int i = 0; i < inv_found.Length; i++)
+            {
+                if (!inv_grab[i])
+                {
+                    Image img = Properties.Resources.inv_provision__3;
+                    g.FillRectangle(new SolidBrush(Color.Red), inv_found_rect[i]);
+                    g.DrawImage(img, inv_found_rect[i]);
+                }
+            }
         }
         string aktif = "inv";
         int opacity = 0;
@@ -200,6 +231,43 @@ namespace Project_PV
                 imgpInv = (Image)Properties.Resources.ResourceManager.GetObject("panel_inventory");
                 aktif = "inv";
             }
+
+            Rectangle cursor = new Rectangle(e.X, e.Y, 10, 10);
+            for (int i = 0; i < inv_found_rect.Length; i++)
+            {
+                if (cursor.IntersectsWith(inv_found_rect[i]))
+                {
+                    if (!inv_grab[i])
+                    {
+                        //TODO masukan kedalam inventori player
+                        Inventory[] inv = new Inventory[16];
+                        inv = gsm.player.inventoryAktif;
+                        for (int j = 0; j < inv.Length; j++)
+                        {
+                            if (inv[j] != null && (inv_found[i].name == inv[j].name))
+                            {
+                                inv[j].jumlah += inv_found[i].jumlah;
+                            }
+                            else
+                            {
+                                if (inv.Length < 16)
+                                {
+                                    inv[inv.Length - 1] = inv_found[i];
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Inventory full");
+                                }
+                            }
+                        }
+                        gsm.player.inventoryAktif = inv;
+                        inv_grab[i] = true;
+                        MessageBox.Show(string.Format("Selamat anda dapat hadiah {0} sebanyak {1}", inv_found[i].name, inv_found[i].jumlah));
+                    }
+                }
+                
+               
+            }
         }
         public override void key_keydown(object sender, KeyEventArgs e)
         {
@@ -207,21 +275,45 @@ namespace Project_PV
             {
                 x -= 10;
                 player[0].hero_move = "run";
+                //buat x barang jatuh
+                for (int i = 0; i < inv_found.Length; i++)
+                {
+                    inv_found[i].x -= 10;
+                    inv_found_rect[i].X -= 10;
+                }
             }
             else if(e.KeyData == Keys.D&&player[0].x<1050)
             {
                 player[0].x += 10;
                 player[0].hero_move = "run";
+                //buat x barang jatuh
+                for (int i = 0; i < inv_found.Length; i++)
+                {
+                    inv_found[i].x += 10;
+                    inv_found_rect[i].X += 10;
+                }
             }
             if (e.KeyData == Keys.A && player[0].x > 300)
             {
                 player[0].x -= 10;
                 player[0].hero_move = "run";
+                //buat x barang jatuh
+                for (int i = 0; i < inv_found.Length; i++)
+                {
+                    inv_found[i].x -= 10;
+                    inv_found_rect[i].X -= 10;
+                }
             }
             else if (e.KeyData == Keys.A&&x<0)
             {
                 x += 10;
                 player[0].hero_move = "run";
+                //buat x barang jatuh
+                for (int i = 0; i < inv_found.Length; i++)
+                {
+                    inv_found[i].x += 10;
+                    inv_found_rect[i].X += 10;
+                }
             }
         }
         float zoom = 1;
