@@ -39,6 +39,7 @@ namespace Project_PV
 			this.def = 4;
 			this.max_dmg = 0;
 			this.min_dmg = 0;
+			this.img = Project_PV.Properties.Resources.eqp_armour_3;
 		}
 	}
 
@@ -54,7 +55,7 @@ namespace Project_PV
 			this.def = 5;
 			this.max_dmg = 2;
 			this.min_dmg = 2;
-			
+			this.img = Project_PV.Properties.Resources.eqp_armour_3;
 		}
 	}
 
@@ -70,6 +71,7 @@ namespace Project_PV
 			this.def = 0;
 			this.max_dmg = 4;
 			this.min_dmg = 3;
+			this.img = Project_PV.Properties.Resources.eqp_weapon_4;
 		}
 	}
 	class melee_weap_2 : equip
@@ -84,6 +86,7 @@ namespace Project_PV
 			this.def = 0;
 			this.max_dmg = 4;
 			this.min_dmg = 4;
+			this.img = Project_PV.Properties.Resources.eqp_weapon_4;
 		}
 	}
 	class range_arm_1 : equip
@@ -98,6 +101,7 @@ namespace Project_PV
 			this.def = 6;
 			this.max_dmg = 1;
 			this.min_dmg = 2;
+			this.img = Project_PV.Properties.Resources.eqp_armour_3;
 		}
 	}
 	class range_arm_2 : equip
@@ -112,6 +116,7 @@ namespace Project_PV
 			this.def = 5;
 			this.max_dmg = 2;
 			this.min_dmg = 2;
+			this.img = Project_PV.Properties.Resources.eqp_armour_3;
 		}
 	}
 	class range_weap_1 : equip
@@ -126,6 +131,7 @@ namespace Project_PV
 			this.def = 0;
 			this.max_dmg = 0;
 			this.min_dmg = 0;
+			this.img = Project_PV.Properties.Resources.eqp_weapon_4;
 		}
 	}
 	class range_weap_2 : equip
@@ -140,6 +146,7 @@ namespace Project_PV
 			this.def = 0;
 			this.max_dmg = 2;
 			this.min_dmg = 2;
+			this.img = Project_PV.Properties.Resources.eqp_weapon_4;
 		}
 	}
 	class doctor_arm_1 : equip
@@ -154,6 +161,7 @@ namespace Project_PV
 			this.def = 6;
 			this.max_dmg = 0;
 			this.min_dmg = 3;
+			this.img = Project_PV.Properties.Resources.eqp_armour_3;
 		}
 	}
 	class doctor_arm_2 : equip
@@ -168,6 +176,7 @@ namespace Project_PV
 			this.def = 4;
 			this.max_dmg = 1;
 			this.min_dmg = 2;
+			this.img = Project_PV.Properties.Resources.eqp_armour_3;
 		}
 	}
 	class doctor_weap_1 : equip
@@ -182,6 +191,7 @@ namespace Project_PV
 			this.def = 1;
 			this.max_dmg = 1;
 			this.min_dmg = 2;
+			this.img = Project_PV.Properties.Resources.eqp_weapon_4;
 		}
 	}
 	class doctor_weap_2 : equip
@@ -196,6 +206,7 @@ namespace Project_PV
 			this.def = 0;
 			this.max_dmg = 2;
 			this.min_dmg = 2;
+			this.img = Project_PV.Properties.Resources.eqp_weapon_4;
 		}
 	}
 

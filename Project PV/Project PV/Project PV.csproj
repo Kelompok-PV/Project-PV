@@ -698,6 +698,8 @@
     <None Include="Resources\inv_gem+emerald.png" />
     <None Include="Resources\back-e.jpg" />
     <None Include="Resources\back-e2.jpg" />
+    <None Include="Resources\eqp_armour_3.png" />
+    <None Include="Resources\eqp_weapon_4.png" />
     <Content Include="Resources\Quest\dungeon_progressionbar.png" />
     <Content Include="Resources\Quest\embark_party.background.png" />
     <None Include="Resources\Town\town full_2.png" />
