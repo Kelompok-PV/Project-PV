@@ -32,12 +32,13 @@ namespace Project_PV
 
             imgpPlayer = (Image)Properties.Resources.ResourceManager.GetObject("panel_player2");
             imgpInv = (Image)Properties.Resources.ResourceManager.GetObject("panel_inventory");
+
+           
         }
 
         Image imgpPlayer;
         Image imgpInv;
         string aktif = "inv";
-
         Font font = new Font("Arial", 15.0f);
         public override void draw(Graphics g)
         {
@@ -84,7 +85,6 @@ namespace Project_PV
             g.DrawImage((Image)Properties.Resources.ResourceManager.GetObject("side_decor"), 1285, 420, -120, 270);
 
             drawStatus(g);
-
         }
         string dmg_min = "10";
         string dmg_max = "10";
@@ -168,7 +168,7 @@ namespace Project_PV
 
         public override void mouse_click(object sender, MouseEventArgs e)
         {
-
+            
         }
 
         public override void update()

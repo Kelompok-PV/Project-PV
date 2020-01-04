@@ -1,6 +1,6 @@
 ﻿<root>
   <player>
-    <gold>13</gold>
+    <gold>38</gold>
     <nama>Hatory</nama>
     <hero>ninja</hero>
     <min_damage>5</min_damage>
@@ -13,7 +13,7 @@
     <hero_stress_point>0</hero_stress_point>
   </player>
   <player>
-    <gold>13</gold>
+    <gold>38</gold>
     <nama>aladin</nama>
     <hero>aladin</hero>
     <min_damage>4</min_damage>
@@ -26,7 +26,7 @@
     <hero_stress_point>25</hero_stress_point>
   </player>
   <player>
-    <gold>13</gold>
+    <gold>38</gold>
     <nama>Frozen</nama>
     <hero>iceWoman</hero>
     <min_damage>4</min_damage>
