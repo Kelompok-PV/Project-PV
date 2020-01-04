@@ -153,6 +153,7 @@ namespace Project_PV
                             musuh[i].musuh_move_now++;
                         }
                     }
+
                     musuh[targetMusuh].getImageAttack(g, zoom);
                 }
                 if(serang_musuh)
@@ -183,13 +184,14 @@ namespace Project_PV
                 {
                     for (int i = 0; i < player.Count; i++)
                     {
-                        if (pilihHero != i)
+                        if (turnAttack[turn_ke].ke != i)
                         {
                             player[i].getImage(g);
                             player[i].hero_move_now++;
                         }
                     }
-                    player[pilihHero].getImageAttack(g, zoom);
+
+                    player[turnAttack[turn_ke].ke].getImageAttack(g, zoom);
                 }
                 if (serang_musuh)
                 {
@@ -381,15 +383,14 @@ namespace Project_PV
                                 player[turnAttack[turn_ke].ke].skills[pilih_attack].getDamageSkill(i,musuh);
                                 
                                 serang = true;
-                                player[pilihHero].x = 520;
-                                player[pilihHero].hero_move = "skill" + (pilih_attack + 1);
-                                player[pilihHero].hero_move_now = 1;
-
-                                sfx.Stop();
-                                string RunningPath = AppDomain.CurrentDomain.BaseDirectory;
-                                string FileName = string.Format("{0}Resources\\char_share_imp_sword.wav", Path.GetFullPath(Path.Combine(RunningPath, @"..\..\")));
-                                sfx.Open(new System.Uri(FileName));
-                                sfx.Play();
+                                player[turnAttack[turn_ke].ke].x = 520;
+                                player[turnAttack[turn_ke].ke].hero_move = "skill" + (pilih_attack + 1);
+                                player[turnAttack[turn_ke].ke].hero_move_now = 1;
+                                //sfx.Stop();
+                                //string RunningPath = AppDomain.CurrentDomain.BaseDirectory;
+                                //string FileName = string.Format("{0}Resources\\char_share_imp_sword.wav", Path.GetFullPath(Path.Combine(RunningPath, @"..\..\")));
+                                //sfx.Open(new System.Uri(FileName));
+                                //sfx.Play();
                             }
                             else
                             {
@@ -649,30 +650,30 @@ namespace Project_PV
                     player[pilihHero].marked = false;
                     if (player[pilihHero].hero_buff == efek.bleed)
                     {
-                        if (player[pilihHero].hero_buff[i] == efek.bleed)
+                        if (player[pilihHero].hero_buff == efek.bleed)
                         {
                             player[pilihHero].hp -= player[pilihHero].hp / 10;
                             player[pilihHero].hero_stress.stress_point += 10;
                         }
-                        if (player[pilihHero].hero_buff[i] == efek.blight)
+                        if (player[pilihHero].hero_buff == efek.blight)
                         {
                             player[pilihHero].hp -= (player[pilihHero].maxHp / 10);
                             player[pilihHero].hero_stress.stress_point += 10;
                         }
-                        if (player[pilihHero].hero_buff[i] == efek.stun)
+                        if (player[pilihHero].hero_buff == efek.stun)
                         {
                             gantiTurn();
                             player[pilihHero].hero_stress.stress_point += 20;
                         }
-                        player[pilihHero].hero_buff_turn[i]--;
-                        if (player[pilihHero].hero_buff_turn[i] == 0||(player[pilihHero].hero_stress.stress_level==stress_stage.depresi&&player[pilihHero].hero_stress.stress_point>=100))
+                        player[pilihHero].hero_buff_turn--;
+                        if (player[pilihHero].hero_buff_turn == 0||(player[pilihHero].hero_stress.stress_level==stress_stage.depresi&&player[pilihHero].hero_stress.stress_point>=100))
                         {
-                            player[pilihHero].hero_buff_turn.RemoveAt(i);
-                            player[pilihHero].hero_buff.RemoveAt(i);
-                            i--;
+                            player[pilihHero].hero_buff_turn=0;
+                            player[pilihHero].hero_buff=efek.none;
+                            
                             for (int j = 0; j < player.Count; j++)
                             {
-                                if (j != i)
+                                if (j != pilihHero)
                                 {
                                     player[j].hero_stress.stress_point += 20;
                                 }
@@ -686,7 +687,7 @@ namespace Project_PV
                                 player[pilihHero].hero_stress.stress_point = 0;
                                 for (int j = 0; j < player.Count; j++)
                                 {
-                                    if (j != i)
+                                    if (j != pilihHero)
                                     {
                                         player[j].hero_stress.stress_point += 10;
                                     }

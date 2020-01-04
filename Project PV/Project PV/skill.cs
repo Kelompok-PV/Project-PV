@@ -167,10 +167,6 @@ namespace Project_PV
         }
         public override void getDamageSkill(int targetSkill, List<karakter> karakters)
         {
-            Random rand = new Random();
-            int damage = rand.Next(min_damage, max_damage);
-            karakters[targetSkill].hp += damage;
-            karakters[targetSkill].hero_buff = skill_efek[0];
             for (int i = 0; i < karakters.Count; i++)
             {
                 karakters[i].hp += damage;
@@ -307,14 +303,13 @@ namespace Project_PV
             rank[0] = 0; rank[1] = 1; rank[2] = 1; rank[3] = 1;
             target[0] = 1; target[1] = 1; target[2] = 1; target[3] = 1;
             status_skill = new status(5, 7, 20, 60, 0, -1);
-            skill_efek[0] = efek.armor;
             icon = Properties.Resources.shieldbreaker_ability_pierce;
         }
         public override void getDamageSkill(int targetSkill, List<musuh> musuhs)
         {
             Random rand = new Random();
             int damage = rand.Next(status_skill.dmg_min, status_skill.dmg_max);
-            musuhs[targetSkill].hp += damage;
+            musuhs[targetSkill].hp -= damage;
         }
     }
     class adders_kiss : Skill
@@ -375,7 +370,17 @@ namespace Project_PV
             int damage = rand.Next(status_skill.dmg_min, status_skill.dmg_max);
             for (int i = 0; i < musuhs.Count; i++)
             {
-                musuhs[i].hp -= damage; //karna pasti damage nya 1
+                try
+                {
+                    if (target[i]==1)
+                    {
+                        musuhs[i].hp -= damage;
+                    }
+                }
+                catch (Exception)
+                {
+
+                }
             }
         }
     }
