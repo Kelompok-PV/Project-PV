@@ -16,7 +16,7 @@ namespace Project_PV
         public int x { get; set; }
         public List<karakter> player { get; set; }
 
-        public Inventory[] battleInv { get; set; }
+        public List<Inventory> battleInv { get; set; }
         public BattleState(GameStateManager gsm)
         {
             player = gsm.player.currentCharacters;
@@ -136,7 +136,7 @@ namespace Project_PV
                 {
                     for (int j = 0; j < 8; j++)
                     {
-                        if((i * 8) + j < battleInv.Length)
+                        if((i * 8) + j < battleInv.Count)
                         {
                             if (battleInv[(i * 8) + j] is Inventory)
                             {

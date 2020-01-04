@@ -68,11 +68,14 @@ namespace Project_PV
                 {
                     for (int j = 0; j < 8; j++)
                     {
-                        if(battleInv[(i * 8) + j] is Inventory)
+                        if ((i * 8) + j < battleInv.Count)
                         {
+                            if (battleInv[(i * 8) + j] is Inventory)
+                            {
 
-                            g.DrawImage(battleInv[(i * 8) + j].gambar, (float)(640 + j * 61.5), 440 + i * 120, 50, 110);
-                            g.DrawString("11", font, new SolidBrush(Color.White), (float)(640 + j * 61.5), 445 + i * 120);
+                                g.DrawImage(battleInv[(i * 8) + j].gambar, (float)(640 + j * 61.5), 440 + i * 120, 50, 110);
+                                g.DrawString("11", font, new SolidBrush(Color.White), (float)(640 + j * 61.5), 445 + i * 120);
+                            }
                         }
                         
                     }
