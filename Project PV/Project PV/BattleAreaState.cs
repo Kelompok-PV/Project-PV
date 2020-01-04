@@ -18,13 +18,15 @@ namespace Project_PV
         public bool battle { get; set; }
         public List<Inventory> battleInv { get; set; }
         public GameStateManager gsm { get; set; }
-        public BattleAreaState(GameStateManager gsm)
+        dungeon thisDungeon;
+        public BattleAreaState(GameStateManager gsm,dungeon dgn)
         {
             this.gsm = gsm;
+            thisDungeon = dgn;
             Random r = new Random();
             int ind = r.Next(4) + 1;
             battle = false;
-            battleInv = gsm.player.inventoryAktif;
+            battleInv = thisDungeon.battleInv;
             player = gsm.player.currentCharacters;
 
             object background = Properties.Resources.ResourceManager.GetObject("courtyard_area___"+ind+"_");
@@ -35,7 +37,10 @@ namespace Project_PV
 
            
         }
-
+        public void readInventory()
+        {
+            battleInv = thisDungeon.battleInv;
+        }
         Image imgpPlayer;
         Image imgpInv;
         string aktif = "inv";
@@ -75,7 +80,7 @@ namespace Project_PV
                             {
 
                                 g.DrawImage(battleInv[(i * 8) + j].gambar, (float)(640 + j * 61.5), 440 + i * 120, 50, 110);
-                                g.DrawString("11", font, new SolidBrush(Color.White), (float)(640 + j * 61.5), 445 + i * 120);
+                                g.DrawString(battleInv[(i * 8) + j].jumlah+"", font, new SolidBrush(Color.White), (float)(640 + j * 61.5), 445 + i * 120);
                             }
                         }
                         
@@ -135,6 +140,7 @@ namespace Project_PV
                 gsm.dungeon.ke++;
                 gsm.dungeon.kebalik = false;
                 gsm.dungeon.myLoc = location.jalan;
+                gsm.dungeon.Area_panjang[gsm.dungeon.ke - 1].readInventory();
                 gsm.dungeon.Area_panjang[gsm.dungeon.ke - 1].reset();
             }
             else if(e.KeyData == Keys.D)
@@ -156,6 +162,7 @@ namespace Project_PV
             {
                 gsm.dungeon.kebalik = true;
                 gsm.dungeon.myLoc = location.jalan;
+                gsm.dungeon.Area_panjang[gsm.dungeon.ke - 1].readInventory();
                 gsm.dungeon.Area_panjang[gsm.dungeon.ke - 1].reset();
             }
         }
@@ -173,8 +180,7 @@ namespace Project_PV
 
         public override void update()
         {
-            //Rectangle invalidateAtas = new Rectangle(0, 0, 1300, 400);
-            //Config.form1.Invalidate(invalidateAtas);
+            thisDungeon.battleInv = battleInv;
         }
 
         public override void mouse_hover(object sender, MouseEventArgs e)

@@ -43,10 +43,13 @@ namespace Project_PV
         MediaPlayer myPlayer = new MediaPlayer();
         MediaPlayer sfx = new MediaPlayer();
 
+        public List<Inventory> battleInv { get; set; }
         List<turn> turnAttack = new List<turn>();
         int turn_ke = 0;
-        public battle(GameStateManager gsm,Image back)
+        dungeon thisDungeon;
+        public battle(GameStateManager gsm,Image back,dungeon dgn)
         {
+            thisDungeon = dgn;
             string RunningPath = AppDomain.CurrentDomain.BaseDirectory;
             string FileName = string.Format("{0}Resources\\sound\\music\\combat\\battle.wav", Path.GetFullPath(Path.Combine(RunningPath, @"..\..\")));
             myPlayer.Open(new System.Uri(FileName));
@@ -55,6 +58,7 @@ namespace Project_PV
 
 
             this.gsm = gsm;
+            battleInv = thisDungeon.battleInv;
             player = new List<karakter>(); ;
             for (int i = 0; i < 4; i++)
             {
@@ -123,7 +127,10 @@ namespace Project_PV
         }
         Image imgpPlayer;
         Image imgpInv;
-
+        public void readInventory()
+        {
+            battleInv = thisDungeon.battleInv;
+        }
         private void Media_Ended(object sender, EventArgs e)
         {
             myPlayer.Position = TimeSpan.Zero;
@@ -261,8 +268,16 @@ namespace Project_PV
                 {
                     for (int j = 0; j < 8; j++)
                     {
-                        g.DrawImage((Image)Properties.Resources.ResourceManager.GetObject("gold"), (float)(640 + j * 61.5), 440 + i * 120, 50, 110);
-                        g.DrawString("11", font, br, (float)(640 + j * 61.5), 445 + i * 120);
+                        if ((i * 8) + j < battleInv.Count)
+                        {
+                            if (battleInv[(i * 8) + j] is Inventory)
+                            {
+                                g.DrawImage(battleInv[(i * 8) + j].gambar, (float)(640 + j * 61.5), 440 + i * 120, 50, 110);
+                                g.DrawString(battleInv[(i * 8) + j].jumlah + "", font,br, (float)(640 + j * 61.5), 445 + i * 120);
+                            }
+                        }
+
+
                     }
                 }
             }

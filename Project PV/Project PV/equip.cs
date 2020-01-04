@@ -222,6 +222,7 @@ namespace Project_PV
 			this.def = 5;
 			this.max_dmg = 1;
 			this.min_dmg = 1;
+			this.img = Project_PV.Properties.Resources.eqp_armour_3;
 		}
 	}
 	class healer_arm_2 : equip
@@ -236,6 +237,7 @@ namespace Project_PV
 			this.def = 4;
 			this.max_dmg = 1;
 			this.min_dmg = 2;
+			this.img = Project_PV.Properties.Resources.eqp_armour_3;
 		}
 	}
 
@@ -251,6 +253,7 @@ namespace Project_PV
 			this.def = 0;
 			this.max_dmg = 1;
 			this.min_dmg = 2;
+			this.img = Project_PV.Properties.Resources.eqp_weapon_4;
 		}
 	}
 
@@ -266,6 +269,7 @@ namespace Project_PV
 			this.def = 1;
 			this.max_dmg = 0;
 			this.min_dmg = 3;
+			this.img = Project_PV.Properties.Resources.eqp_weapon_4;
 		}
 	}
 }

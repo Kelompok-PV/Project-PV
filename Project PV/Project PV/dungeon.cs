@@ -22,21 +22,22 @@ namespace Project_PV
         public int ke{ get; set; }
         public bool kebalik{ get; set; }
         public location myLoc { get; set; }
+        public List<Inventory> battleInv { get; set; }
         public dungeon(GameStateManager gsm,int panjang)
         {
             Area_besar = new List<BattleAreaState>();
             Area_panjang = new List<BattleState>();
             ke = 0;
             kebalik = false;
-            myLoc = location.jalan;
-            btl = new battle(gsm, Properties.Resources.courtyard_area___1_);
+            myLoc = location.area;
+            btl = new battle(gsm, Properties.Resources.courtyard_area___1_,this);
             for (int i = 0; i < panjang; i++)
             {
                 if (i != 0)
                 {
-                    Area_panjang.Add(new BattleState(gsm));
+                    Area_panjang.Add(new BattleState(gsm, this));
                 }
-                Area_besar.Add(new BattleAreaState(gsm));
+                Area_besar.Add(new BattleAreaState(gsm, this));
             }
             Area_besar[0].battle = true;
         }

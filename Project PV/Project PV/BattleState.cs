@@ -17,11 +17,12 @@ namespace Project_PV
         public List<karakter> player { get; set; }
 
         public List<Inventory> battleInv { get; set; }
-        public BattleState(GameStateManager gsm)
+        dungeon thisDungeon;
+        public BattleState(GameStateManager gsm,dungeon dgn)
         {
             player = gsm.player.currentCharacters;
-
-            battleInv = gsm.player.inventoryAktif;
+            thisDungeon = dgn;
+            battleInv = dgn.battleInv;
             player = gsm.player.currentCharacters;
             Random r = new Random();
             this.gsm = gsm;
@@ -163,9 +164,8 @@ namespace Project_PV
                         {
                             if (battleInv[(i * 8) + j] is Inventory)
                             {
-
                                 g.DrawImage(battleInv[(i * 8) + j].gambar, (float)(640 + j * 61.5), 440 + i * 120, 50, 110);
-                                g.DrawString("11", font, new SolidBrush(Color.White), (float)(640 + j * 61.5), 445 + i * 120);
+                                g.DrawString(battleInv[(i * 8) + j].jumlah + "", font, new SolidBrush(Color.White), (float)(640 + j * 61.5), 445 + i * 120);
                             }
                         }
                             
@@ -191,6 +191,10 @@ namespace Project_PV
 
         bool kiri = false;
         List<Inventory> inv = new List<Inventory>();
+        public void readInventory()
+        {
+            battleInv = thisDungeon.battleInv;
+        }
         public override void mouse_click(object sender, MouseEventArgs e)
         {
             //MessageBox.Show(x+"");
@@ -235,7 +239,6 @@ namespace Project_PV
                 aktif = "inv";
             }
 
-            MessageBox.Show(inv.Count+"");
             int index = -1;
             Rectangle cursor = new Rectangle(e.X, e.Y, 10, 10);
             for (int i = 0; i < inv_found_rect.Length; i++)
@@ -344,11 +347,13 @@ namespace Project_PV
                 {
                     gsm.dungeon.ke--;
                 }
+                thisDungeon.battleInv = battleInv;
                 gsm.dungeon.myLoc = location.area;
+                
                 if (gsm.dungeon.Area_besar[gsm.dungeon.ke].battle == false)
                 {
                     gsm.dungeon.myLoc = location.battle;
-                    gsm.dungeon.btl = new battle(gsm,gsm.dungeon.Area_besar[gsm.dungeon.ke].imgBack);
+                    gsm.dungeon.btl = new battle(gsm,gsm.dungeon.Area_besar[gsm.dungeon.ke].imgBack,thisDungeon);
                 }
             }
         }
