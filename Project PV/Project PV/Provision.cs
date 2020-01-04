@@ -423,7 +423,12 @@ namespace Project_PV
 
             if (cursor.IntersectsWith(go))
             {
-                gsm.stage = Stage.dungeon;
+                gsm.player.gold = player.gold;
+                for (int i = 0; i < myinv.Count; i++)
+                {
+                    gsm.player.inventoryAktif[i] = myinv[i];
+                }
+                gsm.stage = gsm.dif;
                 gsm.loadState(gsm.stage);
             }
         }
