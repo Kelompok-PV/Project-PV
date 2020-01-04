@@ -46,8 +46,10 @@ namespace Project_PV
         public List<Inventory> battleInv { get; set; }
         List<turn> turnAttack = new List<turn>();
         int turn_ke = 0;
-        public battle(GameStateManager gsm,Image back)
+        dungeon thisDungeon;
+        public battle(GameStateManager gsm,Image back,dungeon dgn)
         {
+            thisDungeon = dgn;
             string RunningPath = AppDomain.CurrentDomain.BaseDirectory;
             string FileName = string.Format("{0}Resources\\sound\\music\\combat\\battle.wav", Path.GetFullPath(Path.Combine(RunningPath, @"..\..\")));
             myPlayer.Open(new System.Uri(FileName));
@@ -56,7 +58,7 @@ namespace Project_PV
 
 
             this.gsm = gsm;
-            battleInv = gsm.player.inventoryAktif;
+            battleInv = thisDungeon.battleInv;
             player = new List<karakter>(); ;
             for (int i = 0; i < 4; i++)
             {
@@ -125,7 +127,10 @@ namespace Project_PV
         }
         Image imgpPlayer;
         Image imgpInv;
-
+        public void readInventory()
+        {
+            battleInv = thisDungeon.battleInv;
+        }
         private void Media_Ended(object sender, EventArgs e)
         {
             myPlayer.Position = TimeSpan.Zero;
