@@ -38,7 +38,7 @@ namespace Project_PV
             //drawInventory();
 
             //random barang jatuh
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < 3; i++)
             {
                 int typeInv = rand.Next(10);
                 if (typeInv == 0) { int jumlah = rand.Next(1, 8); inv_found[i] = new LargeFood(walk_and_found[i], 334, jumlah); inv_found_rect[i] = new Rectangle(walk_and_found[i], 334, 50, 50); }
@@ -52,12 +52,14 @@ namespace Project_PV
                 else if (typeInv == 8) { int jumlah = rand.Next(1, 8); inv_found[i] = new Shovel(walk_and_found[i], 334, jumlah); inv_found_rect[i] = new Rectangle(walk_and_found[i], 334, 50, 50); }
                 else if (typeInv == 9) { int jumlah = rand.Next(1, 8); inv_found[i] = new TheCure(walk_and_found[i], 334, jumlah); inv_found_rect[i] = new Rectangle(walk_and_found[i], 334, 50, 50); }
             }
+
+            inv = gsm.player.inventoryAktif;
         }
 
-        int[] walk_and_found = { 1292, 2584, 3876, 5168, 6460 };
-        bool[] inv_grab = { false, false, false, false, false};
-        Inventory[] inv_found = new Inventory[5];
-        Rectangle[] inv_found_rect = new Rectangle[5];
+        int[] walk_and_found = { 1292, 1500, 2000};
+        bool[] inv_grab = { false, false, false};
+        Inventory[] inv_found = new Inventory[3];
+        Rectangle[] inv_found_rect = new Rectangle[3];
         Random rand = new Random();
         public override void init()
         {
@@ -178,7 +180,7 @@ namespace Project_PV
             {
                 if (!inv_grab[i])
                 {
-                    Image img = Properties.Resources.inv_provision__3;
+                    Image img = inv_found[i].gambar;
                     g.FillRectangle(new SolidBrush(Color.Red), inv_found_rect[i]);
                     g.DrawImage(img, inv_found_rect[i]);
                 }
@@ -188,7 +190,7 @@ namespace Project_PV
         int opacity = 0;
 
         bool kiri = false;
-
+        List<Inventory> inv = new List<Inventory>();
         public override void mouse_click(object sender, MouseEventArgs e)
         {
             //MessageBox.Show(x+"");
@@ -233,41 +235,45 @@ namespace Project_PV
                 aktif = "inv";
             }
 
+            MessageBox.Show(inv.Count+"");
+            int index = -1;
             Rectangle cursor = new Rectangle(e.X, e.Y, 10, 10);
             for (int i = 0; i < inv_found_rect.Length; i++)
             {
-                if (cursor.IntersectsWith(inv_found_rect[i]))
+                if (cursor.IntersectsWith(inv_found_rect[i]) && !inv_grab[i])
                 {
-                    if (!inv_grab[i])
-                    {
-                        //TODO masukan kedalam inventori player
-                        Inventory[] inv = new Inventory[16];
-                        inv = gsm.player.inventoryAktif;
-                        for (int j = 0; j < inv.Length; j++)
-                        {
-                            if (inv[j] != null && (inv_found[i].name == inv[j].name))
-                            {
-                                inv[j].jumlah += inv_found[i].jumlah;
-                            }
-                            else
-                            {
-                                if (inv.Length < 16)
-                                {
-                                    inv[inv.Length - 1] = inv_found[i];
-                                }
-                                else
-                                {
-                                    MessageBox.Show("Inventory full");
-                                }
-                            }
-                        }
-                        gsm.player.inventoryAktif = inv;
-                        inv_grab[i] = true;
-                        MessageBox.Show(string.Format("Selamat anda dapat hadiah {0} sebanyak {1}", inv_found[i].name, inv_found[i].jumlah));
-                    }
+                    index = i;
                 }
-                
-               
+            }
+
+            for (int j = 0; j < inv.Count; j++)
+            {
+                if(index != -1)
+                {
+                    if (!inv_grab[index] && (inv_found[index].name == inv[j].name))
+                    {
+                        inv[j].jumlah += inv_found[index].jumlah;
+                        inv_grab[index] = true;
+                        MessageBox.Show(string.Format("masuk 1 Selamat anda dapat hadiah {0} sebanyak {1}", inv_found[index].name, inv_found[index].jumlah));
+                        index = -1;
+                    }
+                    else
+                    {
+                        if (inv.Count < 16)
+                        {
+                            inv.Add(inv_found[index]);
+                            inv_grab[index] = true;
+                            MessageBox.Show(string.Format("masuk 2 Selamat anda dapat hadiah {0} sebanyak {1}", inv_found[index].name, inv_found[index].jumlah));
+                            index = -1;
+                        }
+                        else
+                        {
+                            MessageBox.Show("Inventory full");
+                            index = -1;
+                        }
+                    }
+                    gsm.player.inventoryAktif = inv;
+                }
             }
         }
         public override void key_keydown(object sender, KeyEventArgs e)
