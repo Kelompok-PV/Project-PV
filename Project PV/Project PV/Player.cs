@@ -16,7 +16,7 @@ namespace Project_PV
         public string name { get; set; }
         public List<karakter> myCharacter { get; set; }
         public List<karakter> currentCharacters { get; set; }
-        public Inventory[] inventoryAktif { get; set; }
+        public List<Inventory> inventoryAktif { get; set; }
 
         public Player()
         {
@@ -24,7 +24,7 @@ namespace Project_PV
             name = "yomama";
             myCharacter = new List<karakter>();
             currentCharacters = new List<karakter>();
-            inventoryAktif = new Inventory[16];
+            inventoryAktif = new List<Inventory>();
         }
 
         //pas mulai game panggil ini

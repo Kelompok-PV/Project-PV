@@ -56,9 +56,16 @@ namespace Project_PV
 
             this.gsm = gsm;
             player = new List<karakter>(); ;
-            for (int i = 0; i < gsm.player.currentCharacters.Count; i++)
+            for (int i = 0; i < 4; i++)
             {
-                player.Add(gsm.player.currentCharacters[i]);
+                try
+                {
+                    player.Add(gsm.player.currentCharacters[i]);
+                }
+                catch (Exception)
+                {
+
+                }
             }
 
             musuh = new List<musuh>();
@@ -425,7 +432,6 @@ namespace Project_PV
                     {
                             player[turnAttack[turn_ke].ke].skills[pilih_attack].getDamageSkill(i, player);
                             gantiTurn();
-                        
                     }
                     else
                     {

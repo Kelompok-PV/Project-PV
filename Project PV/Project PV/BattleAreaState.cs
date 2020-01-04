@@ -16,6 +16,7 @@ namespace Project_PV
         object background = Properties.Resources.ResourceManager.GetObject("courtyard_battleArea_");
         public Image imgBack { get; set; }
         public bool battle { get; set; }
+        public List<Inventory> battleInv { get; set; }
         public GameStateManager gsm { get; set; }
         public BattleAreaState(GameStateManager gsm)
         {
@@ -23,7 +24,7 @@ namespace Project_PV
             Random r = new Random();
             int ind = r.Next(4) + 1;
             battle = false;
-
+            battleInv = gsm.player.inventoryAktif;
             player = gsm.player.currentCharacters;
 
             object background = Properties.Resources.ResourceManager.GetObject("courtyard_area___"+ind+"_");
@@ -38,8 +39,7 @@ namespace Project_PV
         Image imgpPlayer;
         Image imgpInv;
         string aktif = "inv";
-        
-        
+        Font font = new Font("Arial", 15.0f);
         public override void draw(Graphics g)
         {
 
@@ -62,16 +62,23 @@ namespace Project_PV
 
             g.DrawImage((Image)Properties.Resources.ResourceManager.GetObject("panel_stat"), 70 + 50, 520, 500, 170);
             g.DrawImage(imgpInv, 70 + 550, 420, 550, 270);
-            //MessageBox.Show((Image)imgpInv+"");
-            Font font = new Font("Arial", 15.0f);
+
             if (aktif == "inv")
             {
                 for (int i = 0; i < 2; i++)
                 {
                     for (int j = 0; j < 8; j++)
                     {
-                        g.DrawImage((Image)Properties.Resources.ResourceManager.GetObject("gold"), (float)(640 + j * 61.5), 440 + i * 120, 50, 110);
-                        g.DrawString("11", font, new SolidBrush(Color.White), (float)(640 + j * 61.5), 445 + i * 120);
+                        if ((i * 8) + j < battleInv.Count)
+                        {
+                            if (battleInv[(i * 8) + j] is Inventory)
+                            {
+
+                                g.DrawImage(battleInv[(i * 8) + j].gambar, (float)(640 + j * 61.5), 440 + i * 120, 50, 110);
+                                g.DrawString("11", font, new SolidBrush(Color.White), (float)(640 + j * 61.5), 445 + i * 120);
+                            }
+                        }
+                        
                     }
                 }
             }
@@ -166,7 +173,8 @@ namespace Project_PV
 
         public override void update()
         {
-            
+            //Rectangle invalidateAtas = new Rectangle(0, 0, 1300, 400);
+            //Config.form1.Invalidate(invalidateAtas);
         }
 
         public override void mouse_hover(object sender, MouseEventArgs e)

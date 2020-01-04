@@ -16,8 +16,12 @@ namespace Project_PV
         public int x { get; set; }
         public List<karakter> player { get; set; }
 
+        public List<Inventory> battleInv { get; set; }
         public BattleState(GameStateManager gsm)
         {
+            player = gsm.player.currentCharacters;
+
+            battleInv = gsm.player.inventoryAktif;
             player = gsm.player.currentCharacters;
             Random r = new Random();
             this.gsm = gsm;
@@ -153,8 +157,17 @@ namespace Project_PV
                 {
                     for (int j = 0; j < 8; j++)
                     {
-                        g.DrawImage((Image)Properties.Resources.ResourceManager.GetObject("gold"), (float)(640 + j * 61.5), 440 + i * 120, 50, 110);
-                        g.DrawString("11",font,new SolidBrush(Color.White), (float)(640 + j * 61.5), 445 + i * 120);
+                        if((i * 8) + j < battleInv.Count)
+                        {
+                            if (battleInv[(i * 8) + j] is Inventory)
+                            {
+
+                                g.DrawImage(battleInv[(i * 8) + j].gambar, (float)(640 + j * 61.5), 440 + i * 120, 50, 110);
+                                g.DrawString("11", font, new SolidBrush(Color.White), (float)(640 + j * 61.5), 445 + i * 120);
+                            }
+                        }
+                            
+                        
                     }
                 }
             }
