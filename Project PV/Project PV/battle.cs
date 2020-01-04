@@ -56,8 +56,10 @@ namespace Project_PV
 
             this.gsm = gsm;
             player = new List<karakter>(); ;
-            player.Add(gsm.player.currentCharacters[0]);
-            player.Add(gsm.player.currentCharacters[1]);
+            for (int i = 0; i < gsm.player.currentCharacters.Count; i++)
+            {
+                player.Add(gsm.player.currentCharacters[i]);
+            }
 
             musuh = new List<musuh>();
             for (int i = 0; i < 1; i++)
