@@ -198,6 +198,18 @@ namespace Project_PV
             {
                 if (battleRect[i].IntersectsWith(cursor))
                 {
+                    if (i == 0)
+                    {
+                        gsm.dif = Stage.easyState;
+                    }
+                    if (i == 1)
+                    {
+                        gsm.dif = Stage.mediumState;
+                    }
+                    if (i == 2)
+                    {
+                        gsm.dif = Stage.hardState;
+                    }
                     gsm.stage = Stage.provision;
                     gsm.loadState(gsm.stage);
                 }

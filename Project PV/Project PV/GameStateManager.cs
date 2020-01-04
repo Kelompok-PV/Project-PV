@@ -18,6 +18,7 @@ namespace Project_PV
     {
         public GameState[] gameStates { get; set; }
         public Stage stage { get; set; }
+        public Stage dif { get; set; }
         public Player player { get; set; }
         public dungeon dungeon { get; set; }
         //SoundPlayer townMusic;
@@ -26,7 +27,7 @@ namespace Project_PV
         {
             player = new Player();
 
-            this.stage = Stage.dungeon;
+            this.stage = Stage.title;
             player.myCharacter.Add(new ninja("Hatory"));
             player.myCharacter.Add(new aladin("aladin"));
             player.currentCharacters.Add(player.myCharacter[0]);
@@ -50,11 +51,23 @@ namespace Project_PV
                 //townMusic.PlayLooping();
 
             }
-            else if (stage == Stage.dungeon)
+            else if (stage == Stage.easyState)
             {
                 //townMusic.Stop();
                 dungeon = new dungeon(this, 2);
                 gameStates[(int)stage] = dungeon ;
+            }
+            else if (stage == Stage.mediumState)
+            {
+                //townMusic.Stop();
+                dungeon = new dungeon(this, 4);
+                gameStates[(int)stage] = dungeon;
+            }
+            else if (stage == Stage.hardState)
+            {
+                //townMusic.Stop();
+                dungeon = new dungeon(this, 6);
+                gameStates[(int)stage] = dungeon;
             }
             else if (stage == Stage.sanitarium)
             {
