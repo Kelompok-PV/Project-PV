@@ -22,6 +22,7 @@ namespace Project_PV
         public Image icon { get; set; }
         public int max_damage { get; set; }
         public int min_damage { get; set; }
+        public int acc { get; set; }
 
         public Skill(string nama, efek skill_efek, int[] rank, int[] target, status status_skill, int efek_kena)
         {
@@ -509,13 +510,39 @@ namespace Project_PV
         class yeti1 : Skill
         {
             public yeti1()
-               : base("yeti1", new efek(), new int[4], new int[4], new status(), 100)
+            : base("yeti1", new efek(), new int[4], new int[4], new status(), 100)
             {
                 rank[0] = 1; rank[1] = 1; rank[2] = 0; rank[3] = 0;
                 target[0] = 0; target[1] = 0; target[2] = 1; target[3] = 1;
                 status_skill = new status(3, 4, 20, 70, 0, 3);
                 skill_efek = efek.stun;
+                rank = new int[1];
+                rank[0] = 4;
+                target = new int[4];
+                target[0] = 0;
+                target[1] = 1;
+                target[2] = 2;
+                target[3] = 3;
+                accuracy = 42;
+                crit_mod = 0;
+                max_damage = 4;
+                min_damage = 2;
+                acc = 70;
                 icon = Properties.Resources.yeti_attack___1_;
+            }
+            public override void getDamageSkill(int targetSkill, List<karakter> karakters)
+            {
+                Random rand = new Random();
+                int randakurasi = rand.Next(0, 100);
+                if (randakurasi <=acc)
+                {
+                    int randdodge = rand.Next(0, 100);
+                    if (karakters[targetSkill].dodge < randdodge)
+                    {
+                        int damage = rand.Next(min_damage, max_damage);
+                        karakters[targetSkill].hp -= damage;
+                    }
+                }
             }
         }
         class yeti2 : Skill
@@ -528,6 +555,25 @@ namespace Project_PV
                 status_skill = new status(3, 4, 20, 70, 0, 3);
                 skill_efek = efek.stun;
                 icon = Properties.Resources.yeti_attack___2_;
+                accuracy = 70;
+                crit_mod = 25;
+                max_damage = 8;
+                min_damage = 4;
+                acc = 75;
+            }
+            public override void getDamageSkill(int targetSkill, List<karakter> karakters)
+            {
+                Random rand = new Random();
+                int randakurasi = rand.Next(0, 100);
+                if (randakurasi <= acc)
+                {
+                    int randdodge = rand.Next(0, 100);
+                    if (karakters[targetSkill].dodge < randdodge)
+                    {
+                        int damage = rand.Next(min_damage, max_damage);
+                        karakters[targetSkill].hp -= damage;
+                    }
+                }
             }
         }
         class yeti3 : Skill
@@ -540,6 +586,26 @@ namespace Project_PV
                 status_skill = new status(3, 4, 20, 70, 0, 3);
                 skill_efek = efek.stun;
                 icon = Properties.Resources.yeti_attack___3_;
+                accuracy = 70;
+                crit_mod = 25;
+                max_damage = 4;
+                min_damage = 2;
+                acc = 60;
+            }
+            public override void getDamageSkill(int targetSkill, List<karakter> karakters)
+            {
+                Random rand = new Random();
+                int randakurasi = rand.Next(0, 100);
+                if (randakurasi <= acc)
+                {
+                    int randdodge = rand.Next(0, 100);
+                    if (karakters[targetSkill].dodge < randdodge)
+                    {
+                        karakters[targetSkill].hero_buff = skill_efek;
+                        int damage = rand.Next(min_damage, max_damage);
+                        karakters[targetSkill].hp -= damage;
+                    }
+                }
             }
         }
         class yeti4 : Skill
@@ -552,6 +618,26 @@ namespace Project_PV
                 status_skill = new status(3, 4, 20, 70, 0, 3);
                 skill_efek = efek.stun;
                 icon = Properties.Resources.yeti_attack___4_;
+                accuracy = 70;
+                crit_mod = 50;
+                max_damage = 5;
+                min_damage = 3;
+                acc = 60;
+            }
+            public override void getDamageSkill(int targetSkill, List<karakter> karakters)
+            {
+                Random rand = new Random();
+                int randakurasi = rand.Next(0, 100);
+                if (randakurasi <= acc)
+                {
+                    int randdodge = rand.Next(0, 100);
+                    if (karakters[targetSkill].dodge < randdodge)
+                    {
+                        karakters[targetSkill].hero_buff = skill_efek;
+                        int damage = rand.Next(min_damage, max_damage);
+                        karakters[targetSkill].hp -= damage;
+                    }
+                }
             }
         }
         class Boarman1 : Skill
@@ -571,11 +657,26 @@ namespace Project_PV
                 crit_mod = 50;
                 max_damage = 5;
                 min_damage = 3;
+                acc = 70;
             }
 
             public override void getDamageSkill(int targetSkill, List<karakter> karakters)
             {
-
+                Random rand = new Random();
+                int randakurasi = rand.Next(0, 100);
+                if (randakurasi <= acc)
+                {
+                    int randdodge = rand.Next(0, 100);
+                    if (karakters[targetSkill].dodge < randdodge)
+                    {
+                        for (int i = 0; i < karakters.Count; i++)
+                        {
+                            karakters[i].hero_stress.stress_point += 5;
+                            karakters[i].hero_buff = skill_efek;
+                            karakters[i].hp -= min_damage; //karna pasti damage nya 1
+                        }
+                    }
+                }
             }
         }
         class Boarman2 : Skill
@@ -595,6 +696,21 @@ namespace Project_PV
                 crit_mod = 25;
                 max_damage = 4;
                 min_damage = 2;
+                acc = 60;
+            }
+            public override void getDamageSkill(int targetSkill, List<karakter> karakters)
+            {
+                Random rand = new Random();
+                int randakurasi = rand.Next(0, 100);
+                if (randakurasi <= acc)
+                {
+                    int randdodge = rand.Next(0, 100);
+                    if (karakters[targetSkill].dodge < randdodge)
+                    {
+                        int damage = rand.Next(min_damage, max_damage);
+                        karakters[targetSkill].hp -= damage;
+                    }
+                }
             }
         }
         class Boarman3 : Skill
@@ -617,6 +733,23 @@ namespace Project_PV
                 min_damage = 4;
                 skill_efek = new efek();
                 skill_efek = efek.bleed;
+                acc = 65;
+            }
+
+            public override void getDamageSkill(int targetSkill, List<karakter> karakters)
+            {
+                Random rand = new Random();
+                int randakurasi = rand.Next(0, 100);
+                if (randakurasi <= acc)
+                {
+                    int randdodge = rand.Next(0, 100);
+                    if (karakters[targetSkill].dodge < randdodge)
+                    {
+                        karakters[targetSkill].hero_buff = skill_efek;
+                        int damage = rand.Next(min_damage, max_damage);
+                        karakters[targetSkill].hp -= damage;
+                    }
+                }
             }
         }
         class Boarman4 : Skill
@@ -635,9 +768,23 @@ namespace Project_PV
                 crit_mod = 0;
                 max_damage = 4;
                 min_damage = 2;
+                acc = 65;
+            }
+            public override void getDamageSkill(int targetSkill, List<karakter> karakters)
+            {
+                Random rand = new Random();
+                int randakurasi = rand.Next(0, 100);
+                if (randakurasi <= acc)
+                {
+                    int randdodge = rand.Next(0, 100);
+                    if (karakters[targetSkill].dodge < randdodge)
+                    {
+                        int damage = rand.Next(min_damage, max_damage);
+                        karakters[targetSkill].hp -= damage;
+                    }
+                }
             }
         }
-
         class FlameEater1 : Skill
         {
             public FlameEater1()
@@ -658,17 +805,26 @@ namespace Project_PV
                 min_damage = 1;
                 skill_efek = new efek();
                 skill_efek = efek.bleed;
+                acc = 70;
             }
 
             public override void getDamageSkill(int targetSkill, List<karakter> karakters)
             {
-                for (int i = 0; i < karakters.Count; i++)
+                Random rand = new Random();
+                int randakurasi = rand.Next(0, 100);
+                if (randakurasi <= acc)
                 {
-                    karakters[i].hero_stress.stress_point += 5;
-                    karakters[i].hero_buff = skill_efek;
-                    karakters[i].hp -= min_damage; //karna pasti damage nya 1
+                    int randdodge = rand.Next(0, 100);
+                    if (karakters[targetSkill].dodge < randdodge)
+                    {
+                        for (int i = 0; i < karakters.Count; i++)
+                        {
+                            karakters[i].hero_stress.stress_point += 5;
+                            karakters[i].hero_buff = skill_efek;
+                            karakters[i].hp -= min_damage; //karna pasti damage nya 1
+                        }
+                    }
                 }
-
             }
         }
 
@@ -693,15 +849,23 @@ namespace Project_PV
                 min_damage = 2;
                 skill_efek = new efek();
                 skill_efek = efek.bleed;
+                acc = 65;
             }
             public override void getDamageSkill(int targetSkill, List<karakter> karakters)
             {
-                karakters[targetSkill].hero_stress.stress_point += 5;
-                karakters[targetSkill].hero_buff = skill_efek;
-                karakters[targetSkill].hero_buff_turn = 3;
                 Random rand = new Random();
-                int damage = rand.Next(min_damage, max_damage);
-                karakters[targetSkill].hp -= damage;
+                int randakurasi = rand.Next(0, 100);
+                if (randakurasi <= acc)
+                {
+                    int randdodge = rand.Next(0, 100);
+                    if (karakters[targetSkill].dodge < randdodge)
+                    {
+                        karakters[targetSkill].hero_stress.stress_point += 5;
+                        karakters[targetSkill].hero_buff = skill_efek;
+                        int damage = rand.Next(min_damage, max_damage);
+                        karakters[targetSkill].hp -= damage;
+                    }
+                }
             }
         }
         class FlameEater3 : Skill
@@ -717,13 +881,22 @@ namespace Project_PV
                 crit_mod = 20;
                 max_damage = 11;
                 min_damage = 4;
+                acc = 60;
             }
 
             public override void getDamageSkill(int targetSkill, List<karakter> karakters)
             {
                 Random rand = new Random();
-                int damage = rand.Next(min_damage, max_damage);
-                karakters[targetSkill].hp -= damage;
+                int randakurasi = rand.Next(0, 100);
+                if (randakurasi <= acc)
+                {
+                    int randdodge = rand.Next(0, 100);
+                    if (karakters[targetSkill].dodge < randdodge)
+                    {
+                        int damage = rand.Next(min_damage, max_damage);
+                        karakters[targetSkill].hp -= damage;
+                    }
+                }
             }
         }
         class FlameEater4 : Skill
@@ -741,12 +914,21 @@ namespace Project_PV
                 crit_mod = 20;
                 max_damage = 7;
                 min_damage = 3;
+                acc = 70;
             }
             public override void getDamageSkill(int targetSkill, List<karakter> karakters)
             {
                 Random rand = new Random();
-                int damage = rand.Next(min_damage, max_damage);
-                karakters[targetSkill].hp -= damage;
+                int randakurasi = rand.Next(0, 100);
+                if (randakurasi <= acc)
+                {
+                    int randdodge = rand.Next(0, 100);
+                    if (karakters[targetSkill].dodge < randdodge)
+                    {
+                        int damage = rand.Next(min_damage, max_damage);
+                        karakters[targetSkill].hp -= damage;
+                    }
+                }
             }
         }
         class Gargoyle1 : Skill
@@ -765,14 +947,23 @@ namespace Project_PV
                 crit_mod = 20;
                 max_damage = 11;
                 min_damage = 6;
+                acc = 70;
             }
             public override void getDamageSkill(int targetSkill, List<karakter> karakters)
             {
                 Random rand = new Random();
-                int damage = rand.Next(min_damage, max_damage);
-                for (int i = 0; i < target.Length; i++)
+                int randakurasi = rand.Next(0, 100);
+                if (randakurasi <= acc)
                 {
-                    karakters[target[i]].hp -= damage;
+                    int randdodge = rand.Next(0, 100);
+                    if (karakters[targetSkill].dodge < randdodge)
+                    {
+                        int damage = rand.Next(min_damage, max_damage);
+                        for (int i = 0; i < target.Length; i++)
+                        {
+                            karakters[target[i]].hp -= damage;
+                        }
+                    }
                 }
             }
         }
@@ -792,12 +983,21 @@ namespace Project_PV
                 crit_mod = 15;
                 max_damage = 9;
                 min_damage = 4;
+                acc = 65;
             }
             public override void getDamageSkill(int targetSkill, List<karakter> karakters)
             {
                 Random rand = new Random();
-                int damage = rand.Next(min_damage, max_damage);
-                karakters[targetSkill].hp -= damage;
+                int randakurasi = rand.Next(0, 100);
+                if (randakurasi <= acc)
+                {
+                    int randdodge = rand.Next(0, 100);
+                    if (karakters[targetSkill].dodge < randdodge)
+                    {
+                        int damage = rand.Next(min_damage, max_damage);
+                        karakters[targetSkill].hp -= damage;
+                    }
+                }
             }
         }
         class Gargoyle3 : Skill
@@ -815,14 +1015,22 @@ namespace Project_PV
                 min_damage = 7;
                 skill_efek = new efek();
                 skill_efek = efek.bleed;
+                acc = 65;
             }
             public override void getDamageSkill(int targetSkill, List<karakter> karakters)
             {
                 Random rand = new Random();
-                int damage = rand.Next(min_damage, max_damage);
-                karakters[targetSkill].hp -= damage;
-                karakters[targetSkill].hero_buff = skill_efek;
-                karakters[targetSkill].hero_buff_turn = 3;
+                int randakurasi = rand.Next(0, 100);
+                if (randakurasi <= acc)
+                {
+                    int randdodge = rand.Next(0, 100);
+                    if (karakters[targetSkill].dodge < randdodge)
+                    {
+                        int damage = rand.Next(min_damage, max_damage);
+                        karakters[targetSkill].hp -= damage;
+                        karakters[targetSkill].hero_buff = skill_efek;
+                    }
+                }
             }
         }
         class Gargoyle4 : Skill
@@ -838,12 +1046,21 @@ namespace Project_PV
                 crit_mod = 0;
                 max_damage = 9;
                 min_damage = 4;
+                acc = 70;
             }
             public override void getDamageSkill(int targetSkill, List<karakter> karakters)
             {
                 Random rand = new Random();
-                int damage = rand.Next(min_damage, max_damage);
-                karakters[targetSkill].hp -= damage;
+                int randakurasi = rand.Next(0, 100);
+                if (randakurasi <= acc)
+                {
+                    int randdodge = rand.Next(0, 100);
+                    if (karakters[targetSkill].dodge < randdodge)
+                    {
+                        int damage = rand.Next(min_damage, max_damage);
+                        karakters[targetSkill].hp -= damage;
+                    }
+                }
             }
         }
         class GiantGoblin1 : Skill
@@ -860,15 +1077,24 @@ namespace Project_PV
                 max_damage = 1;
                 min_damage = 1;
                 skill_efek = new efek();
-                skill_efek = efek.bleed; 
+                skill_efek = efek.bleed;
+                acc = 65;
             }
             public override void getDamageSkill(int targetSkill, List<karakter> karakters)
             {
-                for (int i = 0; i < karakters.Count; i++)
+                Random rand = new Random();
+                int randakurasi = rand.Next(0, 100);
+                if (randakurasi <= acc)
                 {
-                    karakters[i].hp -= 1;
-                    karakters[i].hero_buff = skill_efek;
-                    karakters[i].hero_buff_turn = 3;
+                    int randdodge = rand.Next(0, 100);
+                    if (karakters[targetSkill].dodge < randdodge)
+                    {
+                        for (int i = 0; i < karakters.Count; i++)
+                        {
+                            karakters[i].hp -= 1;
+                            karakters[i].hero_buff = skill_efek;
+                        }
+                    }
                 }
             }
         }
@@ -886,16 +1112,25 @@ namespace Project_PV
                 max_damage = 1;
                 min_damage = 1;
                 skill_efek = new efek();
-                skill_efek = efek.bleed; 
+                skill_efek = efek.bleed;
+                acc = 70;
             }
             public override void getDamageSkill(int targetSkill, List<karakter> karakters)
             {
-                for (int i = 0; i < karakters.Count; i++)
+                Random rand = new Random();
+                int randakurasi = rand.Next(0, 100);
+                if (randakurasi <= acc)
                 {
-                    karakters[i].hp -= 1;
-                    karakters[i].hero_buff = skill_efek;
-                karakters[i].hero_buff_turn = 3;
-                karakters[i].hero_stress.stress_point += 10;
+                    int randdodge = rand.Next(0, 100);
+                    if (karakters[targetSkill].dodge < randdodge)
+                    {
+                        for (int i = 0; i < karakters.Count; i++)
+                        {
+                            karakters[i].hp -= 1;
+                            karakters[i].hero_buff = skill_efek;
+                            karakters[i].hero_stress.stress_point += 10;
+                        }
+                    }
                 }
             }
         }
@@ -912,13 +1147,22 @@ namespace Project_PV
                 crit_mod = 10;
                 max_damage = 4;
                 min_damage = 2;
+                acc = 70;
             }
             public override void getDamageSkill(int targetSkill, List<karakter> karakters)
             {
-                karakters[targetSkill].hero_stress.stress_point += 10;
                 Random rand = new Random();
-                int damage = rand.Next(min_damage, max_damage);
-                karakters[targetSkill].hp -= damage;
+                int randakurasi = rand.Next(0, 100);
+                if (randakurasi <= acc)
+                {
+                    int randdodge = rand.Next(0, 100);
+                    if (karakters[targetSkill].dodge < randdodge)
+                    {
+                        karakters[targetSkill].hero_stress.stress_point += 10;
+                        int damage = rand.Next(min_damage, max_damage);
+                        karakters[targetSkill].hp -= damage;
+                    }
+                }
             }
         }
         class GiantGoblin4 : Skill
@@ -936,15 +1180,24 @@ namespace Project_PV
                 min_damage = 1;
                 skill_efek = new efek();
                 skill_efek = efek.stun;
+                acc = 65;
             }
             public override void getDamageSkill(int targetSkill, List<karakter> karakters)
             {
-                for (int i = 0; i < karakters.Count; i++)
+                Random rand = new Random();
+                int randakurasi = rand.Next(0, 100);
+                if (randakurasi <= acc)
                 {
-                    karakters[i].hp -= 1;
-                    karakters[i].hero_buff = skill_efek;
-                karakters[i].hero_buff_turn = 3;
-                karakters[i].hero_stress.stress_point += 10;
+                    int randdodge = rand.Next(0, 100);
+                    if (karakters[targetSkill].dodge < randdodge)
+                    {
+                        for (int i = 0; i < karakters.Count; i++)
+                        {
+                            karakters[i].hp -= 1;
+                            karakters[i].hero_buff = skill_efek;
+                            karakters[i].hero_stress.stress_point += 10;
+                        }
+                    }
                 }
             }
         }
@@ -963,15 +1216,24 @@ namespace Project_PV
                 min_damage = 3;
                 skill_efek = new efek();
                 skill_efek = efek.bleed;
+                acc = 60;
             }
             public override void getDamageSkill(int targetSkill, List<karakter> karakters)
             {
-                for (int i = 0; i < karakters.Count; i++)
+                Random rand = new Random();
+                int randakurasi = rand.Next(0, 100);
+                if (randakurasi <= acc)
                 {
-                    karakters[i].hp -= 3;
-                    karakters[i].hero_buff = skill_efek;
-                karakters[i].hero_buff_turn = 3;
-            }
+                    int randdodge = rand.Next(0, 100);
+                    if (karakters[targetSkill].dodge < randdodge)
+                    {
+                        for (int i = 0; i < karakters.Count; i++)
+                        {
+                            karakters[i].hp -= 3;
+                            karakters[i].hero_buff = skill_efek;
+                        }
+                    }
+                }
             }
         }
         class Larry2 : Skill
@@ -989,15 +1251,24 @@ namespace Project_PV
                 min_damage = 3;
                 skill_efek = new efek();
                 skill_efek = efek.blight;
+                acc = 70;
             }
             public override void getDamageSkill(int targetSkill, List<karakter> karakters)
             {
-                for (int i = 0; i < karakters.Count; i++)
+                Random rand = new Random();
+                int randakurasi = rand.Next(0, 100);
+                if (randakurasi <= acc)
                 {
-                    karakters[i].hp -= 3;
-                    karakters[i].hero_buff = skill_efek;
-                karakters[i].hero_buff_turn = 3;
-                karakters[i].hero_buff_turn = 5;
+                    int randdodge = rand.Next(0, 100);
+                    if (karakters[targetSkill].dodge < randdodge)
+                    {
+                        for (int i = 0; i < karakters.Count; i++)
+                        {
+                            karakters[i].hp -= 3;
+                            karakters[i].hero_buff = skill_efek;
+                            karakters[i].hero_buff_turn = 5;
+                        }
+                    }
                 }
             }
         }
@@ -1014,13 +1285,23 @@ namespace Project_PV
                 crit_mod = 10;
                 max_damage = 3;
                 min_damage = 3;
+                acc = 60;
             }
             public override void getDamageSkill(int targetSkill, List<karakter> karakters)
             {
-                for (int i = 0; i < karakters.Count; i++)
+                Random rand = new Random();
+                int randakurasi = rand.Next(0, 100);
+                if (randakurasi <= acc)
                 {
-                    karakters[i].hp -= 3;
-                    karakters[i].hero_stress.stress_point += 15;
+                    int randdodge = rand.Next(0, 100);
+                    if (karakters[targetSkill].dodge < randdodge)
+                    {
+                        for (int i = 0; i < karakters.Count; i++)
+                        {
+                            karakters[i].hp -= 3;
+                            karakters[i].hero_stress.stress_point += 15;
+                        }
+                    }
                 }
             }
         }
@@ -1037,13 +1318,22 @@ namespace Project_PV
                 crit_mod = 10;
                 max_damage = 4;
                 min_damage = 2;
+                acc = 65;
             }
             public override void getDamageSkill(int targetSkill, List<karakter> karakters)
             {
                 Random rand = new Random();
-                int damage = rand.Next(min_damage, max_damage);
-                karakters[targetSkill].hp -= damage;
-                karakters[targetSkill].hero_stress.stress_point += 15;
+                int randakurasi = rand.Next(0, 100);
+                if (randakurasi <= acc)
+                {
+                    int randdodge = rand.Next(0, 100);
+                    if (karakters[targetSkill].dodge < randdodge)
+                    {
+                        int damage = rand.Next(min_damage, max_damage);
+                        karakters[targetSkill].hp -= damage;
+                        karakters[targetSkill].hero_stress.stress_point += 15;
+                    }
+                }
             }
         }
         class Skeleton_soldier1 : Skill
@@ -1059,12 +1349,21 @@ namespace Project_PV
                 crit_mod = 10;
                 max_damage = 5;
                 min_damage = 2;
+                acc = 65;
             }
             public override void getDamageSkill(int targetSkill, List<karakter> karakters)
             {
                 Random rand = new Random();
-                int damage = rand.Next(min_damage, max_damage);
-                karakters[targetSkill].hp -= damage;
+                int randakurasi = rand.Next(0, 100);
+                if (randakurasi <= acc)
+                {
+                    int randdodge = rand.Next(0, 100);
+                    if (karakters[targetSkill].dodge < randdodge)
+                    {
+                        int damage = rand.Next(min_damage, max_damage);
+                        karakters[targetSkill].hp -= damage;
+                    }
+                }
             }
         }
         class Skeleton_soldier2 : Skill
@@ -1080,12 +1379,21 @@ namespace Project_PV
                 crit_mod = 10;
                 max_damage = 5;
                 min_damage = 2;
+                acc = 60;
             }
             public override void getDamageSkill(int targetSkill, List<karakter> karakters)
             {
                 Random rand = new Random();
-                int damage = rand.Next(min_damage, max_damage);
-                karakters[targetSkill].hp -= damage;
+                int randakurasi = rand.Next(0, 100);
+                if (randakurasi <= acc)
+                {
+                    int randdodge = rand.Next(0, 100);
+                    if (karakters[targetSkill].dodge < randdodge)
+                    {
+                        int damage = rand.Next(min_damage, max_damage);
+                        karakters[targetSkill].hp -= damage;
+                    }
+                }
             }
         }
         class Skeleton_soldier3 : Skill
@@ -1101,12 +1409,21 @@ namespace Project_PV
                 crit_mod = 10;
                 max_damage = 7;
                 min_damage = 3;
+                acc = 65;
             }
             public override void getDamageSkill(int targetSkill, List<karakter> karakters)
             {
                 Random rand = new Random();
-                int damage = rand.Next(min_damage, max_damage);
-                karakters[targetSkill].hp -= damage;
+                int randakurasi = rand.Next(0, 100);
+                if (randakurasi <= acc)
+                {
+                    int randdodge = rand.Next(0, 100);
+                    if (karakters[targetSkill].dodge < randdodge)
+                    {
+                        int damage = rand.Next(min_damage, max_damage);
+                        karakters[targetSkill].hp -= damage;
+                    }
+                }
             }
         }
         class Skeleton_soldier4 : Skill
@@ -1122,12 +1439,21 @@ namespace Project_PV
                 crit_mod = 10;
                 max_damage = 7;
                 min_damage = 3;
+                acc = 60;
             }
             public override void getDamageSkill(int targetSkill, List<karakter> karakters)
             {
                 Random rand = new Random();
-                int damage = rand.Next(min_damage, max_damage);
-                karakters[targetSkill].hp -= damage;
+                int randakurasi = rand.Next(0, 100);
+                if (randakurasi <= acc)
+                {
+                    int randdodge = rand.Next(0, 100);
+                    if (karakters[targetSkill].dodge < randdodge)
+                    {
+                        int damage = rand.Next(min_damage, max_damage);
+                        karakters[targetSkill].hp -= damage;
+                    }
+                }
             }
         }
         public enum efek

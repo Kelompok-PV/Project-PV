@@ -179,8 +179,18 @@ namespace Project_PV
                     Font font1 = new Font("ARIAL", 10, FontStyle.Regular);
                     Point desc = new Point(449, 442);
                     g.DrawString("Max HP  " + roster[indexHero].karakter.maxHp, font1, new SolidBrush(Color.White), desc.X, desc.Y);
+                    g.DrawString("Current HP  " + roster[indexHero].karakter.hp, font1, new SolidBrush(Color.White), desc.X, desc.Y+30);
                     g.DrawString("Dodge   " + roster[indexHero].karakter.dodge, font1, new SolidBrush(Color.White), desc.X + 75, desc.Y);
                     g.DrawString("Damage  " + roster[indexHero].karakter.max_damage, font1, new SolidBrush(Color.White), desc.X + 150, desc.Y);
+
+                    if(roster[indexHero].karakter.hero_equip[0].nama != new nothing().nama)
+                    {
+                        g.DrawImage(roster[indexHero].karakter.hero_equip[0].img, 463, 533, 34, 69);
+                    }
+                    else if (roster[indexHero].karakter.hero_equip[1].nama != new nothing().nama)
+                    {
+                        g.DrawImage(roster[indexHero].karakter.hero_equip[1].img, 509, 532, 34, 69);
+                    }
 
                     //idle
                     try

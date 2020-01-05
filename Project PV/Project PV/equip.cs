@@ -272,4 +272,18 @@ namespace Project_PV
 			this.img = Project_PV.Properties.Resources.eqp_weapon_4;
 		}
 	}
+    class nothing : equip
+    {
+        public nothing()
+        {
+            this.nama = "nothing";
+            this.type = " ";
+            this.acc = 0;
+            this.crit = 0;
+            this.def = 0;
+            this.max_dmg = 0;
+            this.min_dmg = 0;
+            this.img = Project_PV.Properties.Resources.zonk;
+        }
+    }
 }
