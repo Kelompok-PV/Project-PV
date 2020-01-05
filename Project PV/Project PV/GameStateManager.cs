@@ -6,31 +6,37 @@ using System.Media;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.IO;
+
 
 namespace Project_PV
 {
+    
      class GameStateManager
     {
         public GameState[] gameStates { get; set; }
         public Stage stage { get; set; }
+        public Stage dif { get; set; }
         public Player player { get; set; }
         public dungeon dungeon { get; set; }
-        SoundPlayer townMusic;
+        //SoundPlayer townMusic;
 
         public GameStateManager()
         {
             player = new Player();
 
-            this.stage = Stage.provision;
+            this.stage = Stage.title;
             player.myCharacter.Add(new ninja("Hatory"));
-            player.myCharacter.Add(new ninja("Hatory"));
-            player.currentCharacters[0] = new ninja("Hatory");
-            player.currentCharacters[1] = new aladin("Hatory");
+            player.myCharacter.Add(new aladin("aladin"));
+            player.currentCharacters.Add(player.myCharacter[0]);
+            player.currentCharacters.Add(player.myCharacter[1]);
             player.gold = 3000;
             gameStates = new GameState[20];
             loadState(this.stage);
 
-            townMusic = new SoundPlayer(Properties.Resources.town);
+            //townMusic = new SoundPlayer(Properties.Resources.town);
         }
 
         public void loadState(Stage stage)
@@ -42,14 +48,26 @@ namespace Project_PV
             else if (stage == Stage.mainMenu)
             {
                 gameStates[(int)stage] = new MainMenu(this);
-                townMusic.PlayLooping();
+                //townMusic.PlayLooping();
 
             }
-            else if (stage == Stage.dungeon)
+            else if (stage == Stage.easyState)
             {
                 //townMusic.Stop();
                 dungeon = new dungeon(this, 2);
                 gameStates[(int)stage] = dungeon ;
+            }
+            else if (stage == Stage.mediumState)
+            {
+                //townMusic.Stop();
+                dungeon = new dungeon(this, 4);
+                gameStates[(int)stage] = dungeon;
+            }
+            else if (stage == Stage.hardState)
+            {
+                //townMusic.Stop();
+                dungeon = new dungeon(this, 6);
+                gameStates[(int)stage] = dungeon;
             }
             else if (stage == Stage.sanitarium)
             {

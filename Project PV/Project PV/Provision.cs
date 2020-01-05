@@ -8,6 +8,7 @@ using System.Windows.Forms;
 
 namespace Project_PV
 {
+    
     class Provision : GameState
     {
         GameStateManager gsm { get; set; }
@@ -367,7 +368,9 @@ namespace Project_PV
 
             if (cursor.IntersectsWith(go))
             {
-                gsm.stage = Stage.dungeon;
+                gsm.player.gold = player.gold;
+                gsm.player.inventoryAktif = myinv;
+                gsm.stage = gsm.dif;
                 gsm.loadState(gsm.stage);
             }
         }

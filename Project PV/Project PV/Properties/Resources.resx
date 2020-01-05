@@ -1180,4 +1180,10 @@
   <data name="sanitarium_locked_hero_slot_overlay" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sanitarium.locked_hero_slot_overlay.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="eqp_armour_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\eqp_armour_3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="eqp_weapon_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\eqp_weapon_4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Drawing;
 namespace Project_PV
 {
+    
     class musuh
     {
         public int hp { get; set; }
@@ -55,6 +56,7 @@ namespace Project_PV
     }
 
     //SEMUA DODGE ..%
+    
     class yeti : musuh
     {
         public yeti(int x)
@@ -76,6 +78,7 @@ namespace Project_PV
             skill.Add(new FlameEater4());
         }
     }
+    
     class Boarman : musuh
     {
         public Boarman(int x) : base(x)
@@ -94,6 +97,7 @@ namespace Project_PV
             this.speed = 3;
         }
     }
+    
     class FlameEater : musuh
     {
         public FlameEater(int x) : base(x)
@@ -112,6 +116,7 @@ namespace Project_PV
             this.speed = 1;
         }
     }
+    
     class Gargoyle : musuh
     {
         public Gargoyle(int x) : base(x)
@@ -130,6 +135,7 @@ namespace Project_PV
             this.speed = 5;
         }
     }
+    
     class GiantGoblin : musuh
     {
         public GiantGoblin(int x) : base(x)
@@ -148,6 +154,7 @@ namespace Project_PV
             this.speed = 5;
         }
     }
+    
     class Larry : musuh
     {
         public Larry(int x) : base(x)
@@ -166,6 +173,7 @@ namespace Project_PV
             this.speed = 10;
         }
     }
+    
     class Skeleton_soldier : musuh
     {
         public Skeleton_soldier(int x) : base(x)

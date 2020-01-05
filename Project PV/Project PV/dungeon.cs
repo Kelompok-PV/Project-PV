@@ -5,9 +5,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.IO;
+
 
 namespace Project_PV
 {
+    
     class dungeon : GameState
     {
         
@@ -17,21 +22,22 @@ namespace Project_PV
         public int ke{ get; set; }
         public bool kebalik{ get; set; }
         public location myLoc { get; set; }
+        public List<Inventory> battleInv { get; set; }
         public dungeon(GameStateManager gsm,int panjang)
         {
             Area_besar = new List<BattleAreaState>();
             Area_panjang = new List<BattleState>();
             ke = 0;
             kebalik = false;
-            myLoc = location.battle;
-            btl = new battle(gsm, Properties.Resources.courtyard_area___1_);
+            myLoc = location.area;
+            btl = new battle(gsm, Properties.Resources.courtyard_area___1_,this);
             for (int i = 0; i < panjang; i++)
             {
                 if (i != 0)
                 {
-                    Area_panjang.Add(new BattleState(gsm));
+                    Area_panjang.Add(new BattleState(gsm, this));
                 }
-                Area_besar.Add(new BattleAreaState(gsm));
+                Area_besar.Add(new BattleAreaState(gsm, this));
             }
             Area_besar[0].battle = true;
         }
@@ -45,7 +51,7 @@ namespace Project_PV
             }
             else if (myLoc == location.jalan)
             {
-                Area_panjang[ke - 1].draw(g);
+                Area_panjang[ke].draw(g);
             }
             else if (myLoc == location.battle)
             {
@@ -66,7 +72,7 @@ namespace Project_PV
             }
             else if (myLoc == location.jalan)
             {
-                Area_panjang[ke - 1].key_keydown(sender, e);
+                Area_panjang[ke].key_keydown(sender, e);
             }
             else if (myLoc == location.battle)
             {
@@ -82,7 +88,7 @@ namespace Project_PV
             }
             else if (myLoc == location.jalan)
             {
-                Area_panjang[ke - 1].key_KeyUp(sender, e);
+                Area_panjang[ke].key_KeyUp(sender, e);
             }
             else if (myLoc == location.battle)
             {
@@ -98,7 +104,7 @@ namespace Project_PV
             }
             else if (myLoc == location.jalan)
             {
-                Area_panjang[ke - 1].mouse_click(sender, e);
+                Area_panjang[ke].mouse_click(sender, e);
             }
             else if (myLoc == location.battle)
             {
@@ -114,7 +120,7 @@ namespace Project_PV
             }
             else if (myLoc == location.jalan)
             {
-                Area_panjang[ke - 1].mouse_hover(sender, e);
+                Area_panjang[ke].mouse_hover(sender, e);
             }
             else if (myLoc == location.battle)
             {
@@ -131,7 +137,7 @@ namespace Project_PV
             }
             else if (myLoc == location.jalan)
             {
-                Area_panjang[ke - 1].mouse_leave(sender, e);
+                Area_panjang[ke].mouse_leave(sender, e);
             }
             else if (myLoc == location.battle)
             {
@@ -147,7 +153,7 @@ namespace Project_PV
             }
             else if (myLoc == location.jalan)
             {
-                Area_panjang[ke - 1].update();
+                Area_panjang[ke].update();
             }
             else if (myLoc == location.battle)
             {

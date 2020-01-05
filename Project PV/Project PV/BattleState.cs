@@ -8,16 +8,22 @@ using System.Windows.Forms;
 
 namespace Project_PV
 {
+    
     class BattleState : GameState
     {
         public GameStateManager gsm { get; set; }
         public List<int> gambar { get; set; }
         public int x { get; set; }
-        public karakter player { get; set; }
+        public List<karakter> player { get; set; }
 
-        public BattleState(GameStateManager gsm)
+        public List<Inventory> battleInv { get; set; }
+        dungeon thisDungeon;
+        public BattleState(GameStateManager gsm,dungeon dgn)
         {
-            player = gsm.player.currentCharacters[0];
+            player = gsm.player.currentCharacters;
+            thisDungeon = dgn;
+            battleInv = dgn.battleInv;
+            player = gsm.player.currentCharacters;
             Random r = new Random();
             this.gsm = gsm;
             gambar = new List<int>();
@@ -31,8 +37,31 @@ namespace Project_PV
             imgpPlayer = (Image)Properties.Resources.ResourceManager.GetObject("panel_player2");
             imgpInv = (Image)Properties.Resources.ResourceManager.GetObject("panel_inventory");
             //drawInventory();
+
+            //random barang jatuh
+            for (int i = 0; i < 3; i++)
+            {
+                int typeInv = rand.Next(10);
+                if (typeInv == 0) { int jumlah = rand.Next(1, 8); inv_found[i] = new LargeFood(walk_and_found[i], 334, jumlah); inv_found_rect[i] = new Rectangle(walk_and_found[i], 334, 50, 50); }
+                else if (typeInv == 1) { int jumlah = rand.Next(1, 8); inv_found[i] = new LargeFood(walk_and_found[i], 334, jumlah); inv_found_rect[i] = new Rectangle(walk_and_found[i], 334, 50, 50); }
+                else if (typeInv == 2) { int jumlah = rand.Next(1, 8); inv_found[i] = new SmallFood(walk_and_found[i], 334, jumlah); inv_found_rect[i] = new Rectangle(walk_and_found[i], 334, 50, 50); }
+                else if (typeInv == 3) { int jumlah = rand.Next(1, 8); inv_found[i] = new Torch(walk_and_found[i], 334, jumlah); inv_found_rect[i] = new Rectangle(walk_and_found[i], 334, 50, 50); }
+                else if (typeInv == 4) { int jumlah = rand.Next(1, 8); inv_found[i] = new Bandage(walk_and_found[i], 334, jumlah); inv_found_rect[i] = new Rectangle(walk_and_found[i], 334, 50, 50); }
+                else if (typeInv == 5) { int jumlah = rand.Next(1, 8); inv_found[i] = new Gold(walk_and_found[i], 334, jumlah); inv_found_rect[i] = new Rectangle(walk_and_found[i], 334, 50, 50); }
+                else if (typeInv == 6) { int jumlah = rand.Next(1, 8); inv_found[i] = new Jewel(walk_and_found[i], 334, jumlah); inv_found_rect[i] = new Rectangle(walk_and_found[i], 334, 50, 50); }
+                else if (typeInv == 7) { int jumlah = rand.Next(1, 8); inv_found[i] = new Key(walk_and_found[i], 334, jumlah); inv_found_rect[i] = new Rectangle(walk_and_found[i], 334, 50, 50); }
+                else if (typeInv == 8) { int jumlah = rand.Next(1, 8); inv_found[i] = new Shovel(walk_and_found[i], 334, jumlah); inv_found_rect[i] = new Rectangle(walk_and_found[i], 334, 50, 50); }
+                else if (typeInv == 9) { int jumlah = rand.Next(1, 8); inv_found[i] = new TheCure(walk_and_found[i], 334, jumlah); inv_found_rect[i] = new Rectangle(walk_and_found[i], 334, 50, 50); }
+            }
+
+            inv = gsm.player.inventoryAktif;
         }
 
+        int[] walk_and_found = { 1292, 1500, 2000};
+        bool[] inv_grab = { false, false, false};
+        Inventory[] inv_found = new Inventory[3];
+        Rectangle[] inv_found_rect = new Rectangle[3];
+        Random rand = new Random();
         public override void init()
         {
             throw new NotImplementedException();
@@ -101,8 +130,8 @@ namespace Project_PV
             }
             
 
-            player.getImage(g);
-            player.hero_move_now++;
+            player[0].getImage(g);
+            player[0].hero_move_now++;
 
             if (zoomin==true)
             {
@@ -111,11 +140,11 @@ namespace Project_PV
 
             g.DrawImage((Image)Properties.Resources.ResourceManager.GetObject("side_decor"), 0, 420, 120, 270);
             g.DrawImage(imgpPlayer, 70 + 22, 420, 528, 100);
-            g.DrawImage((Image)Properties.Resources.ResourceManager.GetObject(player.hero + "_icon"), 135, 440, 68, 68);
+            g.DrawImage((Image)Properties.Resources.ResourceManager.GetObject(player[0].hero + "_icon"), 135, 440, 68, 68);
 
             for (int i = 0; i < 4; i++)
             {
-                g.DrawImage(player.skills[i].icon, 308+55*i, 447, 52, 52);
+                g.DrawImage(player[0].skills[i].icon, 308+55*i, 447, 52, 52);
             }
             g.DrawImage((Image)Properties.Resources.ResourceManager.GetObject("ability_move"), 308 + 55 * 4, 447, 52, 52);
             g.DrawImage((Image)Properties.Resources.ResourceManager.GetObject("ability_pass"), 308 + 55 * 5, 447, 10, 52);
@@ -131,25 +160,47 @@ namespace Project_PV
                 {
                     for (int j = 0; j < 8; j++)
                     {
-                        g.DrawImage((Image)Properties.Resources.ResourceManager.GetObject("gold"), (float)(640 + j * 61.5), 440 + i * 120, 50, 110);
-                        g.DrawString("11",font,new SolidBrush(Color.White), (float)(640 + j * 61.5), 445 + i * 120);
+                        if((i * 8) + j < battleInv.Count)
+                        {
+                            if (battleInv[(i * 8) + j] is Inventory)
+                            {
+                                g.DrawImage(battleInv[(i * 8) + j].gambar, (float)(640 + j * 61.5), 440 + i * 120, 50, 110);
+                                g.DrawString(battleInv[(i * 8) + j].jumlah + "", font, new SolidBrush(Color.White), (float)(640 + j * 61.5), 445 + i * 120);
+                            }
+                        }
+                            
+                        
                     }
                 }
             }
             g.DrawImage((Image)Properties.Resources.ResourceManager.GetObject("side_decor"), 1285, 420, -120, 270);
-            
+
+            //barang jatuh di jalan
+            for (int i = 0; i < inv_found.Length; i++)
+            {
+                if (!inv_grab[i])
+                {
+                    Image img = inv_found[i].gambar;
+                    g.FillRectangle(new SolidBrush(Color.Red), inv_found_rect[i]);
+                    g.DrawImage(img, inv_found_rect[i]);
+                }
+            }
         }
         string aktif = "inv";
         int opacity = 0;
 
         bool kiri = false;
-
+        List<Inventory> inv = new List<Inventory>();
+        public void readInventory()
+        {
+            battleInv = thisDungeon.battleInv;
+        }
         public override void mouse_click(object sender, MouseEventArgs e)
         {
             //MessageBox.Show(x+"");
             Rectangle mouse = new Rectangle(e.X, e.Y, 1, 1);
 
-            if (mouse.IntersectsWith(new Rectangle(x + 250, 150, 200, 250))&&player.x==300 )
+            if (mouse.IntersectsWith(new Rectangle(x + 250, 150, 200, 250))&&player[0].x==300 )
             {
                 c = new Point(500 / 2, 300 / 2);
                 zoomin = true;
@@ -163,7 +214,7 @@ namespace Project_PV
                 }
             }
 
-            if (mouse.IntersectsWith(new Rectangle(x + 700 + 5 * 450, 20, 450, 450)) && player.x > 900)
+            if (mouse.IntersectsWith(new Rectangle(x + 700 + 5 * 450, 20, 450, 450)) && player[0].x > 900)
             {
                 c = new Point(1000 / 2, 300 / 2);
                 zoomin = true;
@@ -187,28 +238,92 @@ namespace Project_PV
                 imgpInv = (Image)Properties.Resources.ResourceManager.GetObject("panel_inventory");
                 aktif = "inv";
             }
+
+            int index = -1;
+            Rectangle cursor = new Rectangle(e.X, e.Y, 10, 10);
+            for (int i = 0; i < inv_found_rect.Length; i++)
+            {
+                if (cursor.IntersectsWith(inv_found_rect[i]) && !inv_grab[i])
+                {
+                    index = i;
+                }
+            }
+
+            for (int j = 0; j < inv.Count; j++)
+            {
+                if(index != -1)
+                {
+                    if (!inv_grab[index] && (inv_found[index].name == inv[j].name))
+                    {
+                        inv[j].jumlah += inv_found[index].jumlah;
+                        inv_grab[index] = true;
+                        MessageBox.Show(string.Format("masuk 1 Selamat anda dapat hadiah {0} sebanyak {1}", inv_found[index].name, inv_found[index].jumlah));
+                        index = -1;
+                    }
+                    else
+                    {
+                        if (inv.Count < 16)
+                        {
+                            inv.Add(inv_found[index]);
+                            inv_grab[index] = true;
+                            MessageBox.Show(string.Format("masuk 2 Selamat anda dapat hadiah {0} sebanyak {1}", inv_found[index].name, inv_found[index].jumlah));
+                            index = -1;
+                        }
+                        else
+                        {
+                            MessageBox.Show("Inventory full");
+                            index = -1;
+                        }
+                    }
+                    gsm.player.inventoryAktif = inv;
+                }
+            }
         }
         public override void key_keydown(object sender, KeyEventArgs e)
         {
             if (e.KeyData == Keys.D&&x>-2000)
             {
                 x -= 10;
-                player.hero_move = "run";
+                player[0].hero_move = "run";
+                //buat x barang jatuh
+                for (int i = 0; i < inv_found.Length; i++)
+                {
+                    inv_found[i].x -= 10;
+                    inv_found_rect[i].X -= 10;
+                }
             }
-            else if(e.KeyData == Keys.D&&player.x<1050)
+            else if(e.KeyData == Keys.D&&player[0].x<1050)
             {
-                player.x += 10;
-                player.hero_move = "run";
+                player[0].x += 10;
+                player[0].hero_move = "run";
+                //buat x barang jatuh
+                for (int i = 0; i < inv_found.Length; i++)
+                {
+                    inv_found[i].x += 10;
+                    inv_found_rect[i].X += 10;
+                }
             }
-            if (e.KeyData == Keys.A && player.x > 300)
+            if (e.KeyData == Keys.A && player[0].x > 300)
             {
-                player.x -= 10;
-                player.hero_move = "run";
+                player[0].x -= 10;
+                player[0].hero_move = "run";
+                //buat x barang jatuh
+                for (int i = 0; i < inv_found.Length; i++)
+                {
+                    inv_found[i].x -= 10;
+                    inv_found_rect[i].X -= 10;
+                }
             }
             else if (e.KeyData == Keys.A&&x<0)
             {
                 x += 10;
-                player.hero_move = "run";
+                player[0].hero_move = "run";
+                //buat x barang jatuh
+                for (int i = 0; i < inv_found.Length; i++)
+                {
+                    inv_found[i].x += 10;
+                    inv_found_rect[i].X += 10;
+                }
             }
         }
         float zoom = 1;
@@ -232,18 +347,20 @@ namespace Project_PV
                 {
                     gsm.dungeon.ke--;
                 }
+                thisDungeon.battleInv = battleInv;
                 gsm.dungeon.myLoc = location.area;
+                
                 if (gsm.dungeon.Area_besar[gsm.dungeon.ke].battle == false)
                 {
                     gsm.dungeon.myLoc = location.battle;
-                    gsm.dungeon.btl = new battle(gsm,gsm.dungeon.Area_besar[gsm.dungeon.ke].imgBack);
+                    gsm.dungeon.btl = new battle(gsm,gsm.dungeon.Area_besar[gsm.dungeon.ke].imgBack,thisDungeon);
                 }
             }
         }
         public void reset()
         {
             x = 0;
-            player.x = 300;
+            player[0].x = 300;
             zoomin = false;
             opacity = 0;
             ox = 0;
@@ -252,8 +369,8 @@ namespace Project_PV
         }
         public override void key_KeyUp(object sender, KeyEventArgs e)
         {
-            player.hero_move_now = 1;
-            player.hero_move = "idle";
+            player[0].hero_move_now = 1;
+            player[0].hero_move = "idle";
         }
 
         public override void mouse_hover(object sender, MouseEventArgs e)

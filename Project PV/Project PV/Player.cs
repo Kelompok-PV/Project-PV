@@ -3,24 +3,28 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.IO;
 
 namespace Project_PV
 {
+    
     class Player
     {
         public int gold { get; set; }
         public string name { get; set; }
         public List<karakter> myCharacter { get; set; }
-        public karakter[] currentCharacters { get; set; }
-        public Inventory[] inventoryAktif { get; set; }
+        public List<karakter> currentCharacters { get; set; }
+        public List<Inventory> inventoryAktif { get; set; }
 
         public Player()
         {
             gold = 0;
             name = "yomama";
             myCharacter = new List<karakter>();
-            currentCharacters = new karakter[4];
-            inventoryAktif = new Inventory[16];
+            currentCharacters = new List<karakter>();
+            inventoryAktif = new List<Inventory>();
         }
 
         //pas mulai game panggil ini

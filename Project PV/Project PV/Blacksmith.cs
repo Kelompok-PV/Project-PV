@@ -8,6 +8,7 @@ using System.Windows.Forms;
 
 namespace Project_PV
 {
+    
     class Blacksmith : GameState
     {
         public karakter player { get; set; }

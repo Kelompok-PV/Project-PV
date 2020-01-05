@@ -4,8 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.IO;
 namespace Project_PV
 {
+
+    [Serializable]
     abstract class Inventory
     {
         public int x { get; set; }
@@ -18,6 +23,7 @@ namespace Project_PV
         public List<int> MyProperty { get; set; }
 
         
+        public Image gambar { get; set; }
         protected Inventory(int x, int y, string name, int jumlah, int harga, int id, string desc)
         {
             this.x = x;
@@ -36,11 +42,11 @@ namespace Project_PV
             this.jumlah = jumlah;
         }
 
-        public void getImage(Graphics g)
+        public void getImage(Graphics g,float x,int y)
         {
             object O = Properties.Resources.ResourceManager.GetObject("inventory"+this.id);
             Image img = (Image)O;
-            g.DrawImage(img,0,0,50,50);
+            g.DrawImage(img,x,y,50,110);
         }
 
         void getEffect(Inventory inv,karakter karakterPilih)
@@ -89,10 +95,12 @@ namespace Project_PV
             }
         }
     }
+    
     class LargeFood : Inventory
     {
         public LargeFood(int x, int y, int jumlah) : base(x, y, "Large Food", jumlah, 75, 1, "+40 HP")
         {
+            gambar = (Image)Properties.Resources.inv_provision__3;
         }
 
         public LargeFood(int x, int y, int jumlah, int id, string desc) 
@@ -101,10 +109,12 @@ namespace Project_PV
         }
 
     }
+    
     class SmallFood : Inventory
     {
         public SmallFood(int x, int y, int jumlah) : base(x, y, "Small Food", jumlah, 75, 2, "+20 HP")
         {
+            gambar = (Image)Properties.Resources.inv_provision__1;
         }
 
         public SmallFood(int x, int y, int jumlah, int id, string desc) 
@@ -112,10 +122,12 @@ namespace Project_PV
         {
         }
     }
+    
     class Torch : Inventory
     {
         public Torch(int x, int y, int jumlah) : base(x, y, "Torch", jumlah, 75, 3, "-5 Stress Point")
         {
+            gambar = (Image)Properties.Resources.inv_supply_torch;
         }
 
         public Torch(int x, int y, int jumlah, int id, string desc) 
@@ -123,10 +135,12 @@ namespace Project_PV
         {
         }
     }
+    
     class Bandage : Inventory
     {
         public Bandage(int x, int y, int jumlah) : base(x, y, "Bandage", jumlah, 150, 4, "+10 HP")
         {
+            gambar = (Image)Properties.Resources.inv_supply_bandage;
         }
 
         public Bandage(int x, int y, int jumlah, int id, string desc) 
@@ -134,10 +148,12 @@ namespace Project_PV
         {
         }
     }
+    
     class Gold : Inventory
     {
         public Gold(int x, int y, int jumlah) : base(x, y, "Gold", jumlah, 200, 5, "-10 Stress Point")
         {
+            gambar = (Image)Properties.Resources.inv_gold__3;
         }
 
         public Gold(int x, int y, int jumlah, int id, string desc) 
@@ -145,10 +161,12 @@ namespace Project_PV
         {
         }
     }
+    
     class Jewel : Inventory
     {
         public Jewel(int x, int y, int jumlah) : base(x, y, "Jewel", jumlah, 250, 6, "-12 Stress Point")
         {
+            gambar = (Image)Properties.Resources.inv_gem_emerald;
         }
 
         public Jewel(int x, int y, int jumlah, int id, string desc) 
@@ -156,10 +174,12 @@ namespace Project_PV
         {
         }
     }
+    
     class Key : Inventory
     {
         public Key(int x, int y, int jumlah) : base(x, y, "Key", jumlah, 200, 7, "Buff efek heal \n -5 Stress Point")
         {
+            gambar = (Image)Properties.Resources.inv_supply_skeleton_key;
         }
 
         public Key(int x, int y, int jumlah, int id, string desc) 
@@ -167,10 +187,12 @@ namespace Project_PV
         {
         }
     }
+    
     class Shovel : Inventory
     {
         public Shovel(int x, int y, int jumlah) : base(x, y, "Shovel", jumlah, 250, 8, "Clear Buff")
         {
+            gambar = (Image)Properties.Resources.inv_supply_shovel;
         }
 
         public Shovel(int x, int y, int jumlah, int id, string desc) 
@@ -178,10 +200,12 @@ namespace Project_PV
         {
         }
     }
+    
     class TheCure : Inventory
     {
         public TheCure(int x, int y, int jumlah) : base(x, y, "TheCure", jumlah, 0, 9, "Clear Buff \n +5 HP")
         {
+            gambar = (Image)Properties.Resources.inv_estate_the_cure;
         }
 
         public TheCure(int x, int y, int jumlah, int id, string desc) 
@@ -189,10 +213,12 @@ namespace Project_PV
         {
         }
     }
+    
     class PotentSalve : Inventory
     {
         public PotentSalve(int x, int y, int jumlah) : base(x, y, "Potent Salve", jumlah, 300, 10, "Buff efek heal")
         {
+            gambar = (Image)Properties.Resources.inv_provision__0;
         }
 
         public PotentSalve(int x, int y, string name, int jumlah, int id, string desc) 

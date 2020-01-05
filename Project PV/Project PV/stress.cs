@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Project_PV
 {
-    public class stress
+    
+    class stress
     {
         public int stress_point { get; set; }
         public stress_stage stress_level { get; set; }

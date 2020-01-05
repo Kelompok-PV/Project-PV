@@ -8,6 +8,7 @@ using System.Windows.Forms;
 
 namespace Project_PV
 {
+    
     class EntryNewHero : GameState
     {
         Bitmap background;
@@ -31,51 +32,7 @@ namespace Project_PV
             backBtn = Properties.Resources.progression_close;
             backRect = new Rectangle(1232, 33, 30, 30);
             player = gsm.getPlayer();
-
-            newHeroes = new List<newHero>();
-            int temp = rand.Next(2, 3);
-            int xRoster = 700;
-            int yRoster = 28;
-            frame = Properties.Resources.rosterelement_res1;
-            for (int i = 0; i < temp; i++)
-            {
-                int priceRand = rand.Next(1000, 3000);
-                newHeroes.Add(new newHero(xRoster, yRoster,priceRand));
-                yRoster += 75;
-
-                karakter karakter;
-                int type = rand.Next(8);
-                type = 5;
-                switch (type)
-                {
-                    case 0:
-                        karakter = new ninja("Hatory");
-                        break;
-                    case 1:
-                        karakter = new aladin("Aladeen");
-                        break;
-                    case 2:
-                        karakter = new druid("Druid");
-                        break;
-                    case 3:
-                        karakter = new archer("Archer");
-                        break;
-                    case 4:
-                        karakter = new giantLady("Rukka");
-                        break;
-                    case 5:
-                        karakter = new Tony("Stark");
-                        break;
-                    case 6:
-                        karakter = new IceWoman("Frozen");
-                        break;
-                    default:
-                        karakter = new Hercules("Herher");
-                        break;
-                }
-                newHeroes[i].karakter = karakter;
-
-            }
+            randCharacter();
 
             frameStats = Properties.Resources.characterpanel_frames;
 
@@ -183,7 +140,53 @@ namespace Project_PV
         }
 
         private GameStateManager gsm;
-        
+        public void randCharacter()
+        {
+            newHeroes = new List<newHero>();
+
+            int xRoster = 700;
+            int yRoster = 28;
+            frame = Properties.Resources.rosterelement_res1;
+            int temp = rand.Next(2, 3);
+            for (int i = 0; i < temp; i++)
+            {
+                int priceRand = rand.Next(1000, 3000);
+                newHeroes.Add(new newHero(xRoster, yRoster, priceRand));
+                yRoster += 75;
+
+                karakter karakter;
+                int type = rand.Next(8);
+                switch (type)
+                {
+                    case 0:
+                        karakter = new ninja("Hatory");
+                        break;
+                    case 1:
+                        karakter = new aladin("Aladeen");
+                        break;
+                    case 2:
+                        karakter = new druid("Druid");
+                        break;
+                    case 3:
+                        karakter = new archer("Archer");
+                        break;
+                    case 4:
+                        karakter = new giantLady("Rukka");
+                        break;
+                    case 5:
+                        karakter = new Tony("Stark");
+                        break;
+                    case 6:
+                        karakter = new IceWoman("Frozen");
+                        break;
+                    default:
+                        karakter = new Hercules("Herher");
+                        break;
+                }
+                newHeroes[i].karakter = karakter;
+
+            }
+        }
         public override void init()
         {
             
@@ -212,6 +215,7 @@ namespace Project_PV
                     player.gold -= newHeroes[index].price;
                     player.myCharacter.Add(newHeroes[index].karakter);
                     disposeBuy = true;
+                    randCharacter();
                 }
                 else if (cursor.IntersectsWith(closeRect))
                 {
@@ -325,6 +329,7 @@ namespace Project_PV
             gsm.loadState(gsm.stage);
         }
     }
+    
     class newHero
     {
         public int x { get; set; }

@@ -9,6 +9,7 @@ using System.Windows.Forms;
 
 namespace Project_PV
 {
+    
     class Sanitarium : GameState
     {
         public karakter player { get; set; }

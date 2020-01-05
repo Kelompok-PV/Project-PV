@@ -13,6 +13,7 @@ using System.Windows.Media;
 
 namespace Project_PV
 {
+    
     class battle : GameState
     {
         public Image background{ get; set; }
@@ -42,10 +43,13 @@ namespace Project_PV
         MediaPlayer myPlayer = new MediaPlayer();
         MediaPlayer sfx = new MediaPlayer();
 
+        public List<Inventory> battleInv { get; set; }
         List<turn> turnAttack = new List<turn>();
         int turn_ke = 0;
-        public battle(GameStateManager gsm,Image back)
+        dungeon thisDungeon;
+        public battle(GameStateManager gsm,Image back,dungeon dgn)
         {
+            thisDungeon = dgn;
             string RunningPath = AppDomain.CurrentDomain.BaseDirectory;
             string FileName = string.Format("{0}Resources\\sound\\music\\combat\\battle.wav", Path.GetFullPath(Path.Combine(RunningPath, @"..\..\")));
             myPlayer.Open(new System.Uri(FileName));
@@ -54,12 +58,22 @@ namespace Project_PV
 
 
             this.gsm = gsm;
+            battleInv = thisDungeon.battleInv;
             player = new List<karakter>(); ;
-            player.Add(gsm.player.currentCharacters[0]);
-            player.Add(gsm.player.currentCharacters[1]);
+            for (int i = 0; i < 4; i++)
+            {
+                try
+                {
+                    player.Add(gsm.player.currentCharacters[i]);
+                }
+                catch (Exception)
+                {
+
+                }
+            }
 
             musuh = new List<musuh>();
-            for (int i = 0; i < 3; i++)
+            for (int i = 0; i < 1; i++)
             {
                 musuh.Add(new yeti(700+i*100));
                 turnAttack.Add(new turn(0, i, musuh[i].speed));
@@ -113,7 +127,10 @@ namespace Project_PV
         }
         Image imgpPlayer;
         Image imgpInv;
-
+        public void readInventory()
+        {
+            battleInv = thisDungeon.battleInv;
+        }
         private void Media_Ended(object sender, EventArgs e)
         {
             myPlayer.Position = TimeSpan.Zero;
@@ -152,6 +169,7 @@ namespace Project_PV
                             musuh[i].musuh_move_now++;
                         }
                     }
+
                     musuh[targetMusuh].getImageAttack(g, zoom);
                 }
                 if(serang_musuh)
@@ -182,13 +200,14 @@ namespace Project_PV
                 {
                     for (int i = 0; i < player.Count; i++)
                     {
-                        if (pilihHero != i)
+                        if (turnAttack[turn_ke].ke != i)
                         {
                             player[i].getImage(g);
                             player[i].hero_move_now++;
                         }
                     }
-                    player[pilihHero].getImageAttack(g, zoom);
+
+                    player[turnAttack[turn_ke].ke].getImageAttack(g, zoom);
                 }
                 if (serang_musuh)
                 {
@@ -249,8 +268,16 @@ namespace Project_PV
                 {
                     for (int j = 0; j < 8; j++)
                     {
-                        g.DrawImage((Image)Properties.Resources.ResourceManager.GetObject("gold"), (float)(640 + j * 61.5), 440 + i * 120, 50, 110);
-                        g.DrawString("11", font, br, (float)(640 + j * 61.5), 445 + i * 120);
+                        if ((i * 8) + j < battleInv.Count)
+                        {
+                            if (battleInv[(i * 8) + j] is Inventory)
+                            {
+                                g.DrawImage(battleInv[(i * 8) + j].gambar, (float)(640 + j * 61.5), 440 + i * 120, 50, 110);
+                                g.DrawString(battleInv[(i * 8) + j].jumlah + "", font,br, (float)(640 + j * 61.5), 445 + i * 120);
+                            }
+                        }
+
+
                     }
                 }
             }
@@ -303,24 +330,21 @@ namespace Project_PV
             }
             for (int i = 0; i < player.Count; i++)
             {
-                for (int j = 0; j < player[i].hero_buff.Count; j++)
+                if (player[i].hero_buff == efek.bleed)
                 {
-                    if (player[i].hero_buff[j] == efek.bleed)
-                    {
-                        g.DrawImage((Image)Properties.Resources.skill_attribute_bleed, player[i].x + 15 * j, 410, 30, 30);
-                    }
-                    if (player[i].hero_buff[j] == efek.blight)
-                    {
-                        g.DrawImage((Image)Properties.Resources.skill_attribute_disease, player[i].x + 15 * j, 410, 30, 30);
-                    }
-                    if (player[i].hero_buff[j] == efek.marked)
-                    {
-                        g.DrawImage((Image)Properties.Resources.skill_attribute_tag, player[i].x + 15 * j, 410, 30, 30);
-                    }
-                    if (player[i].hero_buff[j] == efek.stun)
-                    {
-                        g.DrawImage((Image)Properties.Resources.skill_attribute_stun, player[i].x + 15 * j, 410, 30, 30);
-                    }
+                    g.DrawImage((Image)Properties.Resources.skill_attribute_bleed, player[i].x + 15, 410, 30, 30);
+                }
+                if (player[i].hero_buff == efek.blight)
+                {
+                    g.DrawImage((Image)Properties.Resources.skill_attribute_disease, player[i].x + 15, 410, 30, 30);
+                }
+                if (player[i].hero_buff == efek.marked)
+                {
+                    g.DrawImage((Image)Properties.Resources.skill_attribute_tag, player[i].x + 15, 410, 30, 30);
+                }
+                if (player[i].hero_buff == efek.stun)
+                {
+                    g.DrawImage((Image)Properties.Resources.skill_attribute_stun, player[i].x + 15, 410, 30, 30);
                 }
             }
         }
@@ -380,20 +404,17 @@ namespace Project_PV
                         {
                             if (player[turnAttack[turn_ke].ke].skills[pilih_attack].target[targetMusuh] == 1)
                             {
-                                int dmg_atk = r.Next(player[pilihHero].skills[pilih_attack].status_skill.dmg_min, player[pilihHero].skills[pilih_attack].status_skill.dmg_max + 1);
-                                musuh[i].hp -= dmg_atk;
+                                player[turnAttack[turn_ke].ke].skills[pilih_attack].getDamageSkill(i,musuh);
+                                
                                 serang = true;
-                                player[pilihHero].x = 520;
-                                player[pilihHero].hero_move = "skill" + (pilih_attack + 1);
-                                player[pilihHero].hero_move_now = 1;
-                                //sfx= new SoundPlayer(Properties.Resources.ninja_attack_1);
-                                //sfx.LoadAsync();
-
-                                sfx.Stop();
-                                string RunningPath = AppDomain.CurrentDomain.BaseDirectory;
-                                string FileName = string.Format("{0}Resources\\char_share_imp_sword.wav", Path.GetFullPath(Path.Combine(RunningPath, @"..\..\")));
-                                sfx.Open(new System.Uri(FileName));
-                                sfx.Play();
+                                player[turnAttack[turn_ke].ke].x = 520;
+                                player[turnAttack[turn_ke].ke].hero_move = "skill" + (pilih_attack + 1);
+                                player[turnAttack[turn_ke].ke].hero_move_now = 1;
+                                //sfx.Stop();
+                                //string RunningPath = AppDomain.CurrentDomain.BaseDirectory;
+                                //string FileName = string.Format("{0}Resources\\char_share_imp_sword.wav", Path.GetFullPath(Path.Combine(RunningPath, @"..\..\")));
+                                //sfx.Open(new System.Uri(FileName));
+                                //sfx.Play();
                             }
                             else
                             {
@@ -419,12 +440,13 @@ namespace Project_PV
                     if (ganti_posisi)
                     {
                         targetHero = i;
-                        //int swap_char= player[targetHero].x;
-                        //player[targetHero].x = player[pilihHero].x;
-                        //player[pilihHero].x = swap_char;
                         gerak_geser = 10 * Math.Abs(pilihHero - targetHero);
                         gerak_geser_max = 100 * Math.Abs(pilihHero - targetHero);
                         timer_geser = true;
+                    }else if (turnAttack[turn_ke].jenis==1&& player[turnAttack[turn_ke].ke].skills[pilih_attack].skill_efek[0] == efek.heal)
+                    {
+                            player[turnAttack[turn_ke].ke].skills[pilih_attack].getDamageSkill(i, player);
+                            gantiTurn();
                     }
                     else
                     {
@@ -500,11 +522,27 @@ namespace Project_PV
                 player[pilihHero].hero_move = "idle";
                 player[pilihHero].hero_move_now = 1;
                 serang = false;
-                if (musuh.Count==0)
+                if (musuh[targetMusuh].hp<=0)
                 {
-                    gsm.dungeon.myLoc = location.area;
-                    gsm.dungeon.Area_besar[gsm.dungeon.ke].battle = true;
+                    for (int i = 0; i < turnAttack.Count; i++)
+                    {
+                        if (turnAttack[i].jenis == 0)
+                        {
+                            if (turnAttack[i].ke==musuh.Count)
+                            {
+                                turnAttack.RemoveAt(i);
+                                i--;
+                            }
+                            else if (turnAttack[i].ke>targetMusuh)
+                            {
+                                turnAttack[i].ke--;
+                                musuh[i].x -= 100;
+                            }
+                        }
+                    }
+                    musuh.RemoveAt(targetMusuh);
                 }
+                winCondition();
                 gantiTurn();
             }
 
@@ -518,6 +556,28 @@ namespace Project_PV
                 musuh[pilihMusuh].musuh_move = "idle";
                 serang_musuh = false;
                 player[targetHero].x = 350 - 100 * targetHero;
+
+                if (player[targetHero].hp <= 0)
+                {
+                    for (int i = 0; i < turnAttack.Count; i++)
+                    {
+                        if (turnAttack[i].jenis == 1)
+                        {
+                            if (turnAttack[i].ke == player.Count)
+                            {
+                                turnAttack.RemoveAt(i);
+                                i--;
+                            }
+                            else if (turnAttack[i].ke > targetHero)
+                            {
+                                turnAttack[i].ke--;
+                                player[i].x += 100;
+                            }
+                        }
+                    }
+                    player.RemoveAt(targetHero);
+                }
+
                 gantiTurn();
             }
 
@@ -592,6 +652,16 @@ namespace Project_PV
             }
         }
 
+        public void winCondition()
+        {
+            if (musuh.Count == 0)
+            {
+                gsm.player.currentCharacters = player;
+                gsm.dungeon.myLoc = location.area;
+                gsm.dungeon.Area_besar[gsm.dungeon.ke].battle = true;
+            }
+        }
+
         public void gantiTurn()
         {
             try
@@ -601,35 +671,53 @@ namespace Project_PV
                 {
                     pilihHero = turnAttack[turn_ke].ke;
                     player[pilihHero].marked = false;
-                    for (int i = 0; i < player[pilihHero].hero_buff.Count; i++)
+                    if (player[pilihHero].hero_buff == efek.bleed)
                     {
-                        if (player[pilihHero].hero_buff[i] == efek.bleed)
+                        if (player[pilihHero].hero_buff == efek.bleed)
                         {
                             player[pilihHero].hp -= player[pilihHero].hp / 10;
-                        }
-                        if (player[pilihHero].hero_buff[i] == efek.blight)
-                        {
-                            player[pilihHero].hp -= (player[pilihHero].maxHp / 10);
-                        }
-                        if (player[pilihHero].hero_buff[i] == efek.marked)
-                        {
-                            player[pilihHero].marked = true;
-                        }
-                        if (player[pilihHero].hero_buff[i] == efek.stress)
-                        {
                             player[pilihHero].hero_stress.stress_point += 10;
                         }
-                        if (player[pilihHero].hero_buff[i] == efek.stun)
+                        if (player[pilihHero].hero_buff == efek.blight)
+                        {
+                            player[pilihHero].hp -= (player[pilihHero].maxHp / 10);
+                            player[pilihHero].hero_stress.stress_point += 10;
+                        }
+                        if (player[pilihHero].hero_buff == efek.stun)
                         {
                             gantiTurn();
+                            player[pilihHero].hero_stress.stress_point += 20;
                         }
-                        player[pilihHero].hero_buff_turn[i]--;
-                        if (player[pilihHero].hero_buff_turn[i] == 0)
+                        player[pilihHero].hero_buff_turn--;
+                        if (player[pilihHero].hero_buff_turn == 0||(player[pilihHero].hero_stress.stress_level==stress_stage.depresi&&player[pilihHero].hero_stress.stress_point>=100))
                         {
-                            player[pilihHero].hero_buff_turn.RemoveAt(i);
-                            player[pilihHero].hero_buff.RemoveAt(i);
-                            i--;
+                            player[pilihHero].hero_buff_turn=0;
+                            player[pilihHero].hero_buff=efek.none;
+                            
+                            for (int j = 0; j < player.Count; j++)
+                            {
+                                if (j != pilihHero)
+                                {
+                                    player[j].hero_stress.stress_point += 20;
+                                }
+                            }
                         }
+                        else
+                        {
+                            if(player[pilihHero].hero_stress.stress_point >= 100)
+                            {
+                                player[pilihHero].hero_stress.stress_level = stress_stage.depresi;
+                                player[pilihHero].hero_stress.stress_point = 0;
+                                for (int j = 0; j < player.Count; j++)
+                                {
+                                    if (j != pilihHero)
+                                    {
+                                        player[j].hero_stress.stress_point += 10;
+                                    }
+                                }
+                            }
+                        }
+
                     }
                 }
                 else
@@ -639,10 +727,6 @@ namespace Project_PV
                     musuh[pilihMusuh].marked = false;
                     for (int i = 0; i < musuh[pilihMusuh].musuh_buff.Count; i++)
                     {
-                        if (musuh[pilihMusuh].musuh_buff[i] == efek.armor)
-                        {
-
-                        }
                         if (musuh[pilihMusuh].musuh_buff[i] == efek.bleed)
                         {
                             musuh[pilihMusuh].hp -= musuh[pilihMusuh].hp / 10;
@@ -684,8 +768,8 @@ namespace Project_PV
             }
         }
     }
-
-    public class turn
+    
+    class turn
     {
         public int jenis { get; set; }
         public int ke { get; set; }
