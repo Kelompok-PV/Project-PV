@@ -21,9 +21,17 @@ namespace Project_PV
         List<string> text = new List<string>();
         List<PointF> ptext = new List<PointF>();
 
+        object frameObj;
+        Bitmap frameBit;
+        List<int> yRoster;
+        private Player players;
+
+        List<Rectangle> rosterField = new List<Rectangle>();
         public Sanitarium(GameStateManager gsm)
         {
             this.gsm = gsm;
+            yRoster = new List<int>();
+            players = gsm.getPlayer();
             font = new Rectangle(430, 80, 500, 150);
             Config.font.AddFontFile("Resources\\DwarvenAxe BB W00 Regular.ttf");
             title = new Font(Config.font.Families[0], 50, FontStyle.Regular);
@@ -40,7 +48,19 @@ namespace Project_PV
             character = (Image)O3;
             qpost = (Image)O4;
             close = (Image)O5;
+
+            frameObj = Properties.Resources.rosterelement_res1;
+            frameBit = (Bitmap)frameObj;
+            yRoster.Add(130);
+
+            for (int i = 0; i < players.myCharacter.Count; i++)
+            {
+                yRoster[i] += 85;
+                rosterField.Add(new Rectangle(xRoster + 10, yRoster[i], 260, 80));
+                yRoster.Add(yRoster[i]);
+            }
         }
+        int xRoster = 1105;
         object O1 = Project_PV.Properties.Resources.sanitarium_character_background;
         Image background ;
 
@@ -55,6 +75,9 @@ namespace Project_PV
 
         object O5 = Project_PV.Properties.Resources.progression_close;
         Image close;
+
+        object O6 = Project_PV.Properties.Resources.progression_close;
+        Image slothero;
 
         StringFormat format = StringFormat.GenericTypographic;
         public override void draw(Graphics g)
@@ -80,6 +103,34 @@ namespace Project_PV
             g.DrawImage(character, -40, 100, 750, 620);
             g.DrawImage(qpost, 25, 115, 70, 70);
             g.DrawImage(close, 1230, 10, 50, 50);
+
+            for (int i = 0; i < players.myCharacter.Count; i++)
+            {
+                g.FillRectangle(new SolidBrush(Color.Black), xRoster + 10, yRoster[i], 260, 80);
+                g.DrawImage(frameBit, xRoster, yRoster[i], 309, 82);
+                g.DrawImage(players.myCharacter[i].getIcon(), 1117, yRoster[i] + 10, 50, 50);
+                g.DrawString(players.myCharacter[i].nama, subtitle, new SolidBrush(Color.FromArgb(250, 231, 162)), 1117 + 55, yRoster[i] + 5);
+            }
+            //if (selected && index != -1)
+            //{
+            //    g.DrawImage(players.myCharacter[index].getIcon(), x, y, 50, 50);
+            //}
+
+            //for (int i = 0; i < karacters.Count; i++)
+            //{
+
+            //    try
+            //    {
+            //        // gambar karakter pada tempat e ketika di taruh
+
+            //        g.DrawImage(karacters[i].GetKarakter().getIcon(), karacters[i].x, karacters[i].y, 90, 90);
+            //        simp = i;
+
+            //    }
+            //    catch (Exception)
+            //    {
+            //    }
+            //}
         }
 
         private GraphicsPath GetStringPath(string s, float dpi, RectangleF rect, Font font, StringFormat format)

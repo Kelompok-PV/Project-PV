@@ -21,7 +21,7 @@ namespace Project_PV
 		object frameObj;
 		Bitmap frameBit;
 		List<int> yRoster;
-		private Player player;
+		private Player player; 
 		List<Rectangle> rosterField = new List<Rectangle>();
 		List<int> statusabbey = new List<int>();
 		bool transition = false;
@@ -372,6 +372,7 @@ namespace Project_PV
 			x = e.X;
 			y = e.Y;
 			Config.form1.Invalidate();
+            // iki shan sg gawe ada hero e hover pas nge drag (gambar e )
 		}
 
         public override void mouse_leave(object sender, MouseEventArgs e)

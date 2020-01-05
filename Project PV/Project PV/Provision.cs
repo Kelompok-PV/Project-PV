@@ -19,6 +19,8 @@ namespace Project_PV
 
         List<int> posisi = new List<int>();
 
+        List<int> tmp = new List<int>();
+
         List<Rectangle> lisrec = new List<Rectangle>();
 
         List<Rectangle> lisrecsell = new List<Rectangle>();
@@ -74,6 +76,7 @@ namespace Project_PV
             for (int i = 0; i < 10; i++)
             {
                 pointer[i] = -1;
+                idx[i] = -1;
             }
 
             lisinv.Add(new LargeFood(posisi[0], posisi[1], 0));
@@ -146,8 +149,10 @@ namespace Project_PV
         int ceteer = 0;
         bool pilih = false;
         int[] pointer = new int[10];
+        int[] idx = new int[10];
 
         int tanda = -1;
+        int tanda2 = -1;
         Rectangle go;
         public override void draw(Graphics g)
         {
@@ -188,124 +193,30 @@ namespace Project_PV
                 {
                     if (pointer[i] == 0) {
                         tanda = i;
-                        if (lisinv[tanda].jumlah > 0)
+                        if (lisinv[idx[tanda]].jumlah > 0)
                         {
-                            g.DrawImage(img[tanda], (float)(550 + pointer[tanda] * 61), 342 + ceteer * 112, 53, 100);
-                            if (lisinv[tanda].jumlah > 1)
+                            g.DrawImage(img[idx[tanda]], (float)(550 + pointer[tanda] * 61), 342 + ceteer * 112, 53, 100);
+                            if (lisinv[idx[tanda]].jumlah > 1)
                             {
-                                g.DrawString(lisinv[tanda].jumlah + "", font, new SolidBrush(Color.FromArgb(202, 179, 112)), (float)(552 + pointer[tanda] * 61.5), 345 + ceteer * 112);
+                                g.DrawString(lisinv[idx[tanda]].jumlah + "", font, new SolidBrush(Color.FromArgb(202, 179, 112)), (float)(552 + pointer[tanda] * 61.5), 345 + ceteer * 112);
                             }
                         }
                     }
-                    if (pointer[i] == 1)
+                     if (pointer[i] == 1)
                     {
                         tanda = i;
-                        if (lisinv[tanda].jumlah > 0)
+                        if (lisinv[idx[tanda]].jumlah > 0)
                         {
-                            g.DrawImage(img[tanda], (float)(550 + pointer[tanda] * 61), 342 + ceteer * 112, 53, 100);
-                            if (lisinv[tanda].jumlah > 1)
+                            g.DrawImage(img[idx[tanda]], (float)(550 + pointer[tanda] * 61), 342 + ceteer * 112, 53, 100);
+                            if (lisinv[idx[tanda]].jumlah > 1)
                             {
-                                g.DrawString(lisinv[tanda].jumlah + "", font, new SolidBrush(Color.FromArgb(202, 179, 112)), (float)(552 + pointer[tanda] * 61.5), 345 + ceteer * 112);
+                                g.DrawString(lisinv[idx[tanda]].jumlah + "", font, new SolidBrush(Color.FromArgb(202, 179, 112)), (float)(552 + pointer[tanda] * 61.5), 345 + ceteer * 112);
                             }
                         }
                     }
-                    if (pointer[i] == 2)
-                    {
-                        tanda = i;
-                        if (lisinv[tanda].jumlah > 0)
-                        {
-                            g.DrawImage(img[tanda], (float)(550 + pointer[tanda] * 61), 342 + ceteer * 112, 53, 100);
-                            if (lisinv[tanda].jumlah > 1)
-                            {
-                                g.DrawString(lisinv[tanda].jumlah + "", font, new SolidBrush(Color.FromArgb(202, 179, 112)), (float)(552 + pointer[tanda] * 61.5), 345 + ceteer * 112);
-                            }
-                        }
-                    }
-                    if (pointer[i] == 3)
-                    {
-                        tanda = i;
-                        if (lisinv[tanda].jumlah > 0)
-                        {
-                            g.DrawImage(img[tanda], (float)(550 + pointer[tanda] * 61), 342 + ceteer * 112, 53, 100);
-                            if (lisinv[tanda].jumlah > 1)
-                            {
-                                g.DrawString(lisinv[tanda].jumlah + "", font, new SolidBrush(Color.FromArgb(202, 179, 112)), (float)(552 + pointer[tanda] * 61.5), 345 + ceteer * 112);
-                            }
-                        }
-                    }
-                    if (pointer[i] == 4)
-                    {
-                        tanda = i;
-                        if (lisinv[tanda].jumlah > 0)
-                        {
-                            g.DrawImage(img[tanda], (float)(550 + pointer[tanda] * 61), 342 + ceteer * 112, 53, 100);
-                            if (lisinv[tanda].jumlah > 1)
-                            {
-                                g.DrawString(lisinv[tanda].jumlah + "", font, new SolidBrush(Color.FromArgb(202, 179, 112)), (float)(552 + pointer[tanda] * 61.5), 345 + ceteer * 112);
-                            }
-                        }
-                    }
-                    if (pointer[i] == 5)
-                    {
-                        tanda = i;
-                        if (lisinv[tanda].jumlah > 0)
-                        {
-                            g.DrawImage(img[tanda], (float)(550 + pointer[tanda] * 61), 342 + ceteer * 112, 53, 100);
-                            if (lisinv[tanda].jumlah > 1)
-                            {
-                                g.DrawString(lisinv[tanda].jumlah + "", font, new SolidBrush(Color.FromArgb(202, 179, 112)), (float)(552 + pointer[tanda] * 61.5), 345 + ceteer * 112);
-                            }
-                        }
-                    }
-                    if (pointer[i] == 6)
-                    {
-                        tanda = i;
-                        if (lisinv[tanda].jumlah > 0)
-                        {
-                            g.DrawImage(img[tanda], (float)(550 + pointer[tanda] * 61), 342 + ceteer * 112, 53, 100);
-                            if (lisinv[tanda].jumlah > 1)
-                            {
-                                g.DrawString(lisinv[tanda].jumlah + "", font, new SolidBrush(Color.FromArgb(202, 179, 112)), (float)(552 + pointer[tanda] * 61.5), 345 + ceteer * 112);
-                            }
-                        }
-                    }
-                    if (pointer[i] == 7)
-                    {
-                        tanda = i;
-                        if (lisinv[tanda].jumlah > 0)
-                        {
-                            g.DrawImage(img[tanda], (float)(550 + pointer[tanda] * 61), 342 + ceteer * 112, 53, 100);
-                            if (lisinv[tanda].jumlah > 1)
-                            {
-                                g.DrawString(lisinv[tanda].jumlah + "", font, new SolidBrush(Color.FromArgb(202, 179, 112)), (float)(552 + pointer[tanda] * 61.5), 345 + ceteer * 112);
-                            }
-                        }
-                    }
-                    if (pointer[i] == 8)
-                    {
-                        tanda = i;
-                        if (lisinv[tanda].jumlah > 0)
-                        {
-                            g.DrawImage(img[tanda], (float)(550 + 0 * 61), 342 + ceteer+1 * 112, 53, 100);
-                            if (lisinv[tanda].jumlah > 1)
-                            {
-                                g.DrawString(lisinv[tanda].jumlah + "", font, new SolidBrush(Color.FromArgb(202, 179, 112)), (float)(552 + 0 * 61.5), 345 + ceteer+1 * 112);
-                            }
-                        }
-                    }
-                    if (pointer[i] == 9)
-                    {
-                        tanda = i;
-                        if (lisinv[tanda].jumlah > 0)
-                        {
-                            g.DrawImage(img[tanda], (float)(550 + 1 * 61), 342 + ceteer+1 * 112, 53, 100);
-                            if (lisinv[tanda].jumlah > 1)
-                            {
-                                g.DrawString(lisinv[tanda].jumlah + "", font, new SolidBrush(Color.FromArgb(202, 179, 112)), (float)(552 + 1 * 61.5), 345 + ceteer+1 * 112);
-                            }
-                        }
-                    }
-                    
+
+
+
                 }
             }
 
@@ -326,8 +237,9 @@ namespace Project_PV
             {
                 if (hover[i])
                 {
-                    g.DrawImage(detail, lisinv[i].x+60, lisinv[i].y, 100, 100);
+                    g.DrawImage(detail, lisinv[i].x+60, lisinv[i].y, 120, 100);
                     g.DrawString(lisinv[i].name, price, new SolidBrush(Color.FromArgb(202, 179, 112)), lisinv[i].x + 80, lisinv[i].y+20);
+                    g.DrawString(lisinv[i].desc, price, new SolidBrush(Color.FromArgb(202, 179, 112)), lisinv[i].x + 80, lisinv[i].y+50);
                 }
             }
 
@@ -356,9 +268,8 @@ namespace Project_PV
         bool beli = false;
         bool jual = false;
         int index = 0;
-        int index2 = 0;
         int plus = 0;
-        int plus2 = 0;
+        int jml = 0;
         public override void mouse_click(object sender, MouseEventArgs e)
         {
             Rectangle cursor = new Rectangle(e.X, e.Y, 10, 10);
@@ -370,55 +281,89 @@ namespace Project_PV
                     index = i; 
                 }
             }
-            //for (int j = 0; j < lisrecsell.Count; j++)
-            //{
-            //    if (cursor.IntersectsWith(lisrecsell[j]))
-            //    {
-            //        jual = true;
-            //        index2 = j;
-            //        MessageBox.Show(myinv[index2].name);
-            //    }
 
-            //}
+            for (int i = 0; i < lisrecsell.Count; i++)
+            {
+
+                if (cursor.IntersectsWith(lisrecsell[i]))
+                {
+                    jual = true;
+                    index = i;
+                }
+            }
             if (beli)
             {
                 if (lisinv[index].harga <= player.gold)
                 {
                     lisinv[index].jumlah++;
-                    if (pointer[index] == -1)
+                    myinv.Add(lisinv[index]);
+                    tmp.Add(index);
+                    for (int i = 0; i < myinv.Count; i++)
                     {
-                        pointer[index] = plus;
-                        plus++;
-                    }
-                    myinv.Clear();
-                    for (int i = 0; i < lisinv.Count; i++)
-                    {
-                        if (lisinv[i].jumlah > 0)
+                        if (myinv[myinv.Count - 1].name.Equals(myinv[i].name))
                         {
-                            myinv.Add(lisinv[i]);
+                            jml++;
                         }
                     }
-
+                    if(jml > 1)
+                    {
+                        MessageBox.Show("Kembar");
+                        myinv.RemoveAt(myinv.Count - 1);
+                        tmp.RemoveAt(tmp.Count - 1);
+                    }
+                    jml = 0;
+                    if(pointer[index] == -1)
+                    {
+                        
+                        pointer[index] = plus;
+                        idx[index] = index;
+                        plus++;
+                    }
                     player.gold -= lisinv[index].harga;
                     beli = false;
                     pilih = true;
+                    //for (int i = 0; i < idx.Length; i++)
+                    //{
+                    //    MessageBox.Show("Index pointer ke- " + i + "=" + idx[i] + "");
+                    //    MessageBox.Show("Pointer ke- " + i + "=" + pointer[i]);
+                    //}
+
                 }
                 else
                 {
                     MessageBox.Show("Gold tidak mencukupi");
                 }
-            }
-            //if (jual)
-            //{
-            //    if (lisinv[index2].jumlah > 0)
-            //    {
-            //        lisinv[index2].jumlah--;
-            //        player.gold += lisinv[index2].harga;
-            //    }
-            //    jual = false;
+
                 
-            //}
+                
+            }
+            if (jual)
+            {
+                if (myinv.Count > index)
+                {
+                    lisinv[tmp[index]].jumlah--;
+                    player.gold += lisinv[tmp[index]].harga;
+                    if(lisinv[tmp[index]].jumlah == 0)
+                    {
+                        pointer[tmp[index]] = -1;
+                        idx[tmp[index]] = -1;
+                        plus--;
+                        for (int i = 0; i < idx.Length - 1; i++)
+                        {
+                            pointer[i] = pointer[i + 1];
+                            idx[i] = idx[i + 1];
+                            pointer[9] = -1;
+                            idx[9] = -1;
+                        }
+                        myinv.RemoveAt(index);
+                        tmp.RemoveAt(index);
+                    }
+                }
+                jual = false;
+                pilih = true;
             
+            }
+
 
             if (cursor.IntersectsWith(go))
             {
@@ -435,7 +380,6 @@ namespace Project_PV
                 if (cursor.IntersectsWith(lisrec[i]))
                 {
                     hover[i] = true;
-                    //MessageBox.Show(hover[hoverr]+"");
                 }
                 else
                 {
