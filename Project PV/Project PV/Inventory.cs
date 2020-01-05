@@ -93,6 +93,23 @@ namespace Project_PV
             {
                 //karakterPilih.hero_buff = efek.heal;
             }
+
+            if (karakterPilih.hero_stress.stress_point <= 0)
+            {
+                if (karakterPilih.hero_stress.stress_level==stress_stage.depresi)
+                {
+                    karakterPilih.hero_stress.stress_point = 100 + karakterPilih.hero_stress.stress_point;
+                    karakterPilih.hero_stress.stress_level = stress_stage.normal;
+                }
+                else
+                {
+                    karakterPilih.hero_stress.stress_point=0;
+                }
+            }
+            if (karakterPilih.hp >= karakterPilih.maxHp)
+            {
+                karakterPilih.hp = karakterPilih.maxHp;
+            }
         }
     }
     
