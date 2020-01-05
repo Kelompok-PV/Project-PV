@@ -21,6 +21,8 @@ namespace Project_PV
         public int id { get; set; }
         public string desc { get; set; }
         public List<int> MyProperty { get; set; }
+
+        
         public Image gambar { get; set; }
         protected Inventory(int x, int y, string name, int jumlah, int harga, int id, string desc)
         {
@@ -51,51 +53,52 @@ namespace Project_PV
         {
             if (inv is LargeFood)
             {
-                karakterPilih.hp += 10;
+                karakterPilih.hp += 40;
             }
             else if (inv is SmallFood)
             {
-
+                karakterPilih.hp += 20;
             }
             else if (inv is Torch)
             {
-
+                karakterPilih.hero_stress.stress_point -= 5;
             }
             else if (inv is Bandage)
             {
-
+                karakterPilih.hp += 10;
             }
             else if (inv is Gold)
             {
-
+                karakterPilih.hero_stress.stress_point -= 10;
             }
             else if (inv is Jewel)
             {
-
+                karakterPilih.hero_stress.stress_point -= 12;
             }
             else if (inv is Key)
             {
-
+                //karakterPilih.hero_buff = efek.heal;
+                karakterPilih.hero_stress.stress_point -= 5;
             }
             else if (inv is Shovel)
             {
-
+                //karakterPilih.hero_buff = efek.none;
             }
             else if (inv is TheCure)
             {
-
+                //karakterPilih.hero_buff = efek.none;
+                karakterPilih.hp += 5;
             }
             else if (inv is PotentSalve)
             {
-
-
+                //karakterPilih.hero_buff = efek.heal;
             }
         }
     }
     
     class LargeFood : Inventory
     {
-        public LargeFood(int x, int y, int jumlah) : base(x, y, "Large Food", jumlah, 75, 1, "")
+        public LargeFood(int x, int y, int jumlah) : base(x, y, "Large Food", jumlah, 75, 1, "+40 HP")
         {
             gambar = (Image)Properties.Resources.inv_provision__3;
         }
@@ -109,7 +112,7 @@ namespace Project_PV
     
     class SmallFood : Inventory
     {
-        public SmallFood(int x, int y, int jumlah) : base(x, y, "Small Food", jumlah, 75, 2, "")
+        public SmallFood(int x, int y, int jumlah) : base(x, y, "Small Food", jumlah, 75, 2, "+20 HP")
         {
             gambar = (Image)Properties.Resources.inv_provision__1;
         }
@@ -122,7 +125,7 @@ namespace Project_PV
     
     class Torch : Inventory
     {
-        public Torch(int x, int y, int jumlah) : base(x, y, "Torch", jumlah, 75, 3, "")
+        public Torch(int x, int y, int jumlah) : base(x, y, "Torch", jumlah, 75, 3, "-5 Stress Point")
         {
             gambar = (Image)Properties.Resources.inv_supply_torch;
         }
@@ -135,7 +138,7 @@ namespace Project_PV
     
     class Bandage : Inventory
     {
-        public Bandage(int x, int y, int jumlah) : base(x, y, "Bandage", jumlah, 150, 4, "")
+        public Bandage(int x, int y, int jumlah) : base(x, y, "Bandage", jumlah, 150, 4, "+10 HP")
         {
             gambar = (Image)Properties.Resources.inv_supply_bandage;
         }
@@ -148,7 +151,7 @@ namespace Project_PV
     
     class Gold : Inventory
     {
-        public Gold(int x, int y, int jumlah) : base(x, y, "Gold", jumlah, 200, 5, "")
+        public Gold(int x, int y, int jumlah) : base(x, y, "Gold", jumlah, 200, 5, "-10 Stress Point")
         {
             gambar = (Image)Properties.Resources.inv_gold__3;
         }
@@ -161,7 +164,7 @@ namespace Project_PV
     
     class Jewel : Inventory
     {
-        public Jewel(int x, int y, int jumlah) : base(x, y, "Jewel", jumlah, 250, 6, "")
+        public Jewel(int x, int y, int jumlah) : base(x, y, "Jewel", jumlah, 250, 6, "-12 Stress Point")
         {
             gambar = (Image)Properties.Resources.inv_gem_emerald;
         }
@@ -174,7 +177,7 @@ namespace Project_PV
     
     class Key : Inventory
     {
-        public Key(int x, int y, int jumlah) : base(x, y, "Key", jumlah, 200, 7, "")
+        public Key(int x, int y, int jumlah) : base(x, y, "Key", jumlah, 200, 7, "Buff efek heal \n -5 Stress Point")
         {
             gambar = (Image)Properties.Resources.inv_supply_skeleton_key;
         }
@@ -187,7 +190,7 @@ namespace Project_PV
     
     class Shovel : Inventory
     {
-        public Shovel(int x, int y, int jumlah) : base(x, y, "Shovel", jumlah, 250, 8, "")
+        public Shovel(int x, int y, int jumlah) : base(x, y, "Shovel", jumlah, 250, 8, "Clear Buff")
         {
             gambar = (Image)Properties.Resources.inv_supply_shovel;
         }
@@ -200,7 +203,7 @@ namespace Project_PV
     
     class TheCure : Inventory
     {
-        public TheCure(int x, int y, int jumlah) : base(x, y, "TheCure", jumlah, 0, 9, "")
+        public TheCure(int x, int y, int jumlah) : base(x, y, "TheCure", jumlah, 0, 9, "Clear Buff \n +5 HP")
         {
             gambar = (Image)Properties.Resources.inv_estate_the_cure;
         }
@@ -213,7 +216,7 @@ namespace Project_PV
     
     class PotentSalve : Inventory
     {
-        public PotentSalve(int x, int y, int jumlah) : base(x, y, "Potent Salve", jumlah, 300, 10, "")
+        public PotentSalve(int x, int y, int jumlah) : base(x, y, "Potent Salve", jumlah, 300, 10, "Buff efek heal")
         {
             gambar = (Image)Properties.Resources.inv_provision__0;
         }
@@ -224,5 +227,15 @@ namespace Project_PV
         }
     }
 
+    //public enum efek
+    //{
+    //    blight,
+    //    bleed,
+    //    stun,
+    //    marked,
+    //    armor,
+    //    stress,
+    //    heal
+    //}
 
 }

@@ -224,6 +224,14 @@ namespace Project_PV
                     gsm.stage = Stage.sanitarium;
                     gsm.loadState(gsm.stage);
                 }
+                else if (cursor.IntersectsWith(blackSmith))
+                {
+                    Stage temp = gsm.stage;
+                    gsm.unloadState(temp);
+
+                    gsm.stage = Stage.blacksmith;
+                    gsm.loadState(gsm.stage);
+                }
                 else if (cursor.IntersectsWith(guild))
                 {
                     Stage temp = gsm.stage;

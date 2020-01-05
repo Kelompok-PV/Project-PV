@@ -406,6 +406,7 @@
     <None Include="Resources\Quest\hero_slot.background.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\sanitarium.locked_hero_slot_overlay.png" />
     <None Include="Resources\skill_attribute_disease.png" />
     <None Include="Resources\skill_attribute_tag.png" />
     <None Include="Resources\skill_attribute_stun.png" />

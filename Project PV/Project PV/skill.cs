@@ -175,9 +175,9 @@ namespace Project_PV
         }
         public override void getDamageSkill(int targetSkill, List<karakter> karakters)
         {
+            Random rand = new Random();
             for (int i = 0; i < karakters.Count; i++)
             {
-                Random rand = new Random();
                 int damage = rand.Next(status_skill.dmg_min, status_skill.dmg_max);
                 karakters[i].hp += damage;
             }

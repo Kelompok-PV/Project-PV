@@ -11,6 +11,7 @@ namespace Project_PV
     
     class Blacksmith : GameState
     {
+        public karakter player { get; set; }
         GameStateManager gsm { get; set; }
         public Font title { get; set; }
         public Font subtitle { get; set; }
@@ -91,6 +92,8 @@ namespace Project_PV
             Rectangle back = new Rectangle(1230, 10, 50, 50);
             if (cursor.IntersectsWith(back))
             {
+                gsm.player.currentCharacters[0] = this.player;
+                gsm.unloadState(gsm.stage);
                 gsm.stage = Stage.mainMenu;
                 gsm.loadState(gsm.stage);
             }
