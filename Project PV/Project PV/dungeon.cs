@@ -23,13 +23,16 @@ namespace Project_PV
         public bool kebalik{ get; set; }
         public location myLoc { get; set; }
         public List<Inventory> battleInv { get; set; }
+        public GameStateManager gsm { get; set; }
         public dungeon(GameStateManager gsm,int panjang)
         {
             Area_besar = new List<BattleAreaState>();
             Area_panjang = new List<BattleState>();
             ke = 0;
             kebalik = false;
-            myLoc = location.area;
+            this.gsm = gsm;
+            battleInv = gsm.player.inventoryAktif;
+            myLoc = location.battle;
             btl = new battle(gsm, Properties.Resources.courtyard_area___1_,this);
             for (int i = 0; i < panjang; i++)
             {

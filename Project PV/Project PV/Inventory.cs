@@ -21,8 +21,8 @@ namespace Project_PV
         public int id { get; set; }
         public string desc { get; set; }
         public List<int> MyProperty { get; set; }
+        public itemUse item { get; set; }
 
-        
         public Image gambar { get; set; }
         protected Inventory(int x, int y, string name, int jumlah, int harga, int id, string desc)
         {
@@ -49,43 +49,47 @@ namespace Project_PV
             g.DrawImage(img,x,y,50,110);
         }
 
-        void getEffect(Inventory inv,karakter karakterPilih)
+        public void getEffect(Inventory inv,karakter karakterPilih)
         {
             if (inv is LargeFood)
             {
+                item = itemUse.bisa;
                 karakterPilih.hp += 40;
             }
             else if (inv is SmallFood)
             {
+                item = itemUse.bisa;
                 karakterPilih.hp += 20;
             }
             else if (inv is Torch)
             {
+                item = itemUse.bisa;
                 karakterPilih.hero_stress.stress_point -= 5;
             }
             else if (inv is Bandage)
             {
+                item = itemUse.bisa;
                 karakterPilih.hp += 10;
             }
             else if (inv is Gold)
             {
-                karakterPilih.hero_stress.stress_point -= 10;
+                
             }
             else if (inv is Jewel)
             {
-                karakterPilih.hero_stress.stress_point -= 12;
+                
             }
             else if (inv is Key)
             {
-                karakterPilih.hero_buff = efek.heal;
-                karakterPilih.hero_stress.stress_point -= 5;
+
             }
             else if (inv is Shovel)
             {
-                karakterPilih.hero_buff = efek.none;
+                
             }
             else if (inv is TheCure)
             {
+                item = itemUse.bisa;
                 karakterPilih.hero_buff = efek.none;
                 karakterPilih.hp += 5;
             }
@@ -243,5 +247,9 @@ namespace Project_PV
         {
         }
     }
-
+    enum itemUse
+    {
+        bisa,
+        tidak
+    }
 }

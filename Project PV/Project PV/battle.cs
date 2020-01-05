@@ -276,8 +276,6 @@ namespace Project_PV
                                 g.DrawString(battleInv[(i * 8) + j].jumlah + "", font,br, (float)(640 + j * 61.5), 445 + i * 120);
                             }
                         }
-
-
                     }
                 }
             }
@@ -372,6 +370,7 @@ namespace Project_PV
         {
             
         }
+        int pilihInv = -1;
 
         public override void mouse_click(object sender, MouseEventArgs e)
         {
@@ -392,6 +391,25 @@ namespace Project_PV
                     prot = player[pilihHero].   skills[i].status_skill.def + "";
                 }
             }
+
+            for (int i = 0; i < 2; i++)
+            {
+                for (int j = 0; j < 8; j++)
+                {
+                    if ((i * 8) + j < battleInv.Count)
+                    {
+                        if (battleInv[(i * 8) + j] is Inventory)
+                        {
+                            Rectangle recInv = new Rectangle((int)(640 + j * 61.5), 440 + i * 120, 50, 110);
+                            if (recInv.IntersectsWith(mouse))
+                            {
+                                pilihInv = (i * 8) + j;
+                            }
+                        }
+                    }
+                }
+            }
+
             for (int i = 0; i < musuh.Count; i++)
             {
                 Rectangle recMusuh = new Rectangle(musuh[i].x, 250, 100, 150);
@@ -443,7 +461,19 @@ namespace Project_PV
                         gerak_geser = 10 * Math.Abs(pilihHero - targetHero);
                         gerak_geser_max = 100 * Math.Abs(pilihHero - targetHero);
                         timer_geser = true;
-                    }else if (turnAttack[turn_ke].jenis==1&& player[turnAttack[turn_ke].ke].skills[pilih_attack].skill_efek[0] == efek.heal)
+                    }else if (pilihInv!=-1&&battleInv[pilihInv].item==itemUse.bisa)
+                    {
+                        battleInv[pilihInv].getEffect(battleInv[pilihInv], player[i]);
+                        battleInv[pilihInv].jumlah--;
+                        if (battleInv[pilihInv].jumlah <= 0)
+                        {
+                            battleInv.RemoveAt(pilihInv);
+                        }
+
+                        pilihInv = -1;
+                        gantiTurn();
+                    }
+                    else if (turnAttack[turn_ke].jenis==1&& player[turnAttack[turn_ke].ke].skills[pilih_attack].skill_efek == efek.heal)
                     {
                             player[turnAttack[turn_ke].ke].skills[pilih_attack].getDamageSkill(i, player);
                             gantiTurn();
