@@ -51,6 +51,14 @@ namespace Project_PV
         List<int> buff_turn_list = new List<int>();
         string buff_temp;
         efek[] arrTemp = { efek.none,efek.armor, efek.bleed, efek.blight, efek.heal, efek.marked, efek.stress, efek.stun };
+        equip[] namaEquip = {
+            new melee_arm_1(),new melee_arm_2(),new melee_weap_1(),new melee_weap_2(),
+            new range_arm_1(),new range_arm_2(),new range_weap_1(),new range_weap_2(),
+            new doctor_arm_1(),new doctor_arm_2(),new doctor_weap_1(),new doctor_weap_2(),
+            new healer_arm_1(),new healer_arm_2(),new healer_weap_1(),new healer_weap_2(),
+            new nothing()};
+        equip[] arrEquip = new equip[2];
+        string equip1="", equip2="";
         private void Form1_Load(object sender, EventArgs e)
         {
             //axWindowsMediaPlayer1.Hide();
@@ -76,10 +84,9 @@ namespace Project_PV
                     speed = Convert.ToInt32(reader.ReadElementString("speed"));
                     level = Convert.ToInt32(reader.ReadElementString("level"));
                     stress_level = reader.ReadElementString("hero_stress_level");
+
                     buff_list.Clear();
                     buff_turn_list.Clear();
-                    
-                    
                     
                     if(stress_level == "normal")
                     {
@@ -89,9 +96,26 @@ namespace Project_PV
                     {
                         status = stress_stage.depresi;
                     }
+
                     stress_point = Convert.ToInt32(reader.ReadElementString("hero_stress_point"));
 
-                    if(hero == "ninja")
+                    equip1 = reader.ReadElementString("equip_1");
+                    equip2 = reader.ReadElementString("equip_2");
+
+                    arrEquip = new equip[2];
+                    for (int i = 0; i < namaEquip.Length; i++)
+                    {
+                        if (equip1 == namaEquip[i].nama)
+                        {
+                            arrEquip[0] = namaEquip[i];
+                        }
+
+                        if (equip2 == namaEquip[i].nama)
+                        {
+                            arrEquip[1] = namaEquip[i];
+                        }
+                    }
+                    if (hero == "ninja")
                     {
                         karakter hero = new ninja(nama);
                         overRideHero(hero);
@@ -182,6 +206,7 @@ namespace Project_PV
             manager.player.myCharacter[manager.player.myCharacter.Count - 1].level = level;
             manager.player.myCharacter[manager.player.myCharacter.Count - 1].hero_stress.stress_level = status;
             manager.player.myCharacter[manager.player.myCharacter.Count - 1].hero_stress.stress_point = stress_point;
+            manager.player.myCharacter[manager.player.myCharacter.Count - 1].hero_equip = arrEquip;
         }
 
         //private int FPS = 60;
@@ -216,8 +241,6 @@ namespace Project_PV
 
         private void Form1_MouseClick(object sender, MouseEventArgs e)
         {
-            //MessageBox.Show("x: "+e.X+" y: "+e.Y);
-            //Cursor.Current = new Cursor(Project_PV.Properties.Resources.arrow.GetHicon());
             manager.mouse_click(sender, e);
         }
         private void Form1_KeyDown(object sender, KeyEventArgs e)
@@ -274,8 +297,9 @@ namespace Project_PV
                 writer.WriteElementString("level", manager.player.myCharacter[i].level.ToString());
                 writer.WriteElementString("hero_stress_level", manager.player.myCharacter[i].hero_stress.stress_level.ToString());
                 writer.WriteElementString("hero_stress_point", manager.player.myCharacter[i].hero_stress.stress_point.ToString());
-                
-                
+                writer.WriteElementString("equip_1", manager.player.myCharacter[i].hero_equip[0].nama);
+                writer.WriteElementString("equip_2", manager.player.myCharacter[i].hero_equip[1].nama);
+
                 writer.WriteEndElement();
             }
             writer.WriteEndElement();

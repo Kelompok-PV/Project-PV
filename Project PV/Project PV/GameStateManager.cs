@@ -27,7 +27,7 @@ namespace Project_PV
         {
             player = new Player();
 
-            this.stage = Stage.easyState;
+            this.stage = Stage.title;
             player.myCharacter.Add(new ninja("Hatory"));
             player.myCharacter.Add(new aladin("aladin"));
             player.currentCharacters.Add(player.myCharacter[0]);
