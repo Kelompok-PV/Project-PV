@@ -77,21 +77,21 @@ namespace Project_PV
             }
             else if (inv is Key)
             {
-                //karakterPilih.hero_buff = efek.heal;
+                karakterPilih.hero_buff = efek.heal;
                 karakterPilih.hero_stress.stress_point -= 5;
             }
             else if (inv is Shovel)
             {
-                //karakterPilih.hero_buff = efek.none;
+                karakterPilih.hero_buff = efek.none;
             }
             else if (inv is TheCure)
             {
-                //karakterPilih.hero_buff = efek.none;
+                karakterPilih.hero_buff = efek.none;
                 karakterPilih.hp += 5;
             }
             else if (inv is PotentSalve)
             {
-                //karakterPilih.hero_buff = efek.heal;
+                karakterPilih.hero_buff = efek.heal;
             }
 
             if (karakterPilih.hero_stress.stress_point <= 0)
@@ -243,16 +243,5 @@ namespace Project_PV
         {
         }
     }
-
-    //public enum efek
-    //{
-    //    blight,
-    //    bleed,
-    //    stun,
-    //    marked,
-    //    armor,
-    //    stress,
-    //    heal
-    //}
 
 }
