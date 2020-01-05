@@ -374,7 +374,7 @@ namespace Project_PV
 
         public override void mouse_click(object sender, MouseEventArgs e)
         {
-            //MessageBox.Show(e.X + "" + e.Y);
+            MessageBox.Show(e.X + "" + e.Y);
             int x = e.X;
             int y = e.Y;
             Rectangle mouse = new Rectangle(x, y, 1, 1);
@@ -707,16 +707,20 @@ namespace Project_PV
                         {
                             player[pilihHero].hp -= player[pilihHero].hp / 10;
                             player[pilihHero].hero_stress.stress_point += 10;
+                            MessageBox.Show(player[pilihHero].nama+" terkena Bleed "+ player[pilihHero].hero_buff_turn);
                         }
                         if (player[pilihHero].hero_buff == efek.blight)
                         {
                             player[pilihHero].hp -= (player[pilihHero].maxHp / 10);
                             player[pilihHero].hero_stress.stress_point += 10;
+                            MessageBox.Show(player[pilihHero].nama + " terkena Blight " + player[pilihHero].hero_buff_turn);
                         }
                         if (player[pilihHero].hero_buff == efek.stun)
                         {
                             gantiTurn();
                             player[pilihHero].hero_stress.stress_point += 20;
+
+                            MessageBox.Show(player[pilihHero].nama + " terkena Stun " + player[pilihHero].hero_buff_turn);
                         }
                         player[pilihHero].hero_buff_turn--;
                         if (player[pilihHero].hero_buff_turn == 0||(player[pilihHero].hero_stress.stress_level==stress_stage.depresi&&player[pilihHero].hero_stress.stress_point>=100))

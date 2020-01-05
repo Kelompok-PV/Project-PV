@@ -698,6 +698,7 @@ namespace Project_PV
             {
                 karakters[targetSkill].hero_stress.stress_point += 5;
                 karakters[targetSkill].hero_buff = skill_efek;
+                karakters[targetSkill].hero_buff_turn = 3;
                 Random rand = new Random();
                 int damage = rand.Next(min_damage, max_damage);
                 karakters[targetSkill].hp -= damage;
@@ -821,6 +822,7 @@ namespace Project_PV
                 int damage = rand.Next(min_damage, max_damage);
                 karakters[targetSkill].hp -= damage;
                 karakters[targetSkill].hero_buff = skill_efek;
+                karakters[targetSkill].hero_buff_turn = 3;
             }
         }
         class Gargoyle4 : Skill
@@ -866,6 +868,7 @@ namespace Project_PV
                 {
                     karakters[i].hp -= 1;
                     karakters[i].hero_buff = skill_efek;
+                    karakters[i].hero_buff_turn = 3;
                 }
             }
         }
@@ -891,7 +894,8 @@ namespace Project_PV
                 {
                     karakters[i].hp -= 1;
                     karakters[i].hero_buff = skill_efek;
-                    karakters[i].hero_stress.stress_point += 10;
+                karakters[i].hero_buff_turn = 3;
+                karakters[i].hero_stress.stress_point += 10;
                 }
             }
         }
@@ -939,7 +943,8 @@ namespace Project_PV
                 {
                     karakters[i].hp -= 1;
                     karakters[i].hero_buff = skill_efek;
-                    karakters[i].hero_stress.stress_point += 10;
+                karakters[i].hero_buff_turn = 3;
+                karakters[i].hero_stress.stress_point += 10;
                 }
             }
         }
@@ -965,7 +970,8 @@ namespace Project_PV
                 {
                     karakters[i].hp -= 3;
                     karakters[i].hero_buff = skill_efek;
-                }
+                karakters[i].hero_buff_turn = 3;
+            }
             }
         }
         class Larry2 : Skill
@@ -990,7 +996,8 @@ namespace Project_PV
                 {
                     karakters[i].hp -= 3;
                     karakters[i].hero_buff = skill_efek;
-                    karakters[i].hero_buff_turn = 5;
+                karakters[i].hero_buff_turn = 3;
+                karakters[i].hero_buff_turn = 5;
                 }
             }
         }
