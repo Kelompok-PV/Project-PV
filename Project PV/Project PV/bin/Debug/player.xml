@@ -1,21 +1,36 @@
 ﻿<root>
   <player>
-    <gold>228</gold>
+    <gold>78</gold>
     <nama>Hatory</nama>
     <hero>ninja</hero>
     <min_damage>5</min_damage>
     <max_damage>10</max_damage>
     <maxHp>33</maxHp>
-    <hp>3</hp>
+    <hp>23</hp>
     <speed>20</speed>
     <level>1</level>
     <hero_stress_level>normal</hero_stress_level>
-    <hero_stress_point>40</hero_stress_point>
+    <hero_stress_point>80</hero_stress_point>
     <equip_1>Long Bow</equip_1>
     <equip_2>nothing</equip_2>
   </player>
   <player>
-    <gold>228</gold>
+    <gold>78</gold>
+    <nama>Hatory</nama>
+    <hero>ninja</hero>
+    <min_damage>5</min_damage>
+    <max_damage>10</max_damage>
+    <maxHp>33</maxHp>
+    <hp>5</hp>
+    <speed>20</speed>
+    <level>1</level>
+    <hero_stress_level>normal</hero_stress_level>
+    <hero_stress_point>0</hero_stress_point>
+    <equip_1>Long Bow</equip_1>
+    <equip_2>nothing</equip_2>
+  </player>
+  <player>
+    <gold>78</gold>
     <nama>Hatory</nama>
     <hero>ninja</hero>
     <min_damage>5</min_damage>
@@ -30,22 +45,7 @@
     <equip_2>nothing</equip_2>
   </player>
   <player>
-    <gold>228</gold>
-    <nama>Hatory</nama>
-    <hero>ninja</hero>
-    <min_damage>5</min_damage>
-    <max_damage>10</max_damage>
-    <maxHp>33</maxHp>
-    <hp>8</hp>
-    <speed>20</speed>
-    <level>1</level>
-    <hero_stress_level>normal</hero_stress_level>
-    <hero_stress_point>0</hero_stress_point>
-    <equip_1>Long Bow</equip_1>
-    <equip_2>nothing</equip_2>
-  </player>
-  <player>
-    <gold>228</gold>
+    <gold>78</gold>
     <nama>aladin</nama>
     <hero>aladin</hero>
     <min_damage>4</min_damage>
@@ -60,7 +60,7 @@
     <equip_2>Golden Robe</equip_2>
   </player>
   <player>
-    <gold>228</gold>
+    <gold>78</gold>
     <nama>Herher</nama>
     <hero>hercules</hero>
     <min_damage>5</min_damage>

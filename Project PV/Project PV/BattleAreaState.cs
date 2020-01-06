@@ -156,6 +156,17 @@ namespace Project_PV
                             i--;
                         }
                     }
+                    for (int i = 0; i < thisDungeon.battleInv.Count; i++)
+                    {
+                        if(battleInv[i] is Gold)
+                        {
+                            gsm.player.gold += battleInv[i].jumlah;
+                        }
+                        if (battleInv[i] is Jewel)
+                        {
+                            gsm.player.gold += (battleInv[i].jumlah*50);
+                        }
+                    }
                     gsm.stage = Stage.mainMenu;
                     gsm.loadState(gsm.stage);
                 }

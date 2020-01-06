@@ -1,15 +1,15 @@
 ﻿<root>
   <buff>
-    <hero_buff>stun</hero_buff>
-    <hero_buff_turn>-2</hero_buff_turn>
+    <hero_buff>none</hero_buff>
+    <hero_buff_turn>0</hero_buff_turn>
   </buff>
   <buff>
     <hero_buff>none</hero_buff>
-    <hero_buff_turn>-3</hero_buff_turn>
+    <hero_buff_turn>0</hero_buff_turn>
   </buff>
   <buff>
     <hero_buff>none</hero_buff>
-    <hero_buff_turn>-3</hero_buff_turn>
+    <hero_buff_turn>0</hero_buff_turn>
   </buff>
   <buff>
     <hero_buff>none</hero_buff>

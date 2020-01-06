@@ -73,7 +73,7 @@ namespace Project_PV
             }
 
             musuh = new List<musuh>();
-            for (int i = 0; i < 1; i++)
+            for (int i = 0; i < 2; i++)
             {
                 musuh.Add(new yeti(700+i*100));
                 turnAttack.Add(new turn(0, i, musuh[i].speed));
@@ -281,6 +281,9 @@ namespace Project_PV
             }
             g.DrawImage((Image)Properties.Resources.ResourceManager.GetObject("side_decor"), 1285, 420, -120, 270);
 
+            g.DrawImage(player[pilihHero].hero_equip[0].img, 310, 562, 45, 105);
+            g.DrawImage(player[pilihHero].hero_equip[1].img, 373, 562, 45, 105);
+
             for (int i = 0; i < 4; i++)
             {
                 if (player[pilihHero].skills[pilih_attack].rank[i] == 1)
@@ -374,7 +377,7 @@ namespace Project_PV
 
         public override void mouse_click(object sender, MouseEventArgs e)
         {
-            //MessageBox.Show(e.X + "" + e.Y);
+            MessageBox.Show(e.X + "" + e.Y);
             int x = e.X;
             int y = e.Y;
             Rectangle mouse = new Rectangle(x, y, 1, 1);
@@ -554,21 +557,28 @@ namespace Project_PV
                 serang = false;
                 if (musuh[targetMusuh].hp<=0)
                 {
-                    for (int i = 0; i < turnAttack.Count; i++)
+                    try
                     {
-                        if (turnAttack[i].jenis == 0)
+                        for (int i = 0; i < turnAttack.Count; i++)
                         {
-                            if (turnAttack[i].ke==musuh.Count)
+                            if (turnAttack[i].jenis == 0)
                             {
-                                turnAttack.RemoveAt(i);
-                                i--;
-                            }
-                            else if (turnAttack[i].ke>targetMusuh)
-                            {
-                                turnAttack[i].ke--;
-                                musuh[i].x -= 100;
+                                if (turnAttack[i].ke == musuh.Count)
+                                {
+                                    turnAttack.RemoveAt(i);
+                                    i--;
+                                }
+                                else if (turnAttack[i].ke > targetMusuh)
+                                {
+                                    turnAttack[i].ke--;
+                                    musuh[i].x -= 100;
+                                }
                             }
                         }
+                    }
+                    catch (Exception)
+                    {
+
                     }
                     MessageBox.Show("mati");
                     musuh.RemoveAt(targetMusuh);
@@ -915,6 +925,8 @@ namespace Project_PV
                     }
                     else
                     {
+                        pilihHero = turnAttack[0].ke;
+                        gerak_attack = false;
                         MessageBox.Show("diem2");
                     }
                 }
