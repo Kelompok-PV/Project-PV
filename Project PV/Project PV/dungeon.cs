@@ -23,14 +23,17 @@ namespace Project_PV
         public bool kebalik{ get; set; }
         public location myLoc { get; set; }
         public List<Inventory> battleInv { get; set; }
+        public GameStateManager gsm { get; set; }
         public dungeon(GameStateManager gsm,int panjang)
         {
             Area_besar = new List<BattleAreaState>();
             Area_panjang = new List<BattleState>();
             ke = 0;
             kebalik = false;
+            this.gsm = gsm;
+            battleInv = gsm.player.inventoryAktif;
             myLoc = location.area;
-            btl = new battle(gsm, Properties.Resources.courtyard_area___1_,this);
+            //btl = new battle(gsm, Properties.Resources.courtyard_area___1_, this);
             for (int i = 0; i < panjang; i++)
             {
                 if (i != 0)
@@ -51,7 +54,7 @@ namespace Project_PV
             }
             else if (myLoc == location.jalan)
             {
-                Area_panjang[ke].draw(g);
+                Area_panjang[ke -1].draw(g);
             }
             else if (myLoc == location.battle)
             {
@@ -72,7 +75,7 @@ namespace Project_PV
             }
             else if (myLoc == location.jalan)
             {
-                Area_panjang[ke].key_keydown(sender, e);
+                Area_panjang[ke -1].key_keydown(sender, e);
             }
             else if (myLoc == location.battle)
             {
@@ -88,7 +91,7 @@ namespace Project_PV
             }
             else if (myLoc == location.jalan)
             {
-                Area_panjang[ke].key_KeyUp(sender, e);
+                Area_panjang[ke - 1].key_KeyUp(sender, e);
             }
             else if (myLoc == location.battle)
             {
@@ -104,7 +107,7 @@ namespace Project_PV
             }
             else if (myLoc == location.jalan)
             {
-                Area_panjang[ke].mouse_click(sender, e);
+                Area_panjang[ke - 1].mouse_click(sender, e);
             }
             else if (myLoc == location.battle)
             {
@@ -120,7 +123,7 @@ namespace Project_PV
             }
             else if (myLoc == location.jalan)
             {
-                Area_panjang[ke].mouse_hover(sender, e);
+                Area_panjang[ke - 1].mouse_hover(sender, e);
             }
             else if (myLoc == location.battle)
             {
@@ -137,7 +140,7 @@ namespace Project_PV
             }
             else if (myLoc == location.jalan)
             {
-                Area_panjang[ke].mouse_leave(sender, e);
+                Area_panjang[ke - 1].mouse_leave(sender, e);
             }
             else if (myLoc == location.battle)
             {
@@ -153,7 +156,7 @@ namespace Project_PV
             }
             else if (myLoc == location.jalan)
             {
-                Area_panjang[ke].update();
+                Area_panjang[ke -1].update();
             }
             else if (myLoc == location.battle)
             {

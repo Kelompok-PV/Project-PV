@@ -72,10 +72,10 @@ namespace Project_PV
             this.x = x;
             this.speed = 15;
 
-            skill.Add(new FlameEater1());
-            skill.Add(new FlameEater2());
-            skill.Add(new FlameEater3());
-            skill.Add(new FlameEater4());
+            skill.Add(new yeti1());
+            skill.Add(new yeti2());
+            skill.Add(new yeti3());
+            skill.Add(new yeti4());
         }
     }
     

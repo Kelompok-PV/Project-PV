@@ -263,6 +263,106 @@ namespace Project_PV.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap aladin_run___1_ {
+            get {
+                object obj = ResourceManager.GetObject("aladin_run___1_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap aladin_run___10_ {
+            get {
+                object obj = ResourceManager.GetObject("aladin_run___10_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap aladin_run___2_ {
+            get {
+                object obj = ResourceManager.GetObject("aladin_run___2_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap aladin_run___3_ {
+            get {
+                object obj = ResourceManager.GetObject("aladin_run___3_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap aladin_run___4_ {
+            get {
+                object obj = ResourceManager.GetObject("aladin_run___4_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap aladin_run___5_ {
+            get {
+                object obj = ResourceManager.GetObject("aladin_run___5_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap aladin_run___6_ {
+            get {
+                object obj = ResourceManager.GetObject("aladin_run___6_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap aladin_run___7_ {
+            get {
+                object obj = ResourceManager.GetObject("aladin_run___7_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap aladin_run___8_ {
+            get {
+                object obj = ResourceManager.GetObject("aladin_run___8_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap aladin_run___9_ {
+            get {
+                object obj = ResourceManager.GetObject("aladin_run___9_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap aladin_skill1___1_ {
             get {
                 object obj = ResourceManager.GetObject("aladin_skill1___1_", resourceCulture);
@@ -503,9 +603,209 @@ namespace Project_PV.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap archer_run__1_ {
+            get {
+                object obj = ResourceManager.GetObject("archer_run__1_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap archer_run__10_ {
+            get {
+                object obj = ResourceManager.GetObject("archer_run__10_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap archer_run__2_ {
+            get {
+                object obj = ResourceManager.GetObject("archer_run__2_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap archer_run__3_ {
+            get {
+                object obj = ResourceManager.GetObject("archer_run__3_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap archer_run__4_ {
+            get {
+                object obj = ResourceManager.GetObject("archer_run__4_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap archer_run__5_ {
+            get {
+                object obj = ResourceManager.GetObject("archer_run__5_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap archer_run__6_ {
+            get {
+                object obj = ResourceManager.GetObject("archer_run__6_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap archer_run__7_ {
+            get {
+                object obj = ResourceManager.GetObject("archer_run__7_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap archer_run__8_ {
+            get {
+                object obj = ResourceManager.GetObject("archer_run__8_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap archer_run__9_ {
+            get {
+                object obj = ResourceManager.GetObject("archer_run__9_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap arrow {
             get {
                 object obj = ResourceManager.GetObject("arrow", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap assasin_run__1_ {
+            get {
+                object obj = ResourceManager.GetObject("assasin_run__1_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap assasin_run__10_ {
+            get {
+                object obj = ResourceManager.GetObject("assasin_run__10_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap assasin_run__2_ {
+            get {
+                object obj = ResourceManager.GetObject("assasin_run__2_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap assasin_run__3_ {
+            get {
+                object obj = ResourceManager.GetObject("assasin_run__3_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap assasin_run__4_ {
+            get {
+                object obj = ResourceManager.GetObject("assasin_run__4_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap assasin_run__5_ {
+            get {
+                object obj = ResourceManager.GetObject("assasin_run__5_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap assasin_run__6_ {
+            get {
+                object obj = ResourceManager.GetObject("assasin_run__6_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap assasin_run__7_ {
+            get {
+                object obj = ResourceManager.GetObject("assasin_run__7_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap assasin_run__8_ {
+            get {
+                object obj = ResourceManager.GetObject("assasin_run__8_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap assasin_run__9_ {
+            get {
+                object obj = ResourceManager.GetObject("assasin_run__9_", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1152,6 +1452,106 @@ namespace Project_PV.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap druid_run___1_ {
+            get {
+                object obj = ResourceManager.GetObject("druid_run___1_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap druid_run___10_ {
+            get {
+                object obj = ResourceManager.GetObject("druid_run___10_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap druid_run___2_ {
+            get {
+                object obj = ResourceManager.GetObject("druid_run___2_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap druid_run___3_ {
+            get {
+                object obj = ResourceManager.GetObject("druid_run___3_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap druid_run___4_ {
+            get {
+                object obj = ResourceManager.GetObject("druid_run___4_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap druid_run___5_ {
+            get {
+                object obj = ResourceManager.GetObject("druid_run___5_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap druid_run___6_ {
+            get {
+                object obj = ResourceManager.GetObject("druid_run___6_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap druid_run___7_ {
+            get {
+                object obj = ResourceManager.GetObject("druid_run___7_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap druid_run___8_ {
+            get {
+                object obj = ResourceManager.GetObject("druid_run___8_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap druid_run___9_ {
+            get {
+                object obj = ResourceManager.GetObject("druid_run___9_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap dungeon_progressionbar {
             get {
                 object obj = ResourceManager.GetObject("dungeon_progressionbar", resourceCulture);
@@ -1305,6 +1705,116 @@ namespace Project_PV.Properties {
         internal static System.Drawing.Bitmap giantlady_idle__9_ {
             get {
                 object obj = ResourceManager.GetObject("giantlady_idle__9_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap giantlady_run___1_ {
+            get {
+                object obj = ResourceManager.GetObject("giantlady_run___1_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap giantlady_run___10_ {
+            get {
+                object obj = ResourceManager.GetObject("giantlady_run___10_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap giantlady_run___11_ {
+            get {
+                object obj = ResourceManager.GetObject("giantlady_run___11_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap giantlady_run___2_ {
+            get {
+                object obj = ResourceManager.GetObject("giantlady_run___2_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap giantlady_run___3_ {
+            get {
+                object obj = ResourceManager.GetObject("giantlady_run___3_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap giantlady_run___4_ {
+            get {
+                object obj = ResourceManager.GetObject("giantlady_run___4_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap giantlady_run___5_ {
+            get {
+                object obj = ResourceManager.GetObject("giantlady_run___5_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap giantlady_run___6_ {
+            get {
+                object obj = ResourceManager.GetObject("giantlady_run___6_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap giantlady_run___7_ {
+            get {
+                object obj = ResourceManager.GetObject("giantlady_run___7_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap giantlady_run___8_ {
+            get {
+                object obj = ResourceManager.GetObject("giantlady_run___8_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap giantlady_run___9_ {
+            get {
+                object obj = ResourceManager.GetObject("giantlady_run___9_", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -1482,6 +1992,136 @@ namespace Project_PV.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap hercules_run___1_ {
+            get {
+                object obj = ResourceManager.GetObject("hercules_run___1_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap hercules_run___10_ {
+            get {
+                object obj = ResourceManager.GetObject("hercules_run___10_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap hercules_run___11_ {
+            get {
+                object obj = ResourceManager.GetObject("hercules_run___11_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap hercules_run___12_ {
+            get {
+                object obj = ResourceManager.GetObject("hercules_run___12_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap hercules_run___13_ {
+            get {
+                object obj = ResourceManager.GetObject("hercules_run___13_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap hercules_run___2_ {
+            get {
+                object obj = ResourceManager.GetObject("hercules_run___2_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap hercules_run___3_ {
+            get {
+                object obj = ResourceManager.GetObject("hercules_run___3_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap hercules_run___4_ {
+            get {
+                object obj = ResourceManager.GetObject("hercules_run___4_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap hercules_run___5_ {
+            get {
+                object obj = ResourceManager.GetObject("hercules_run___5_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap hercules_run___6_ {
+            get {
+                object obj = ResourceManager.GetObject("hercules_run___6_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap hercules_run___7_ {
+            get {
+                object obj = ResourceManager.GetObject("hercules_run___7_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap hercules_run___8_ {
+            get {
+                object obj = ResourceManager.GetObject("hercules_run___8_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap hercules_run___9_ {
+            get {
+                object obj = ResourceManager.GetObject("hercules_run___9_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap hero_slot_background {
             get {
                 object obj = ResourceManager.GetObject("hero_slot_background", resourceCulture);
@@ -1585,6 +2225,106 @@ namespace Project_PV.Properties {
         internal static System.Drawing.Bitmap iceWoman_idle___8_ {
             get {
                 object obj = ResourceManager.GetObject("iceWoman_idle___8_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iceWoman_run__1_ {
+            get {
+                object obj = ResourceManager.GetObject("iceWoman_run__1_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iceWoman_run__10_ {
+            get {
+                object obj = ResourceManager.GetObject("iceWoman_run__10_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iceWoman_run__2_ {
+            get {
+                object obj = ResourceManager.GetObject("iceWoman_run__2_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iceWoman_run__3_ {
+            get {
+                object obj = ResourceManager.GetObject("iceWoman_run__3_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iceWoman_run__4_ {
+            get {
+                object obj = ResourceManager.GetObject("iceWoman_run__4_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iceWoman_run__5_ {
+            get {
+                object obj = ResourceManager.GetObject("iceWoman_run__5_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iceWoman_run__6_ {
+            get {
+                object obj = ResourceManager.GetObject("iceWoman_run__6_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iceWoman_run__7_ {
+            get {
+                object obj = ResourceManager.GetObject("iceWoman_run__7_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iceWoman_run__8_ {
+            get {
+                object obj = ResourceManager.GetObject("iceWoman_run__8_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iceWoman_run__9_ {
+            get {
+                object obj = ResourceManager.GetObject("iceWoman_run__9_", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -3069,6 +3809,106 @@ namespace Project_PV.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap tonyStark_run___1_ {
+            get {
+                object obj = ResourceManager.GetObject("tonyStark_run___1_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tonyStark_run___10_ {
+            get {
+                object obj = ResourceManager.GetObject("tonyStark_run___10_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tonyStark_run___2_ {
+            get {
+                object obj = ResourceManager.GetObject("tonyStark_run___2_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tonyStark_run___3_ {
+            get {
+                object obj = ResourceManager.GetObject("tonyStark_run___3_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tonyStark_run___4_ {
+            get {
+                object obj = ResourceManager.GetObject("tonyStark_run___4_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tonyStark_run___5_ {
+            get {
+                object obj = ResourceManager.GetObject("tonyStark_run___5_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tonyStark_run___6_ {
+            get {
+                object obj = ResourceManager.GetObject("tonyStark_run___6_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tonyStark_run___7_ {
+            get {
+                object obj = ResourceManager.GetObject("tonyStark_run___7_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tonyStark_run___8_ {
+            get {
+                object obj = ResourceManager.GetObject("tonyStark_run___8_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tonyStark_run___9_ {
+            get {
+                object obj = ResourceManager.GetObject("tonyStark_run___9_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap torch__1_ {
             get {
                 object obj = ResourceManager.GetObject("torch__1_", resourceCulture);
@@ -3610,6 +4450,16 @@ namespace Project_PV.Properties {
         internal static System.Drawing.Bitmap yeti_idle___9_ {
             get {
                 object obj = ResourceManager.GetObject("yeti_idle___9_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap zonk {
+            get {
+                object obj = ResourceManager.GetObject("zonk", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

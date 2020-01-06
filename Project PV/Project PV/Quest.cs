@@ -39,6 +39,7 @@ namespace Project_PV
             {
                 yRoster[i] += 85;
                 rosterField.Add(new Rectangle(xRoster + 10, yRoster[i], 260, 80));
+                roster_bool.Add(false);
                 yRoster.Add(yRoster[i]);
             }
 
@@ -122,8 +123,6 @@ namespace Project_PV
             for (int i = 0; i < player.myCharacter.Count; i++)
             {
                 g.FillRectangle(new SolidBrush(Color.Black), xRoster + 10, yRoster[i], 260, 80);
-                
-
                 g.DrawImage(frameBit, xRoster, yRoster[i], 309, 82);
                 g.DrawImage(player.myCharacter[i].getIcon(), 1117, yRoster[i] + 10, 50, 50);
                 
@@ -145,6 +144,7 @@ namespace Project_PV
 
         }
         List<Rectangle> rosterField = new List<Rectangle>();
+        List<bool> roster_bool = new List<bool>();
         int index = -1;
         public override void init()
         {
@@ -170,10 +170,11 @@ namespace Project_PV
             {
                 for (int i = 0; i < rosterField.Count; i++)
                 {
-                    if (rosterField[i].IntersectsWith(cursor))
+                    if (rosterField[i].IntersectsWith(cursor) && !roster_bool[i])
                     {
                         index = i;
                         selected = true;
+                        roster_bool[i] = true;
                         break;
                     }
                 }
