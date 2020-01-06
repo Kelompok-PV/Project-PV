@@ -131,7 +131,6 @@ namespace Project_PV
                 }
             }
             
-
             if (x<-1800)
             {
                 g.DrawImage(imgLast, x + 950 + 5 * 450, 0, 450, 430);
@@ -188,6 +187,7 @@ namespace Project_PV
                     }
                 }
             }
+            
             g.DrawImage((Image)Properties.Resources.ResourceManager.GetObject("side_decor"), 1285, 420, -120, 270);
 
             //barang jatuh di jalan
@@ -250,7 +250,8 @@ namespace Project_PV
         }
         public override void mouse_click(object sender, MouseEventArgs e)
         {
-            //MessageBox.Show(x+"");
+            MessageBox.Show(e.X+","+e.Y);
+
             Rectangle mouse = new Rectangle(e.X, e.Y, 1, 1);
 
             if (mouse.IntersectsWith(new Rectangle(x + 250, 150, 200, 250))&&player[0].x==300 )
@@ -310,7 +311,7 @@ namespace Project_PV
                     {
                         inv[j].jumlah += inv_found[index].jumlah;
                         inv_grab[index] = true;
-                        MessageBox.Show(string.Format("masuk 1 Selamat anda dapat hadiah {0} sebanyak {1}", inv_found[index].name, inv_found[index].jumlah));
+                        MessageBox.Show(string.Format("Selamat anda dapat hadiah {0} sebanyak {1}", inv_found[index].name, inv_found[index].jumlah));
                         index = -1;
                     }
                     else
@@ -319,7 +320,7 @@ namespace Project_PV
                         {
                             inv.Add(inv_found[index]);
                             inv_grab[index] = true;
-                            MessageBox.Show(string.Format("masuk 2 Selamat anda dapat hadiah {0} sebanyak {1}", inv_found[index].name, inv_found[index].jumlah));
+                            MessageBox.Show(string.Format("Selamat anda dapat hadiah {0} sebanyak {1}", inv_found[index].name, inv_found[index].jumlah));
                             index = -1;
                         }
                         else
@@ -428,39 +429,13 @@ namespace Project_PV
             }
             else if(e.KeyData == Keys.D&&player[0].x<1050)
             {
-                for (int i = 0; i < player.Count; i++)
-                {
-                    player[i].x += 10;
-                    player[i].hero_move = "run";
-                }
-                //buat x barang jatuh
-                for (int i = 0; i < inv_found.Length; i++)
-                {
-                    inv_found[i].x += 10;
-                    inv_found_rect[i].X += 10;
-                }
+                player[0].x += 10;
+                player[0].hero_move = "run";
             }
             if (e.KeyData == Keys.A && player[0].x > 300)
             {
-                for (int i = 0; i < player.Count; i++)
-                {
-                    if (i == 0)
-                    {
-                        player[i].x -= 10;
-                        player[i].hero_move = "run";
-                    }
-                    else if (player[i].x > 10)
-                    {
-                        player[i].x -= 10;
-                        player[i].hero_move = "run";
-                    }
-                }
-                //buat x barang jatuh
-                for (int i = 0; i < inv_found.Length; i++)
-                {
-                    inv_found[i].x -= 10;
-                    inv_found_rect[i].X -= 10;
-                }
+                player[0].x -= 10;
+                player[0].hero_move = "run";
             }
             else if (e.KeyData == Keys.A&&x<0)
             {

@@ -192,26 +192,142 @@ namespace Project_PV
                 //panel bawah
                 for (int i = 0; i < 10; i++)
                 {
-                    if (pointer[i] == 0) {
+                    if (pointer[i] == 0) 
+                    {
                         tanda = i;
                         if (lisinv[idx[tanda]].jumlah > 0)
                         {
                             g.DrawImage(img[idx[tanda]], (float)(550 + pointer[tanda] * 61), 342 + ceteer * 112, 53, 100);
+                            
                             if (lisinv[idx[tanda]].jumlah > 1)
                             {
                                 g.DrawString(lisinv[idx[tanda]].jumlah + "", font, new SolidBrush(Color.FromArgb(202, 179, 112)), (float)(552 + pointer[tanda] * 61.5), 345 + ceteer * 112);
                             }
                         }
                     }
-                     if (pointer[i] == 1)
+                    if (pointer[i] == 1)
                     {
                         tanda = i;
                         if (lisinv[idx[tanda]].jumlah > 0)
                         {
                             g.DrawImage(img[idx[tanda]], (float)(550 + pointer[tanda] * 61), 342 + ceteer * 112, 53, 100);
+                            
+
                             if (lisinv[idx[tanda]].jumlah > 1)
                             {
                                 g.DrawString(lisinv[idx[tanda]].jumlah + "", font, new SolidBrush(Color.FromArgb(202, 179, 112)), (float)(552 + pointer[tanda] * 61.5), 345 + ceteer * 112);
+                            }
+                        }
+                    }
+                    if (pointer[i] == 2)
+                    {
+                        tanda = i;
+                        if (lisinv[idx[tanda]].jumlah > 0)
+                        {
+                            g.DrawImage(img[idx[tanda]], (float)(550 + pointer[tanda] * 61), 342 + ceteer * 112, 53, 100);
+                            
+
+                            if (lisinv[idx[tanda]].jumlah > 1)
+                            {
+                                g.DrawString(lisinv[idx[tanda]].jumlah + "", font, new SolidBrush(Color.FromArgb(202, 179, 112)), (float)(552 + pointer[tanda] * 61.5), 345 + ceteer * 112);
+                            }
+                        }
+                    }
+                    if (pointer[i] == 3)
+                    {
+                        tanda = i;
+                        if (lisinv[idx[tanda]].jumlah > 0)
+                        {
+                            g.DrawImage(img[idx[tanda]], (float)(550 + pointer[tanda] * 61), 342 + ceteer * 112, 53, 100);
+
+
+                            if (lisinv[idx[tanda]].jumlah > 1)
+                            {
+                                g.DrawString(lisinv[idx[tanda]].jumlah + "", font, new SolidBrush(Color.FromArgb(202, 179, 112)), (float)(552 + pointer[tanda] * 61.5), 345 + ceteer * 112);
+                            }
+                        }
+                    }
+                    if (pointer[i] == 4)
+                    {
+                        tanda = i;
+                        if (lisinv[idx[tanda]].jumlah > 0)
+                        {
+                            g.DrawImage(img[idx[tanda]], (float)(550 + pointer[tanda] * 61), 342 + ceteer * 112, 53, 100);
+
+
+                            if (lisinv[idx[tanda]].jumlah > 1)
+                            {
+                                g.DrawString(lisinv[idx[tanda]].jumlah + "", font, new SolidBrush(Color.FromArgb(202, 179, 112)), (float)(552 + pointer[tanda] * 61.5), 345 + ceteer * 112);
+                            }
+                        }
+                    }
+                    if (pointer[i] == 5)
+                    {
+                        tanda = i;
+                        if (lisinv[idx[tanda]].jumlah > 0)
+                        {
+                            g.DrawImage(img[idx[tanda]], (float)(550 + pointer[tanda] * 61), 342 + ceteer * 112, 53, 100);
+
+
+                            if (lisinv[idx[tanda]].jumlah > 1)
+                            {
+                                g.DrawString(lisinv[idx[tanda]].jumlah + "", font, new SolidBrush(Color.FromArgb(202, 179, 112)), (float)(552 + pointer[tanda] * 61.5), 345 + ceteer * 112);
+                            }
+                        }
+                    }
+                    if (pointer[i] == 6)
+                    {
+                        tanda = i;
+                        if (lisinv[idx[tanda]].jumlah > 0)
+                        {
+                            g.DrawImage(img[idx[tanda]], (float)(550 + pointer[tanda] * 61), 342 + ceteer * 112, 53, 100);
+
+
+                            if (lisinv[idx[tanda]].jumlah > 1)
+                            {
+                                g.DrawString(lisinv[idx[tanda]].jumlah + "", font, new SolidBrush(Color.FromArgb(202, 179, 112)), (float)(552 + pointer[tanda] * 61.5), 345 + ceteer * 112);
+                            }
+                        }
+                    }
+                    if (pointer[i] == 7)
+                    {
+                        tanda = i;
+                        if (lisinv[idx[tanda]].jumlah > 0)
+                        {
+                            g.DrawImage(img[idx[tanda]], (float)(550 + pointer[tanda] * 61), 342 + ceteer * 112, 53, 100);
+
+
+                            if (lisinv[idx[tanda]].jumlah > 1)
+                            {
+                                g.DrawString(lisinv[idx[tanda]].jumlah + "", font, new SolidBrush(Color.FromArgb(202, 179, 112)), (float)(552 + pointer[tanda] * 61.5), 345 + ceteer * 112);
+                            }
+                        }
+                    }
+                    if (pointer[i] == 8)
+                    {
+                        tanda = i;
+                        if (lisinv[idx[tanda]].jumlah > 0)
+                        {
+                            g.DrawImage(img[idx[tanda]], (float)(550 + pointer[0] * 61), 342 + ceteer+1 * 112, 53, 100);
+
+
+                            if (lisinv[idx[tanda]].jumlah > 1)
+                            {
+                                g.DrawString(lisinv[idx[tanda]].jumlah + "", font, new SolidBrush(Color.FromArgb(202, 179, 112)), (float)(552 + pointer[0] * 61.5), 345 + ceteer+1 * 112);
+                            }
+                        }
+                    }
+                    if (pointer[i] == 9)
+                    {
+                        tanda = i;
+                        if (lisinv[idx[tanda]].jumlah > 0)
+                        {
+                            g.DrawImage(img[idx[tanda]], (float)(550 + pointer[1] * 61), 342 + ceteer+1 * 112, 53, 100);
+
+
+                            if (lisinv[idx[tanda]].jumlah > 1)
+                            {
+                                g.DrawString(lisinv[idx[tanda]].jumlah + "", font, new SolidBrush(Color.FromArgb(202, 179, 112)), (float)(552 + pointer[1] * 61.5), 345 + ceteer+1 * 112);
                             }
                         }
                     }
@@ -308,7 +424,6 @@ namespace Project_PV
                     }
                     if(jml > 1)
                     {
-                        MessageBox.Show("Kembar");
                         myinv.RemoveAt(myinv.Count - 1);
                         tmp.RemoveAt(tmp.Count - 1);
                     }
@@ -352,13 +467,24 @@ namespace Project_PV
                         for (int i = 0; i < idx.Length - 1; i++)
                         {
                             pointer[i] = pointer[i + 1];
+                            if (pointer[i] > 0)
+                            {
+                                pointer[i] -= 1;
+                            }
+                            else if (pointer[i] == 0)
+                            {
+                                pointer[i] = 0;
+                            }
+
                             idx[i] = idx[i + 1];
                             pointer[9] = -1;
                             idx[9] = -1;
                         }
                         myinv.RemoveAt(index);
                         tmp.RemoveAt(index);
+                       
                     }
+                    //Config.form1.Invalidate();
                 }
                 jual = false;
                 pilih = true;
