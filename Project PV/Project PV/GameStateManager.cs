@@ -27,7 +27,7 @@ namespace Project_PV
         {
             player = new Player();
 
-            this.stage = Stage.title;
+            this.stage = Stage.blacksmith;
             player.myCharacter.Add(new ninja("Hatory"));
             player.myCharacter.Add(new aladin("aladin"));
             player.currentCharacters.Add(player.myCharacter[0]);
@@ -55,7 +55,7 @@ namespace Project_PV
             {
                 //townMusic.Stop();
                 dungeon = new dungeon(this, 2);
-                gameStates[(int)stage] = dungeon ;
+                gameStates[(int)stage] = dungeon;
             }
             else if (stage == Stage.mediumState)
             {
@@ -71,8 +71,8 @@ namespace Project_PV
             }
             else if (stage == Stage.sanitarium)
             {
-                Sanitarium bs = new Sanitarium(this);
-                bs.player = player.currentCharacters[0];
+                //Sanitarium bs = new Sanitarium(this);
+                //bs.player = player.currentCharacters[0];
                 gameStates[(int)stage] = new Sanitarium(this);
             }
             else if (stage == Stage.blacksmith)

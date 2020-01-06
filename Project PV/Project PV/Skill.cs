@@ -71,12 +71,7 @@ namespace Project_PV
             {
                 int randdodge = rand.Next(0, 100);
                 if(musuhs[targetSkill].dodge < randdodge)
-            int randomAkurasi = rand.Next(0,100);
-            if (randomAkurasi <= status_skill.acc)
-            {
-                int randomDodge= rand.Next(0, 100);
-                if (musuhs[targetSkill].dodge < randomDodge)
-                {
+                { 
                     int damage = rand.Next(status_skill.dmg_min, status_skill.dmg_max);
                     musuhs[targetSkill].hp -= damage;
                     musuhs[targetSkill].musuh_buff.Add(skill_efek[0]);
