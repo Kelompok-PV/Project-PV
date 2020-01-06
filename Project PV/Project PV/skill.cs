@@ -69,6 +69,11 @@ namespace Project_PV
 
             Random rand = new Random();
             int randakurasi = rand.Next(0, 100);
+            if(randakurasi <= status_skill.acc)
+            {
+                int randdodge = rand.Next(0, 100);
+                if(musuhs[targetSkill].dodge < randdodge)
+                { 
 
             if (randakurasi <= status_skill.acc)
             {

@@ -162,10 +162,17 @@ namespace Project_PV
 				
 				try
 				{
-					// gambar karakter pada tempat e ketika di taruh
-					
-					g.DrawImage(karacters[i].GetKarakter().getIcon(), karacters[i].x, karacters[i].y, 90,90);
-					simp = i;
+                    // gambar karakter pada tempat e ketika di taruh
+                    if (i == 0 || i == 2 || i == 4)
+                    {
+                        g.DrawImage(karacters[i].GetKarakter().getIcon(), karacters[i].x, karacters[i].y, 90, 90);
+                        simp = i;
+                        break;
+                    }
+                    else
+                    {
+                        simp = -1;
+                    }
 					
 				}
 				catch (Exception)
@@ -174,7 +181,7 @@ namespace Project_PV
 			}
 			string type = "";
 			// gambar panel persetujuan
-			if (simp != -1 )
+			if (simp != -1)
 			{
 
 				if (simp < 2)
@@ -249,7 +256,7 @@ namespace Project_PV
 		int index = -1;
 		public override void mouse_click(object sender, MouseEventArgs e)
 		{
-			 cursor= new Rectangle(e.X, e.Y, 10, 10);
+			cursor= new Rectangle(e.X, e.Y, 10, 10);
 			Rectangle back = new Rectangle(1230, 10, 50, 50);
 			if (cursor.IntersectsWith(back))
 			{
@@ -279,8 +286,17 @@ namespace Project_PV
 					{
 						selected = false;
 						karacters[i].setKaracter(player.myCharacter[index]);
-						player.currentCharacters[i] = karacters[i].GetKarakter();
-						indexsimp = i;
+                        if (player.currentCharacters.Count > i)
+                        {
+                            player.currentCharacters[i] = karacters[i].GetKarakter();
+                            indexsimp = i;
+                        }
+                        else
+                        {
+                            player.currentCharacters.Add(karacters[i].GetKarakter());
+                            indexsimp = player.currentCharacters.Count-1;
+                        }
+                       
 						index = -1;
 						break;
 					}
@@ -373,7 +389,6 @@ namespace Project_PV
 			x = e.X;
 			y = e.Y;
 			Config.form1.Invalidate();
-            // iki shan sg gawe ada hero e hover pas nge drag (gambar e )
 		}
 
         public override void mouse_leave(object sender, MouseEventArgs e)
