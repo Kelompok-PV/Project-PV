@@ -74,10 +74,11 @@ namespace Project_PV
 			Random rand = new Random();
             musuh = new List<musuh>();
 			int a = rand.Next(1, 5);
-			int b = rand.Next(1, 8);
+		
             for (int i = 0; i < a; i++)
             {
-                if(b == 1)
+				int b = rand.Next(1, 8);
+				if (b == 1)
 				{
 					musuh.Add(new yeti(700 + i * 100));
 				} else if(b == 2)
