@@ -69,23 +69,25 @@ namespace Project_PV
 
             Random rand = new Random();
             int randakurasi = rand.Next(0, 100);
-            if(randakurasi <= status_skill.acc)
-            {
-                int randdodge = rand.Next(0, 100);
-                if(musuhs[targetSkill].dodge < randdodge)
-                { 
-
             if (randakurasi <= status_skill.acc)
             {
-                int randomDodge = rand.Next(0, 100);
-                if (musuhs[targetSkill].dodge < randomDodge)
+                int randdodge = rand.Next(0, 100);
+                if (musuhs[targetSkill].dodge < randdodge)
                 {
-                    int damage = rand.Next(status_skill.dmg_min, status_skill.dmg_max);
-                    musuhs[targetSkill].hp -= damage;
-                    musuhs[targetSkill].musuh_buff.Add(skill_efek);
+
+                    if (randakurasi <= status_skill.acc)
+                    {
+                        int randomDodge = rand.Next(0, 100);
+                        if (musuhs[targetSkill].dodge < randomDodge)
+                        {
+                            int damage = rand.Next(status_skill.dmg_min, status_skill.dmg_max);
+                            musuhs[targetSkill].hp -= damage;
+                            musuhs[targetSkill].musuh_buff.Add(skill_efek);
+                        }
+                    }
+
                 }
             }
-
         }
     }
         class incision : Skill

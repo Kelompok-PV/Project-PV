@@ -32,7 +32,7 @@ namespace Project_PV
             kebalik = false;
             this.gsm = gsm;
             battleInv = gsm.player.inventoryAktif;
-            myLoc = location.jalan;
+            myLoc = location.battle;
             btl = new battle(gsm, Properties.Resources.courtyard_area___1_,this);
             for (int i = 0; i < panjang; i++)
             {

@@ -183,7 +183,7 @@ namespace Project_PV
             skill.Add(new Skeleton_soldier2());
             skill.Add(new Skeleton_soldier3());
             skill.Add(new Skeleton_soldier4());
-            this.name = "Skeleton_soldier";
+            this.name = "Skeleton";
             this.musuh_move = "idle";
             this.maxHp = 8;
             this.dodge = 0;

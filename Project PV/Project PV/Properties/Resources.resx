@@ -1441,4 +1441,277 @@
   <data name="tonyStark_run___9_" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\tonyStark_run_ (9).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Boarman_idle___10_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Boarman_idle_ (10).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Boarman_idle___1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Boarman_idle_ (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Boarman_idle___2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Boarman_idle_ (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Boarman_idle___3_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Boarman_idle_ (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Boarman_idle___4_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Boarman_idle_ (4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Boarman_idle___5_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Boarman_idle_ (5).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Boarman_idle___6_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Boarman_idle_ (6).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Boarman_idle___7_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Boarman_idle_ (7).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Boarman_idle___8_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Boarman_idle_ (8).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Boarman_idle___9_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Boarman_idle_ (9).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Boarman_skill1___1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Boarman_skill1_ (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Boarman_skill2___1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Boarman_skill2_ (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Boarman_skill3___1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Boarman_skill3_ (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Boarman_skill4___1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Boarman_skill4_ (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flame_idle___1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\flame_idle_ (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flame_idle___2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\flame_idle_ (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flame_idle___3_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\flame_idle_ (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flame_idle___4_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\flame_idle_ (4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flame_idle___5_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\flame_idle_ (5).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flame_idle___6_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\flame_idle_ (6).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flame_idle___7_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\flame_idle_ (7).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flame_idle___8_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\flame_idle_ (8).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flame_skill1___1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\flame_skill1_ (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flame_skill2___1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\flame_skill2_ (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flame_skill3___1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\flame_skill3_ (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flame_skill4___1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\flame_skill4_ (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Gargoyle_idle___10_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Gargoyle_idle_ (10).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Gargoyle_idle___1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Gargoyle_idle_ (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Gargoyle_idle___2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Gargoyle_idle_ (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Gargoyle_idle___3_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Gargoyle_idle_ (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Gargoyle_idle___4_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Gargoyle_idle_ (4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Gargoyle_idle___5_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Gargoyle_idle_ (5).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Gargoyle_idle___6_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Gargoyle_idle_ (6).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Gargoyle_idle___7_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Gargoyle_idle_ (7).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Gargoyle_idle___8_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Gargoyle_idle_ (8).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Gargoyle_idle___9_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Gargoyle_idle_ (9).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Gargoyle_skill1___1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Gargoyle_skill1_ (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Gargoyle_skill1___2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Gargoyle_skill1_ (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Gargoyle_skill1___3_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Gargoyle_skill1_ (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Gargoyle_skill2___1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Gargoyle_skill2_ (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Gargoyle_skill2___2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Gargoyle_skill2_ (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Gargoyle_skill2___3_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Gargoyle_skill2_ (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Gargoyle_skill3___1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Gargoyle_skill3_ (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Gargoyle_skill4___1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Gargoyle_skill4_ (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="giant_idle___1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\giant_idle_ (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="giant_idle___2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\giant_idle_ (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="giant_idle___3_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\giant_idle_ (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="giant_idle___4_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\giant_idle_ (4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="giant_idle___5_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\giant_idle_ (5).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="giant_idle___6_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\giant_idle_ (6).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="giant_idle___7_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\giant_idle_ (7).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="giant_idle___8_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\giant_idle_ (8).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="giant_skill1___1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\giant_skill1_ (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="giant_skill1___2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\giant_skill1_ (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="giant_skill1___3_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\giant_skill1_ (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="giant_skill2___1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\giant_skill2_ (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="giant_skill2___2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\giant_skill2_ (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="giant_skill3___1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\giant_skill3_ (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="giant_skill3___2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\giant_skill3_ (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="giant_skill3___3_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\giant_skill3_ (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="giant_skill4___1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\giant_skill4_.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Larry_idle___1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Larry_idle_ (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Larry_idle___2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Larry_idle_ (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Larry_idle___3_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Larry_idle_ (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Larry_idle___4_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Larry_idle_ (4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Larry_idle___5_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Larry_idle_ (5).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Larry_idle___6_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Larry_idle_ (6).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Larry_idle___7_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Larry_idle_ (7).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Larry_skill1___1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Larry_skill1_ (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Larry_skill2___1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Larry_skill2_ (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Larry_skill2___2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Larry_skill2_ (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Larry_skill2___3_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Larry_skill2_ (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Larry_skill3___1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Larry_skill3_ (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Larry_skill3___2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Larry_skill3_ (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Larry_skill3___3_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Larry_skill3_ (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Larry_skill4___1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Larry_skill4_ (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Larry_skill4___2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Larry_skill4_ (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Larry_skill4___3_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Larry_skill4_ (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Larry_skill4___4_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Larry_skill4_ (4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Larry_skill4___5_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Larry_skill4_ (5).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Skeleton_idle___1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Skeleton_idle_ (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Skeleton_idle___2_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Skeleton_idle_ (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Skeleton_idle___3_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Skeleton_idle_ (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Skeleton_idle___4_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Skeleton_idle_ (4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Skeleton_idle___5_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Skeleton_idle_ (5).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Skeleton_idle___6_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Skeleton_idle_ (6).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Skeleton_idle___7_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Skeleton_idle_ (7).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Skeleton_skill1___1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Skeleton_skill1_ (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Skeleton_skill2___1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Skeleton_skill2_ (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Skeleton_skill3___1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Skeleton_skill3_ (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Skeleton_skill4___1_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Skeleton_skill4_ (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
