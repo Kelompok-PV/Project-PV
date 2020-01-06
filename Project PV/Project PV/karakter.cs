@@ -138,7 +138,7 @@ namespace Project_PV
             this.maxHp = 33;
             this.dodge = 20;
             
-            this.hp = 33;
+            this.hp = 20;
             this.type = "Range";
             this.hero_move = "idle";
             this.speed = 20;

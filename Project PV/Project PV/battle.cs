@@ -377,7 +377,7 @@ namespace Project_PV
 
         public override void mouse_click(object sender, MouseEventArgs e)
         {
-            MessageBox.Show(e.X + "" + e.Y);
+            //MessageBox.Show(e.X + "" + e.Y);
             int x = e.X;
             int y = e.Y;
             Rectangle mouse = new Rectangle(x, y, 1, 1);
