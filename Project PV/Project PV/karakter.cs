@@ -138,7 +138,7 @@ namespace Project_PV
             this.maxHp = 33;
             this.dodge = 20;
             
-            this.hp = 33;
+            this.hp = 20;
             this.type = "Range";
             this.hero_move = "idle";
             this.speed = 20;
@@ -150,7 +150,7 @@ namespace Project_PV
             skills.Add(new captivate());
             skills.Add(new impale());
             hero_equip = new equip[2];
-            hero_equip[0] = new nothing();
+            hero_equip[0] = new melee_arm_1();
             hero_equip[1] = new nothing();
         }
     }

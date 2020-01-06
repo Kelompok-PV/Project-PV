@@ -50,11 +50,11 @@ namespace Project_PV
         public battle(GameStateManager gsm,Image back,dungeon dgn)
         {
             thisDungeon = dgn;
-            string RunningPath = AppDomain.CurrentDomain.BaseDirectory;
-            string FileName = string.Format("{0}Resources\\sound\\music\\combat\\battle.wav", Path.GetFullPath(Path.Combine(RunningPath, @"..\..\")));
-            myPlayer.Open(new System.Uri(FileName));
-            myPlayer.MediaEnded += new EventHandler(Media_Ended);
-            myPlayer.Play();
+            //string RunningPath = AppDomain.CurrentDomain.BaseDirectory;
+            //string FileName = string.Format("{0}Resources\\sound\\music\\combat\\battle.wav", Path.GetFullPath(Path.Combine(RunningPath, @"..\..\")));
+            //myPlayer.Open(new System.Uri(FileName));
+            //myPlayer.MediaEnded += new EventHandler(Media_Ended);
+            //myPlayer.Play();
 
 
             this.gsm = gsm;
@@ -71,11 +71,36 @@ namespace Project_PV
 
                 }
             }
-
+			Random rand = new Random();
             musuh = new List<musuh>();
-            for (int i = 0; i < 1; i++)
+			int a = rand.Next(1, 5);
+		
+            for (int i = 0; i < a; i++)
             {
-                musuh.Add(new yeti(700+i*100));
+				int b = rand.Next(1, 8);
+				if (b == 1)
+				{
+					musuh.Add(new yeti(700 + i * 100));
+				} else if(b == 2)
+				{
+					musuh.Add(new Gargoyle(700 + i * 100));
+				}else if (b == 3)
+				{
+					musuh.Add(new Skeleton_soldier(700 + i * 100));
+				}else if(b== 4)
+				{
+					musuh.Add(new Boarman(700 + i * 100));
+				} else if(b== 5)
+				{
+					musuh.Add(new Larry(700 + i * 100));
+				} else if(b== 6)
+				{
+					musuh.Add(new FlameEater(700 + i * 100));
+				}
+				else
+				{
+					musuh.Add(new GiantGoblin(700 + i * 100));
+				}
                 turnAttack.Add(new turn(0, i, musuh[i].speed));
             }
 
@@ -280,6 +305,9 @@ namespace Project_PV
                 }
             }
             g.DrawImage((Image)Properties.Resources.ResourceManager.GetObject("side_decor"), 1285, 420, -120, 270);
+
+            g.DrawImage(player[pilihHero].hero_equip[0].img, 310, 562, 45, 105);
+            g.DrawImage(player[pilihHero].hero_equip[1].img, 373, 562, 45, 105);
 
             for (int i = 0; i < 4; i++)
             {
@@ -554,22 +582,30 @@ namespace Project_PV
                 serang = false;
                 if (musuh[targetMusuh].hp<=0)
                 {
-                    for (int i = 0; i < turnAttack.Count; i++)
+                    try
                     {
-                        if (turnAttack[i].jenis == 0)
+                        for (int i = 0; i < turnAttack.Count; i++)
                         {
-                            if (turnAttack[i].ke==musuh.Count)
+                            if (turnAttack[i].jenis == 0)
                             {
-                                turnAttack.RemoveAt(i);
-                                i--;
-                            }
-                            else if (turnAttack[i].ke>targetMusuh)
-                            {
-                                turnAttack[i].ke--;
-                                musuh[i].x -= 100;
+                                if (turnAttack[i].ke == musuh.Count)
+                                {
+                                    turnAttack.RemoveAt(i);
+                                    i--;
+                                }
+                                else if (turnAttack[i].ke > targetMusuh)
+                                {
+                                    turnAttack[i].ke--;
+                                    musuh[i].x -= 100;
+                                }
                             }
                         }
                     }
+                    catch (Exception)
+                    {
+
+                    }
+                    MessageBox.Show("mati");
                     musuh.RemoveAt(targetMusuh);
                 }
                 winCondition();
@@ -606,6 +642,20 @@ namespace Project_PV
                         }
                     }
                     player.RemoveAt(targetHero);
+                    if (player.Count == 0)
+                    {
+                        MessageBox.Show("Mati Semua");
+                        for (int i = 0; i < gsm.player.currentCharacters.Count; i++)
+                        {
+                            if (gsm.player.currentCharacters[i].hp <= 0)
+                            {
+                                gsm.player.currentCharacters.RemoveAt(i);
+                                i--;
+                            }
+                        }
+                        gsm.stage = Stage.mainMenu;
+                        gsm.loadState(gsm.stage);
+                    }
                 }
 
                 gantiTurn();
@@ -691,110 +741,225 @@ namespace Project_PV
                 gsm.dungeon.Area_besar[gsm.dungeon.ke].battle = true;
             }
         }
-
+        bool gerak_attack = false;
         public void gantiTurn()
         {
+            gerak_attack = false;
             try
             {
-                turn_ke++;
-                if (turnAttack[turn_ke].jenis == 1)
+                if (gerak_attack == false)
                 {
-                    pilihHero = turnAttack[turn_ke].ke;
-                    player[pilihHero].marked = false;
-                    if (player[pilihHero].hero_buff == efek.bleed)
+                    turn_ke++;
+                    if (turnAttack[turn_ke].jenis == 1)
                     {
-                        if (player[pilihHero].hero_buff == efek.bleed)
-                        {
-                            player[pilihHero].hp -= player[pilihHero].hp / 10;
-                            player[pilihHero].hero_stress.stress_point += 10;
-                        }
-                        if (player[pilihHero].hero_buff == efek.blight)
-                        {
-                            player[pilihHero].hp -= (player[pilihHero].maxHp / 10);
-                            player[pilihHero].hero_stress.stress_point += 10;
-                        }
-                        if (player[pilihHero].hero_buff == efek.stun)
-                        {
-                            gantiTurn();
-                            player[pilihHero].hero_stress.stress_point += 20;
-                        }
-                        player[pilihHero].hero_buff_turn--;
-                        if (player[pilihHero].hero_buff_turn == 0||(player[pilihHero].hero_stress.stress_level==stress_stage.depresi&&player[pilihHero].hero_stress.stress_point>=100))
-                        {
-                            player[pilihHero].hero_buff_turn=0;
-                            player[pilihHero].hero_buff=efek.none;
-                            
-                            for (int j = 0; j < player.Count; j++)
+                        gerak_attack = true;
+                        MessageBox.Show("player1");
+                        pilihHero = turnAttack[turn_ke].ke;
+                        
+                            if (player[pilihHero].hero_buff == efek.bleed)
                             {
-                                if (j != pilihHero)
-                                {
-                                    player[j].hero_stress.stress_point += 20;
-                                }
+                                player[pilihHero].hp -= player[pilihHero].hp / 10;
+                                player[pilihHero].hero_stress.stress_point += 10;
+                                MessageBox.Show(player[pilihHero].nama + " terkena Bleed " + player[pilihHero].hero_buff_turn);
                             }
-                        }
-                        else
-                        {
-                            if(player[pilihHero].hero_stress.stress_point >= 100)
+                            if (player[pilihHero].hero_buff == efek.blight)
                             {
-                                player[pilihHero].hero_stress.stress_level = stress_stage.depresi;
-                                player[pilihHero].hero_stress.stress_point = 0;
+                                player[pilihHero].hp -= (player[pilihHero].maxHp / 10);
+                                player[pilihHero].hero_stress.stress_point += 10;
+                                MessageBox.Show(player[pilihHero].nama + " terkena Blight " + player[pilihHero].hero_buff_turn);
+                            }
+                            if (player[pilihHero].hero_buff == efek.stun)
+                            {
+                                gantiTurn();
+                                player[pilihHero].hero_stress.stress_point += 20;
+
+                                MessageBox.Show(player[pilihHero].nama + " terkena Stun " + player[pilihHero].hero_buff_turn);
+                            }
+                            player[pilihHero].hero_buff_turn--;
+                            if (player[pilihHero].hero_buff_turn == 0 || (player[pilihHero].hero_stress.stress_level == stress_stage.depresi && player[pilihHero].hero_stress.stress_point >= 100))
+                            {
+                                player[pilihHero].hero_buff_turn = 0;
+                                player[pilihHero].hero_buff = efek.none;
+
                                 for (int j = 0; j < player.Count; j++)
                                 {
                                     if (j != pilihHero)
                                     {
-                                        player[j].hero_stress.stress_point += 10;
+                                        player[j].hero_stress.stress_point += 20;
                                     }
                                 }
                             }
-                        }
+                            else
+                            {
+                                if (player[pilihHero].hero_stress.stress_point >= 100)
+                                {
+                                    player[pilihHero].hero_stress.stress_level = stress_stage.depresi;
+                                    player[pilihHero].hero_stress.stress_point = 0;
+                                    for (int j = 0; j < player.Count; j++)
+                                    {
+                                        if (j != pilihHero)
+                                        {
+                                            player[j].hero_stress.stress_point += 10;
+                                        }
+                                    }
+                                }
+                            }
 
+                        
+                    }
+                    else
+                    {
+                        gerak_attack = true;
+                        MessageBox.Show("musuh1");
+                        delay_aktif = true;
+                        pilihMusuh = turnAttack[turn_ke].ke;
+                        musuh[pilihMusuh].marked = false;
+                        for (int i = 0; i < musuh[pilihMusuh].musuh_buff.Count; i++)
+                        {
+                            if (musuh[pilihMusuh].musuh_buff[i] == efek.bleed)
+                            {
+                                musuh[pilihMusuh].hp -= musuh[pilihMusuh].hp / 10;
+                            }
+                            if (musuh[pilihMusuh].musuh_buff[i] == efek.blight)
+                            {
+                                musuh[pilihMusuh].hp -= (musuh[pilihMusuh].maxHp / 10);
+                            }
+                            if (musuh[pilihMusuh].musuh_buff[i] == efek.marked)
+                            {
+                                musuh[pilihMusuh].marked = true;
+                            }
+                            if (musuh[pilihMusuh].musuh_buff[i] == efek.stun)
+                            {
+                                gantiTurn();
+                            }
+                            musuh[pilihMusuh].musuh_buff_turn[i]--;
+                            if (musuh[pilihMusuh].musuh_buff_turn[i] == 0)
+                            {
+                                musuh[pilihMusuh].musuh_buff_turn.RemoveAt(i);
+                                musuh[pilihMusuh].musuh_buff.RemoveAt(i);
+                                i--;
+                            }
+                        }
                     }
                 }
                 else
                 {
-                    delay_aktif = true;
-                    pilihMusuh = turnAttack[turn_ke].ke;
-                    musuh[pilihMusuh].marked = false;
-                    for (int i = 0; i < musuh[pilihMusuh].musuh_buff.Count; i++)
-                    {
-                        if (musuh[pilihMusuh].musuh_buff[i] == efek.bleed)
-                        {
-                            musuh[pilihMusuh].hp -= musuh[pilihMusuh].hp / 10;
-                        }
-                        if (musuh[pilihMusuh].musuh_buff[i] == efek.blight)
-                        {
-                            musuh[pilihMusuh].hp -= (musuh[pilihMusuh].maxHp / 10);
-                        }
-                        if (musuh[pilihMusuh].musuh_buff[i] == efek.marked)
-                        {
-                            musuh[pilihMusuh].marked = true;
-                        }
-                        if (musuh[pilihMusuh].musuh_buff[i] == efek.stun)
-                        {
-                            gantiTurn();
-                        }
-                        musuh[pilihMusuh].musuh_buff_turn[i]--;
-                        if (musuh[pilihMusuh].musuh_buff_turn[i] == 0)
-                        {
-                            musuh[pilihMusuh].musuh_buff_turn.RemoveAt(i);
-                            musuh[pilihMusuh].musuh_buff.RemoveAt(i);
-                            i--;
-                        }
-                    }
+
+                    MessageBox.Show("diem1");
                 }
             }
             catch (Exception)
             {
+                try
+                {
+                    if (gerak_attack == false)
+                    {
+                        turn_ke = 0;
+                        if (turnAttack[turn_ke].jenis == 1)
+                        {
+                            gerak_attack = true;
+                            MessageBox.Show("player2");
+                            pilihHero = turnAttack[turn_ke].ke;
+                            player[pilihHero].marked = false;
+                           
+                            if (player[pilihHero].hero_buff == efek.bleed)
+                            {
+                                player[pilihHero].hp -= player[pilihHero].hp / 10;
+                                player[pilihHero].hero_stress.stress_point += 10;
+                                MessageBox.Show(player[pilihHero].nama + " terkena Bleed " + player[pilihHero].hero_buff_turn);
+                            }
+                            if (player[pilihHero].hero_buff == efek.blight)
+                            {
+                                player[pilihHero].hp -= (player[pilihHero].maxHp / 10);
+                                player[pilihHero].hero_stress.stress_point += 10;
+                                MessageBox.Show(player[pilihHero].nama + " terkena Blight " + player[pilihHero].hero_buff_turn);
+                            }
+                            if (player[pilihHero].hero_buff == efek.stun)
+                            {
+                                gantiTurn();
+                                player[pilihHero].hero_stress.stress_point += 20;
 
-                turn_ke = 0;
-                if (turnAttack[turn_ke].jenis == 1)
-                {
-                    pilihHero = turnAttack[turn_ke].ke;
+                                MessageBox.Show(player[pilihHero].nama + " terkena Stun " + player[pilihHero].hero_buff_turn);
+                            }
+                            player[pilihHero].hero_buff_turn--;
+                            if (player[pilihHero].hero_buff_turn == 0 || (player[pilihHero].hero_stress.stress_level == stress_stage.depresi && player[pilihHero].hero_stress.stress_point >= 100))
+                            {
+                                player[pilihHero].hero_buff_turn = 0;
+                                player[pilihHero].hero_buff = efek.none;
+
+                                for (int j = 0; j < player.Count; j++)
+                                {
+                                    if (j != pilihHero)
+                                    {
+                                        player[j].hero_stress.stress_point += 20;
+                                    }
+                                }
+                            }
+                            else
+                            {
+                                if (player[pilihHero].hero_stress.stress_point >= 100)
+                                {
+                                    player[pilihHero].hero_stress.stress_level = stress_stage.depresi;
+                                    player[pilihHero].hero_stress.stress_point = 0;
+                                    for (int j = 0; j < player.Count; j++)
+                                    {
+                                        if (j != pilihHero)
+                                        {
+                                            player[j].hero_stress.stress_point += 10;
+                                        }
+                                    }
+                                }
+                            }
+
+                            
+                        }
+                        else
+                        {
+                            gerak_attack = true;
+                            MessageBox.Show("musuh2");
+                            delay_aktif = true;
+                            pilihMusuh = turnAttack[turn_ke].ke;
+                            musuh[pilihMusuh].marked = false;
+                            for (int i = 0; i < musuh[pilihMusuh].musuh_buff.Count; i++)
+                            {
+                                if (musuh[pilihMusuh].musuh_buff[i] == efek.bleed)
+                                {
+                                    musuh[pilihMusuh].hp -= musuh[pilihMusuh].hp / 10;
+                                }
+                                if (musuh[pilihMusuh].musuh_buff[i] == efek.blight)
+                                {
+                                    musuh[pilihMusuh].hp -= (musuh[pilihMusuh].maxHp / 10);
+                                }
+                                if (musuh[pilihMusuh].musuh_buff[i] == efek.marked)
+                                {
+                                    musuh[pilihMusuh].marked = true;
+                                }
+                                if (musuh[pilihMusuh].musuh_buff[i] == efek.stun)
+                                {
+                                    gantiTurn();
+                                }
+                                musuh[pilihMusuh].musuh_buff_turn[i]--;
+                                if (musuh[pilihMusuh].musuh_buff_turn[i] == 0)
+                                {
+                                    musuh[pilihMusuh].musuh_buff_turn.RemoveAt(i);
+                                    musuh[pilihMusuh].musuh_buff.RemoveAt(i);
+                                    i--;
+                                }
+                            }
+                        }
+                    }
+                    else
+                    {
+                        pilihHero = turnAttack[0].ke;
+                        gerak_attack = false;
+                        MessageBox.Show("diem2");
+                    }
                 }
-                else
+                catch (Exception)
                 {
-                    delay_aktif = true;
+
                 }
+                
             }
         }
     }

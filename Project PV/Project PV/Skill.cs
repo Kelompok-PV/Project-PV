@@ -69,6 +69,11 @@ namespace Project_PV
 
             Random rand = new Random();
             int randakurasi = rand.Next(0, 100);
+            if(randakurasi <= status_skill.acc)
+            {
+                int randdodge = rand.Next(0, 100);
+                if(musuhs[targetSkill].dodge < randdodge)
+                { 
 
             if (randakurasi <= status_skill.acc)
             {
@@ -484,10 +489,10 @@ namespace Project_PV
                         if (target[i] == 1)
                         {
                             pointer = i;
-                            if (musuhs[pointer].dodge < randdodge)
+                            if (i<musuhs.Count&& musuhs[pointer].dodge < randdodge)
                             {
                                 int damage = rand.Next(status_skill.dmg_min, status_skill.dmg_max);
-                                for (int j = 0; j < target.Length; i++)
+                                for (int j = 0; j < target.Length; j++)
                                 {
                                     try
                                     {
