@@ -6,11 +6,11 @@
     <min_damage>5</min_damage>
     <max_damage>10</max_damage>
     <maxHp>33</maxHp>
-    <hp>33</hp>
+    <hp>30</hp>
     <speed>20</speed>
     <level>1</level>
     <hero_stress_level>normal</hero_stress_level>
-    <hero_stress_point>0</hero_stress_point>
+    <hero_stress_point>5</hero_stress_point>
     <equip_1>Long Bow</equip_1>
     <equip_2>nothing</equip_2>
   </player>
