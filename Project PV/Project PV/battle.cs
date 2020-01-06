@@ -71,11 +71,35 @@ namespace Project_PV
 
                 }
             }
-
+			Random rand = new Random();
             musuh = new List<musuh>();
-            for (int i = 0; i < 2; i++)
+			int a = rand.Next(1, 5);
+			int b = rand.Next(1, 8);
+            for (int i = 0; i < a; i++)
             {
-                musuh.Add(new yeti(700+i*100));
+                if(b == 1)
+				{
+					musuh.Add(new yeti(700 + i * 100));
+				} else if(b == 2)
+				{
+					musuh.Add(new Gargoyle(700 + i * 100));
+				}else if (b == 3)
+				{
+					musuh.Add(new Skeleton_soldier(700 + i * 100));
+				}else if(b== 4)
+				{
+					musuh.Add(new Boarman(700 + i * 100));
+				} else if(b== 5)
+				{
+					musuh.Add(new Larry(700 + i * 100));
+				} else if(b== 6)
+				{
+					musuh.Add(new FlameEater(700 + i * 100));
+				}
+				else
+				{
+					musuh.Add(new GiantGoblin(700 + i * 100));
+				}
                 turnAttack.Add(new turn(0, i, musuh[i].speed));
             }
 
