@@ -352,6 +352,7 @@ namespace Project_PV
                 
                 if (gsm.dungeon.Area_besar[gsm.dungeon.ke].battle == false)
                 {
+
                     gsm.dungeon.myLoc = location.battle;
                     gsm.dungeon.btl = new battle(gsm,gsm.dungeon.Area_besar[gsm.dungeon.ke].imgBack,thisDungeon);
                 }

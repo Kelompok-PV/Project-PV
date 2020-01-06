@@ -148,6 +148,14 @@ namespace Project_PV
                 DialogResult dr = MessageBox.Show("Yakin Keluar","Ke Desa",MessageBoxButtons.YesNo);
                 if (dr == DialogResult.Yes)
                 {
+                    for (int i = 0; i < gsm.player.currentCharacters.Count; i++)
+                    {
+                        if (gsm.player.currentCharacters[i].hp <= 0)
+                        {
+                            gsm.player.currentCharacters.RemoveAt(i);
+                            i--;
+                        }
+                    }
                     gsm.stage = Stage.mainMenu;
                     gsm.loadState(gsm.stage);
                 }
