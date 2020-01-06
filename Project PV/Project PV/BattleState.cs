@@ -62,6 +62,12 @@ namespace Project_PV
             }
 
             inv = gsm.player.inventoryAktif;
+
+            dmg_min = player[pilihHero].skills[pilih_attack].status_skill.dmg_min + "";
+            dmg_max = player[pilihHero].skills[pilih_attack].status_skill.dmg_max + "";
+            acc = player[pilihHero].skills[pilih_attack].status_skill.acc + "";
+            crit = player[pilihHero].skills[pilih_attack].status_skill.crit + "%";
+            prot = player[pilihHero].skills[pilih_attack].status_skill.def + "";
         }
 
         int[] walk_and_found = { 1292, 1500, 2000};
