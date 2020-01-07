@@ -27,14 +27,11 @@ namespace Project_PV
         {
             player = new Player();
 
-            this.stage = Stage.blacksmith;
             this.stage = Stage.easyState;
             player.myCharacter.Add(new ninja("Hatory"));
             player.myCharacter.Add(new aladin("aladin"));
-            player.myCharacter.Add(new aladin("aladin"));
             player.currentCharacters.Add(player.myCharacter[0]);
             player.currentCharacters.Add(player.myCharacter[1]);
-            player.currentCharacters.Add(player.myCharacter[2]);
             player.inventoryAktif.Add(new SmallFood(0, 0, 2));
             player.gold = 3000;
             gameStates = new GameState[20];

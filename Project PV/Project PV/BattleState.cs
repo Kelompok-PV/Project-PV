@@ -141,12 +141,24 @@ namespace Project_PV
                 g.DrawImage(imgDoor, x + 580 + 5 * 450, 0, 450, 430);
             }
 
+            //barang jatuh di jalan
+            for (int i = 0; i < inv_found.Length; i++)
+            {
+                if (!inv_grab[i])
+                {
+                    Image img = inv_found[i].gambar;
+                    g.FillRectangle(new SolidBrush(Color.Red), inv_found_rect[i]);
+                    g.DrawImage(img, inv_found_rect[i]);
+                }
+            }
 
-            for (int i = 0; i < player.Count; i++)
+            for (int i = player.Count - 1; i >= 0; i--)
             {
                 player[i].getImage(g);
                 player[i].hero_move_now++;
             }
+
+            
 
             if (zoomin==true)
             {
@@ -168,6 +180,16 @@ namespace Project_PV
 
             g.DrawImage((Image)Properties.Resources.ResourceManager.GetObject("panel_stat"), 70 + 50, 520, 500, 170);
             g.DrawImage(imgpInv, 70 + 550, 420, 550, 270);
+
+            if (player[pilihHero].hero_equip[0].type != "zonk")
+            {
+                g.DrawImage(player[pilihHero].hero_equip[0].img, 310, 562, 45, 105);
+            }
+            if (player[pilihHero].hero_equip[1].type != "zonk")
+            {
+                g.DrawImage(player[pilihHero].hero_equip[1].img, 373, 562, 45, 105);
+            }
+
             //MessageBox.Show((Image)imgpInv+"");
             Font font = new Font("Arial", 15.0f);
             if (aktif=="inv")
@@ -190,16 +212,7 @@ namespace Project_PV
             
             g.DrawImage((Image)Properties.Resources.ResourceManager.GetObject("side_decor"), 1285, 420, -120, 270);
 
-            //barang jatuh di jalan
-            for (int i = 0; i < inv_found.Length; i++)
-            {
-                if (!inv_grab[i])
-                {
-                    Image img = inv_found[i].gambar;
-                    g.FillRectangle(new SolidBrush(Color.Red), inv_found_rect[i]);
-                    g.DrawImage(img, inv_found_rect[i]);
-                }
-            }
+            
 
             drawStatus(g);
         }
@@ -250,7 +263,6 @@ namespace Project_PV
         }
         public override void mouse_click(object sender, MouseEventArgs e)
         {
-            MessageBox.Show(e.X+","+e.Y);
 
             Rectangle mouse = new Rectangle(e.X, e.Y, 1, 1);
 
@@ -418,7 +430,7 @@ namespace Project_PV
                 x -= 10;
                 for (int i = 0; i < player.Count; i++)
                 {
-                    player[0].hero_move = "run";
+                    player[i].hero_move = "run";
                 }
                 //buat x barang jatuh
                 for (int i = 0; i < inv_found.Length; i++)
@@ -429,13 +441,27 @@ namespace Project_PV
             }
             else if(e.KeyData == Keys.D&&player[0].x<1050)
             {
-                player[0].x += 10;
-                player[0].hero_move = "run";
+                for (int i = 0; i < player.Count; i++)
+                {
+                    player[i].x += 10;
+                    player[i].hero_move = "run";
+                }
             }
-            if (e.KeyData == Keys.A && player[0].x > 300)
+            if (e.KeyData == Keys.A && player[0].x > 10)
             {
-                player[0].x -= 10;
-                player[0].hero_move = "run";
+                for (int i = 0; i < player.Count; i++)
+                {
+                    if (i == 0)
+                    {
+                        player[i].x -= 10;
+                        player[i].hero_move = "run";
+                    }
+                    else if (player[i].x > 10)
+                    {
+                        player[i].x -= 10;
+                        player[i].hero_move = "run";
+                    }
+                }
             }
             else if (e.KeyData == Keys.A&&x<0)
             {

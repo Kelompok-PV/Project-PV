@@ -199,7 +199,7 @@ namespace Project_PV
             {
                 if (battleRect[i].IntersectsWith(cursor))
                 {
-                    if (i == 0)
+                    if (i == 2)
                     {
                         gsm.dif = Stage.easyState;
                     }
@@ -207,7 +207,7 @@ namespace Project_PV
                     {
                         gsm.dif = Stage.mediumState;
                     }
-                    if (i == 2)
+                    if (i == 0)
                     {
                         gsm.dif = Stage.hardState;
                     }
