@@ -172,8 +172,8 @@ namespace Project_PV
                 {
                     g.DrawImage(player.currentCharacters[indexsimp].hero_equip[1].img, 500, 390, 80, 80);
                     g.DrawString("Nama = " + player.currentCharacters[indexsimp].hero_equip[1].nama + "", stress, new SolidBrush(Color.FromArgb(250, 231, 162)), 580, 400);
-                    g.DrawString("Jenis = " + player.currentCharacters[indexsimp].hero_equip[1].jenis + "", stress, new SolidBrush(Color.FromArgb(250, 231, 162)), 580, 430);
-                    g.DrawString("Damage = " + player.currentCharacters[indexsimp].hero_equip[1].max_dmg + "", stress, new SolidBrush(Color.FromArgb(250, 231, 162)), 580, 550);
+                    g.DrawString("Jenis = " + player.currentCharacters[indexsimp].hero_equip[1].type + "", stress, new SolidBrush(Color.FromArgb(250, 231, 162)), 580, 430);
+                    g.DrawString("Damage = " + player.currentCharacters[indexsimp].hero_equip[1].max_dmg + " + 5", stress, new SolidBrush(Color.FromArgb(250, 231, 162)), 580, 460);
                     tmp = 1;
                     pay = 250;
                 }
@@ -182,23 +182,23 @@ namespace Project_PV
                     g.DrawString("Nama = " + player.currentCharacters[indexsimp].hero_equip[1].nama + "", stress, new SolidBrush(Color.FromArgb(250, 231, 162)), 580, 400);
                     g.DrawImage(player.currentCharacters[indexsimp].hero_equip[1].img, 500, 390, 80, 80);
                 }
-                g.DrawString("Armor = ", titleName, new SolidBrush(Color.FromArgb(250, 231, 162)), 550, 460);
+                g.DrawString("Armor = ", titleName, new SolidBrush(Color.FromArgb(250, 231, 162)), 550, 490);
                 if (!player.currentCharacters[indexsimp].hero_equip[0].nama.Equals("nothing"))
                 {
                     if (player.currentCharacters[indexsimp].hero_equip[0].jenis.Equals("armor"))
                     {
-                        g.DrawImage(player.currentCharacters[indexsimp].hero_equip[0].img, 500, 500, 80, 80);
-                        g.DrawString("Nama = " + player.currentCharacters[indexsimp].hero_equip[0].nama + "", stress, new SolidBrush(Color.FromArgb(250, 231, 162)), 580, 490);
-                        g.DrawString("Jenis = " + player.currentCharacters[indexsimp].hero_equip[0].jenis + "", stress, new SolidBrush(Color.FromArgb(250, 231, 162)), 580, 520);
-                        g.DrawString("Defend = " + player.currentCharacters[indexsimp].hero_equip[0].def + "", stress, new SolidBrush(Color.FromArgb(250, 231, 162)), 580, 550);
+                        g.DrawImage(player.currentCharacters[indexsimp].hero_equip[0].img, 500, 520, 80, 80);
+                        g.DrawString("Nama = " + player.currentCharacters[indexsimp].hero_equip[0].nama + "", stress, new SolidBrush(Color.FromArgb(250, 231, 162)), 580, 520);
+                        g.DrawString("Jenis = " + player.currentCharacters[indexsimp].hero_equip[0].type + "", stress, new SolidBrush(Color.FromArgb(250, 231, 162)), 580, 550);
+                        g.DrawString("Defend = " + player.currentCharacters[indexsimp].hero_equip[0].def + " + 2", stress, new SolidBrush(Color.FromArgb(250, 231, 162)), 580, 580);
                         tmp2 = 1;
                         pay2 = 250;
                     }
                 }
                 else
                 {
-                    g.DrawString("Nama = " + player.currentCharacters[indexsimp].hero_equip[0].nama + "", stress, new SolidBrush(Color.FromArgb(250, 231, 162)), 580, 490);
-                    g.DrawImage(player.currentCharacters[indexsimp].hero_equip[0].img, 500, 500, 80, 80);
+                    g.DrawString("Nama = " + player.currentCharacters[indexsimp].hero_equip[0].nama + "", stress, new SolidBrush(Color.FromArgb(250, 231, 162)), 580, 520);
+                    g.DrawImage(player.currentCharacters[indexsimp].hero_equip[0].img, 500, 520, 80, 80);
                 }
 
                 titleName = new Font(Config.font.Families[0], 20, FontStyle.Regular);
@@ -315,7 +315,7 @@ namespace Project_PV
                     {
                         pay2 = 250;
                     }
-                    player.currentCharacters[indexsimp].hero_equip[0].def += 5; ;
+                    player.currentCharacters[indexsimp].hero_equip[0].def += 2; ;
                     player.currentCharacters[indexsimp].hero_equip[1].max_dmg += 5; ;
                     player.gold -= (pay + pay2);
                     tmp = -1;

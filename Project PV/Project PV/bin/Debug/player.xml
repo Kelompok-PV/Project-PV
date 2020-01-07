@@ -1,6 +1,6 @@
 ﻿<root>
   <player>
-    <gold>1645</gold>
+    <gold>3000</gold>
     <nama>Hatory</nama>
     <hero>ninja</hero>
     <min_damage>5</min_damage>
@@ -15,7 +15,7 @@
     <equip_2>Spike</equip_2>
   </player>
   <player>
-    <gold>1645</gold>
+    <gold>3000</gold>
     <nama>aladin</nama>
     <hero>aladin</hero>
     <min_damage>4</min_damage>
@@ -30,7 +30,7 @@
     <equip_2>nothing</equip_2>
   </player>
   <player>
-    <gold>1645</gold>
+    <gold>3000</gold>
     <nama>Stark</nama>
     <hero>tonyStark</hero>
     <min_damage>4</min_damage>
