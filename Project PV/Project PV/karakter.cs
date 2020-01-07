@@ -157,8 +157,13 @@ namespace Project_PV
             skills.Add(new captivate());
             skills.Add(new impale());
             hero_equip = new equip[2];
+<<<<<<< HEAD
             hero_equip[0] = new nothing();
             hero_equip[1] = new nothing();
+=======
+            hero_equip[0] = new melee_arm_1();
+            hero_equip[1] = new melee_weap_1();
+>>>>>>> 4106bd0cbb7a49230bfaaa0755593c90a71d2900
         }
     }
     //jarak jauh
