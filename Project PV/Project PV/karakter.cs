@@ -151,7 +151,7 @@ namespace Project_PV
             skills.Add(new impale());
             hero_equip = new equip[2];
             hero_equip[0] = new melee_arm_1();
-            hero_equip[1] = new nothing();
+            hero_equip[1] = new melee_weap_1();
         }
     }
     //jarak jauh

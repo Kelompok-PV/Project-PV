@@ -101,6 +101,10 @@ namespace Project_PV
         int indexsimp = -1;
         int simp = -1;
         bool cek = false;
+        int tmp = -1;
+        int tmp2 = -1;
+        int pay = 0;
+        int pay2 = 0;
         public override void draw(Graphics g)
         {
             g.DrawImage(background, 0, 0, 1300, 700);
@@ -147,14 +151,9 @@ namespace Project_PV
             // gambar panel persetujuan
             if (simp != -1)
             {
-
                 if (simp < 2)
                 {
-                    type = "Treatment";
-                }
-                else if (simp >= 2 && simp < 4)
-                {
-                    type = "Medical";
+                    type = "Equip";
                 }
 
                 g.FillRectangle(new SolidBrush(Color.FromArgb(200, Color.Black)), 0, 0, 1300, 730);
@@ -168,41 +167,58 @@ namespace Project_PV
                 titleName = new Font(Config.font.Families[0], 25, FontStyle.Regular);
                 g.DrawString("Your Choice?", titleName, new SolidBrush(Color.FromArgb(250, 231, 162)), 750, 360);
                 g.DrawString(player.currentCharacters[indexsimp].nama, titleName, new SolidBrush(Color.FromArgb(250, 231, 162)), 360, 360);
-                    g.DrawString("Weapon = ", titleName, new SolidBrush(Color.FromArgb(250, 231, 162)), 550, 360);
-                for (int i = 0; i < player.currentCharacters[indexsimp].hero_equip.Length; i++)
+                g.DrawString("Weapon = " + player.currentCharacters[indexsimp].hero_equip.Length, titleName, new SolidBrush(Color.FromArgb(250, 231, 162)), 550, 360);
+                if (!player.currentCharacters[indexsimp].hero_equip[1].nama.Equals("nothing"))
                 {
-                    if(player.currentCharacters[indexsimp].hero_equip[i] != null)
+                    g.DrawImage(player.currentCharacters[indexsimp].hero_equip[1].img, 500, 390, 80, 80);
+                    g.DrawString("Nama = " + player.currentCharacters[indexsimp].hero_equip[1].nama + "", stress, new SolidBrush(Color.FromArgb(250, 231, 162)), 580, 400);
+                    g.DrawString("Jenis = " + player.currentCharacters[indexsimp].hero_equip[1].jenis + "", stress, new SolidBrush(Color.FromArgb(250, 231, 162)), 580, 430);
+                    g.DrawString("Damage = " + player.currentCharacters[indexsimp].hero_equip[1].max_dmg + "", stress, new SolidBrush(Color.FromArgb(250, 231, 162)), 580, 550);
+                    tmp = 1;
+                    pay = 250;
+                }
+                else
+                {
+                    g.DrawString("Nama = " + player.currentCharacters[indexsimp].hero_equip[1].nama + "", stress, new SolidBrush(Color.FromArgb(250, 231, 162)), 580, 400);
+                    g.DrawImage(player.currentCharacters[indexsimp].hero_equip[1].img, 500, 390, 80, 80);
+                }
+                g.DrawString("Armor = ", titleName, new SolidBrush(Color.FromArgb(250, 231, 162)), 550, 460);
+                if (!player.currentCharacters[indexsimp].hero_equip[0].nama.Equals("nothing"))
+                {
+                    if (player.currentCharacters[indexsimp].hero_equip[0].jenis.Equals("armor"))
                     {
-                        if (player.currentCharacters[indexsimp].hero_equip[i].jenis.Equals("weapon"))
-                        {
-                            g.DrawString(player.currentCharacters[indexsimp].hero_equip[i].nama + "", stress, new SolidBrush(Color.FromArgb(250, 231, 162)), 580, 400);
-                        }
-                    }
-                    else
-                    {
-
+                        g.DrawImage(player.currentCharacters[indexsimp].hero_equip[0].img, 500, 500, 80, 80);
+                        g.DrawString("Nama = " + player.currentCharacters[indexsimp].hero_equip[0].nama + "", stress, new SolidBrush(Color.FromArgb(250, 231, 162)), 580, 490);
+                        g.DrawString("Jenis = " + player.currentCharacters[indexsimp].hero_equip[0].jenis + "", stress, new SolidBrush(Color.FromArgb(250, 231, 162)), 580, 520);
+                        g.DrawString("Defend = " + player.currentCharacters[indexsimp].hero_equip[0].def + "", stress, new SolidBrush(Color.FromArgb(250, 231, 162)), 580, 550);
+                        tmp2 = 1;
+                        pay2 = 250;
                     }
                 }
+                else
+                {
+                    g.DrawString("Nama = " + player.currentCharacters[indexsimp].hero_equip[0].nama + "", stress, new SolidBrush(Color.FromArgb(250, 231, 162)), 580, 490);
+                    g.DrawImage(player.currentCharacters[indexsimp].hero_equip[0].img, 500, 500, 80, 80);
+                }
 
-                
-                    //if (player.currentCharacters[indexsimp].hp < player.currentCharacters[indexsimp].maxHp)
-                    //{
-                    //    g.DrawString("Pay Cash = ", titleName, new SolidBrush(Color.FromArgb(250, 231, 162)), 550, 420);
-                    //    g.DrawString("100", titleName, new SolidBrush(Color.FromArgb(250, 231, 162)), 550, 450);
-                    //}
-                    g.DrawString("Armor = ", titleName, new SolidBrush(Color.FromArgb(250, 231, 162)), 550, 420);
-                    g.DrawString(player.currentCharacters[indexsimp].hero_equip  + "", stress, new SolidBrush(Color.FromArgb(250, 231, 162)), 580, 450);
-                    //if (player.currentCharacters[indexsimp].hero_buff != efek.none)
-                    //{
-                    //    g.DrawString("Pay Cash = ", titleName, new SolidBrush(Color.FromArgb(250, 231, 162)), 550, 360);
-                    //    g.DrawString("100", titleName, new SolidBrush(Color.FromArgb(250, 231, 162)), 570, 360);
-                    //}
-                
                 titleName = new Font(Config.font.Families[0], 20, FontStyle.Regular);
-                g.DrawString("Yes", titleName, new SolidBrush(Color.FromArgb(250, 231, 162)), 780, 395);
-                yes = new Rectangle(780, 395, 20, 20);
+                if (tmp == 1 || tmp2 == 1|| (tmp == 1 && tmp2 == 1))
+                {
+                    g.DrawString("Yes", titleName, new SolidBrush(Color.FromArgb(250, 231, 162)), 780, 395);
+                    yes = new Rectangle(780, 395, 20, 20);
+                }
                 g.DrawString("No", titleName, new SolidBrush(Color.FromArgb(250, 231, 162)), 830, 395);
                 no = new Rectangle(830, 395, 20, 20);
+                g.DrawString("Pay Cash = ", titleName, new SolidBrush(Color.FromArgb(250, 231, 162)), 780, 425);
+                if (tmp == 1)
+                {
+                    g.DrawString("Upgrade Weapon", titleName, new SolidBrush(Color.FromArgb(250, 231, 162)), 780, 455);
+                }
+                if (tmp2 == 1)
+                {
+                    g.DrawString("Upgrade Armor", titleName, new SolidBrush(Color.FromArgb(250, 231, 162)), 780, 485);
+                }
+                g.DrawString(pay+"+"+pay2+"", titleName, new SolidBrush(Color.FromArgb(250, 231, 162)), 880, 425);
                 Font font1 = new Font("ARIAL", 10, FontStyle.Regular);
 
                 //idle di dalam status
@@ -283,6 +299,48 @@ namespace Project_PV
                 }
 
 
+            }
+
+            bool close = false;
+            if (cursor.IntersectsWith(yes))
+            {
+
+                if (simp < 2)
+                {
+                    if(tmp == 1)
+                    {
+                        pay = 250;
+                    }
+                    if(tmp2 == 1)
+                    {
+                        pay2 = 250;
+                    }
+                    player.currentCharacters[indexsimp].hero_equip[0].def += 5; ;
+                    player.currentCharacters[indexsimp].hero_equip[1].max_dmg += 5; ;
+                    player.gold -= (pay + pay2);
+                    tmp = -1;
+                    pay = 0;
+                    tmp2 = -1;
+                    pay2 = 0;
+                    close = true;
+                    
+                }
+                
+                Config.form1.Invalidate();
+
+            }
+            else if (cursor.IntersectsWith(no))
+            {
+                close = true;
+            }
+            if (close == true)
+            {
+                int tmpx = karacters[simp].x;
+                int tmpy = karacters[simp].y;
+                int tmindex = karacters[simp].index;
+                karacters[simp] = new Selected_karacter(tmpx, tmpy, tmindex);
+                simp = -1;
+                Config.form1.Invalidate();
             }
 
         }
