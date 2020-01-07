@@ -1,6 +1,7 @@
 ﻿<root>
   <player>
     <gold>2550</gold>
+    <gold>3000</gold>
     <nama>Hatory</nama>
     <hero>ninja</hero>
     <min_damage>5</min_damage>
@@ -16,6 +17,7 @@
   </player>
   <player>
     <gold>2550</gold>
+    <gold>3000</gold>
     <nama>aladin</nama>
     <hero>aladin</hero>
     <min_damage>4</min_damage>

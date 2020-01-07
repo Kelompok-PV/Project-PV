@@ -42,7 +42,11 @@ namespace Project_PV
             imgpPlayer = (Image)Properties.Resources.ResourceManager.GetObject("panel_player2");
             imgpInv = (Image)Properties.Resources.ResourceManager.GetObject("panel_inventory");
 
-           
+            dmg_min = player[pilihHero].skills[pilih_attack].status_skill.dmg_min + "";
+            dmg_max = player[pilihHero].skills[pilih_attack].status_skill.dmg_max + "";
+            acc = player[pilihHero].skills[pilih_attack].status_skill.acc + "";
+            crit = player[pilihHero].skills[pilih_attack].status_skill.crit + "%";
+            prot = player[pilihHero].skills[pilih_attack].status_skill.def + "";
         }
         public void readInventory()
         {

@@ -31,7 +31,7 @@ namespace Project_PV
             this.stage = Stage.blacksmith;
             player.myCharacter.Add(new ninja("Hatory"));
             player.myCharacter.Add(new aladin("aladin"));
-            player.myCharacter.Add(new Tony("aladin"));
+            player.myCharacter.Add(new aladin("aladin"));
             player.currentCharacters.Add(player.myCharacter[0]);
             player.currentCharacters.Add(player.myCharacter[1]);
             player.currentCharacters.Add(player.myCharacter[2]);
