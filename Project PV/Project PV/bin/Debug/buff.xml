@@ -1,11 +1,7 @@
 ﻿<root>
   <buff>
     <hero_buff>none</hero_buff>
-    <hero_buff_turn>0</hero_buff_turn>
-  </buff>
-  <buff>
-    <hero_buff>none</hero_buff>
-    <hero_buff_turn>-6</hero_buff_turn>
+    <hero_buff_turn>-1</hero_buff_turn>
   </buff>
   <buff>
     <hero_buff>none</hero_buff>

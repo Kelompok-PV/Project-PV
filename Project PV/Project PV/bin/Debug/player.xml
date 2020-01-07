@@ -1,50 +1,31 @@
 ﻿<root>
   <player>
-    <gold>2776</gold>
+    <gold>3000</gold>
     <nama>Hatory</nama>
     <hero>ninja</hero>
     <min_damage>5</min_damage>
     <max_damage>10</max_damage>
     <maxHp>33</maxHp>
-<<<<<<< HEAD
-    <hp>33</hp>
-=======
-    <hp>30</hp>
->>>>>>> 4106bd0cbb7a49230bfaaa0755593c90a71d2900
+    <hp>20</hp>
     <speed>20</speed>
     <level>1</level>
     <hero_stress_level>normal</hero_stress_level>
-    <hero_stress_point>15</hero_stress_point>
-    <equip_1>Iron Shield</equip_1>
-    <equip_2>Spike</equip_2>
-  </player>
-  <player>
-    <gold>2776</gold>
-    <nama>aladin</nama>
-    <hero>aladin</hero>
-    <min_damage>4</min_damage>
-    <max_damage>7</max_damage>
-    <maxHp>22</maxHp>
-    <hp>16</hp>
-    <speed>1</speed>
-    <level>1</level>
-    <hero_stress_level>normal</hero_stress_level>
-    <hero_stress_point>15</hero_stress_point>
+    <hero_stress_point>20</hero_stress_point>
     <equip_1>nothing</equip_1>
     <equip_2>nothing</equip_2>
   </player>
   <player>
     <gold>3000</gold>
-    <nama>Stark</nama>
-    <hero>tonyStark</hero>
+    <nama>aladin</nama>
+    <hero>aladin</hero>
     <min_damage>4</min_damage>
-    <max_damage>8</max_damage>
-    <maxHp>24</maxHp>
-    <hp>24</hp>
-    <speed>4</speed>
+    <max_damage>7</max_damage>
+    <maxHp>22</maxHp>
+    <hp>19</hp>
+    <speed>1</speed>
     <level>1</level>
     <hero_stress_level>normal</hero_stress_level>
-    <hero_stress_point>0</hero_stress_point>
+    <hero_stress_point>15</hero_stress_point>
     <equip_1>nothing</equip_1>
     <equip_2>nothing</equip_2>
   </player>

@@ -603,7 +603,7 @@ namespace Project_PV
                     }
                     catch (Exception)
                     {
-                        MessageBox.Show("error");
+
                     }
                     MessageBox.Show("mati");
                     musuh.RemoveAt(targetMusuh);
