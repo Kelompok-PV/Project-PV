@@ -180,7 +180,7 @@ namespace Project_PV
                 else
                 {
                     g.DrawString("Nama = " + player.currentCharacters[indexsimp].hero_equip[1].nama + "", stress, new SolidBrush(Color.FromArgb(250, 231, 162)), 580, 400);
-                    g.DrawImage(player.currentCharacters[indexsimp].hero_equip[1].img, 500, 390, 80, 80);
+                    //g.DrawImage(player.currentCharacters[indexsimp].hero_equip[1].img, 500, 390, 80, 80);
                 }
                 g.DrawString("Armor = ", titleName, new SolidBrush(Color.FromArgb(250, 231, 162)), 550, 490);
                 if (!player.currentCharacters[indexsimp].hero_equip[0].nama.Equals("nothing"))
@@ -198,7 +198,7 @@ namespace Project_PV
                 else
                 {
                     g.DrawString("Nama = " + player.currentCharacters[indexsimp].hero_equip[0].nama + "", stress, new SolidBrush(Color.FromArgb(250, 231, 162)), 580, 520);
-                    g.DrawImage(player.currentCharacters[indexsimp].hero_equip[0].img, 500, 520, 80, 80);
+                    //g.DrawImage(player.currentCharacters[indexsimp].hero_equip[0].img, 500, 520, 80, 80);
                 }
 
                 titleName = new Font(Config.font.Families[0], 20, FontStyle.Regular);
@@ -339,6 +339,10 @@ namespace Project_PV
                 int tmpy = karacters[simp].y;
                 int tmindex = karacters[simp].index;
                 karacters[simp] = new Selected_karacter(tmpx, tmpy, tmindex);
+                tmp = -1;
+                pay = 0;
+                tmp2 = -1;
+                pay2 = 0;
                 simp = -1;
                 Config.form1.Invalidate();
             }
