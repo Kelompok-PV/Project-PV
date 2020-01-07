@@ -250,8 +250,6 @@ namespace Project_PV
         }
         public override void mouse_click(object sender, MouseEventArgs e)
         {
-            MessageBox.Show(e.X+","+e.Y);
-
             Rectangle mouse = new Rectangle(e.X, e.Y, 1, 1);
 
             if (mouse.IntersectsWith(new Rectangle(x + 250, 150, 200, 250))&&player[0].x==300 )
