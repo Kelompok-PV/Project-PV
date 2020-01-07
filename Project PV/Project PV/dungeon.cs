@@ -8,7 +8,7 @@ using System.Windows.Forms;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
-
+using System.Windows.Media;
 
 namespace Project_PV
 {
@@ -24,16 +24,25 @@ namespace Project_PV
         public location myLoc { get; set; }
         public List<Inventory> battleInv { get; set; }
         public GameStateManager gsm { get; set; }
+        MediaPlayer myPlayer = new MediaPlayer();
         public dungeon(GameStateManager gsm,int panjang)
         {
+            string RunningPath = AppDomain.CurrentDomain.BaseDirectory;
+            string FileName = string.Format("{0}Resources\\sound\\music\\combat\\battle.wav", Path.GetFullPath(Path.Combine(RunningPath, @"..\..\")));
+            myPlayer.Open(new System.Uri(FileName));
+            myPlayer.MediaEnded += new EventHandler(Media_Ended);
+            myPlayer.Play();
+
             Area_besar = new List<BattleAreaState>();
             Area_panjang = new List<BattleState>();
             ke = 1;
             kebalik = false;
             this.gsm = gsm;
             battleInv = gsm.player.inventoryAktif;
-            myLoc = location.jalan;
-            btl = new battle(gsm, Properties.Resources.courtyard_area___1_,this);
+
+            myLoc = location.battle;
+            btl = new battle(gsm, Properties.Resources.courtyard_area___1_, this);
+
             for (int i = 0; i < panjang; i++)
             {
                 if (i != 0)
@@ -98,7 +107,11 @@ namespace Project_PV
                 btl.key_KeyUp(sender, e);
             }
         }
-
+        private void Media_Ended(object sender, EventArgs e)
+        {
+            myPlayer.Position = TimeSpan.Zero;
+            myPlayer.Play();
+        }
         public override void mouse_click(object sender, MouseEventArgs e)
         {
             if (myLoc == location.area)

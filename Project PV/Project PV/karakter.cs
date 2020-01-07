@@ -100,7 +100,14 @@ namespace Project_PV
             Image img = (Image)O;
             g.DrawImage(img, x-zoom/2, 250 - zoom, 100 + zoom, 150 + zoom);
         }
-
+        public void getDamage(int pilih_jurus,int target_musuh,List<musuh>musuh)
+        {
+            skills[pilih_jurus].min_damage += hero_equip[0].min_dmg;
+            skills[pilih_jurus].max_damage += hero_equip[0].max_dmg;
+            skills[pilih_jurus].getDamageSkill(target_musuh, musuh);
+            skills[pilih_jurus].min_damage -= hero_equip[0].min_dmg;
+            skills[pilih_jurus].max_damage -= hero_equip[0].max_dmg;
+        }
         //butuh buat shop hero
         public Image getIdle()
         {
@@ -150,8 +157,9 @@ namespace Project_PV
             skills.Add(new captivate());
             skills.Add(new impale());
             hero_equip = new equip[2];
-            hero_equip[0] = new melee_arm_1();
-            hero_equip[1] = new melee_weap_1();
+            hero_equip[0] = new nothing();
+            hero_equip[1] = new nothing();
+
         }
     }
     //jarak jauh

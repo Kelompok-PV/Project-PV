@@ -10,7 +10,7 @@ namespace Project_PV
     [Serializable]
     abstract class Skill
     {
-        
+
         public string nama { get; set; }
         public efek skill_efek { get; set; }
         public int[] rank { get; set; }
@@ -399,17 +399,19 @@ namespace Project_PV
         }
         public override void getDamageSkill(int targetSkill, List<musuh> musuhs)
         {
+
             Random rand = new Random();
-            int randakurasi = rand.Next(0, 100);
+            int randakurasi = rand.Next(0, 40);
             if (randakurasi <= status_skill.acc)
             {
-                int randdodge = rand.Next(0, 100);
+                int randdodge = rand.Next(0, 80);
                 if (musuhs[targetSkill].dodge < randdodge)
                 {
                     int damage = rand.Next(status_skill.dmg_min, status_skill.dmg_max);
                     musuhs[targetSkill].hp -= damage;
                 }
             }
+
         }
     }
     class adders_kiss : Skill
@@ -425,11 +427,12 @@ namespace Project_PV
         }
         public override void getDamageSkill(int targetSkill, List<musuh> musuhs)
         {
+
             Random rand = new Random();
-            int randakurasi = rand.Next(0, 100);
+            int randakurasi = rand.Next(0, 40);
             if (randakurasi <= status_skill.acc)
             {
-                int randdodge = rand.Next(0, 100);
+                int randdodge = rand.Next(0, 60);
                 if (musuhs[targetSkill].dodge < randdodge)
                 {
                     int damage = rand.Next(status_skill.dmg_min, status_skill.dmg_max);
@@ -437,8 +440,10 @@ namespace Project_PV
                     musuhs[targetSkill].musuh_buff.Add(skill_efek);
                 }
             }
+
         }
     }
+
     class captivate : Skill
     {
         public captivate()
@@ -453,10 +458,10 @@ namespace Project_PV
         public override void getDamageSkill(int targetSkill, List<musuh> musuhs)
         {
             Random rand = new Random();
-            int randakurasi = rand.Next(0, 100);
+            int randakurasi = rand.Next(0, 40);
             if (randakurasi <= status_skill.acc)
             {
-                int randdodge = rand.Next(0, 100);
+                int randdodge = rand.Next(0, 60);
                 if (musuhs[targetSkill].dodge < randdodge)
                 {
                     int damage = rand.Next(status_skill.dmg_min, status_skill.dmg_max);
@@ -466,6 +471,8 @@ namespace Project_PV
             }
         }
     }
+
+
     class impale : Skill
     {
         public impale()
@@ -480,39 +487,38 @@ namespace Project_PV
 
         public override void getDamageSkill(int targetSkill, List<musuh> musuhs)
         {
+
             int pointer = 0;
             Random rand = new Random();
-            int randakurasi = rand.Next(0, 100);
+            int randakurasi = rand.Next(0, 40);
             if (randakurasi <= status_skill.acc)
             {
-                int randdodge = rand.Next(0, 100);
+                int randdodge = rand.Next(0, 60);
                 for (int i = 0; i < target.Length; i++)
                 {
-                    if (target[i] == 1)
+                    pointer = i;
+                    if (i < musuhs.Count && musuhs[pointer].dodge < randdodge)
                     {
-                        pointer = i;
-                        if (i < musuhs.Count && musuhs[pointer].dodge < randdodge)
+                        int damage = rand.Next(status_skill.dmg_min, status_skill.dmg_max);
+                        for (int j = 0; j < target.Length; j++)
                         {
-                            int damage = rand.Next(status_skill.dmg_min, status_skill.dmg_max);
-                            for (int j = 0; j < target.Length; j++)
+                            try
                             {
-                                try
+                                if (target[j] == 1)
                                 {
-                                    if (target[j] == 1)
-                                    {
-                                        musuhs[j].hp -= damage;
-                                    }
+                                    musuhs[j].hp -= damage;
                                 }
-                                catch (Exception)
-                                {
+                            }
+                            catch (Exception)
+                            {
 
-                                }
                             }
                         }
                     }
                 }
             }
         }
+
     }
     class yeti1 : Skill
     {
@@ -535,7 +541,7 @@ namespace Project_PV
             max_damage = 4;
             min_damage = 2;
             acc = 70;
-            icon = Properties.Resources.yeti_attack___1_;
+            icon = Properties.Resources.yeti_skill1___1_;
         }
         public override void getDamageSkill(int targetSkill, List<karakter> karakters)
         {
@@ -552,6 +558,7 @@ namespace Project_PV
             }
         }
     }
+
     class yeti2 : Skill
     {
         public yeti2()
@@ -561,7 +568,7 @@ namespace Project_PV
             target[0] = 0; target[1] = 0; target[2] = 1; target[3] = 1;
             status_skill = new status(3, 4, 20, 70, 0, 3);
             skill_efek = efek.stun;
-            icon = Properties.Resources.yeti_attack___2_;
+            icon = Properties.Resources.yeti_skill2___1_;
             accuracy = 70;
             crit_mod = 25;
             max_damage = 8;
@@ -592,7 +599,7 @@ namespace Project_PV
             target[0] = 0; target[1] = 0; target[2] = 1; target[3] = 1;
             status_skill = new status(3, 4, 20, 70, 0, 3);
             skill_efek = efek.stun;
-            icon = Properties.Resources.yeti_attack___3_;
+            icon = Properties.Resources.yeti_skill3___1_;
             accuracy = 70;
             crit_mod = 25;
             max_damage = 4;
@@ -1474,6 +1481,6 @@ namespace Project_PV
         stress,
         heal
     }
-    
- }
+
+}
 

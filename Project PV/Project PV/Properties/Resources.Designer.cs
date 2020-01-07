@@ -1722,9 +1722,69 @@ namespace Project_PV.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap eqp_armour_1 {
+            get {
+                object obj = ResourceManager.GetObject("eqp_armour_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap eqp_armour_2 {
+            get {
+                object obj = ResourceManager.GetObject("eqp_armour_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap eqp_armour_3 {
             get {
                 object obj = ResourceManager.GetObject("eqp_armour_3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap eqp_armour_4 {
+            get {
+                object obj = ResourceManager.GetObject("eqp_armour_4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap eqp_weapon_1 {
+            get {
+                object obj = ResourceManager.GetObject("eqp_weapon_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap eqp_weapon_2 {
+            get {
+                object obj = ResourceManager.GetObject("eqp_weapon_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap eqp_weapon_3 {
+            get {
+                object obj = ResourceManager.GetObject("eqp_weapon_3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -5158,36 +5218,6 @@ namespace Project_PV.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap yeti_attack___1_ {
-            get {
-                object obj = ResourceManager.GetObject("yeti_attack___1_", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap yeti_attack___2_ {
-            get {
-                object obj = ResourceManager.GetObject("yeti_attack___2_", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap yeti_attack___3_ {
-            get {
-                object obj = ResourceManager.GetObject("yeti_attack___3_", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap yeti_attack___4_ {
             get {
                 object obj = ResourceManager.GetObject("yeti_attack___4_", resourceCulture);
@@ -5360,6 +5390,36 @@ namespace Project_PV.Properties {
         internal static System.Drawing.Bitmap yeti_idle___9_ {
             get {
                 object obj = ResourceManager.GetObject("yeti_idle___9_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap yeti_skill1___1_ {
+            get {
+                object obj = ResourceManager.GetObject("yeti_skill1___1_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap yeti_skill2___1_ {
+            get {
+                object obj = ResourceManager.GetObject("yeti_skill2___1_", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap yeti_skill3___1_ {
+            get {
+                object obj = ResourceManager.GetObject("yeti_skill3___1_", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

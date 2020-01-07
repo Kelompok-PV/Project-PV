@@ -39,7 +39,7 @@ namespace Project_PV
 			this.def = 4;
 			this.max_dmg = 0;
 			this.min_dmg = 0;
-			this.img = Project_PV.Properties.Resources.eqp_armour_3;
+			this.img = Project_PV.Properties.Resources.eqp_armour_1;
 		}
 	}
 
@@ -51,11 +51,11 @@ namespace Project_PV
 			this.type = "Melee";
 			this.jenis = "armor";
 			this.acc = 0;
-			this.crit = 4;
-			this.def = 5;
+			this.crit = 8;
+			this.def = 10;
 			this.max_dmg = 2;
 			this.min_dmg = 2;
-			this.img = Project_PV.Properties.Resources.eqp_armour_3;
+			this.img = Project_PV.Properties.Resources.eqp_armour_2;
 		}
 	}
 
@@ -71,7 +71,7 @@ namespace Project_PV
 			this.def = 0;
 			this.max_dmg = 4;
 			this.min_dmg = 3;
-			this.img = Project_PV.Properties.Resources.eqp_weapon_4;
+			this.img = Project_PV.Properties.Resources.eqp_weapon_1;
 		}
 	}
 	class melee_weap_2 : equip
@@ -81,12 +81,12 @@ namespace Project_PV
 			this.nama = "Thunder God Hammer";
 			this.type = "Melee";
 			this.jenis = "weapon";
-			this.acc =1;
-			this.crit = 5;
+			this.acc =6;
+			this.crit = 8;
 			this.def = 0;
-			this.max_dmg = 4;
+			this.max_dmg = 6;
 			this.min_dmg = 4;
-			this.img = Project_PV.Properties.Resources.eqp_weapon_4;
+			this.img = Project_PV.Properties.Resources.eqp_weapon_2;
 		}
 	}
 	class range_arm_1 : equip
@@ -98,10 +98,10 @@ namespace Project_PV
 			this.jenis = "armor";
 			this.acc = 0;
 			this.crit = 0;
-			this.def = 6;
-			this.max_dmg = 1;
+			this.def = 8;
+			this.max_dmg = 4;
 			this.min_dmg = 2;
-			this.img = Project_PV.Properties.Resources.eqp_armour_3;
+			this.img = Project_PV.Properties.Resources.eqp_armour_2;
 		}
 	}
 	class range_arm_2 : equip
@@ -113,9 +113,9 @@ namespace Project_PV
 			this.jenis = "armor";
 			this.acc = 2;
 			this.crit = 0;
-			this.def = 5;
-			this.max_dmg = 2;
-			this.min_dmg = 2;
+			this.def = 12;
+			this.max_dmg = 6;
+			this.min_dmg = 4;
 			this.img = Project_PV.Properties.Resources.eqp_armour_3;
 		}
 	}
@@ -129,8 +129,8 @@ namespace Project_PV
 			this.acc = 5;
 			this.crit = 3;
 			this.def = 0;
-			this.max_dmg = 0;
-			this.min_dmg = 0;
+			this.max_dmg = 4;
+			this.min_dmg = 2;
 			this.img = Project_PV.Properties.Resources.eqp_weapon_4;
 		}
 	}
@@ -144,9 +144,9 @@ namespace Project_PV
 			this.acc = 7;
 			this.crit = 2;
 			this.def = 0;
-			this.max_dmg = 2;
-			this.min_dmg = 2;
-			this.img = Project_PV.Properties.Resources.eqp_weapon_4;
+			this.max_dmg = 8;
+			this.min_dmg = 6;
+			this.img = Project_PV.Properties.Resources.eqp_weapon_1;
 		}
 	}
 	class doctor_arm_1 : equip
@@ -158,10 +158,10 @@ namespace Project_PV
 			this.jenis = "armor";
 			this.acc = 0;
 			this.crit = 0;
-			this.def = 6;
-			this.max_dmg = 0;
-			this.min_dmg = 3;
-			this.img = Project_PV.Properties.Resources.eqp_armour_3;
+			this.def = 12;
+			this.max_dmg = 2;
+			this.min_dmg = 1;
+			this.img = Project_PV.Properties.Resources.eqp_armour_1;
 		}
 	}
 	class doctor_arm_2 : equip
@@ -173,8 +173,8 @@ namespace Project_PV
 			this.jenis = "armor";
 			this.acc = 0;
 			this.crit = 2;
-			this.def = 4;
-			this.max_dmg = 1;
+			this.def = 20;
+			this.max_dmg = 6;
 			this.min_dmg = 2;
 			this.img = Project_PV.Properties.Resources.eqp_armour_3;
 		}
@@ -189,7 +189,7 @@ namespace Project_PV
 			this.acc = 2;
 			this.crit = 2;
 			this.def = 1;
-			this.max_dmg = 1;
+			this.max_dmg = 3;
 			this.min_dmg = 2;
 			this.img = Project_PV.Properties.Resources.eqp_weapon_4;
 		}
@@ -204,9 +204,9 @@ namespace Project_PV
 			this.acc = 3;
 			this.crit = 3;
 			this.def = 0;
-			this.max_dmg = 2;
-			this.min_dmg = 2;
-			this.img = Project_PV.Properties.Resources.eqp_weapon_4;
+			this.max_dmg = 4;
+			this.min_dmg = 3;
+			this.img = Project_PV.Properties.Resources.eqp_weapon_2;
 		}
 	}
 
@@ -219,10 +219,10 @@ namespace Project_PV
 			this.jenis = "armor";
 			this.acc = 0;
 			this.crit = 1;
-			this.def = 5;
-			this.max_dmg = 1;
+			this.def = 12;
+			this.max_dmg = 3;
 			this.min_dmg = 1;
-			this.img = Project_PV.Properties.Resources.eqp_armour_3;
+			this.img = Project_PV.Properties.Resources.eqp_armour_2;
 		}
 	}
 	class healer_arm_2 : equip
@@ -234,7 +234,7 @@ namespace Project_PV
 			this.jenis = "armor";
 			this.acc = 1;
 			this.crit = 1;
-			this.def = 4;
+			this.def = 8;
 			this.max_dmg = 1;
 			this.min_dmg = 2;
 			this.img = Project_PV.Properties.Resources.eqp_armour_3;
@@ -253,7 +253,7 @@ namespace Project_PV
 			this.def = 0;
 			this.max_dmg = 1;
 			this.min_dmg = 2;
-			this.img = Project_PV.Properties.Resources.eqp_weapon_4;
+			this.img = Project_PV.Properties.Resources.eqp_weapon_3;
 		}
 	}
 
@@ -269,7 +269,7 @@ namespace Project_PV
 			this.def = 1;
 			this.max_dmg = 0;
 			this.min_dmg = 3;
-			this.img = Project_PV.Properties.Resources.eqp_weapon_4;
+			this.img = Project_PV.Properties.Resources.eqp_weapon_2;
 		}
 	}
     class nothing : equip
@@ -277,7 +277,7 @@ namespace Project_PV
         public nothing()
         {
             this.nama = "nothing";
-            this.type = " ";
+            this.type = "zonk";
             this.acc = 0;
             this.crit = 0;
             this.def = 0;

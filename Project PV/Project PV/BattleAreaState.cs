@@ -20,6 +20,11 @@ namespace Project_PV
         public GameStateManager gsm { get; set; }
         dungeon thisDungeon;
         public List<int> locSkill { get; set; }
+        public List<equip> listEquip { get; set; }
+        public equip dropEquip{ get; set; }
+        public Rectangle recItem { get; set; }
+        public int w { get; set; }
+        public int h { get; set; }
         public BattleAreaState(GameStateManager gsm,dungeon dgn)
         {
             locSkill = new List<int>();
@@ -28,9 +33,37 @@ namespace Project_PV
             locSkill.Add(420);
             locSkill.Add(476);
 
+            listEquip = new List<equip>();
+
+            listEquip.Add(new melee_arm_1());
+            listEquip.Add(new melee_arm_2());
+            listEquip.Add(new melee_weap_1());
+            listEquip.Add(new melee_weap_2());
+
+            listEquip.Add(new range_arm_1());
+            listEquip.Add(new range_arm_2());
+            listEquip.Add(new range_weap_1());
+            listEquip.Add(new range_weap_2());
+
+            listEquip.Add(new doctor_arm_1());
+            listEquip.Add(new doctor_arm_2());
+            listEquip.Add(new doctor_weap_1());
+            listEquip.Add(new doctor_weap_2());
+
+            listEquip.Add(new healer_arm_1());
+            listEquip.Add(new healer_arm_2());
+            listEquip.Add(new healer_weap_1());
+            listEquip.Add(new healer_weap_2());
+
+
+            Random r = new Random();
+
+            dropEquip = listEquip[r.Next(listEquip.Count)];
+            w = 50;
+            h = 100;
+
             this.gsm = gsm;
             thisDungeon = dgn;
-            Random r = new Random();
             int ind = r.Next(4) + 1;
             battle = false;
             battleInv = thisDungeon.battleInv;
@@ -61,15 +94,21 @@ namespace Project_PV
 
             g.DrawImage(imgBack, 0, 0, 1300, 450);
 
-            for (int i = 0; i < player.Count; i++)
+            g.DrawImage(dropEquip.img, 600, 300, w, h);
+
+            for (int i = player.Count-1; i >=0 ; i--)
             {
                 player[i].getImage(g);
                 player[i].hero_move_now++;
             }
 
+            
+
             g.DrawImage((Image)Properties.Resources.ResourceManager.GetObject("side_decor"), 0, 420, 120, 270);
             g.DrawImage(imgpPlayer, 70 + 22, 420, 528, 100);
             g.DrawImage((Image)Properties.Resources.ResourceManager.GetObject(player[pilihHero].hero + "_icon"), 135, 440, 68, 68);
+
+            
 
             for (int i = 0; i < 4; i++)
             {
@@ -82,6 +121,15 @@ namespace Project_PV
 
             g.DrawImage((Image)Properties.Resources.ResourceManager.GetObject("panel_stat"), 70 + 50, 520, 500, 170);
             g.DrawImage(imgpInv, 70 + 550, 420, 550, 270);
+
+            if (player[pilihHero].hero_equip[0].type != "zonk")
+            {
+                g.DrawImage(player[pilihHero].hero_equip[0].img, 310, 562, 45, 105);
+            }
+            if (player[pilihHero].hero_equip[1].type != "zonk")
+            {
+                g.DrawImage(player[pilihHero].hero_equip[1].img, 373, 562, 45, 105);
+            }
 
             if (aktif == "inv")
             {
@@ -247,6 +295,49 @@ namespace Project_PV
                     acc = player[pilihHero].skills[i].status_skill.acc + "";
                     crit = player[pilihHero].skills[i].status_skill.crit + "%";
                     prot = player[pilihHero].skills[i].status_skill.def + "";
+                }
+            }
+
+            Rectangle rectangeItem = new Rectangle(600, 300, w, h);
+            if (mouse.IntersectsWith(rectangeItem))
+            {
+                if (player[pilihHero].type == dropEquip.type)
+                {
+                    equip temp = new equip();
+                    if (dropEquip.jenis == "armor")
+                    {
+                        if(player[pilihHero].hero_equip[1] is nothing)
+                        {
+                            player[pilihHero].hero_equip[1] = dropEquip;
+                            w = 1;
+                            h = 1;
+                        }
+                        else
+                        {
+                            temp = player[pilihHero].hero_equip[1];
+                            player[pilihHero].hero_equip[1] = dropEquip;
+                            dropEquip = temp;
+                        }
+                    }
+                    else
+                    {
+                        if (player[pilihHero].hero_equip[0] is nothing)
+                        {
+                            player[pilihHero].hero_equip[0] = dropEquip;
+                            w = 1;
+                            h = 1;
+                        }
+                        else
+                        {
+                            temp = player[pilihHero].hero_equip[0];
+                            player[pilihHero].hero_equip[0] = dropEquip;
+                            dropEquip = temp;
+                        }
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Item Ini hanya bisa di gunakan oleh type : "+dropEquip.type);
                 }
             }
 
