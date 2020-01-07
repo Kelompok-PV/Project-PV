@@ -39,13 +39,10 @@ namespace Project_PV
             kebalik = false;
             this.gsm = gsm;
             battleInv = gsm.player.inventoryAktif;
-<<<<<<< HEAD
+
             myLoc = location.battle;
             btl = new battle(gsm, Properties.Resources.courtyard_area___1_, this);
-=======
-            myLoc = location.jalan;
-            btl = new battle(gsm, Properties.Resources.courtyard_area___1_,this);
->>>>>>> 4106bd0cbb7a49230bfaaa0755593c90a71d2900
+
             for (int i = 0; i < panjang; i++)
             {
                 if (i != 0)

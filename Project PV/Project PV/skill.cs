@@ -399,30 +399,19 @@ namespace Project_PV
         }
         public override void getDamageSkill(int targetSkill, List<musuh> musuhs)
         {
+            
             Random rand = new Random();
-            int randakurasi = rand.Next(0, 100);
+            int randakurasi = rand.Next(0, 40);
             if (randakurasi <= status_skill.acc)
             {
-<<<<<<< HEAD
-                Random rand = new Random();
-                int randakurasi = rand.Next(0, 40);
-                if (randakurasi <= status_skill.acc)
-                {
-                    int randdodge = rand.Next(0, 80);
-                    if (musuhs[targetSkill].dodge < randdodge)
-                    {
-                        int damage = rand.Next(status_skill.dmg_min, status_skill.dmg_max);
-                        musuhs[targetSkill].hp -= damage;
-                    }
-=======
-                int randdodge = rand.Next(0, 100);
+                int randdodge = rand.Next(0, 80);
                 if (musuhs[targetSkill].dodge < randdodge)
                 {
                     int damage = rand.Next(status_skill.dmg_min, status_skill.dmg_max);
                     musuhs[targetSkill].hp -= damage;
->>>>>>> 4106bd0cbb7a49230bfaaa0755593c90a71d2900
                 }
             }
+            
         }
     }
     class adders_kiss : Skill
@@ -438,34 +427,23 @@ namespace Project_PV
         }
         public override void getDamageSkill(int targetSkill, List<musuh> musuhs)
         {
+
             Random rand = new Random();
-            int randakurasi = rand.Next(0, 100);
+            int randakurasi = rand.Next(0, 40);
             if (randakurasi <= status_skill.acc)
             {
-<<<<<<< HEAD
-                Random rand = new Random();
-                int randakurasi = rand.Next(0, 40);
-                if (randakurasi <= status_skill.acc)
-                {
-                    int randdodge = rand.Next(0, 60);
-                    if (musuhs[targetSkill].dodge < randdodge)
-                    {
-                        int damage = rand.Next(status_skill.dmg_min, status_skill.dmg_max);
-                        musuhs[targetSkill].hp -= damage;
-                        musuhs[targetSkill].musuh_buff.Add(skill_efek);
-                    }
-=======
-                int randdodge = rand.Next(0, 100);
+                int randdodge = rand.Next(0, 60);
                 if (musuhs[targetSkill].dodge < randdodge)
                 {
                     int damage = rand.Next(status_skill.dmg_min, status_skill.dmg_max);
                     musuhs[targetSkill].hp -= damage;
                     musuhs[targetSkill].musuh_buff.Add(skill_efek);
->>>>>>> 4106bd0cbb7a49230bfaaa0755593c90a71d2900
                 }
             }
+            
         }
     }
+
     class captivate : Skill
     {
         public captivate()
@@ -480,33 +458,21 @@ namespace Project_PV
         public override void getDamageSkill(int targetSkill, List<musuh> musuhs)
         {
             Random rand = new Random();
-            int randakurasi = rand.Next(0, 100);
+            int randakurasi = rand.Next(0, 40);
             if (randakurasi <= status_skill.acc)
             {
-<<<<<<< HEAD
-                Random rand = new Random();
-                int randakurasi = rand.Next(0, 40);
-                if (randakurasi <= status_skill.acc)
-                {
-                    int randdodge = rand.Next(0, 60);
-                    if (musuhs[targetSkill].dodge < randdodge)
-                    {
-                        int damage = rand.Next(status_skill.dmg_min, status_skill.dmg_max);
-                        musuhs[targetSkill].hp -= damage;
-                        musuhs[targetSkill].musuh_buff.Add(skill_efek);
-                    }
-=======
-                int randdodge = rand.Next(0, 100);
+                int randdodge = rand.Next(0, 60);
                 if (musuhs[targetSkill].dodge < randdodge)
                 {
                     int damage = rand.Next(status_skill.dmg_min, status_skill.dmg_max);
                     musuhs[targetSkill].hp -= damage;
                     musuhs[targetSkill].musuh_buff.Add(skill_efek);
->>>>>>> 4106bd0cbb7a49230bfaaa0755593c90a71d2900
                 }
             }
         }
     }
+    
+
     class impale : Skill
     {
         public impale()
@@ -521,12 +487,7 @@ namespace Project_PV
 
         public override void getDamageSkill(int targetSkill, List<musuh> musuhs)
         {
-            int pointer = 0;
-            Random rand = new Random();
-            int randakurasi = rand.Next(0, 100);
-            if (randakurasi <= status_skill.acc)
-            {
-<<<<<<< HEAD
+
                 int pointer = 0;
                 Random rand = new Random();
                 int randakurasi = rand.Next(0, 40);
@@ -534,12 +495,6 @@ namespace Project_PV
                 {
                     int randdodge = rand.Next(0, 60);
                     for (int i = 0; i < target.Length; i++)
-=======
-                int randdodge = rand.Next(0, 100);
-                for (int i = 0; i < target.Length; i++)
-                {
-                    if (target[i] == 1)
->>>>>>> 4106bd0cbb7a49230bfaaa0755593c90a71d2900
                     {
                         pointer = i;
                         if (i < musuhs.Count && musuhs[pointer].dodge < randdodge)
@@ -563,7 +518,7 @@ namespace Project_PV
                     }
                 }
             }
-        }
+        
     }
     class yeti1 : Skill
     {
